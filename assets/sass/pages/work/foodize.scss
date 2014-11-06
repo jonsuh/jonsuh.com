@@ -1,0 +1,86 @@
+// ==================================================
+// Foodize
+// ==================================================
+$project-color          : #2b2b69;
+$project-color-secondary: #48100a;
+
+// Menu Item
+// ==================================================
+.work-menu-item--foodize {
+  background-color: $project-color-secondary !important;
+  @include retina-background-image("work/foodize/thumbnail.jpg");
+  &:after {
+    background-color: rgba($project-color-secondary, 0.5);
+    @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
+  }
+
+  @include work-item-introduction(160, 190, 220, 250);
+
+  .work-item-link:hover {
+    color: $project-color;
+  }
+}
+
+// Hero
+// ==================================================
+.hero--foodize {
+  background-color: $project-color;
+  background-position: bottom center;
+  @include retina-background-image("work/foodize/thumbnail.jpg");
+  @media #{$large-up} {
+    background-image: image-url("work/foodize/thumbnail@2x.jpg");
+  }
+}
+
+.foodize-logo {
+  max-width: em-calc(150);
+  @media #{$little-up} {
+    max-width: em-calc(150);
+  }
+  @media #{$small-up} {
+    max-width: 100%;
+  }
+}
+
+// Introduction
+// ==================================================
+.foodize-introduction-description {
+  @extend %max-span-columns-7;
+}
+
+.foodize-introduction-image {
+  text-align: center;
+  margin-top: em-calc(10);
+  @media #{$medium-up} {
+    margin-top: em-calc(30);
+  }
+  @media #{$large-up} {
+    margin-top: em-calc(40);
+  }
+}
+
+// Responsive
+// ==================================================
+.foodize-responsive-description {
+  @extend %max-span-columns-7;
+}
+
+// Homescreen
+// ==================================================
+.foodize-homescreen-image {
+  @include max-span-columns(5);
+  margin-top: em-calc(10);
+  @media #{$medium-up} {
+    margin-top: em-calc(30);
+  }
+}
+
+.foodize-homescreen-description {
+  @extend %max-span-columns-7;
+}
+
+// Devices
+// ==================================================
+.section--foodize-devices {
+  background-color: $project-color;
+}

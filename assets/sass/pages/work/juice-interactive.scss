@@ -1,0 +1,191 @@
+// ==================================================
+// Juice Interactive
+// ==================================================
+$project-color          : #f88400;
+$project-color-secondary: #424242;
+
+// Selected
+// ==================================================
+.work-selected-item-link--juice-interactive {
+  background-color: $project-color;
+  @include retina-background-image("work/juice-interactive/thumbnail.jpg");
+  &:before {
+    background-color: rgba($project-color, 0.5);
+    @include linear-gradient(to right, rgba($project-color, 0.5), rgba($project-color, 0));
+    @include transition(background $transition-duration ease);
+  }
+
+  &:hover {
+    background-color: scale-color($project-color, $lightness: 10%);
+    &:before {
+      background-color: rgba($project-color, 0.3);
+      @include linear-gradient(to right, rgba($project-color, 0.3), rgba($project-color, 0));
+    }
+  }
+}
+
+// Menu Item
+// ==================================================
+.work-menu-item--juice-interactive {
+  background-color: $project-color !important;
+  @include retina-background-image("work/juice-interactive/thumbnail.jpg");
+  &:after {
+    background-color: rgba($project-color, 0.5);
+    @include linear-gradient(to right, rgba($project-color, 0.5), rgba($project-color, 0));
+  }
+
+  @include work-item-introduction(220, 270, 290, 350);
+
+  .work-item-link:hover {
+    color: $project-color;
+  }
+}
+
+// Hero
+// ==================================================
+.hero--juice-interactive {
+  background-color: $project-color;
+  @include retina-background-image("work/juice-interactive/thumbnail.jpg");
+  @media #{$large-up} {
+    background-image: image-url("work/juice-interactive/thumbnail@2x.jpg");
+  }
+
+  &:before {
+    @extend %content-overlay;
+    background-color: rgba($project-color-secondary, 0.5);
+    @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
+  }
+}
+
+.juice-interactive-logo {
+  max-width: em-calc(170);
+  @media #{$small-up} {
+    max-width: em-calc(200);
+  }
+  @media #{$medium-up} {
+    max-width: 100%;
+  }
+  position: relative;
+  z-index: 2;
+}
+
+// Facelift
+// ==================================================
+.juice-interactive-facelift-description {
+  @extend %max-span-columns-7;
+}
+
+.juice-interactive-facelift-image {
+  margin-top: em-calc(10);
+}
+
+@media #{$medium-up} {
+  .juice-interactive-facelift-image {
+    margin-top: em-calc(40);
+  }
+}
+
+// Honest
+// ==================================================
+.juice-interactive-honest-description {
+
+}
+
+@media #{$medium-up} {
+  .juice-interactive-honest-description {
+    @include span-columns(6);
+    padding-top: em-calc(25);
+  }
+
+  .juice-interactive-honest-image {
+    @include span-columns(6);
+  }
+}
+
+@media #{$screen} and (min-width: em-calc(930)) {
+  .juice-interactive-honest-description {
+    @include span-columns(6);
+    @include shift(.5);
+    padding-top: em-calc(50);
+  }
+
+  .juice-interactive-honest-image {
+    @include span-columns(5.5);
+  }
+}
+
+// Responsive
+// ==================================================
+.section--juice-interactive-responsive {
+  background-color: $project-color;
+  color: $grey-darker;
+
+  h2 {
+    color: $grey-darkest;
+  }
+}
+
+.juice-interactive-responsive-description {
+  @extend %max-span-columns-7;
+}
+
+.juice-interactive-responsive-image {
+  margin-top: em-calc(10);
+}
+
+@media #{$medium-up} {
+  .juice-interactive-responsive-image {
+    margin-top: em-calc(40);
+  }
+}
+
+// Animations
+// ==================================================
+.juice-interactive-animations-description {
+  @extend %max-span-columns-7;
+}
+
+.juice-interactive-animations-example {
+  @extend %max-span-columns-7;
+  @media #{$small-up} {
+    padding-top: em-calc(10);
+  }
+}
+
+@media #{$medium-up} {
+  .juice-interactive-animations-description {
+    @include span-columns(5);
+  }
+
+  .juice-interactive-animations-example {
+    @include span-columns(7);
+  }
+}
+
+@media #{$large-up} {
+  .juice-interactive-animations-description {
+    padding-top: em-calc(30);
+  }
+}
+
+// Browsers
+// ==================================================
+.juice-interactive-browsers-description {
+  @extend %max-span-columns-7;
+}
+
+.juice-interactive-browsers-images {
+  text-align: center;
+  @media #{$small-up} {
+    padding-top: em-calc(10);
+  }
+  @media #{$medium-up} {
+    padding-top: em-calc(20);
+  }
+}
+
+@media #{$small-up} {
+  .juice-interactive-browsers-images-break {
+    display: none;
+  }
+}

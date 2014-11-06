@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+{% include logic.html %}
+  <meta name="viewport" content="width=device-width">
+  <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,700,500,300">
+  <link rel="stylesheet" href="/assets/css/screen.css">
+  {% if page.css %}<link rel="stylesheet" href="/assets/css/blog/{{ page.css }}">{% endif %}
+  <link rel="canonical" href="{{ url | prepend: site.url | prepend: site.url_protocol }}">
+  <meta name="robots" content="index,follow,archive">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="author" href="{{ site.social.google }}">
+
+  <meta name="description" content="{{ description }}">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:title" content="{% if url == '/' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta property="og:url" content="{{ url | prepend: site.url | prepend: site.url_protocol }}">
+  <meta property="og:site_name" content="Jonathan Suh">
+  <meta property="og:type" content="{% if type == 'post' %}article{% else %}website{% endif %}">
+
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ site.url | prepend: site.url_protocol }}/icon.png">
+  <meta property="fb:admins" content="506470591">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.social.username }}">
+  <meta name="twitter:creator" content="@{{ site.social.username }}">
+  <meta name="twitter:url" content="{{ url | prepend: site.url | prepend: url_protocol }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:title" content="{% if url == '/' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image:src" content="{{ site.url }}/icon.png">
+
+  <link href="{{ site.url }}/icon.png" rel="apple-touch-icon">
+  <meta name="msapplication-TileImage" content="{{ site.url }}/icon.png">
+  <meta name="msapplication-TileColor" content="#2196f3">
+</head>
+<body id="top">
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+<div id="fb-root"></div>
+<script src="/assets/js/jonsuh.js"></script>
+<script src="//use.typekit.net/iko7pqe.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+</body>
+</html>

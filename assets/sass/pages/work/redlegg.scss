@@ -1,0 +1,142 @@
+// ==================================================
+// RedLegg
+// ==================================================
+$project-color: #eb372f;
+
+// Selected
+// ==================================================
+.work-selected-item-link--redlegg {
+  background-color: $project-color;
+  @include retina-background-image("work/redlegg/thumbnail.gif");
+  &:before {
+    background-color: rgba($project-color, 0.6);
+    @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
+    @include transition(background $transition-duration ease);
+  }
+
+  &:hover {
+    background-color: scale-color($project-color, $lightness: 10%);
+    &:before {
+      background-color: rgba($project-color, 0.4);
+      @include linear-gradient(to right, rgba($project-color, 0.4), rgba($project-color, 0));
+    }
+  }
+}
+
+// Menu Item
+// ==================================================
+.work-menu-item--redlegg {
+  background-color: $project-color !important;
+  @include retina-background-image("work/redlegg/thumbnail.gif");
+  &:after {
+    background-color: rgba($project-color, 0.5);
+    @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
+  }
+
+  @include work-item-introduction(250, 300, 335, 390);
+
+  .work-item-link:hover {
+    color: $project-color;
+  }
+}
+
+// Hero
+// ==================================================
+.hero--redlegg {
+  background-color: $project-color;
+  @include retina-background-image("work/redlegg/hero.gif");
+  @media #{$small-up} {
+    height: em-calc(233);
+  }
+  @media #{$medium-up} {
+    height: em-calc(266);
+  }
+  @media #{$large-up} {
+    height: em-calc(300);
+    background-image: image-url("work/redlegg/hero@2x.gif");
+  }
+}
+
+.redlegg-logo {
+  max-width: em-calc(200);
+  @media #{$small-up} {
+    max-width: inherit;
+  }
+}
+
+// Introduction
+// ==================================================
+.redlegg-introduction-description {
+  @extend %max-span-columns-7;
+}
+
+.redlegg-introduction-image {
+  @include max-span-columns(10);
+  @media #{$small-up} {
+    padding-top: em-calc(10);
+  }
+  @media #{$medium-up} {
+    padding-top: em-calc(20);
+  }
+}
+
+// SVG Animations
+// ==================================================
+.redlegg-svg-description {
+  @extend %max-span-columns-7;
+}
+
+.redlegg-svg-example {
+  @extend %max-span-columns-7;
+}
+
+.redlegg-svg-description {
+  @extend %max-span-columns-7;
+}
+
+.redlegg-svg-example {
+  @extend %max-span-columns-7;
+}
+
+// Responsive
+// ==================================================
+.section--redlegg-red {
+  color: $grey-lightest;
+  background-color: $project-color;
+}
+
+.redlegg-responsive-description {
+  @extend %max-span-columns-7;
+}
+
+.redlegg-responsive-image {
+  @media #{$small-up} {
+    padding-top: em-calc(10);
+  }
+  @media #{$medium-up} {
+    padding-top: em-calc(20);
+  }
+}
+
+@media #{$ipad-up} {
+  .redlegg-responsive-description {
+    @include span-columns(4);
+    padding-top: em-calc(20);
+  }
+
+  .redlegg-responsive-image {
+    @include span-columns(8);
+    padding-top: 0;
+  }
+}
+
+@media #{$large-up} {
+  .redlegg-responsive-description {
+    @include span-columns(3);
+    padding-top: em-calc(30);
+  }
+
+  .redlegg-responsive-image {
+    @include span-columns(9);
+  }
+}

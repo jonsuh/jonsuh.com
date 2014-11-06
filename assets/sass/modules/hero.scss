@@ -1,0 +1,23 @@
+// ==================================================
+// Hero
+// ==================================================
+.hero {
+  @extend %bumper;
+  height: em-calc(200);
+  @media #{$small-up} {
+    height: em-calc(300);
+  }
+  @media #{$medium-up} {
+    height: em-calc(400);
+  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $blue;
+  position: relative;
+  @include transition(height .25s ease);
+  &:before {
+    @extend %content-overlay;
+    z-index: 1;
+  }
+}

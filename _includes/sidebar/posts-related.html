@@ -1,0 +1,14 @@
+{% if site.related_posts.size > 1 %}
+  <div class="sidebar-section">
+    <h4 class="sidebar-title">Related post{% if site.related_posts.size > 2 %}s{% endif %}</h4>
+    <ul class="sidebar-list">
+    {% for post in site.related_posts limit:5 %}
+      {% if page.url != post.url %}
+        <li class="sidebar-list-item">
+          <a href="{{ post.url | append: "/" }}" class="sidebar-list-link">{{ post.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+{% endif %}

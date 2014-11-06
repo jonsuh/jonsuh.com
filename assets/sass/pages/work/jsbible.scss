@@ -1,0 +1,178 @@
+// ==================================================
+// JSBible
+// ==================================================
+$project-color          : #ee0206;
+$project-color-secondary: #000;
+
+// Menu Item
+// ==================================================
+.work-menu-item--jsbible {
+  background-color: $project-color !important;
+  @include retina-background-image("work/jsbible/thumbnail.jpg");
+  &:after {
+    background-color: rgba($project-color-secondary, 0.5);
+    @include linear-gradient(to right, rgba($project-color-secondary, 0.3), rgba($project-color-secondary, 0));
+  }
+
+  @include work-item-introduction(180, 220, 240, 270);
+
+  .work-item-link:hover {
+    color: $project-color-secondary;
+  }
+}
+
+// Hero
+// ==================================================
+.hero--jsbible {
+  background-color: $project-color-secondary;
+  @include retina-background-image("work/jsbible/thumbnail.jpg");
+  @media #{$small-up} {
+    height: em-calc(233);
+  }
+  @media #{$medium-up} {
+    height: em-calc(266);
+  }
+  @media #{$large-up} {
+    height: em-calc(300);
+    background-image: image-url("work/jsbible/thumbnail@2x.jpg");
+  }
+
+  &:before {
+    @extend %content-overlay;
+    background-color: rgba($project-color-secondary, 0.3);
+    @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
+  }
+}
+
+.jsbible-logo {
+  max-width: em-calc(170);
+  @media #{$small-up} {
+    max-width: em-calc(200);
+  }
+  @media #{$medium-up} {
+    max-width: 100%;
+  }
+  position: relative;
+  z-index: 2;
+}
+
+// Need
+// ==================================================
+.jsbible-need {
+  @extend %max-span-columns-7;
+}
+
+// Build
+// ==================================================
+.section--jsbible-build {
+  background-color: $project-color;
+}
+
+.jsbible-build-image {
+  text-align: center;
+
+  p {
+    line-height: 0;
+  }
+}
+
+.jsbible-build-image-jquery,
+.jsbible-build-image-plus,
+.jsbible-build-image-biblia {
+  max-height: em-calc(40);
+}
+
+.jsbible-build-image-plus {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jsbible-build-description {
+  @extend %max-span-columns-7;
+
+  &,
+  a {
+    color: $white;
+    border-color: scale-color($white, $lightness: -20%);
+  }
+
+  a:hover {
+    border-color: $white;
+  }
+
+  padding-top: em-calc(10);
+  @media #{$small-up} {
+    padding-top: em-calc(20);
+  }
+  @media #{$medium-up} {
+    padding-top: em-calc(30);
+  }
+}
+
+@media #{$small-up} {
+  .jsbible-build-image-jquery,
+  .jsbible-build-image-plus,
+  .jsbible-build-image-biblia {
+    max-height: em-calc(50);
+  }
+}
+
+@media #{$medium-up} {
+  .jsbible-build-image-plus {
+    display: inline;
+  }
+}
+
+@media #{$large-up} {
+  .jsbible-build-image-jquery,
+  .jsbible-build-image-plus,
+  .jsbible-build-image-biblia {
+    max-height: em-calc(60);
+  }
+}
+
+// Website
+// ==================================================
+.jsbible-website {
+  @extend %max-span-columns-7;
+}
+
+// Open Source
+// ==================================================
+.section--jsbible-open-source {
+  background-color: $project-color-secondary;
+
+  &,
+  h2 {
+    color: $white;
+  }
+}
+
+.jsbible-open-source {
+  @extend %max-span-columns-7;
+}
+
+.jsbible-open-source-link {
+  font-weight: 700;
+  color: $white;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid $white;
+  display: block;
+  margin: em-calc(15) auto 0;
+  max-width: em-calc(200);
+  padding: em-calc(15 0);
+  @media #{$medium-up} {
+    max-width: em-calc(220);
+    padding: em-calc(20 0);
+    margin-top: em-calc(25);
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $project-color;
+    border-color: $project-color;
+  }
+}

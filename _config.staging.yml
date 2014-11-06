@@ -1,0 +1,12 @@
+## Environment
+environment: staging
+
+url    : "" # PARTS OF THIS LINE HAVE BEEN REMOVED
+url_protocol: "http:"
+labs_url: "http://labs.jonsuh.com"
+cdn_url: ""
+
+paginate   : 10
+limit_posts: 0
+future     : false
+unpublished: false

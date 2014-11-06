@@ -1,0 +1,144 @@
+# ============================
+# Environment
+# ============================
+environment: development
+
+# ============================
+# Site
+# ============================
+title: Jonathan Suh
+baseurl: ""
+url: "//jonsuh.local"
+url_protocol: "http:"
+description: "Jonathan Suh is a designer and developer based out of Northwest Indiana/Chicago, creating digital things for the web."
+
+# ============================
+# URLs
+# ============================
+labs_url: "http://labs.jonsuh.local"
+cdn_url: ""
+
+# ============================
+# Author
+# ============================
+name: Jonathan Suh
+author:
+  name     : Jonathan Suh
+  firstname: Jonathan
+  lastname : Suh
+  nickname : Jon
+
+email       : hello@jonsuh.com
+email_secure: "&#104;&#101;&#108;&#108;&#111;&#64;&#106;&#111;&#110;&#115;&#117;&#104;&#46;&#99;&#111;&#109;"
+social:
+  codepen      : "http://codepen.io/jonsuh"
+  dribbble     : "https://dribbble.com/jonsuh"
+  facebook     : "https://facebook.com/jonsuh"
+  flickr       : "https://flickr.com/jonsuh"
+  github       : "https://github.com/jonsuh"
+  google       : "https://plus.google.com/+JonathanSuh"
+  linkedin     : "http://linkedin.com/jonsuh"
+  instagram    : "http://instagram.com/jonsuh"
+  paypal       : "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JBKMWV5MHLZZW"
+  stackoverflow: "http://stackoverflow.com/users/879081/jonsuh"
+  twitter      : "https://twitter.com/jonsuh"
+  username     : jonsuh
+
+amazon_tag: jonsuhcom-20
+
+# ============================
+# Backwards compatibility
+# ============================
+# relative_permalinks: false
+
+# ============================
+# Outputting
+# ============================
+paginate     : 5
+permalink    : /blog/:title
+paginate_path: /blog/page/:num
+# timezone     :      null
+
+# quiet:    false
+# defaults: []
+
+# ============================
+# Where things are
+# ============================
+# source:      .
+# destination: ./_site
+# plugins:     ./_plugins
+# layouts:     ./_layouts
+# data_source: ./_data
+collections:
+  posts_deprecated:
+    output: true
+    permalink: /blog/:path/
+  work:
+    output: true
+    permalink: /work/:path/
+
+# ============================
+# Handling reading
+# ============================
+# safe:         false
+# include:      [".htaccess"]
+exclude: [
+  "assets/sass",
+  "assets/js/src",
+  "assets/js/vendor",
+  "bower.json",
+  "bower_components",
+  "Capfile",
+  "config",
+  "Gemfile",
+  "Gemfile.lock",
+  "Gruntfile.js",
+  "node_modules",
+  "package.json",
+]
+# keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+# markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# textile_ext:  "textile"
+
+# ============================
+# Filtering
+# ============================
+# show_drafts: null
+# limit_posts: 0
+future:      true
+# unpublished: false
+
+# ============================
+# Plugins
+# ============================
+# whitelist: []
+# gems:      []
+
+# ============================
+# Conversion
+# ============================
+markdown         : kramdown
+highlighter      : pygments
+# lsi              : true
+excerpt_separator: <!--more-->
+
+# ============================
+# Markdown Processors
+# ============================
+kramdown:
+  auto_ids:      true
+  # footnote_nr:   1
+  # entity_output: as_char
+  # toc_levels:    1..6
+  # smart_quotes:  lsquo,rsquo,ldquo,rdquo
+  # use_coderay:   false
+
+  # coderay:
+  #   coderay_wrap:              div
+  #   coderay_line_numbers:      inline
+  #   coderay_line_number_start: 1
+  #   coderay_tab_width:         4
+  #   coderay_bold_every:        10
+  #   coderay_css:               style

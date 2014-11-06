@@ -1,0 +1,84 @@
+---
+layout: default
+---
+<div class="section section--post">
+  <div class="post">
+    <section class="post-main">
+      <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name"><a href="{{ page.url | append: '/' }}" class="post-link">{{ page.title }}</a></h1>
+          <p class="post-meta">
+            <time content="{{ page.date | date: "%Y-%m-%d" }}" datetime="{{ page.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+            <span class="post-meta-bullet">&bull;</span> <span class="post-meta-author"><a href="/about/" class="post-meta-author-link">By <span itemprop="author">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</span></a></span>
+          </p>
+        </header>
+        <section class="post-content" itemprop="articleBody">
+          {{ content }}
+        </section>
+        {% capture share_url %}{% strip %}
+          {{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' | encode_url }}
+        {% endstrip %}{% endcapture %}
+        <section class="post-share">
+          <ul class="post-share-menu">
+            <li class="post-share-menu-title">Share</li>
+            <li class="post-share-menu-item">
+              <a href="https://twitter.com/intent/tweet?text={{ page.title | encode_url }}&url={{ share_url }}&via={{ site.social.username }}" class="post-share-menu-link post-share-menu-link--twitter js-social-twitter-share" title="Share on Twitter" target="_blank">{% include svg/twitter.html %}</a>
+            </li>
+            <li class="post-share-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" data-share-url="{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-share-menu-link post-share-menu-link--facebook js-social-facebook-share" title="Share on Facebook" target="_blank">{% include svg/facebook.html %}</a>
+            </li>
+            <li class="post-share-menu-item">
+              <a href="https://plus.google.com/share?url={{ share_url }}" class="post-share-menu-link post-share-menu-link--google js-social-google-share" title="Share on Google+" target="_blank">{% include svg/google.html %}</a>
+            </li>
+          </ul>
+        </section>
+        <section class="post-navigation">
+          {% if page.previous.url %}
+            <a href="{{ page.previous.url | append: "/" }}" class="post-pagination-link post-pagination-link--previous" title="{{ page.previous.title }}"><span class="post-pagination-arrow">&larr;</span> Previous<span class="post-pagination-label"> Post</span></a>
+          {% endif %}
+          {% if page.next.url %}
+            <a href="{{ page.next.url | append: "/" }}" class="post-pagination-link post-pagination-link--next" title="{{ page.next.title }}">Next <span class="post-pagination-label">Post </span><span class="post-pagination-arrow">&rarr;</span></a>
+          {% endif %}
+        </section>
+        {% if site.related_posts.size > 1 %}
+          <section class="post-related">
+            <h3 class="post-related-title">Related post{% if site.related_posts.size > 2 %}s{% endif %}</h3>
+            <ul class="post-related-list">            
+              {% for post in site.related_posts limit:5 %}
+                {% if page.url != post.url %}
+                  <li class="post-related-list-item">
+                    <a href="{{ post.url | append: "/" }}" class="post-related-list-link">{{ post.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </section>
+        {% endif %}
+        <section class="post-author">
+          <img src="/assets/images/avatar-512.jpg" alt="Jonathan Suh" class="post-author-image">
+          <h3 class="post-author-name"><a href="/about/" class="post-author-name-link">Jonathan Suh</a></h3>
+          <p class="post-author-about">I’m a multidisciplinary developer &amp; designer. I’m currently with the folks at <a href="http://juiceinteractive.com" class="no-break" target="_blank">Juice Interactive</a>, and I’ve worked with well-known brands and agencies, which include Allstate, Brian Hoff Design, Leo Burnett, and OLSON. <a href="/about/">More about me</a>. <a href="https://twitter.com/jonsuh" class="twitter-follow-button post-author-twitter" data-show-count="true" data-size="large">Follow @jonsuh</a></p>
+        </section>
+      </article>
+    </section>
+    <aside class="post-sidebar">
+      <hr class="section-break-half">
+
+      {% include sidebar/hey.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/posts-selected.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/newsletter.html %}
+    </aside>
+  </div>
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | append: "/" }}" class="post-pagination-bumper post-pagination-bumper--previous" title="{{ page.previous.title }}">{% include svg/arrow-left.html %}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a href="{{ page.next.url | append: "/" }}" class="post-pagination-bumper post-pagination-bumper--next" title="{{ page.next.title }}">{% include svg/arrow-right.html %}</a>
+  {% endif %}
+</div>

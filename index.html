@@ -1,0 +1,62 @@
+---
+layout: default
+sitemap:
+  priority: 1
+---
+<div class="section">
+  <div class="post">
+    <section class="post-main">
+      <div class="post-overflow">
+        <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name"><a href="{{ site.posts.first.url | append: '/' }}" class="post-link">{{ site.posts.first.title }}</a></h1>
+            <p class="post-meta">
+              <time content="{{ site.posts.first.date | date: "%Y-%m-%d" }}" datetime="{{ site.posts.first.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ site.posts.first.date | date: "%B %-d, %Y" }}</time>
+              <span class="post-meta-bullet">&bull;</span> <span class="post-meta-author"><a href="/about/" class="post-meta-author-link">By <span itemprop="author">{% if site.posts.first.author %}{{ site.posts.first.author }}{% else %}{{ site.author.name }}{% endif %}</span></a></span>
+            </p>
+          </header>
+          <section class="post-content" itemprop="articleBody">
+            {{ site.posts.first.content }}
+          </section>
+          {% capture share_url %}{% strip %}
+            {{ site.posts.first.url | prepend: site.url | prepend: site.url_protocol | append: '/' | encode_url }}
+          {% endstrip %}{% endcapture %}
+          <section class="post-share">
+            <ul class="post-share-menu">
+              <li class="post-share-menu-title">Share</li>
+              <li class="post-share-menu-item">
+                <a href="https://twitter.com/intent/tweet?text={{ site.posts.first.title | encode_url }}&url={{ share_url }}&via={{ site.social.username }}" class="post-share-menu-link post-share-menu-link--twitter js-social-twitter-share" title="Share on Twitter" target="_blank">{% include svg/twitter.html %}</a>
+              </li>
+              <li class="post-share-menu-item">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" data-share-url="{{ site.posts.first.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-share-menu-link post-share-menu-link--facebook js-social-facebook-share" title="Share on Facebook" target="_blank">{% include svg/facebook.html %}</a>
+              </li>
+              <li class="post-share-menu-item">
+                <a href="https://plus.google.com/share?url={{ share_url }}" class="post-share-menu-link post-share-menu-link--google js-social-google-share" title="Share on Google+" target="_blank">{% include svg/google.html %}</a>
+              </li>
+              <li class="post-share-menu-item">
+                <a href="{{ site.posts.first.url | append: '/' }}" class="post-share-menu-link post-share-menu-link--link" title="Permalink">{% include svg/link.html %}</a>
+              </li>
+            </ul>
+          </section>
+        </article>
+        <div class="post-overflow-overlay"></div>
+        <div class="post-overflow-toggle js-post-overflow">Keep Reading</div>
+      </div>
+      <hr class="section-break-half">
+      <p><a href="/blog/" class="button">See more blog posts</a></p>
+    </section>
+    <aside class="post-sidebar">
+      <hr class="section-break-half">
+
+      {% include sidebar/work-selected.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/posts-selected.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/newsletter.html %}
+    </aside>
+  </div>
+</div>

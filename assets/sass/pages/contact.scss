@@ -1,0 +1,192 @@
+// ==================================================
+// Contact
+// ==================================================
+.hero--contact {
+  background-color: map-get($color-yellow, "700");
+  @include retina-background-image("contact/manufactured-by.jpg");
+  @media #{$large-up} {
+    background-image: image-url("contact/manufactured-by@2x.jpg");
+  }
+}
+
+.contact-main {
+  @include max-span-columns(7);
+}
+
+// Email
+// ==================================================
+.contact-email {
+  margin-top: em-calc(20);
+  margin-bottom: em-calc(20);
+  @media #{$small-up} {
+    margin-top: em-calc(25);
+    margin-bottom: em-calc(25);
+  }
+  @media #{$medium-up} {
+    margin-top: em-calc(30);
+    margin-bottom: em-calc(30);
+  }
+}
+
+.contact-email-link {
+  font-size: 135%;
+  font-weight: 500;
+  border-bottom-color: map-get($color-purple, "200");
+  &:hover {
+    border-bottom-color: map-get($color-purple-deep, "300");
+  }
+}
+
+// Newsletter
+// ==================================================
+.form--contact {
+  .form-field-group--first-name {
+    display: none;
+  }
+
+  .form-submit {
+    width: 100%;
+  }
+
+  @media #{$ipad-up} {
+    .form-field-group--first-name {
+      width: em-calc(190);
+      display: block;
+    }
+
+    .form-field-group--email {
+      width: em-calc(200);
+    }
+
+    .form-submit {
+      width: em-calc(140);
+    }
+  }
+}
+
+.contact-form-disclaimer {
+  @extend .small;
+  color: $grey;
+}
+
+// Stalk
+// ==================================================
+.contact-stalk {
+  padding-left: 0;
+  @include max-span-columns(4, false);
+}
+
+.contact-stalk-item {
+  display: inline-block;
+  margin-right: em-calc(5);
+}
+
+.contact-stalk-link {
+  color: $grey;
+  border-color: $grey-lighter;
+  &:hover {
+    border-color: $grey-lighter;
+  }
+
+  &--codepen {
+    border-color: map-get($color-social, "codepen");
+    &:hover {
+      color: map-get($color-social, "codepen");
+    }
+  }
+
+  &--dribbble {
+    border-color: map-get($color-social, "dribbble");
+    &:hover {
+      color: map-get($color-social, "dribbble");
+    }
+  }
+
+  &--flickr {
+    border-color: map-get($color-social, "flickr");
+    &:hover {
+      color: map-get($color-social, "flickr");
+    }
+  }
+
+  &--github {
+    border-color: map-get($color-social, "github");
+    &:hover {
+      color: map-get($color-social, "github");
+    }
+  }
+
+  &--google {
+    border-color: map-get($color-social, "google");
+    &:hover {
+      color: map-get($color-social, "google");
+    }
+  }
+
+  &--instagram {
+    border-color: map-get($color-social, "instagram");
+    &:hover {
+      color: map-get($color-social, "instagram");
+    }
+  }
+
+  &--stackoverflow {
+    border-color: map-get($color-social, "stackoverflow");
+    &:hover {
+      color: map-get($color-social, "stackoverflow");
+    }
+  }
+
+  &--twitter {
+    border-color: map-get($color-social, "twitter");
+    &:hover {
+      color: map-get($color-social, "twitter");
+    }
+  }
+}
+
+// Responsive
+// ==================================================
+@media #{$small-up} {
+  .form--contact {
+    .form-field-group,
+    .form-submit {
+      float: left;
+    }
+
+    .form-field-group {
+      width: em-calc(220);
+      margin-right: em-calc(5);
+      margin-bottom: 0;
+    }
+
+    .form-submit {
+      width: em-calc(120);
+    }
+  }
+}
+
+@media #{$medium-up} {
+  .form--contact {
+    .form-field-group {
+      width: em-calc(270);
+    }
+  }
+}
+
+@media #{$ipad-up} {
+  .form--contact {
+    .form-field-group--first-name {
+      width: em-calc(150);
+      display: block;
+    }
+
+    .form-field-group--email {
+      width: em-calc(200);
+    }
+
+    .form-submit {
+      width: em-calc(140);
+    }
+  }
+}

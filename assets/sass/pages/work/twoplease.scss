@@ -1,0 +1,282 @@
+// ==================================================
+// TwoPlease
+// ==================================================
+$project-color          : #50094b;
+$project-color-secondary: #24213d;
+$project-color-tertiary : #808184;
+
+// Selected
+// ==================================================
+.work-selected-item-link--twoplease {
+  background-color: $project-color;
+  @include retina-background-image("work/twoplease/thumbnail.jpg");
+  &:before {
+    background-color: rgba($project-color, 0.6);
+    @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
+    @include transition(background $transition-duration ease);
+  }
+
+  &:hover {
+    background-color: scale-color($project-color, $lightness: 10%);
+    &:before {
+      background-color: rgba($project-color, 0.4);
+      @include linear-gradient(to right, rgba($project-color, 0.4), rgba($project-color, 0));
+    }
+  }
+}
+
+// Menu Item
+// ==================================================
+.work-menu-item--twoplease {
+  background-color: $project-color !important;
+  @include retina-background-image("work/twoplease/thumbnail.jpg");
+  &:after {
+    background-color: rgba($project-color, 0.5);
+    @include linear-gradient(to right, rgba($project-color, 0.5), rgba($project-color, 0));
+  }
+
+  @include work-item-introduction(280, 340, 370, 420);
+
+  .work-item-link:hover {
+    color: $project-color;
+  }
+}
+
+.section--twoplease-blue {
+  color: $grey-lighter;
+  background-color: $project-color-secondary;
+}
+
+.section--twoplease-grey {
+  border-top: 5px solid $project-color-tertiary;
+}
+
+// Hero
+// ==================================================
+.hero--twoplease {
+  background-color: $project-color;
+  @include retina-background-image("work/twoplease/hero.jpg");
+  @media #{$large-up} {
+    background-image: image-url("work/twoplease/hero@2x.jpg");
+  }
+
+  &:before {
+    @extend %content-overlay;
+    background-color: rgba($project-color, 0.5);
+    @include linear-gradient(to right, rgba($project-color, 0.5), rgba($project-color, 0.8));
+  }
+}
+
+.twoplease-logo {
+  max-width: em-calc(200);
+  @media #{$small-up} {
+    max-width: em-calc(250);
+  }
+  @media #{$medium-up} {
+    max-width: 100%;
+  }
+  position: relative;
+  z-index: 2;
+}
+
+// Introduction
+// ==================================================
+.section--twoplease-introduction {
+  overflow: hidden;
+}
+
+.twoplease-introduction-description {
+  @media #{$ipad-up} {
+    @include span-columns(7);
+  }
+}
+
+.twoplease-introduction-image {
+  img {
+    margin-top: em-calc(10);
+  }
+
+  @media #{$ipad-up} {
+    @include span-columns(5);
+
+    img {
+      height: em-calc(400);
+      max-width: inherit;
+    }
+  }
+}
+
+// Responsive
+// ==================================================
+.twoplease-responsive-description {
+  @include max-span-columns(6);
+}
+
+.twoplease-responsive-image {
+  @include max-span-columns(3);
+  text-align: center;
+  max-height: em-calc(350);
+  margin-bottom: em-calc(40);
+  overflow: hidden;
+
+  img {
+    margin-top: em-calc(10);
+    display: block;
+  }
+}
+
+.twoplease-responsive-purpose {
+
+}
+
+.quote--twoplease-responsive-purpose {
+  font-size: em-calc(20);
+  color: #c7a17a;
+  padding: 0;
+  border-left: 0;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@media #{$screen} and (min-width: em-calc(600)) {
+  .twoplease-responsive-description {
+    @include span-columns(6);
+    @include shift(.5);
+    padding-top: em-calc(80);
+  }
+
+  .twoplease-responsive-image {
+    @include span-columns(5);
+    max-height: inherit;
+  }
+
+  .twoplease-responsive-purpose {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+  .quote--twoplease-responsive-purpose {
+    font-size: em-calc(22);
+  }
+}
+
+@media #{$ipad-up} {
+  .twoplease-responsive-description {
+    @include span-columns(5);
+    @include shift(1);
+    padding-top: em-calc(120);
+  }
+
+  .twoplease-responsive-image {
+    @include span-columns(5);
+    @include shift(.5);
+  }
+}
+
+@media #{$large-up} {
+  .twoplease-responsive-description {
+    @include span-columns(4);
+    @include shift(0);
+    padding-top: em-calc(60);
+  }
+
+  .twoplease-responsive-image {
+    @include span-columns(4);
+    @include shift(0);
+  }
+
+  .twoplease-responsive-purpose {
+    @include span-columns(4);
+    @include shift(0);
+  }
+
+  .quote--twoplease-responsive-purpose {
+    padding-top: em-calc(220);
+  }
+}
+
+// Screenshots
+// ==================================================
+.twoplease-screenshots {
+  position: relative;
+}
+
+.twoplease-screenshots-image-1 {
+  display: block;
+}
+
+.twoplease-screenshots-image-2 {
+  
+}
+
+@media #{$medium-up} {
+  .twoplease-screenshots-image-1 {
+    width: 60%;
+    position: absolute;
+    top: em-calc(100);
+    left: 0;
+    z-index: 1;
+  }
+
+  .twoplease-screenshots-image-2 {
+    width: 60%;
+    margin-left: 40%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Testimonial
+// ==================================================
+.twoplease-testimonial-pots {
+  text-align: center;
+  margin-bottom: em-calc(25);
+}
+
+.twoplease-testimonial-quote {
+  
+}
+
+.quote--twoplease-testimonial {
+  font-size: em-calc(20);
+  border-left: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  p {
+    color: $project-color;
+  }
+}
+
+p.twoplease-testimonial-quote-by {
+  color: $project-color-tertiary;
+  text-align: right;
+  padding-right: 10%;
+}
+
+@media #{$small-up} {
+  .twoplease-testimonial-pots {
+    margin-bottom: em-calc(30);
+  }
+
+  .quote--twoplease-testimonial {
+    font-size: em-calc(22);
+  }
+}
+
+@media #{$ipad-up} {
+  .twoplease-testimonial-pots {
+    @include span-columns(3.5);
+  }
+
+  .twoplease-testimonial-quote {
+    @include span-columns(8);
+    @include shift(.5);
+  }
+
+  .quote--twoplease-testimonial {
+    font-size: em-calc(24);
+  }
+}

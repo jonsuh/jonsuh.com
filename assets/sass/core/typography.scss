@@ -1,0 +1,234 @@
+// ==================================================
+// Typography
+// ==================================================
+$paragraph-font-size     : em-calc(16);
+$paragraph-font-color    : $grey-dark;
+$paragraph-line-height   : 1.5em;
+$paragraph-letter-spacing: 0;
+$paragraph-indent        : 1.5em;
+$paragraph-margin-bottom : .75em;
+
+body,
+html {
+  font-family: $sans-serif;
+  color: $paragraph-font-color;
+}
+
+body,
+html,
+input,
+button {
+  @extend %font-smoothing;
+}
+
+// Headers
+// ==================================================
+$header-1-font-size: em-calc(30);
+$header-2-font-size: em-calc(20);
+$header-3-font-size: em-calc(18);
+$header-4-font-size: em-calc(16);
+$header-5-font-size: em-calc(14);
+$header-font-color: $grey-darker;
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-font-color;
+  margin: 0;
+}
+
+h1 {
+  font-size: $header-1-font-size;
+  line-height: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  font-size: $header-2-font-size;
+  line-height: 1.3em;
+  margin-bottom: 0.35em;
+}
+
+h3 {
+  font-size: $header-3-font-size;
+  line-height: 1.35em;
+  margin-bottom: 0.4em;
+}
+
+h4 {
+  font-size: $header-4-font-size;
+  line-height: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-size: $header-5-font-size;
+  line-height: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+// Paragraph
+// ==================================================
+p {
+  font-size: $paragraph-font-size;
+  letter-spacing: $paragraph-letter-spacing;
+  line-height: $paragraph-line-height;
+  margin: 0;
+  margin-bottom: $paragraph-margin-bottom;
+  @extend %font-smoothing;
+}
+
+// Lists
+// ==================================================
+ol,
+ul {
+  font-size: $paragraph-font-size;
+  letter-spacing: $paragraph-letter-spacing;
+  line-height: $paragraph-line-height;
+  padding-left: $paragraph-indent;
+  margin: 0;
+  margin-bottom: $paragraph-margin-bottom;
+  @extend %font-smoothing;
+
+  li {
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+  }
+}
+
+// Blockquote
+// ==================================================
+blockquote {
+  font-family: $serif;
+  font-size: 1.15em;
+  font-style: italic;
+  color: scale-color($paragraph-font-color, $lightness: 15%);
+  border-left: 2px solid $grey-light;
+  padding-left: 1.5em;
+  margin: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+// Anchor
+// ==================================================
+a {
+  color: $paragraph-font-color;
+  text-decoration: none;
+  border-bottom: 1px solid map-get($color-blue, "100");
+
+  &:hover {
+    color: $grey-darker;
+    border-color: map-get($color-blue, "300");
+  }
+}
+
+// Small
+// ==================================================
+small,
+p.small {
+  font-size: 92%;
+  line-height: 1.4em;
+}
+
+// Form
+// ==================================================
+form {
+  font-size: $paragraph-font-size;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+input,
+textarea,
+button {
+  
+}
+
+// Code
+// ==================================================
+$code-font-family: Consolas, "Liberation Mono", Courier, monospace;
+$code-background-color: $grey-lightest;
+$code-border-radius: 3;
+
+code {
+  font-family: $code-font-family;
+  font-size: $paragraph-font-size;
+  color: $paragraph-font-color;
+}
+
+p > code {
+  font-size: 1em;
+  background-color: $code-background-color;
+  padding: em-calc(4 7 2);
+  border-radius: em-calc($code-border-radius);
+}
+
+pre,
+.highlight {
+  margin-bottom: $paragraph-margin-bottom;
+  @include clearfix;
+}
+
+pre {
+  background-color: $code-background-color;
+  padding: em-calc(10 15);
+  border-radius: em-calc($code-border-radius);
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  code {
+    font-size: em-calc(14);
+  }
+}
+
+// Responsive font sizes
+// ==================================================
+@media #{$small-up} {
+  $header-1-font-size : em-calc(32);
+  $header-2-font-size : em-calc(22);
+  $header-3-font-size : em-calc(19);
+  $paragraph-font-size: 17;
+
+  h1 {font-size: $header-1-font-size}
+  h2 {font-size: $header-2-font-size}
+  h3 {font-size: $header-3-font-size}
+  p  {font-size: em-calc($paragraph-font-size)}
+  ol, ul {font-size: em-calc($paragraph-font-size)}
+  form {font-size: em-calc($paragraph-font-size)}
+  pre code {
+    font-size: em-calc(15);
+  }
+}
+
+@media #{$medium-up} {
+  $header-1-font-size : em-calc(34);
+  $header-2-font-size : em-calc(24);
+  $header-3-font-size : em-calc(20);
+  $paragraph-font-size: em-calc(18);
+
+  h1 {font-size: $header-1-font-size}
+  h2 {font-size: $header-2-font-size}
+  h3 {font-size: $header-3-font-size}
+  p  {font-size: $paragraph-font-size}
+  ol, ul {font-size: $paragraph-font-size}
+  form {font-size: $paragraph-font-size}
+  pre code {
+    font-size: em-calc(16);
+  }
+}
+
+@media #{$large-up} {
+  $header-1-font-size : em-calc(36);
+  $header-2-font-size : em-calc(26);
+  $header-3-font-size : em-calc(21);
+  $header-4-font-size : em-calc(17);
+  $header-5-font-size : em-calc(15);
+  $paragraph-font-size: em-calc(19);
+
+  h1 {font-size: $header-1-font-size}
+  h2 {font-size: $header-2-font-size}
+  h3 {font-size: $header-3-font-size}
+  h4 {font-size: $header-4-font-size}
+  h5 {font-size: $header-5-font-size}
+  p  {font-size: $paragraph-font-size}
+  ol, ul {font-size: $paragraph-font-size}
+  form {font-size: $paragraph-font-size}
+}

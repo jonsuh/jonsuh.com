@@ -1,0 +1,218 @@
+// ==================================================
+// Work
+// ==================================================
+
+// Menu
+// ==================================================
+.work-menu {
+  background-color: $white;
+  @include clearfix;
+}
+
+.work-menu-item {
+  height: em-calc(200);
+  background-color: $cyan;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    @extend %content-overlay;
+  }
+
+  &:nth-child(3n+1) {
+    background-color: $cyan;
+  }
+  &:nth-child(3n+2) {
+    background-color: map-get($color-cyan, "600");
+  }
+  &:nth-child(3n+3) {
+    background-color: map-get($color-cyan, "300");
+  }
+
+  @media #{$small-up} {
+    height: em-calc(250);
+  }
+
+  @media #{$medium-up} {
+    height: em-calc(300);
+  }
+
+  @media #{$large-up} {
+    width: 50%;
+    float: left;
+  }
+}
+
+.work-item-content {
+  @extend %bumper;
+  @extend %bumper-v;
+  position: absolute;
+  left: em-calc(10);
+  bottom: em-calc(10);
+  z-index: 2;
+  @media #{$small-up} {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.work-item-title,
+.work-item-introduction {
+  color: $white;
+}
+
+.work-item-introduction {
+  $font-size: 18;
+
+  font-size: em-calc($font-size);
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: rem-calc(10);
+
+  @media #{$screen} and (min-width: em-calc(380)) {
+    font-size: em-calc(22);
+    font-weight: 300;
+  }
+
+  @media #{$small-up} {
+    font-size: em-calc(24);
+    font-weight: 300;
+  }
+
+  @media #{$medium-up} {
+    font-size: em-calc(28);
+  }
+}
+
+@mixin work-item-introduction($wit-tiny, $wit-little, $wit-small, $wit-medium) {
+  .work-item-introduction {
+    max-width: em-calc($wit-tiny, 18);
+    @media #{$screen} and (min-width: em-calc(380)) {
+      max-width: em-calc($wit-little, 22);
+    }
+
+    @media #{$small-up} {
+      max-width: em-calc($wit-small, 24);
+    }
+
+    @media #{$medium-up} {
+      max-width: em-calc($wit-medium, 28);
+    }
+  }
+}
+
+.work-item-title {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: em-calc(15);
+}
+
+.work-item-link {
+  $font-size: 14;
+
+  font-size: em-calc($font-size);
+  font-weight: 500;
+  color: $white;
+  text-transform: uppercase;
+  padding: em-calc(10 20, $font-size);
+  border: 2px solid rgba($white, 0.5);
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    color: $cyan;
+    border-color: $white;
+    background-color: $white;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include linear-gradient(to right, rgba($white, 0) 25%, rgba($white, 0.6) 75%);
+    }
+  }
+
+  @media #{$small-up} {
+    padding: em-calc(15 25, $font-size);
+  }
+
+  @media #{$medium-up} {
+    padding: em-calc(15 35, $font-size);
+  }
+}
+
+// Item -- Contact
+// ==================================================
+.work-menu-item--contact {
+  background-color: map-get($color-yellow, "700") !important;
+  @include retina-background-image("contact/manufactured-by.jpg");
+  &:after {
+    background-color: rgba(map-get($color-yellow, "700"), 0.5);
+    @include linear-gradient(to right, rgba(map-get($color-yellow, "700"), 0.5), rgba(map-get($color-yellow, "700"), 0));
+  }
+
+  .work-item-link:hover {
+    color: map-get($color-yellow, "700");
+  }
+}
+
+// Selected
+// ==================================================
+.work-selected {
+  list-style: none;
+  padding-left: 0;
+}
+
+.work-selected-item {
+  height: em-calc(100);
+  @media #{$small-up} {
+    height: em-calc(125);
+  }
+  @media #{$medium-up} {
+    height: em-calc(150);
+  }
+  @media #{$large-up} {
+    height: em-calc(125);
+  }
+  position: relative;
+}
+
+.work-selected-item-link {
+  border: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $cyan;
+  background-size: cover;
+  background-position: center;
+  &:before {
+    @extend %content-overlay;
+    z-index: 1;
+  }
+
+  &:hover {
+    background-color: scale-color($cyan, $lightness: 10%);
+  }
+}
+
+.work-selected-item-content {
+  position: absolute;
+  left: em-calc(15);
+  bottom: em-calc(10);
+}
+
+.work-selected-item-title {
+  @extend .work-item-title;
+  font-size: 95%;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}

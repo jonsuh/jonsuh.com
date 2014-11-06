@@ -1,0 +1,475 @@
+// ==================================================
+// Header, Logo, Navigation
+// ==================================================
+
+// Header
+// ==================================================
+$header-height      : em-calc(60);
+$header-border-width: em-calc(3);
+
+.header-border {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: $header-border-width solid $grey-lighter;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include z-index("header-line");
+}
+
+.header {
+  background-color: $grey-darkest;
+  height: $header-height;
+  line-height: $header-height - $header-border-width;
+  @include clearfix;
+  overflow: hidden;
+  position: relative;
+  @include z-index("header");
+}
+
+// Logo
+// ==================================================
+$logo-width: 65;
+
+.logo {
+  width: em-calc($logo-width);
+  float: left;
+}
+
+.logo-link {
+  text-align: center;
+  border-bottom-width: $header-border-width;
+  border-bottom-color: transparent;
+  display: block;
+  position: relative;
+  @include z-index("header-link");
+}
+
+.logo-canvas {
+  position: relative;
+  height: $header-height - $header-border-width;
+}
+
+.logo-svg {
+  width: em-calc(46);
+  height: em-calc(50);
+  position: relative;
+  top: em-calc(3.5);
+
+  polygon {
+    stroke: $grey-light;
+    stroke-width: 1;
+  }
+
+  g {
+    @include transform(translateX(em-calc(0)));
+    @include transition-property(transform);
+  }
+}
+
+%logo-svg-transition-1 {
+  @include transition-duration(.15s);
+  @include transition-timing-function(cubic-bezier(0.455,0.03,0.515,0.955));
+  // @include transition-timing-function(ease-out);
+}
+%logo-svg-transition-2 {
+  @include transition-duration(.175s);
+  @include transition-timing-function(cubic-bezier(0.55,0.055,0.675,0.19));
+  // @include transition-timing-function(ease-in);
+}
+%logo-svg-transition-3 {
+  @include transition-duration(.2s);
+  @include transition-timing-function(cubic-bezier(0.215,0.61,0.355,1));
+  // @include transition-timing-function(ease);
+}
+
+.logo-svg {
+  &-green-1  {fill: #3fae52; @extend %logo-svg-transition-1}
+  &-green-2  {fill: #7cc686; @extend %logo-svg-transition-2}
+  &-green-3  {fill: #2d8d43; @extend %logo-svg-transition-3}
+  &-cyan-1   {fill: #00bad2; @extend %logo-svg-transition-1}
+  &-cyan-2   {fill: #0097a7; @extend %logo-svg-transition-2}
+  &-cyan-3   {fill: #4ac4d7; @extend %logo-svg-transition-3}
+  &-cyan-4   {fill: #00bad2; @extend %logo-svg-transition-1}
+  &-blue-1   {fill: #62b3e4; @extend %logo-svg-transition-2}
+  &-blue-2   {fill: #1b77bd; @extend %logo-svg-transition-3}
+  &-blue-3   {fill: #62b3e4; @extend %logo-svg-transition-1}
+  &-blue-4   {fill: #3191cf; @extend %logo-svg-transition-2}
+  &-purple-1 {fill: #7a3594; @extend %logo-svg-transition-3}
+  &-purple-2 {fill: #944198; @extend %logo-svg-transition-1}
+  &-purple-3 {fill: #b06eae; @extend %logo-svg-transition-2}
+  &-purple-4 {fill: #944198; @extend %logo-svg-transition-3}
+  &-pink-1   {fill: #e81f64; @extend %logo-svg-transition-1}
+  &-pink-2   {fill: #c21e5c; @extend %logo-svg-transition-2}
+  &-pink-3   {fill: #f06392; @extend %logo-svg-transition-3}
+  &-pink-4   {fill: #e81f64; @extend %logo-svg-transition-1}
+  &-pink-5   {fill: #c21e5c; @extend %logo-svg-transition-2}
+  &-red-1    {fill: #ef4438; @extend %logo-svg-transition-3}
+  &-red-2    {fill: #e57373; @extend %logo-svg-transition-1}
+  &-red-3    {fill: #d32e2e; @extend %logo-svg-transition-2}
+  &-red-4    {fill: #ef4438; @extend %logo-svg-transition-3}
+  &-red-5    {fill: #d32e2e; @extend %logo-svg-transition-1}
+  &-orange-1 {fill: #f47c20; @extend %logo-svg-transition-2}
+  &-orange-2 {fill: #f8951f; @extend %logo-svg-transition-3}
+  &-orange-3 {fill: #f47c20; @extend %logo-svg-transition-1}
+  &-orange-4 {fill: #fcb452; @extend %logo-svg-transition-2}
+  &-yellow-1 {fill: #fedc63; @extend %logo-svg-transition-3}
+  &-yellow-2 {fill: #fecd27; @extend %logo-svg-transition-1}
+  &-yellow-3 {fill: #faa71c; @extend %logo-svg-transition-2}
+}
+
+@mixin logo-svg-transform($transform-rotate, $transform-x, $transform-y) {
+  @include transform(rotate($transform-rotate) translate3d(em-calc($transform-x), em-calc($transform-y), 0))
+}
+
+.logo-link:hover {
+  .logo-svg {
+    &-green-1  {@include logo-svg-transform(-15deg, 30, 0)}
+    &-green-2  {@include logo-svg-transform(-10deg, -10, -30)}
+    &-green-3  {@include logo-svg-transform(14deg, 20, -110)}
+    &-cyan-1   {@include logo-svg-transform(-7deg, -85, -50)}
+    &-cyan-2   {@include logo-svg-transform(22deg, 70, -180)}
+    &-cyan-3   {@include logo-svg-transform(12deg, -20, -80)}
+    &-cyan-4   {@include logo-svg-transform(-25deg, 0, 80)}
+    &-blue-1   {@include logo-svg-transform(7deg, -35, -60)}
+    &-blue-2   {@include logo-svg-transform(13deg, 100, -150)}
+    &-blue-3   {@include logo-svg-transform(2deg, 50, -50)}
+    &-blue-4   {@include logo-svg-transform(-10deg, 50, 60)}
+    &-purple-1 {@include logo-svg-transform(5deg, -80, -150)}
+    &-purple-2 {@include logo-svg-transform(8deg, -20, -120)}
+    &-purple-3 {@include logo-svg-transform(-30deg, -80, 120)}
+    &-purple-4 {@include logo-svg-transform(20deg, 150, -80)}
+    &-pink-1   {@include logo-svg-transform(10deg, 40, -120)}
+    &-pink-2   {@include logo-svg-transform(-30deg, -120, 0)}
+    &-pink-3   {@include logo-svg-transform(11deg, 90, 0)}
+    &-pink-4   {@include logo-svg-transform(-60deg, -350, -10)}
+    &-pink-5   {@include logo-svg-transform(-22deg, -120, 90)}
+    &-red-1    {@include logo-svg-transform(5deg, 50, -30)}
+    &-red-2    {@include logo-svg-transform(-20deg, -95, 15)}
+    &-red-3    {@include logo-svg-transform(17deg, 80, 0)}
+    &-red-4    {@include logo-svg-transform(9deg, 50, 20)}
+    &-red-5    {@include logo-svg-transform(-12deg, -70, 50)}
+    &-orange-1 {@include logo-svg-transform(8deg, 70, -35)}
+    &-orange-2 {@include logo-svg-transform(-23deg, -100, 0)}
+    &-orange-3 {@include logo-svg-transform(15deg, 10, 18)}
+    &-orange-4 {@include logo-svg-transform(10deg, 40, 28)}
+    &-yellow-1 {@include logo-svg-transform(20deg, 50, 0)}
+    &-yellow-2 {@include logo-svg-transform(-14deg, -80, -17)}
+    &-yellow-3 {@include logo-svg-transform(-5deg, -15, -20)}
+  }
+}
+
+// Navigation
+// ==================================================
+.navigation {
+  width: 100%;
+  text-align: center;
+  background-color: $grey-darkest;
+  border-top: 1px solid scale-color($grey-darker, $lightness: 4%);
+  position: relative;
+  top: -1px;
+  @include clearfix;
+  clear: both;
+}
+
+.navigation-link,
+.navigation-toggle-label {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.navigation-link {
+  font-weight: 500;
+  color: $grey-light;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom-width: $header-border-width;
+  border-bottom-color: transparent;
+  padding-left: em-calc(7);
+  padding-right: em-calc(7);
+  display: inline-block;
+  position: relative;
+  @include z-index("header-link");
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.navigation-toggle {
+  color: $grey-light;
+  border-bottom-color: transparent !important;
+  display: block;
+  float: right;
+  padding-right: em-calc(10);
+}
+
+.navigation-toggle-label {
+  text-align: right;
+  margin-right: em-calc(3);
+  display: inline-block;
+  position: relative;
+}
+
+.navigation-toggle-label-open,
+.navigation-toggle-label-close {
+  @include transition(opacity $transition-duration linear);
+}
+
+.navigation-toggle-label-open {
+  opacity: 1;
+}
+
+.navigation-toggle-label-close {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+$hamburger-width: em-calc(20);
+
+.navigation-toggle-hamburger {
+  width: $hamburger-width;
+  position: relative;
+  display: inline-block;
+  @include clearfix;
+}
+
+.navigation-toggle-hamburger-bun,
+.navigation-toggle-hamburger-patty {
+  width: $hamburger-width;
+  border: 0;
+  border-top: 2px solid $grey-light;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  @include transition(border-color $transition-duration linear,
+                      transform $transition-duration ease,
+                      opacity $transition-duration linear);
+  @include transform-origin(50% 50%);
+}
+
+.navigation-toggle-hamburger-bun {
+  @include transition-delay(0);
+}
+
+.navigation-toggle-hamburger-bun--top {
+  top: em-calc(-12);
+}
+
+.navigation-toggle-hamburger-patty {
+  top: em-calc(-7);
+  @include transition-delay(.075s);
+}
+
+.navigation-toggle-hamburger-bun--bottom {
+  bottom: 0;
+}
+
+.navigation-toggle:hover {
+  color: $white;
+
+  .navigation-toggle-hamburger-bun,
+  .navigation-toggle-hamburger-patty {
+    border-color: $white;
+  }
+}
+
+// Border colors
+// ==================================================
+.logo-link:hover {
+  border-color: $blue;
+}
+
+.navigation-link {
+  &:hover,
+  &.is-current {
+    color: $white;
+
+    &:nth-child(1) {border-color: $pink}
+    &:nth-child(2) {border-color: $cyan}
+    &:nth-child(3) {border-color: $orange}
+    &:nth-child(4) {border-color: map-get($color-purple-deep, "500")}
+  }
+}
+
+// Toggled
+// ==================================================
+@media #{$small-down} {
+  .js-nav {
+    .header {
+      height: $header-height * 2;
+    }
+
+    .logo-link {
+      border-bottom-color: transparent;
+    }
+
+    .navigation-toggle-label-open {
+      opacity: 0;
+    }
+
+    .navigation-toggle-label-close {
+      opacity: 1;
+    }
+
+    .navigation-toggle-hamburger-bun {
+      @include transition-delay(.075s);
+    }
+
+    .navigation-toggle-hamburger-bun--top {
+      @include transform(rotate(45deg) translate3d(em-calc(4), em-calc(3), 0));
+    }
+
+    .navigation-toggle-hamburger-patty {
+      opacity: 0;
+      @include transition-delay(0);
+    }
+
+    .navigation-toggle-hamburger-bun--bottom {
+      @include transform(rotate(-45deg) translate3d(em-calc(4), em-calc(-3), 0));
+    }
+  }
+
+  .js-nav,
+  .js-nav-transition {
+    .header {
+      @include transition(height .25s ease);
+    }
+  }
+
+  .js-nav-transition {
+    .logo-link {
+      @include transition-delay(.25s);
+    }
+  }
+
+  .js-nav {
+    .logo-link {
+      @include transition-duration(0);
+      @include transition-delay(0);
+    }
+  }
+}
+
+// Responsive
+// ==================================================
+@mixin logo-width($logo-width) {
+  .logo {
+    width: em-calc($logo-width);
+  }
+
+  .navigation {
+    // @include calc(width, 100% - #{em-calc($logo-width)});
+    width: -webkit-calc(100% - #{em-calc($logo-width)});
+    width: calc(100% - #{em-calc($logo-width)});
+  }
+}
+
+@media #{$screen} and (min-width: em-calc(400)) {
+  .navigation-link {
+    padding-left: em-calc(15);
+    padding-right: em-calc(15);
+  }  
+}
+
+@media #{$small-up} {
+  $header-height: em-calc(70);
+
+  .header {
+    background-color: $white;
+    height: $header-height;
+    line-height: $header-height - $header-border-width;
+  }
+
+  @include logo-width(75);
+
+  .logo-canvas {
+    height: $header-height - $header-border-width;
+  }
+
+  .logo-svg {
+    width: em-calc(61);
+    height: em-calc(67);
+    top: 0;
+  }
+
+  .navigation {
+    background-color: $white;
+    text-align: right;
+    height: inherit;
+    border-top: 0;
+    top: inherit;
+    float: left;
+    clear: inherit;
+  }
+
+  .navigation-link {
+    color: $grey-dark;
+    padding-left: em-calc(11);
+    padding-right: em-calc(11);
+
+    &:hover,
+    &.is-current {
+      color: $grey-darker;
+    }
+  }
+
+  .navigation-toggle {
+    display: none;
+  }
+}
+
+@media #{$screen} and (min-width: em-calc(550)) {
+  .navigation-link {
+    padding-left: em-calc(18);
+    padding-right: em-calc(18);
+  }
+}
+
+@media #{$medium-up} {
+  @include logo-width(79);
+
+  .navigation-link {
+    padding-left: em-calc(22);
+    padding-right: em-calc(22);
+  }
+}
+
+@media #{$ipad-up} {
+  $header-height: em-calc(90);
+
+  .header {
+    height: $header-height;
+    line-height: $header-height - $header-border-width;
+  }
+
+  @include logo-width(102);
+
+  .logo-canvas {
+    height: $header-height - $header-border-width;
+  }
+
+  .logo-svg {
+    width: em-calc(80);
+    height: em-calc(87);
+  }
+
+  .navigation-link {
+    padding-left: em-calc(25);
+    padding-right: em-calc(25);
+  }
+}
+
+@media #{$screen} and (min-width: em-calc(900)) {
+  @include logo-width(132);
+
+  .navigation-link {
+    padding-left: em-calc(40);
+    padding-right: em-calc(40);
+  }
+}

@@ -1,0 +1,30 @@
+// ==================================================
+// Button
+// ==================================================
+.button {
+  font-size: rem-calc(16);
+  font-weight: 700;
+  color: $white;
+  letter-spacing: 0.02em;
+  background-color: map-get($color-blue, "500");
+  border: 0;
+  padding: rem-calc(15 25);
+  display: inline-block;
+
+  &:hover {
+    color: $white;
+    background-color: map-get($color-blue, "700");
+  }
+}
+
+@media #{$small-up} {
+  .button {
+    padding: rem-calc(15 30);
+  }
+}
+
+@media #{$medium-up} {
+  .button {
+    padding: rem-calc(15 40);
+  }
+}

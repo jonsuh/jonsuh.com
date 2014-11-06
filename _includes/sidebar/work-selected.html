@@ -1,0 +1,14 @@
+  <div class="sidebar-section">
+    <h4 class="sidebar-title">Selected Projects</h4>
+    <ul class="work-selected">
+      {% for work in site.data.work-selected %}
+        <li class="work-selected-item">
+          <a href="{{ work.url | prepend: '/work/' }}" class="work-selected-item-link work-selected-item-link--{{ work.url }}">
+            <div class="work-selected-item-content">
+              <h3 class="work-selected-item-title">{{ work.title }}</h3>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>

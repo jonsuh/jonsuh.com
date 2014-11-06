@@ -1,0 +1,36 @@
+<footer id="footer" class="footer">
+  <div class="footer-top">
+    <a href="#top" class="footer-top-link js-top">
+      {% include svg/arrow-top.html %}
+      <span class="footer-top-link-label">Top</span>
+    </a>
+  </div>
+  <div class="container">
+    <div class="footer-column footer-column--left">
+      <div class="footer-logo">
+        <a href="/" class="footer-logo-link" title="{{ site.name }}">
+          <div class="footer-logo-canvas">
+            <svg viewBox="-100 -80 470 514" preserveAspectRatio="xMidYMid meet" class="footer-logo-svg">
+              <polygon points="235.4,58.2 269.2,0.8 186.7,0.8"/><polygon points="186.7,0.8 235.4,58.2 188.8,82"/><polygon points="269.2,0.8 235.4,58.2 269.2,79.8"/><polygon points="232.3,145.3 235.4,58.2 188.8,82"/><polygon points="232.3,145.3 269.2,79.8 235.4,58.2"/><polygon points="188.8,82 232.3,145.3 185.5,131.1"/><polygon points="269.2,79.8 232.3,145.3 267.8,126.6"/><polygon points="185.5,131.1 188.8,196.8 232.3,145.3"/><polygon points="232.3,145.3 237.3,206.6 188.8,196.8"/><polygon points="232.3,145.3 267.8,202.7 237.3,206.6"/><polygon points="232.3,145.3 267.8,126.6 267.8,202.7"/><polygon points="188.8,196.8 203.3,290.1 184.9,255.9"/><polygon points="203.3,290.1 237.3,206.6 188.8,196.8"/><polygon points="203.3,290.1 267.8,202.7 237.3,206.6"/><polygon points="203.3,290.1 261.3,279.3 267.8,202.7"/><polygon points="145.3,285.4 184.9,255.9 135.6,315.1"/><polygon points="135.6,315.1 203.3,290.1 184.9,255.9"/><polygon points="203.3,290.1 261.3,279.3 236,323.5"/><polygon points="135.6,315.1 236,323.5 203.3,290.1"/><polygon points="135.6,315.1 180.7,353.2 236,323.5"/><polygon points="135.6,315.1 104.4,274 145.3,285.4"/><polygon points="135.6,315.1 73.6,290.1 104.4,274"/><polygon points="73.6,290.1 64.2,335.2 102.1,351.8"/><polygon points="73.6,290.1 102.1,351.8 135.6,315.1"/><polygon points="102.1,351.8 180.7,353.2 135.6,315.1"/><polygon points="46.1,273 77.8,250.5 104.4,274"/><polygon points="73.6,290.1 46.1,273 104.4,274"/><polygon points="46.1,273 64.2,335.2 73.6,290.1"/><polygon points="46.1,273 8.5,275.2 64.2,335.2"/><polygon points="46.1,273 0.8,251.5 8.5,275.2"/><polygon points="0.8,251.5 69.5,230 46.1,273"/><polygon points="46.1,273 69.5,230 77.8,250.5"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <nav class="footer-navigation" role="navigation">
+        <a href="/" class="footer-navigation-link-home">{{ site.author.name }}</a>
+        <a href="{{ site.social.twitter }}" class="footer-navigation-link-twitter" title="Follow {{ site.author.firstname }} on Twitter" target="_blank">
+          {% include svg/twitter.html %}
+        </a>
+        <a href="/about/" class="footer-navigation-link footer-navigation-link--first">About</a>
+        <a href="/work/" class="footer-navigation-link">Work</a>
+        <a href="/blog/" class="footer-navigation-link footer-navigation-link--blog">Blog</a>
+        <a href="/blog/feed.xml" class="footer-navigation-link footer-navigation-link--rss" title="RSS feed" target="_blank">{% include svg/rss.html %}</a>
+        <a href="/contact/" class="footer-navigation-link">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-column footer-column--right">
+      <p class="footer-copyright">{{ site.time | date: '%Y' }} &copy; <a href="/contact/">{{ site.author.name }}</a>. All rights reserved.</p>
+      <p class="footer-made-with">Made with {% include svg/heart-outline.html %} in Northwest Indiana/Chicago.</p>
+    </div>
+  </div>
+</footer>

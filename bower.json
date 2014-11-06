@@ -1,0 +1,13 @@
+{
+  "name": "jonsuh.com",
+  "dependencies": {},
+  "devDependencies": {
+    "normalize-css": "~3.0.2",
+    "bourbon": "~4.0.2",
+    "neat": "~1.7.0",
+    "jquery": "~2.1.1",
+    "jquery-form": "~3.46.0",
+    "jquery-validation": "~1.13.0",
+    "picturefill": "~2.1.0"
+  }
+}

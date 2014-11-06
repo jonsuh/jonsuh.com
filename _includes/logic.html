@@ -1,0 +1,19 @@
+{% strip %}
+
+{% assign url = page.url | remove : '/index.html' | append : '/' | replace: '//', '/' %}
+
+{% assign type = 'page' %}
+{% if url contains '/blog/' and url != '/blog/' %}
+  {% assign type = 'post' %}
+{% elsif url contains '/work/' and url != '/work/' %}
+  {% assign type = 'case-study' %}
+{% endif %}
+
+{% assign description = site.description %}
+{% if type == 'post' %}
+  {% assign description = page.excerpt | strip_html | strip_newlines %}
+{% elsif type == 'case-study' %}
+  {% assign description = page.introduction %}
+{% endif %}
+
+{% endstrip %}

@@ -1,0 +1,95 @@
+// ==================================================
+// Form
+// ==================================================
+.form {
+  @include clearfix;
+
+  input,
+  button {
+    @include appearance(none);
+    border: 2px solid $grey-lighter;
+    padding: em-calc(12 15);
+    display: block;
+    border-radius: 0;
+    outline: none;
+    @include transition-property(color, background, border);
+    @include transition-duration($transition-duration);
+    @include transition-timing-function(linear);
+  }
+
+  input {
+    width: 100%;
+
+    &:focus {
+      border-color: map-get($color-blue, "100");
+    }
+  }
+
+  button {
+    color: $white;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    background-color: $blue;
+    border-color: $blue;
+
+    &:focus,
+    &:hover {
+      background-color: map-get($color-blue, "300");
+      border-color: map-get($color-blue, "300");
+    }
+    &:active {
+      background-color: map-get($color-blue, "700");
+      border-color: map-get($color-blue, "700");
+    }
+  }
+}
+
+.form-field-group {
+  margin-bottom: em-calc(10);
+}
+
+input.has-error {
+  border-color: map-get($color-red, "700") !important;
+}
+
+input + .has-error {
+  $font-size: 13;
+
+  font-size: em-calc($font-size);
+  font-weight: 700;
+  color: $white;
+  background-color: map-get($color-red, "700");
+  padding: em-calc(6 15 8, $font-size);
+  margin: 0;
+  @include transition(background-color $transition-duration linear);
+}
+
+// Mailchimp specific
+// ==================================================
+// input.mce_inline_error {
+//   border-color: map-get($color-red, "700") !important;
+// }
+// div.mce_inline_error {
+//   $font-size: 13;
+
+//   font-size: em-calc($font-size);
+//   background-color: map-get($color-red, "700") !important;
+//   padding: em-calc(6 15 8, $font-size) !important;
+//   margin: 0 !important;
+//   @include transition(background-color $transition-duration linear);
+// }
+
+.mce-form {
+  overflow: hidden;
+}
+
+.mce-responses {
+  .response {
+    display: none;
+  }
+}
+
+.mce-security {
+  position: absolute;
+  left: -5000px;
+}

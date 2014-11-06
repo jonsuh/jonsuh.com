@@ -1,0 +1,56 @@
+// ==================================================
+// Variables
+// ==================================================
+$em-base : 16px !default;
+$rem-base: 16px !default;
+
+// Fonts
+// ==================================================
+$sans-serif: "RobotoDraft", "Roboto", Helvetica, Arial, sans-serif;
+$serif     : "freight-text-pro", "FreightText Pro", "FreightText", Georgia, "Times New Roman", serif;
+
+// Colors
+// ==================================================
+$black       : #000;
+$white       : #fff;
+
+$grey-lightest: #f4f5f6;
+$grey-lighter : #e6e7eb;
+$grey-light   : #bbbcc3;
+$grey         : #999aa1;
+$grey-dark    : #66676e;
+$grey-darker  : #33343b;
+$grey-darkest : #222326;
+
+$blue  : map-get($color-blue, "500");
+$brown : map-get($color-brown, "500");
+$cyan  : map-get($color-cyan, "500");
+$green : map-get($color-green, "500");
+$orange: map-get($color-orange, "500");
+$pink  : map-get($color-pink, "500");
+$purple: map-get($color-purple, "500");
+$red   : map-get($color-red, "500");
+$teal  : map-get($color-teal, "500");
+$yellow: map-get($color-yellow, "500");
+
+$color-social: (
+  "codepen"      : #66ce5b,
+  "codepen-green": #66ce5b,
+  "dribbble"     : #ea4c89,
+  "facebook"     : #3b5998,
+  "flickr"       : #ff0084,
+  "flickr-pink"  : #ff0084,
+  "flickr-blue"  : #0063dc,
+  "github"       : #333,
+  "github-grey"  : #333,
+  "github-blue"  : #4183c4,
+  "google"       : #dd4b39,
+  "instagram"    : #3f729b,
+  "linkedin"     : #0976b4,
+  "stackoverflow": #fe7a15,
+  "twitter"      : #55acee
+);
+
+// Transition
+// ==================================================
+$transition-duration       : .15s;

@@ -1,0 +1,250 @@
+// ==================================================
+// Base
+// ==================================================
+html,
+body {
+  background-color: $grey-darkest;
+  height: 100%;
+}
+
+#fb-root {
+  display: none;
+}
+
+// Silent classes
+// ==================================================
+$bumper-padding: 15;
+
+%bumper {
+  padding-left: em-calc($bumper-padding);
+  padding-right: em-calc($bumper-padding);
+}
+
+%bumper-v {
+  padding-top: em-calc($bumper-padding);
+  padding-bottom: em-calc($bumper-padding);
+}
+
+%container-override {
+  left: em-calc($bumper-padding * -1);
+  @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
+}
+
+@media #{$small-up} {
+  $bumper-padding: 25;
+
+  %bumper {
+    padding-left: em-calc($bumper-padding);
+    padding-right: em-calc($bumper-padding);
+  }
+
+  %bumper-v {
+    padding-top: em-calc($bumper-padding);
+    padding-bottom: em-calc($bumper-padding);
+  }
+
+  %container-override-small-up {
+    left: em-calc($bumper-padding * -1);
+    @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
+  }
+}
+
+@media #{$medium-up} {
+  $bumper-padding: 50;
+
+  %bumper {
+    padding-left: em-calc($bumper-padding);
+    padding-right: em-calc($bumper-padding);
+  }
+
+  %bumper-v {
+    padding-top: em-calc($bumper-padding);
+    padding-bottom: em-calc($bumper-padding);
+  }
+
+  %container-override-medium-up {
+    left: em-calc($bumper-padding * -1);
+    @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
+  }
+}
+
+%content-overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+%font-smoothing {
+  @include font-smoothing;
+}
+
+%list-reset {
+  @include list-reset;
+}
+
+// Grid classes
+// ==================================================
+%max-span-columns-7 {
+  @include max-span-columns(7);
+}
+
+// Layout classes
+// ==================================================
+.container {
+  @extend %bumper;
+  @include outer-container;
+  position: relative;
+}
+
+$section-padding: 25;
+
+.section {
+  background-color: $white;
+  padding-top: em-calc($section-padding);
+  padding-bottom: em-calc($section-padding);
+  @include clearfix;
+}
+
+%section-break {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  @include clearfix;
+}
+
+.section-break {
+  @extend %section-break;
+  padding-top: em-calc($section-padding);
+}
+
+.section-break-half {
+  @extend %section-break;
+  padding-top: em-calc($section-padding / 2);
+}
+
+@media #{$small-up} {
+  $section-padding: 40;
+
+  .section {
+    padding-top: em-calc($section-padding);
+    padding-bottom: em-calc($section-padding);
+  }
+
+  .section-break {
+    padding-top: em-calc($section-padding);
+  }
+
+  .section-break-half {
+    padding-top: em-calc($section-padding / 2);
+  }
+}
+
+@media #{$medium-up} {
+  $section-padding: 60;
+
+  .section {
+    padding-top: em-calc($section-padding);
+    padding-bottom: em-calc($section-padding);
+  }
+
+  .section-break {
+    padding-top: em-calc($section-padding);
+  }
+
+  .section-break-half {
+    padding-top: em-calc($section-padding / 2);
+  }
+}
+
+// Presentational classes
+// ==================================================
+div {
+  &.flush {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.flush-top {
+    padding-top: 0;
+  }
+
+  &.flush-bottom {
+    padding-bottom: 0;
+  }
+}
+
+p,
+ol, ul, li {
+  &.flush {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.flush-top {
+    margin-top: 0;
+  }
+
+  &.flush-bottom {
+    margin-bottom: 0;
+  }
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.paragraph {
+  p {
+    text-indent: $paragraph-indent;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    + p {
+      text-indent: 0;
+    }
+  }
+
+  p {
+    + h1 {
+      margin-top: .38em;
+    }
+    + h2 {
+      margin-top: .6em;
+    }
+    + h3 {
+      margin-top: .62em;
+    }
+    + h4 {
+      margin-top: .8em;
+    }
+    + h5 {
+      margin-top: .88em;
+    }
+  }
+}
+
+.quote {
+  p {
+    line-height: 1.3em;
+  }
+}
+
+// Elements
+// ==================================================
+a {
+  @include transition-property(color, background, border);
+  @include transition-duration($transition-duration);
+  @include transition-timing-function(linear);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

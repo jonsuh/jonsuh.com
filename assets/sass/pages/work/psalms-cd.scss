@@ -1,0 +1,226 @@
+// ==================================================
+// Psalms CD
+// ==================================================
+$project-color          : #708baa;
+$project-color-secondary: #16243c;
+
+// Menu Item
+// ==================================================
+.work-menu-item--psalms-cd {
+  background-color: $project-color-secondary !important;
+  @include retina-background-image("work/psalms-cd/thumbnail.jpg");
+  &:after {
+    background-color: rgba($project-color-secondary, 0.5);
+    @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
+  }
+
+  @include work-item-introduction(225, 270, 290, 350);
+
+  .work-item-link:hover {
+    color: $project-color;
+  }
+}
+
+// Hero
+// ==================================================
+.hero--psalms-cd {
+  background-color: $project-color;
+  background-position: top center;
+  @include retina-background-image("work/psalms-cd/thumbnail.jpg");
+  @media #{$small-up} {
+    height: em-calc(233);
+  }
+  @media #{$medium-up} {
+    height: em-calc(266);
+  }
+  @media #{$large-up} {
+    height: em-calc(300);
+    background-image: image-url("work/psalms-cd/thumbnail@2x.jpg");
+  }
+}
+
+.psalms-cd-logo {
+  max-width: em-calc(200);
+  @media #{$little-up} {
+    max-width: em-calc(250);
+  }
+  @media #{$small-up} {
+    max-width: 100%;
+  }
+}
+
+.psalms-cd {
+  // Brand
+  // ==================================================
+  &-brand-description {
+    @extend %max-span-columns-7;
+  }
+
+  &-brand-logo {
+    text-align: center;
+    @include max-span-columns(10);
+  }
+
+  &-brand-logo-container {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    cursor: ew-resize;
+
+    img {
+      display: block;
+    }
+  }
+
+  &-brand-logo-overlay {
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &-brand-logo-overlay-image {
+    width: 200%;
+    max-width: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media #{$medium-up} {
+    &-brand-logo {
+      margin-top: em-calc(20);
+    }
+  }
+
+  @media #{$screen} and (min-width: em-calc(850)) {
+    &-brand-logo {
+      margin-top: em-calc(30);
+    }
+  }
+
+  // Product
+  // ==================================================
+  &-product-section {
+    @extend .section;
+    background-color: $project-color-secondary;
+  }
+
+  &-product {
+    @extend %max-span-columns-7;
+
+    > h2 {
+      color: $white;
+    }
+
+    > p {
+      color: $grey;
+    }
+  }
+
+  &-product-container,
+  &-product-jacket {
+    position: relative;
+  }
+
+  &-product-container {
+    @extend %max-span-columns-7;
+    margin-top: em-calc(20);
+    overflow: hidden;
+    @media #{$small-up} {
+      margin-top: em-calc(30);
+    }
+  }
+
+  &-product-jacket,
+  &-product-disc {
+    width: 70%;
+    cursor: pointer;
+  }
+
+  &-product-jacket {
+    z-index: 2;
+  }
+
+  &-product-disc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    @include transform(translate3d(-30%, 0, 0) rotate(-180deg));
+    @include transition(transform .8s ease);
+  }
+
+  &-product-disc.is-animated {
+    @include transform(translate3d(0, 0, 0) rotate(0));
+  }
+
+  // Website
+  // ==================================================
+  &-website-description {
+    @extend %max-span-columns-7;
+  }
+
+  &-website-screenshot {
+    @include max-span-columns(10);
+    text-align: center;
+    margin-top: em-calc(20);
+    margin-bottom: em-calc(20);
+  }
+
+  &-website-player-purchase {
+    @extend %max-span-columns-7;
+  }
+
+  &-website-mobile-image {
+    padding-top: em-calc(10);
+  }
+
+  @media #{$screen} and (min-width: em-calc(850)) {
+    &-website-player-purchase-image {
+      @include span-columns(8);
+    }
+
+    &-website-player-purchase {
+      @include span-columns(4);
+    }
+  }
+
+  &-website-mobile {
+    @include max-span-columns(9);
+  }
+
+  &-website-mobile-description {
+    
+  }
+
+  &-website-mobile-image {
+    text-align: center;
+  }
+
+  @media #{$medium-up} {
+    &-website-mobile-description {
+      @include span-columns(5);
+      padding-top: em-calc(45);
+    }
+
+    &-website-mobile-image {
+      @include span-columns(7);
+      text-align: left;
+      padding-top: em-calc(25);
+    }
+  }
+
+  @media #{$large-up} {
+    &-website-mobile-description {
+      padding-top: em-calc(80);
+    }
+
+    &-website-mobile-image {
+      padding-top: em-calc(40);
+    }
+  }
+}

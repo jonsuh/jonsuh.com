@@ -1,0 +1,41 @@
+---
+
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url | prepend: site.url_protocol }}</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+{% strip %}
+{% for page in site.pages %}
+  {% assign url = page.url | remove : 'index.html' | prepend: site.url | prepend: site.url_protocol %}
+  {% if url contains '/page/' or url contains '.xml' or url contains '404' %}{% else %}
+    <url>
+      <loc>{{ url }}</loc>
+      {% if page.lastmod %}<lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>{% endif %}
+      <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.5{% endif %}</priority>
+    </url>
+  {% endif %}
+{% endfor %}
+
+{% assign works = site.work | sort: 'date' | reverse %}
+{% for work in works %}
+  <url>
+    <loc>{{ work.url | prepend: site.url | prepend: site.url_protocol }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{% endfor %}
+
+{% for page in site.posts %}
+  <url>
+    <loc>{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{% endfor %}
+{% endstrip %}
+</urlset>

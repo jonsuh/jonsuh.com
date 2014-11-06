@@ -1,0 +1,94 @@
+// ==================================================
+// 404
+// ==================================================
+.hero--errors-404 {
+  height: webkit-calc(100% - #{em-calc(60)});
+  height: calc(100% - #{em-calc(60)});
+  max-height: em-calc(500);
+  background-image: image-url("dawson.jpg");
+  &:before {
+    background-color: rgba($blue, 0.6);
+    @include animation(errors-404 10s linear infinite);
+  }
+}
+
+@include keyframes(errors-404) {
+  0%   {background-color: rgba($red, 0.6)}
+  7%   {background-color: rgba($pink, 0.6)}
+  14%  {background-color: rgba($purple, 0.6)}
+  21%  {background-color: rgba(map-get($color-purple-deep, "500"), 0.6)}
+  28%  {background-color: rgba(map-get($color-blue-deep, "500"), 0.6)}
+  35%  {background-color: rgba($blue, 0.6)}
+  42%  {background-color: rgba($cyan, 0.6)}
+  49%  {background-color: rgba($teal, 0.6)}
+  56%  {background-color: rgba($green, 0.6)}
+  63%  {background-color: rgba(map-get($color-green-light, "500"), 0.6)}
+  70%  {background-color: rgba(map-get($color-yellow-light, "500"), 0.6)}
+  77%  {background-color: rgba($yellow, 0.6)}
+  84%  {background-color: rgba($orange, 0.6)}
+  91%  {background-color: rgba(map-get($color-orange-deep, "500"), 0.6)}
+  100% {background-color: rgba($red, 0.6)}
+}
+
+// Content
+// ==================================================
+.errors-content {
+  @extend .container;
+  position: relative;
+  z-index: 2;
+}
+
+.errors-content,
+.errors-title,
+.errors-subtitle,
+.errors-description {
+  color: $white;
+}
+
+.errors-title {
+  font-size: em-calc(40);
+  @media #{$small-up} {
+    font-size: em-calc(50);
+  }
+  @media #{$medium-up} {
+    font-size: em-calc(60);
+  }
+}
+
+.errors-container {
+  @include max-span-columns(3.2);
+  @media #{$small-up} {
+    @include max-span-columns(3.5);
+  }
+  @media #{$medium-up} {
+    @include max-span-columns(3.7);
+  }
+  @media #{$large-up} {
+    max-width: inherit;
+  }
+}
+
+.errors-subtitle {
+  
+}
+
+.errors-description {
+  margin-top: em-calc(20);
+
+  a {
+    color: $grey-darker;
+    background-color: $white;
+    border: 0;
+    padding-left: em-calc(5);
+    padding-right: em-calc(5);
+    margin-right: em-calc(3);
+    &:hover {
+      color: $white;
+      background-color: $grey-darker;
+    }
+  }
+}
+
+.errors-audio {
+  display: none;
+}

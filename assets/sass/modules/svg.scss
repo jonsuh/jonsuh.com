@@ -1,0 +1,18 @@
+// ==================================================
+// SVG
+// ==================================================
+%svg-overflow {
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+.svg-icon {
+  @extend %svg-overflow;
+}
+
+a .svg-icon {
+  path {
+    @include transition(fill $transition-duration linear);
+  }
+}

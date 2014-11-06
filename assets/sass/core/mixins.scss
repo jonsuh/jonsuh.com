@@ -1,0 +1,132 @@
+// ==================================================
+// Mixins
+// ==================================================
+@mixin container-override-reset {
+  width: auto;
+  left: inherit;
+}
+
+// Em to Pixel (Thanks ZURB)
+// ==================================================
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-em($value, $base-value: $em-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1em;
+  @if ($value == 0em) { $value: 0; } // Turn 0em into 0
+  @return $value;
+}
+
+@function em-calc($values, $base-value: $em-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-em(nth($values, 1), $base-value); }
+
+  $emValues: ();
+  @for $i from 1 through $max {
+    $emValues: append($emValues, convert-to-em(nth($values, $i), $base-value));
+  }
+  @return $emValues;
+}
+
+// Font smoothing
+// ==================================================
+@mixin font-smoothing {
+  text-rendering         : optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing : antialiased;
+}
+
+// Image URL
+// ==================================================
+$image-url-path: "../images/" !default;
+@function image-url($url) {
+  @return url($image-url-path + $url);
+}
+
+// List reset
+// ==================================================
+@mixin list-reset {
+  line-height: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Max span columns
+// ==================================================
+@mixin max-span-columns($columns, $center: true) {
+  $msc-width: $columns * $column + ($columns - 1) * $gutter;
+
+  max-width: em-calc($msc-width);
+  @if $center == true {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Ranges (Thanks ZURB)
+// ==================================================
+@function lower-bound($range){
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range,1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}
+
+// Rem Calc (Thanks ZURB)
+// ==================================================
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+// Retina background image
+// ==================================================
+@mixin retina-background-image($rbi-image_path, $rbi-small-up: true) {
+  background-image: image-url("#{$rbi-image_path}");
+
+  $rbi-extension_index: str-length($rbi-image_path) - 3;
+  $rbi-retina-path    : str-insert($rbi-image_path, "@2x", $rbi-extension_index);
+
+  @media #{$retina} {
+    @if ($rbi-small-up == true) {
+      @media #{$small-up} {
+        background-image: image-url("#{$rbi-retina-path}");
+      }
+    } @else {
+      background-image: image-url("#{$rbi-retina-path}");
+    }
+  }
+}
+
+// z-index
+// ==================================================
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

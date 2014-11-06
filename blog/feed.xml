@@ -1,0 +1,25 @@
+---
+
+---
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.name | xml_escape }}</title>  
+    <link>{{ site.url | prepend: site.url_protocol }}</link>
+    <description>{{ site.description }}</description>
+    <copyright>Copyright &amp;copy; {{ site.time | date: "%Y" }}, {{ site.author.name }}. All rights reserved.</copyright>
+    <language>en-us</language>
+    <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+    {% for post in site.posts limit:20 %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</link>
+        <author>{{ site.author.name }}</author>
+        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+        <description>{{ post.excerpt | strip_html | xml_escape }}</description>
+        <guid>{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

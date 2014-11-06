@@ -1,0 +1,33 @@
+---
+layout: default
+title: Archives
+permalink: /blog/archives/
+sitemap:
+  priority: 0.7
+---
+<div class="section">
+  <div class="post post--posts">
+    <section class="post-main">
+      {% for post in site.posts %}{% strip %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture year_next %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% endstrip %}{% if year != year_next %}
+          {% if forloop.index != 1 %}</ul>{% endif %}
+          <h2>{{ post.date | date: '%Y' }}</h2>
+          <ul class="post-archives">
+        {% endif %}
+        <li class="post-archives-item"><a href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-archives-link"><span class="post-meta post-meta--archives">{{ post.date | date: '%B %e' }}</span>{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </section>
+    <aside class="post-sidebar">
+      <hr class="section-break-half">
+
+      {% include sidebar/hey.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/newsletter.html %}
+    </aside>
+  </div>
+</div>

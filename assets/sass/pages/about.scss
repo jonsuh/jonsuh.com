@@ -1,0 +1,311 @@
+// ==================================================
+// About
+// ==================================================
+.hero--about {
+  background-color: $green;
+  @include retina-background-image("about/jonathan-suh.jpg");
+  @media #{$large-up} {
+    background-image: image-url("about/jonathan-suh@2x.jpg");
+  }
+}
+
+.about-main,
+.about-sidebar {
+  @include max-span-columns(7);
+}
+
+// Introduction
+// ==================================================
+.about-introduction {
+  @extend .paragraph;
+}
+
+// Mosaic
+// ==================================================
+.about-mosaic {
+  margin-bottom: $paragraph-margin-bottom;
+  position: relative;
+  @include clearfix;
+}
+
+.about-mosaic-tile {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  float: left;
+}
+
+.about-mosaic-tile-proportion {
+  width: 100%;
+  display: block;
+}
+
+.about-mosaic-tile--jonathan-becky {
+  width: 60%;
+  @include retina-background-image("about/jonathan-becky.jpg");
+}
+
+.about-mosaic-tile--jonathan-silas,
+.about-mosaic-tile--becky-silas {
+  width: 50%;
+}
+
+.about-mosaic-tile--jonathan-silas {
+  @include retina-background-image("about/jonathan-silas.jpg");
+}
+
+.about-mosaic-tile--becky-silas {
+  @include retina-background-image("about/becky-silas.jpg");
+}
+
+.about-mosaic-tile--silas-katelyn {
+  width: 40%;
+  @include retina-background-image("about/silas-katelyn.jpg");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+// Find me
+// ==================================================
+.about-find-me {
+  
+}
+
+.about-social-link {
+  &:hover {
+    border-color: $grey-lighter;
+  }
+
+  &--codepen {
+    border-color: map-get($color-social, "codepen");
+    &:hover {
+      color: map-get($color-social, "codepen");
+    }
+  }
+
+  &--dribbble {
+    border-color: map-get($color-social, "dribbble");
+    &:hover {
+      color: map-get($color-social, "dribbble");
+    }
+  }
+
+  &--flickr {
+    border-color: map-get($color-social, "flickr");
+    &:hover {
+      color: map-get($color-social, "flickr");
+    }
+  }
+
+  &--github {
+    border-color: map-get($color-social, "github");
+    &:hover {
+      color: map-get($color-social, "github");
+    }
+  }
+
+  &--google {
+    border-color: map-get($color-social, "google");
+    &:hover {
+      color: map-get($color-social, "google");
+    }
+  }
+
+  &--instagram {
+    border-color: map-get($color-social, "instagram");
+    &:hover {
+      color: map-get($color-social, "instagram");
+    }
+  }
+
+  &--stackoverflow {
+    border-color: map-get($color-social, "stackoverflow");
+    &:hover {
+      color: map-get($color-social, "stackoverflow");
+    }
+  }
+
+  &--twitter {
+    border-color: map-get($color-social, "twitter");
+    &:hover {
+      color: map-get($color-social, "twitter");
+    }
+  }
+}
+
+// Colophon
+// ==================================================
+.about-colophon {
+
+}
+
+// People
+// ==================================================
+.sidebar-list--about-people {
+  .sidebar-list-item {
+    display: inline-block;
+
+    &:after {
+      content: ", ";
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+// Location
+// ==================================================
+.section--about-location {
+  background-color: $pink;
+}
+
+.about-location {
+  @include max-span-columns(3);
+}
+
+.about-location-image-container {
+  width: em-calc(245);
+  height: em-calc(254);
+  display: inline-block;
+  position: relative;
+}
+
+.about-location-image {
+  width: 100%;
+  display: block;
+}
+
+.about-location-image-path {
+  fill: map-get($color-pink, "400");
+}
+
+.about-location-pin,
+.about-location-beacon {
+  display: inline-block;
+  position: absolute;
+}
+
+.about-location-pin {
+  $pin-size: 14;
+  width: em-calc($pin-size);
+  height: em-calc($pin-size);
+  background-color: map-get($color-pink, "200");
+  border: 2px solid $pink;
+  border-radius: em-calc($pin-size);
+  top: em-calc(32);
+  left: em-calc(122);
+}
+
+.about-location-beacon {
+  $beacon-size: 50;
+  width: em-calc($beacon-size);
+  height: em-calc($beacon-size);
+  border-radius: em-calc($beacon-size);
+  top: em-calc(14);
+  left: em-calc(104);
+  background-color: $white;
+  opacity: 0.5;
+  @include animation(about-location-beacon 2s linear infinite);
+  @include transform(scale3d(.25,.25,.25));
+}
+
+@include keyframes(about-location-beacon) {
+  0% {
+    @include transform(scale3d(.25,.25,.25));
+    opacity: 0.5;
+  }
+  25% {
+    @include transform(scale3d(.7,.7,.7));
+    opacity: 0.5;
+  }
+  50% {
+    @include transform(scale3d(1,1,1));
+    opacity: 0;
+  }
+  100% {
+    @include transform(scale3d(.25,.25,.25));
+    opacity: 0;
+  }
+}
+
+// Sidebar
+// ==================================================
+.about-sidebar-break {
+  width: 100%;
+  margin-top: em-calc(165);
+  display: none;
+}
+
+// Responsive
+// ==================================================
+@media #{$medium-up} {
+  $about-mosaic-tile-gutter: em-calc(15);
+
+  .about-mosaic {
+    width: 110%;
+    left: -5%;
+  }
+
+  .about-mosaic-tile--jonathan-becky {
+    // @include calc(width, 41% - #{$about-mosaic-tile-gutter});
+    width: -webkit-calc(41% - #{$about-mosaic-tile-gutter});
+    width: calc(41% - #{$about-mosaic-tile-gutter});
+    margin-right: $about-mosaic-tile-gutter;
+  }
+
+  .about-mosaic-tile--jonathan-silas,
+  .about-mosaic-tile--becky-silas {
+    // @include calc(width, 36% - #{$about-mosaic-tile-gutter});
+    width: -webkit-calc(36% - #{$about-mosaic-tile-gutter});
+    width: calc(36% - #{$about-mosaic-tile-gutter});
+    margin-right: $about-mosaic-tile-gutter;
+  }
+
+  .about-mosaic-tile--jonathan-silas {
+    margin-bottom: $about-mosaic-tile-gutter;
+  }
+
+  .about-mosaic-tile--silas-katelyn {
+    width: 23%;
+  }
+
+  .section-break-half--after-about-mosaic {
+    display: none;
+  }
+}
+
+@media #{$large-up} {
+  .about-main {
+    @include span-columns(7.5);
+  }
+
+  .about-sidebar {
+    @include span-columns(4);
+    @include shift(.5);
+  }
+
+  .about-mosaic {
+    width: 173%;
+    @include clearfix;
+  }
+
+  .about-sidebar-break {
+    display: block;
+  }
+
+  .sidebar-list--about-people {
+    .sidebar-list-item {
+      display: inherit;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

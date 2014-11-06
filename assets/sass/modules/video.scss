@@ -1,0 +1,53 @@
+// ==================================================
+// Flex Video
+// ==================================================
+$video-padding-top              : 25;
+$video-padding-bottom           : 67.5%;
+$video-widescreen-padding-bottom: 56.34%;
+
+@mixin video-container {
+  position: relative;
+  padding-top: em-calc($video-padding-top);
+  padding-bottom: $video-padding-bottom;
+  height: 0;
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  &.widescreen {
+    padding-bottom: $video-widescreen-padding-bottom;
+  }
+
+  &.vimeo {
+    padding-top: 0;
+  }
+
+  iframe,
+  object,
+  embed,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video {
+  font-size: 1em;
+  @include video-container;
+
+  @media #{$small-up} {
+    $font-size: 17;
+
+    font-size: em-calc($font-size);
+    padding-top: em-calc($video-padding-top, $font-size);
+  }
+
+  @media #{$medium-up} {
+    $font-size: 18;
+
+    font-size: em-calc($font-size);
+    padding-top: em-calc($video-padding-top, $font-size);
+  }
+}

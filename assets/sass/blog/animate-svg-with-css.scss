@@ -1,0 +1,80 @@
+@import "bourbon";
+@import "../core/colors";
+@import "../core/variables";
+
+.ufo-building {
+  width: 100%;
+  height: auto;
+}
+
+.ufo-building-float {
+  @include animation(ufo-building-float 5s linear infinite);
+}
+
+.ufo-big {
+  @include animation(ufo-big 5s linear infinite);
+}
+
+.ufo-small {
+  @include animation(ufo-small 5s linear infinite);
+}
+
+.ufo-big-lights-light {
+  @include animation(ufo-big-lights 2.5s ease infinite);
+}
+
+.ufo-big-lights-light--2 {
+  @include animation-delay(.2s);
+}
+
+.ufo-big-lights-light--3 {
+  @include animation-delay(.4s);
+}
+
+.ufo-big-lights-light--4 {
+  @include animation-delay(.6s);
+}
+
+.ufo-big-lights-light--5 {
+  @include animation-delay(.8s);
+}
+
+.building-flames {
+  path {
+    fill: $red;
+  }
+  @include animation(building-flames .15s ease infinite);
+  @include transform-origin(center top);
+}
+
+@include keyframes(ufo-building-float) {
+  0% {@include transform(translateY(0));}
+  25% {@include transform(translateY(em-calc(-25)));}
+  50% {@include transform(translateY(0));}
+  75% {@include transform(translateY(em-calc(25)));}
+  100% {@include transform(translateY(0));}
+}
+
+@include keyframes(ufo-big) {
+  0% {opacity: 0}
+  15%, 70% {opacity: 1}
+  85%, 100% {opacity: 0}
+}
+
+@include keyframes(ufo-small) {
+  0%, 10% {opacity: 0}
+  25%, 85% {opacity: 1}
+  100% {opacity: 0}
+}
+
+@include keyframes(ufo-big-lights) {
+  0% {fill: #000}
+  20% {fill: $yellow}
+  40%, 100% {fill: #000}
+}
+
+@include keyframes(building-flames) {
+  0% {@include transform(scale(1,1));}
+  50% {@include transform(scale(1,1.2));}
+  100% {@include transform(scale(1,1));}
+}
