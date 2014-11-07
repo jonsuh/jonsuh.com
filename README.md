@@ -1,6 +1,6 @@
 ## Jonathan Suh
 
-In the spirit of sharing, I’ve decided to open source my website [jonsuh.com](https://jonsuh.com). Now you know all of my secrets.
+In the spirit of sharing, I’ve decided to open source my website [jonsuh.com](https://jonsuh.com/?utm_source=jonsuh&utm_medium=github&utm_content=jonsuh.com.git). Now you know all of my secrets.
 
 ## Requirements
 
