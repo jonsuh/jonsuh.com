@@ -105,7 +105,7 @@ encoding:     "utf-8"
 # ============================
 # Filtering
 # ============================
-# show_drafts: null
+show_drafts: true
 # limit_posts: 0
 future:      true
 # unpublished: false

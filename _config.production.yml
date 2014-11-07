@@ -8,5 +8,6 @@ cdn_url: ""
 
 paginate   : 10
 limit_posts: 0
+show_drafts: false
 future     : false
 unpublished: false
