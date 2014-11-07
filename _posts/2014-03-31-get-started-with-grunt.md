@@ -188,7 +188,7 @@ module.exports = function(grunt) {
 };
 {% endhighlight %}
 
-All of your Grunt code needs to be inside `modules.export = function(grunt) {...};`
+All of your Grunt code needs to be inside `module.exports = function(grunt) {...};`
 
 **Configuring tasks**  
 Tasks are configured inside `grunt.initConfig({...});` like such:
