@@ -14,7 +14,7 @@ With more and more people accessing the internet with mobile devices, it’s so 
 
 Resize your browser, view this page on your mobile device, or change your device orientation (landscape, portrait). You’ll see that the video resizes proportionally, not to mention the rest of this site, according to the size of your browser or orientation of your device.
 
-<div class="flex-video widescreen"><iframe src="http://www.youtube.com/embed/wN3gueLT0D8?showinfo=0" frameborder="0" width="560" height="315"></iframe></div>
+<div class="flex-video widescreen"><iframe src="//www.youtube.com/embed/wN3gueLT0D8?showinfo=0" frameborder="0" width="560" height="315"></iframe></div>
 
 <p><a href="{{ site.labs_url }}/responsive-video-embed/" class="button button--labs" target="_blank">See the <b>Demo</b></a></p>
 
