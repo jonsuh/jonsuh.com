@@ -212,7 +212,7 @@
     letter-spacing: 0.05em;
   }
 
-  @media #{$medium-up} {
+  .home-hero-disclaimer {
     bottom: em-calc(35);
   }
 }
