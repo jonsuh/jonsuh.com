@@ -15,6 +15,17 @@ Utility = {
         });
       });
     }
+
+    var jsAnchors = document.querySelectorAll(".js-anchor");
+    if (jsAnchors) {
+      [].forEach.call(jsAnchors, function(anchor) {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+
+          Utility.anchorScrollTo(this);
+        });
+      });
+    }
   },
 
   /**
@@ -132,16 +143,6 @@ Utility = {
     return /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/.test(email);
   },
 
-  // anchorScrollTo: function(thisObj, thatObj) {
-  //   var thisOffset = thisObj.offset(),
-  //       thatOffset = thatObj.offset(),
-  //       offsetDiff = Math.abs(thatOffset.top - thisOffset.top);
-
-  //   Utility.scrollTo(0, 300, function(t) {
-  //     return t <.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1; // easeInOutCubic
-  //   });
-  // },
-
   /**
    * Animate scroll to Y position of page
    *
@@ -181,6 +182,22 @@ Utility = {
     }
  
     requestAnimationFrame(scroll);
+  },
+
+  /**
+   * Anchor animate scroll to Y position of element
+   *
+   * @param {object} obj - The element to scroll to
+   */
+  anchorScrollTo: function(thisObj) {
+    var id = thisObj.getAttribute("href"),
+        that = document.querySelector(id),
+        rect = that.getBoundingClientRect(),
+        offset = rect.top + document.body.scrollTop;
+
+    Utility.scrollTo(offset, 300, function(t) {
+      return t <.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1; // easeInOutCubic
+    });
   },
 
   /**
