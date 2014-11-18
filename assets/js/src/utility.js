@@ -249,6 +249,24 @@ Utility = {
   },
 
   /**
+   * Open a centered popup window
+   *
+   * @param {string} url - The URL of the popup
+   * @param {int} width  - The width of the popup
+   * @param {int} height - The height of the popup
+   */
+  windowOpen: function(url, width, height) {
+    var left = (screen.width / 2) - (width / 2);
+    var top = (screen.height / 2) - (height / 2);
+
+    window.open(
+      url,
+      "",
+      "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+    );
+  },
+
+  /**
    * Check if browser is Chrome on iOS
    *
    */
