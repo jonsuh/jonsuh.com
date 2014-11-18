@@ -55,11 +55,7 @@ Social = {
   googleShare: function(e) {
     e.preventDefault();
 
-    window.open(
-      this.getAttribute("href"),
-      "",
-      "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=600,height=360"
-    );
+    Utility.windowOpen(this.getAttribute("href"), 600, 360);
   },
 
   twitterLoad: function() {
