@@ -1,0 +1,52 @@
+// ==================================================
+// Chart
+// ==================================================
+.chart {
+  margin-bottom: $paragraph-margin-bottom;
+  @include clearfix;
+
+  .chart-legend {
+    margin-top: $paragraph-margin-bottom - em-calc(10);
+  }
+}
+
+.chart--no-labels {
+  .chart-legend {
+    margin-top: em-calc(-10);
+  }
+}
+
+.chart-legend {
+  text-align: center;
+  @include clearfix;
+}
+
+.chart-legend-item,
+.chart-legend-item-color,
+.chart-legend-item-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.chart-legend-item {
+  margin: 0 em-calc(5);
+}
+
+.chart-legend-item-color {
+  width: em-calc(14);
+  height: em-calc(14);
+  margin-right: em-calc(4);
+  border-radius: em-calc(14);
+}
+
+.chart-legend-item-title {
+  font-size: em-calc(11);
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+@media #{$small-up} {
+  .chart-legend-item-title {
+    font-size: em-calc(12);
+  }
+}
