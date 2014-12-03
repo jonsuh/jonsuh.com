@@ -5,6 +5,7 @@
     "normalize-css": "~3.0.2",
     "bourbon": "~4.0.2",
     "neat": "~1.7.0",
-    "picturefill": "~2.1.0"
+    "picturefill": "~2.1.0",
+    "chartjs": "~1.0.1-beta.4"
   }
 }
