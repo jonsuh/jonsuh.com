@@ -57,6 +57,12 @@ module.exports = function(grunt) {
             'assets/js/src/social.js',
             'assets/js/src/work.js',
             'assets/js/src/app.js'
+          ],
+          'assets/js/blog/2014-12-03.js': ['assets/js/src/blog/2014-12-03.js'],
+          'assets/js/chart.js': [
+            'bower_components/chartjs/src/Chart.Core.js',
+            'bower_components/chartjs/src/Chart.Line.js',
+            'assets/js/vendor/Chart.legend.js'
           ]
         }
       }
@@ -142,7 +148,9 @@ module.exports = function(grunt) {
       },
       production: {
         files: {
-          'assets/js/jonsuh.js': ['assets/js/jonsuh.js']
+          'assets/js/jonsuh.js': ['assets/js/jonsuh.js'],
+          'assets/js/chart.js': ['assets/js/chart.js'],
+          'assets/js/blog/2014-12-03.js': ['assets/js/blog/2014-12-03.js']
         }
       },
     },
