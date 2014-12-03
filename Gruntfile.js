@@ -233,7 +233,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', ['shell:caniuse','newer:copy:normalize', 'sass:build', 'concat:build', 'jekyll:build']);
+  grunt.registerTask('build', ['newer:copy:normalize', 'sass:build', 'concat:build', 'jekyll:build']);
   grunt.registerTask('default', ['build', 'concurrent:watch']);
 
   grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer', 'concat:build', 'cssmin:production', 'uglify:production', 'jekyll:production'])
