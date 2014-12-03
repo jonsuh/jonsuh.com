@@ -58,12 +58,12 @@ module.exports = function(grunt) {
             'assets/js/src/work.js',
             'assets/js/src/app.js'
           ],
-          'assets/js/blog/2014-12-03.js': ['assets/js/src/blog/2014-12-03.js'],
           'assets/js/chart.js': [
             'bower_components/chartjs/src/Chart.Core.js',
             'bower_components/chartjs/src/Chart.Line.js',
             'assets/js/vendor/Chart.legend.js'
-          ]
+          ],
+          'assets/js/blog/https-increased-organic-search-impressions-by-144-percent.js': ['assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js'],
         }
       }
     },
@@ -147,11 +147,17 @@ module.exports = function(grunt) {
         report: 'gzip'
       },
       production: {
-        files: {
-          'assets/js/jonsuh.js': ['assets/js/jonsuh.js'],
-          'assets/js/chart.js': ['assets/js/chart.js'],
-          'assets/js/blog/2014-12-03.js': ['assets/js/blog/2014-12-03.js']
-        }
+        files: [{
+          expand: true,
+          cwd: 'assets/js/',
+          src: [
+            '**/*.js',
+            '!src/**/*.js',
+            '!vendor/**/*.js'
+          ],
+          dest: 'assets/js/',
+          ext: '.js'
+        }]
       },
     },
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HTTPS Increased my Organic Search Impressions by 144%
-date: "2014-12-03 09:30:00"
+title: HTTPS Increased Organic Search Impressions by 144%
+date: "2014-12-04 07:50:00"
 excerpt: A few months ago, I launched the redesign of my website. I enabled HTTPS a week later, and since then I’ve noticed a significant increase in organic searches—both impressions and clicks. Impressions went up by 144% and clicks by 94%.
 comments: false
 tags:
@@ -9,7 +9,7 @@ tags:
 - SEO
 js:
 - chart.js
-- blog/2014-12-03.js
+- blog/https-increased-organic-search-impressions-by-144-percent.js
 ---
 
 A few months ago, I launched the redesign of my website. I enabled HTTPS a week later, and since then I’ve noticed a significant increase in organic searches—both impressions and clicks.
