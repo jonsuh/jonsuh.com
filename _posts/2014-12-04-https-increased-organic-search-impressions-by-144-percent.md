@@ -68,7 +68,7 @@ I was also diligent about making sure my certificate was installed properly. I u
 
 ![](/assets/images/blog/2014/https-increased-my-organic-search-impressions-by-144-percent/ssl-test.png)
 
-When I had first installed the certificate my rating was an F, but the tool to informed me of the vulnerabilities, so I was able to do some homework and correct them. I’d be curious to know if security level and configuration play a role in determining search ranking.
+When I had first installed the certificate, my rating was an F, but the tool informed me of the vulnerabilities, so I was able to do some homework and correct them. I’d be curious to know if security level and configuration play a role in determining search ranking.
 
 ## Securing your site with HTTPS
 
