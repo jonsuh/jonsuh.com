@@ -62,7 +62,7 @@ For a few reasons, actually.
 
 Reasons 1 and 3 played the biggest role as to why I enabled HTTPS, but frankly I didn’t expect it to boost my rankings.
 
-Either I’m part of the “fewer than 1% of global queries” category or it’s possible that since Google published that post, they have increased HTTPS rankings. (Or I’m totally wrong and there’s another reason why those numbers have gone up)
+Either I’m part of the “fewer than 1% of global queries” category or since Google published that post, they have increased HTTPS rankings. (Maybe a combination of both, or I’m totally wrong and there’s another reason that I’m not considering)
 
 I was also diligent about making sure my certificate was installed properly. I used an <a href="https://www.ssllabs.com/ssltest/index.html" target="_blank">SSL Server Test tool by Qualyss SSL Labs</a> to test and make sure there weren’t any issues.
 
