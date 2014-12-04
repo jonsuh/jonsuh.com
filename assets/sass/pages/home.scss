@@ -2,9 +2,9 @@
 // Home
 // ==================================================
 .hero--home {
-  height: em-calc(400);
+  height: em-calc(350);
   @media #{$small-up} {
-    height: em-calc(450);
+    height: em-calc(425);
   }
   @include retina-background-image("audi.jpg");
   @media #{$medium-up} {
@@ -29,9 +29,9 @@
 .home-hero-svg {
   width: em-calc(73 * 1.8);
   height: em-calc(80 * 1.8);
-  margin-top: em-calc(45);
+  margin-top: em-calc(30);
   @media #{$small-up} {
-    margin-top: em-calc(60);
+    margin-top: em-calc(50);
   }
   polygon {
     stroke: rgba($white, 0.3);
@@ -179,7 +179,7 @@
 
 @media #{$medium-up} {
   .hero--home {
-    height: em-calc(450);
+    height: em-calc(400);
 
     .align-cell {
       text-align: left;
@@ -219,8 +219,10 @@
 
 @media #{$ipad-up} {
   .hero--home {
-    height: -webkit-calc(100% - #{em-calc(90)});
-    height: calc(100% - #{em-calc(90)});
+    height: -webkit-calc(100% - #{em-calc(90 + 25)});
+    height: calc(100% - #{em-calc(90 + 25)});
+    min-height: em-calc(400);
+    max-height: em-calc(500);
   }
 
   .home-hero-introduction {
