@@ -46,6 +46,19 @@
   margin-bottom: $paragraph-margin-bottom;
   position: relative;
   overflow: hidden;
+
+  .post-title {
+    font-size: em-calc(22);
+    @media #{$small-up} {
+      font-size: em-calc(24);
+    }
+    @media #{$medium-up} {
+      font-size: em-calc(26);
+    }
+    @media #{$large-up} {
+      font-size: em-calc(28);
+    }
+  }
 }
 
 .post-overflow-overlay {
