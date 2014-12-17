@@ -16,6 +16,7 @@
   background-color: $blue;
   position: relative;
   @include transition(height .25s ease);
+  @include transition-property(height, max-height);
   &:before {
     @extend %content-overlay;
     z-index: 1;
