@@ -10,14 +10,15 @@
 {% endif %}
 
 {% assign description = site.description %}
-{% assign share_image = site.url | prepend: site.url_protocol | append: '/icon.png' %}
 {% if type == 'post' %}
   {% assign description = page.excerpt | strip_html | strip_newlines %}
-  {% if page.share_image != '' %}
-    {% assign share_image = url | prepend: '/assets/images' | prepend: site.url | prepend: site.url_protocol | append: page.share_image %}
-  {% endif %}
 {% elsif type == 'case-study' %}
   {% assign description = page.introduction %}
+{% endif %}
+
+{% assign share_image = site.url | prepend: site.url_protocol | append: '/icon.png' %}
+{% if page.share_image != '' %}
+  {% assign share_image = url | prepend: '/assets/images' | prepend: site.url | prepend: site.url_protocol | append: page.share_image %}
 {% endif %}
 
 {% endstrip %}
