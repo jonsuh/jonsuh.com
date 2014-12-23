@@ -2,7 +2,8 @@
 layout: post
 title: Father Forgets
 date: "2014-12-23 13:30:00"
-excerpt: While reading *How to Win Friends & Influence People* by Dale Carnegie, I came across a piece, *Father Forgets* by W. Livingston Larned, and it struck me like a hammer.
+excerpt: While reading How to Win Friends & Influence People by Dale Carnegie, I came across a piece, Father Forgets by W. Livingston Larned, and it struck me like a hammer.
+share_image: share.jpg
 comments: false
 tags:
 - journal
