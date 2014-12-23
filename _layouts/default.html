@@ -20,7 +20,7 @@
   <meta property="og:type" content="{% if type == 'post' %}article{% else %}website{% endif %}">
 
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="{{ site.url | prepend: site.url_protocol }}/icon.png">
+  <meta property="og:image" content="{{ share_image }}">
   <meta property="fb:admins" content="506470591">
 
   <meta name="twitter:card" content="summary">
@@ -30,7 +30,7 @@
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:title" content="{% if url == '/' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}">
   <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:image:src" content="{{ site.url }}/icon.png">
+  <meta name="twitter:image:src" content="{{ share_image }}">
 
   <link rel="apple-touch-icon" href="{{ site.url }}/icon.png">
   <meta name="theme-color" content="#2196f3">
