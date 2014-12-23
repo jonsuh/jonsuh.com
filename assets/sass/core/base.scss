@@ -162,6 +162,15 @@ $section-padding: 25;
 
 // Presentational classes
 // ==================================================
+blockquote {
+  &.indented {
+    font-family: $sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    border-left: 0;
+  }
+}
+
 div {
   &.flush {
     padding-top: 0;
@@ -228,6 +237,10 @@ ol, ul, li {
       margin-top: .88em;
     }
   }
+}
+
+.text-center {
+  text-align: center;
 }
 
 .quote {
