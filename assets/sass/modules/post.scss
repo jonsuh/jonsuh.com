@@ -170,7 +170,11 @@
 // ==================================================
 .post-content {
   p,
-  .highlight {
+  ul,
+  ol,
+  figure,
+  .highlight,
+  .twitter-tweet {
     + h1,
     + h2 {
       margin-top: rem-calc(20);
