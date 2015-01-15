@@ -11,6 +11,27 @@
 
 .contact-main {
   @include max-span-columns(7);
+
+  @media #{$large-up} {
+    #carbonads {
+      position: absolute;
+      top: 0;
+      right: em-calc(30);
+
+      .carbon-wrap {
+        width: em-calc(130);
+      }
+
+      .carbon-img,
+      .carbon-text {
+        display: block;
+      }
+
+      .carbon-text {
+        padding: em-calc(15);
+      }
+    }
+  }
 }
 
 // Email

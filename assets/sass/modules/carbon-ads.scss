@@ -1,0 +1,65 @@
+// ==================================================
+// Carbon Ads
+// ==================================================
+#carbonads {
+  background-color: $grey-lightest;
+  padding: em-calc(2);
+  position: relative;
+  margin-top: em-calc(15);
+  margin-bottom: em-calc(15);
+  @media #{$small-up} {
+    margin-bottom: em-calc(10);
+  }
+  @media #{$medium-up} {
+    margin-top: em-calc(25);
+  }
+  @media #{$large-up} {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @include clearfix;
+
+  a {
+    border: none;
+  }
+}
+
+.carbon-wrap {
+  display: table;
+}
+
+.carbon-img,
+.carbon-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.carbon-img {
+  img {
+    display: block;
+  }
+}
+
+.carbon-text,
+.carbon-poweredby {
+  font-size: em-calc(13);
+}
+
+.carbon-text {
+  line-height: 1.2em;
+  padding: em-calc(0 15);
+}
+
+.carbon-poweredby {
+  font-family: $serif;
+  font-size: em-calc(13);
+  font-style: italic;
+  position: absolute;
+  right: 0;
+  bottom: em-calc(-25);
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
