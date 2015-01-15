@@ -226,9 +226,9 @@
     @media #{$screen} and (min-height: em-calc(700)) {
       max-height: em-calc(600);
     }
-    @media #{$screen} and (min-height: em-calc(800)) {
-      max-height: em-calc(700);
-    }
+    // @media #{$screen} and (min-height: em-calc(800)) {
+    //   max-height: em-calc(700);
+    // }
   }
 
   .home-hero-introduction {
