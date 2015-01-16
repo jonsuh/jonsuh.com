@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mujjo iPhone 5 Wallet Case
+title: Mujjo iPhone 5 Wallet Case Review
 date: "2012-11-08"
 comments: false
 excerpt: Allow me introduce you to the beautiful iPhone 5 Wallet by Mujjo. This hand-crafted wallet sleeve is not only stylish and elegant, but its high-quality materials and practicality makes it a great companion for your iPhone 5.

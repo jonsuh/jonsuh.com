@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Compartments&mdash;Keep Track of Your Valuables
+title: Compartments Review&mdash;Keep Track of Your Valuables
 date: "2012-06-24"
 comments: false
 excerpt: Compartments allows you keep track of your personal belongings, from electronics and gadgets to furniture and jewelry, to allow you to have a peace of mind in the event that, God forbid, someone were to disrupt your home and get a hold of your belongings.

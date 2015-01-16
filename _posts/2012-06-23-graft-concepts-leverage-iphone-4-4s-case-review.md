@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Graft Concepts Leverage iPhone 4/4S Case
+title: Graft Concepts Leverage iPhone 4/4S Case Review
 date: "2012-06-23"
 comments: false
 excerpt: Today we’ll be taking a look at the Leverage iPhone 4/4S case by Graft Concepts, a case that adds minimal bulk while providing a stylish, sleek look without compromising on protection.

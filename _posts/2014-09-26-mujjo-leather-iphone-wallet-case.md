@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mujjo Leather iPhone Wallet Case for iPhone 5/5s
+title: Mujjo Leather iPhone Wallet Case for iPhone 5/5s Review
 date: "2014-09-26 09:17:00"
 excerpt: "If you don’t like carrying a lot in your pockets, the Mujjo Leather Wallet Case is for you&mdash;it’s designed to carry your iPhone along with a couple of bare essentials like your bank card, ID and cash. It’s slim, functional and beautiful."
 comments: false

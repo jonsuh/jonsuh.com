@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mujjo Leather Wallet Case for iPhone 6
+title: Mujjo Leather Wallet Case for iPhone 6 Review
 date: "2015-01-16 09:17:00"
 comments: false
 share_image: https://farm9.staticflickr.com/8612/16108648579_f1bce4940b_c.jpg

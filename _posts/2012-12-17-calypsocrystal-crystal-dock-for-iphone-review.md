@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CalypsoCrystal Crystal Dock for iPhone
+title: CalypsoCrystal Crystal Dock for iPhone Review
 date: "2012-12-17"
 comments: false
 excerpt: If you’re looking for a dock for your iPhone (charging dock, speaker/music dock, alarm dock), there are a wide variety of them out there. I had the opportunity to get my hands on the beautifully handcrafted Crystal Dock by CalypsoCrystal for the iPhone. If you like crystal, the Crystal Dock may be what you’re looking for.

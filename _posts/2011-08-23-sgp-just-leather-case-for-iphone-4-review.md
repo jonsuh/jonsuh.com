@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SGP Just Leather Case for iPhone 4
+title: SGP Just Leather Case for iPhone 4 Review
 date: "2011-08-23"
 comments: false
 excerpt: Today I’ll be reviewing SGP’s Just Leather Case for the iPhone 4. Although I’ve never been a huge fan of leather cases for the iPhone, the first impression was a good one, apart from the fact that SGP is one of the companies I trust the most when it comes to cell phone and tablet cases and screen protectors.

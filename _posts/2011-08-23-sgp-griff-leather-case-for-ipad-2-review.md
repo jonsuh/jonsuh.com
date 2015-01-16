@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SGP Griff Leather Case for iPad 2
+title: SGP Griff Leather Case for iPad 2 Review
 date: "2011-08-23"
 comments: false
 excerpt: Next in line is the SGP Griff Leather Case for the iPad 2. I ordered this badboy a week before I got my iPad 2 order in; I truly was excited about getting it.
