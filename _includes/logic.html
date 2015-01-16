@@ -18,7 +18,11 @@
 
 {% assign share_image = site.url | prepend: site.url_protocol | append: '/icon.png' %}
 {% if page.share_image != '' %}
-  {% assign share_image = url | prepend: '/assets/images' | prepend: site.url | prepend: site.url_protocol | append: page.share_image %}
+  {% if page.share_image contains 'http://' or 'https://' %}
+    {% assign share_image = page.share_image %}
+  {% else %}
+    {% assign share_image = url | prepend: '/assets/images' | prepend: site.url | prepend: site.url_protocol | append: page.share_image %}
+  {% endif %}
 {% endif %}
 
 {% endstrip %}
