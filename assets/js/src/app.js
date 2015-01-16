@@ -33,6 +33,18 @@ App = {
     // ==================================================
     App.googleAnalytics();
     Social.init();
+
+    // About page Carbon Ads detection
+    // ==================================================
+    var aboutSidebarBreak = document.querySelector(".about-sidebar-break");
+    if (aboutSidebarBreak) {
+      setTimeout(function() {
+        var carbonAds = document.querySelector("#carbonads");
+        if (carbonAds) {
+          Utility.addClass(aboutSidebarBreak, "has-carbonads");
+        }
+      }, 1000);
+    }
   },
 
   error404Init: function() {

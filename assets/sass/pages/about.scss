@@ -240,6 +240,10 @@
   width: 100%;
   margin-top: em-calc(165);
   display: none;
+
+  &.has-carbonads {
+    margin-top: em-calc(95);
+  }
 }
 
 // Responsive

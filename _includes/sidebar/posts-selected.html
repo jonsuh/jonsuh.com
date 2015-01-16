@@ -4,7 +4,7 @@
     {% strip %}
       {% assign counter = 0 %}
       {% for post in site.data.posts-selected %}
-        {% if counter < 5 %}
+        {% if counter < 4 %}
           {% if page.url contains post.url %}{% else %}
             {% assign counter = counter | plus: 1 %}
             <li class="sidebar-list-item">
