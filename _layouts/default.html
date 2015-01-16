@@ -27,7 +27,6 @@
   <meta name="twitter:site" content="@{{ site.social.username }}">
   <meta name="twitter:creator" content="@{{ site.social.username }}">
   <meta name="twitter:url" content="{{ url | prepend: site.url | prepend: site.url_protocol }}">
-  <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:title" content="{% if url == '/' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}">
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image:src" content="{{ share_image }}">
