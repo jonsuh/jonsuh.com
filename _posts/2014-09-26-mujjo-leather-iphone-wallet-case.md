@@ -1,13 +1,16 @@
 ---
 layout: post
-title: Mujjo Leather iPhone Wallet Case
+title: Mujjo Leather iPhone Wallet Case for iPhone 5/5s
 date: "2014-09-26 09:17:00"
+excerpt: "If you don’t like carrying a lot in your pockets, the Mujjo Leather Wallet Case is for you&mdash;it’s designed to carry your iPhone along with a couple of bare essentials like your bank card, ID and cash. It’s slim, functional and beautiful."
 comments: false
 tags:
 - case
 - iphone
 - review
 ---
+
+*Note: There’s a newer version of the Leather Wallet Case for the <span class="no-break">iPhone 6</span>. <a href="/blog/mujjo-leather-wallet-case-iphone-6">Read the review</a>.*
 
 If you don’t like carrying a lot in your pockets, the Mujjo Leather Wallet Case is for you&mdash;it’s designed to carry your iPhone along with a couple of bare essentials like your bank card, ID and cash. It’s slim, functional and beautiful.
 
@@ -51,11 +54,11 @@ After using this case for several weeks, it formed a beautiful, natural patina, 
 
 ## Summary
 
-Overally, I love and recommend the Mujjo Leather Wallet Case (I pre-ordered mine for the iPhone 6). Not only do I appreciate the beautiful design and high-quality leather and make, but I’ve found it extremely functional.
+Overally, I love and recommend the Mujjo Leather Wallet Case. Not only do I appreciate the beautiful design and high-quality leather and make, but I’ve found it extremely functional.
 
-The Leather Wallet Case for iPhone will cost you €37.15 ($47.36) + shipping. It fits both the iPhone 5 and 5s* and comes in tan or black.
+The Leather Wallet Case for iPhone will cost you €37.15 ($47.36) + shipping. It fits both the iPhone 5 and 5s and comes in tan or black.
 
 - <a href="http://www.mujjo.com/collections/understated/leather-iphone-5s-wallet-case-tan" target="_blank">Tan Leather iPhone 5/5s Wallet Case</a>
 - <a href="http://www.mujjo.com/collections/low-key/leather-iphone-5s-wallet-case-black" target="_blank">Black Leather iPhone 5/5s Wallet Case</a>
 
-\* iPhone 6 or 6 Plus owners: Pre-order the Leather Wallet Case for the iPhone 6 in <a href="http://www.mujjo.com/leather-wallet-case-80-for-iphone-6-tan" target="_blank">Tan</a> or <a href="http://www.mujjo.com/leather-wallet-case-80-for-iphone-6-black" target="_blank">Black</a>, or for the 6 Plus in <a href="http://www.mujjo.com/leather-wallet-case-80-for-iphone-6-plus-tan" target="_blank">Tan</a> or <a href="http://www.mujjo.com/leather-wallet-case-80-for-iphone-6-plus-black" target="_blank">Black</a>.
+*If you own an iPhone 6*, read my review of the updated <a href="/blog/mujjo-leather-wallet-case-iphone-6">Leather Wallet Case</a>.
