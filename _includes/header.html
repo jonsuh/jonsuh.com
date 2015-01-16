@@ -10,19 +10,8 @@
         </div>
       </a>
     </div>
-    <a href="#navigation-toggle" class="navigation-toggle js-navigation-toggle">
-      <span class="navigation-toggle-label">
-        <span class="navigation-toggle-label-open">Menu</span>
-        <span class="navigation-toggle-label-close">Close</span>
-      </span>
-      <div class="navigation-toggle-hamburger">
-        <hr class="navigation-toggle-hamburger-bun navigation-toggle-hamburger-bun--top">
-        <hr class="navigation-toggle-hamburger-patty">
-        <hr class="navigation-toggle-hamburger-bun navigation-toggle-hamburger-bun--bottom">
-      </div>
-    </a>
     <nav id="navigation" class="navigation" role="navigation">
-      <a href="/about/" class="navigation-link{% if page.url contains "/about/" %} is-current{% endif %}">About</a><a href="/work/" class="navigation-link{% if page.url contains "/work/" %} is-current{% endif %}">Work</a><a href="/blog/" class="navigation-link{% if page.url contains "/blog/" %} is-current{% endif %}">Blog</a><a href="/contact/" class="navigation-link{% if page.url contains "/contact/" %} is-current{% endif %}">Contact</a>
+      <a href="/about/" class="navigation-link{% if page.url contains "/about/" %} is-current{% endif %}"><span class="navigation-label">About</span></a><a href="/work/" class="navigation-link{% if page.url contains "/work/" %} is-current{% endif %}"><span class="navigation-label">Work</span></a><a href="/blog/" class="navigation-link{% if page.url contains "/blog/" %} is-current{% endif %}"><span class="navigation-label">Blog</span></a><a href="/contact/" class="navigation-link{% if page.url contains "/contact/" %} is-current{% endif %}"><span class="navigation-label">Contact</span></a>
     </nav>
   </div>
 </header>

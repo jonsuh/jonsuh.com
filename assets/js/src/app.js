@@ -18,7 +18,6 @@ App = {
     // Initialize pages
     // ==================================================
     App.error404Init();
-    App.navigationInit();
     App.newsletterInit();
     Work.init();
 
@@ -112,25 +111,6 @@ App = {
       setTimeout(function() {
         email.value = "";
       }, 500);
-    }
-  },
-
-  navigationInit: function() {
-    var navToggle = document.querySelector(".js-navigation-toggle");
-
-    navToggle.addEventListener("click", function(e) {
-      e.preventDefault();
-      if ( ! Utility.hasClass(docHtml, "js-nav js-nav-transition")) {
-        Utility.addClass(docHtml, "js-nav js-nav-transition");
-      } else {
-        Utility.removeClass(docHtml, "js-nav");
-        docHtml.addEventListener(App.transitionEnd, navTransitionRemove);
-      }
-    });
-
-    function navTransitionRemove() {
-      Utility.removeClass(docHtml, "js-nav-transition");
-      docHtml.removeEventListener(App.transitionEnd, navTransitionRemove);
     }
   },
 
