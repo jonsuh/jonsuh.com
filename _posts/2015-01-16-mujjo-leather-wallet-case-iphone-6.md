@@ -30,7 +30,7 @@ The inside of the case has been improved and now is lined with suede along with 
 
 !["Another look at the suede, inner lining"](https://farm9.staticflickr.com/8603/16293938582_dabaa3c63f_c.jpg)
 
-The corners snap in nicely and the snug fit securely keeps your phone in place and from rattling around. The small lip around the case gives a bit of separation from the surface when your phone is face down, but based on the surface, I don’t always feel comfortable having it face down because the separation is so slight.
+The corners snap in nicely and the snug fit securely keeps your phone in place and from rattling around. The small lip around the front gives a bit of separation from the surface when your phone is face down, but based on the surface, I don’t always feel comfortable having it facing down because there isn’t much separation.
 
 !["Bottom cutout"](https://farm8.staticflickr.com/7480/16293936002_3617fd71c2_c.jpg)
 
@@ -39,8 +39,6 @@ The corners snap in nicely and the snug fit securely keeps your phone in place a
 The top, button, power button, volume buttons and mute switch are cutouts, which exposes certain parts of your phone, making them vulnerable to scratches if you’re not careful.
 
 !["Camera cutout"](https://farm8.staticflickr.com/7482/16108651649_217fff0f10_c.jpg)
-
-The camera cutout in the back does not obstruct the camera, so you’re free to take pictures of your love ones or food. The cutout itself has a bit of roughness to it, which didn’t bother me too much.
 
 The camera cutout doesn’t obstruct the camera. The camera of the iPhone 6 protrudes from the body, but the case gives you enough separation to keep the camera from touching the surface when you lay it down on its back.
 
@@ -52,7 +50,7 @@ You can safely put 2–3 cards in the wallet slot. It’s tight when you first g
 
 I personally love the gray color variant—it fits well with my Space Gray iPhone, but also looks great against other Mujjo products, like the [tan Mujjo Macbook Folio Sleeve](/blog/mujjo-macbook-folio-sleeve/).
 
-I loved the Leather Wallet Case for the iPhone 5/5s, and I feel the same way about the one for the iPhone 6. The Leather Wallet Case for the iPhone 6 will set you back €33.02 ($38.09) + shipping and comes in <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/iphone-6-sleeves/leather-wallet-case-for-iphone-6-tan" target="_blank">Tan</a>, <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/iphone-6-sleeves/leather-wallet-case-for-iphone-6-black" target="_blank">Black</a>, and <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/iphone-6-sleeves/leather-wallet-case-for-iphone-6-gray" target="_blank">Gray</a>. You can order yours at <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/" target="_blank">mujjo.com</a>.
+I loved the Leather Wallet Case for the iPhone 5/5s so I bought one for my iPhone 6, and I feel the same way about this one as I do the last. The Leather Wallet Case for the iPhone 6 will set you back €33.02 ($38.09) + shipping and comes in <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/iphone-6-sleeves/leather-wallet-case-for-iphone-6-tan" target="_blank">Tan</a>, <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/iphone-6-sleeves/leather-wallet-case-for-iphone-6-black" target="_blank">Black</a>, and <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/iphone-6-sleeves/leather-wallet-case-for-iphone-6-gray" target="_blank">Gray</a>. You can order yours at <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/" target="_blank">mujjo.com</a>.
 
 I’ve owned several Mujjo products over the years, and again, they executed well on a beautiful, high-quality product.
 
