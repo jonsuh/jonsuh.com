@@ -18,7 +18,7 @@ I loved the quality of the Leather Wallet Case for the iPhone 5/5s, and you’re
 
 !["Packaging of the Mujjo Leather Wallet Case"](https://farm8.staticflickr.com/7525/16268858466_077ae940c3_c.jpg)
 
-The case is slim and light, so it won’t add much bulk to your phone. The iPhone 6/6+ is notoriously slippery, but the leather provides a nice, secure grip when its in your hand.
+The case is slim and light, so it won’t add much bulk to your phone. The iPhone 6/6+ is notoriously slippery, but the leather provides a nice, secure grip when it’s in your hand.
 
 !["Stitching and Mujjo mark"](https://farm8.staticflickr.com/7475/16293940582_3bebd67df7_c.jpg)
 
@@ -32,11 +32,13 @@ The inside of the case has been improved and now is lined with suede along with 
 
 The corners snap in nicely and the snug fit securely keeps your phone in place and from rattling around. The small lip around the front gives a bit of separation from the surface when your phone is face down, but based on the surface, I don’t always feel comfortable having it facing down because there isn’t much separation.
 
+!["Top cutout"](https://farm8.staticflickr.com/7464/16268851676_2058e3691e_c.jpg)
+
 !["Bottom cutout"](https://farm8.staticflickr.com/7480/16293936002_3617fd71c2_c.jpg)
 
 !["Volume buttons and mute switch cutout"](https://farm9.staticflickr.com/8617/15672373654_8fdaa28cfa_c.jpg)
 
-The top, button, power button, volume buttons and mute switch are cutouts, which exposes certain parts of your phone, making them vulnerable to scratches if you’re not careful.
+The top, bottom, power button, volume buttons and mute switch are cutouts, which exposes certain parts of your phone, making them vulnerable to scratches if you’re not careful.
 
 !["Camera cutout"](https://farm8.staticflickr.com/7482/16108651649_217fff0f10_c.jpg)
 
