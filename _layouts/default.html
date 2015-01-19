@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,700,500,300">
-  <link rel="stylesheet" href="/assets/css/screen.css">
-  {% if page.css %}<link rel="stylesheet" href="/assets/css/blog/{{ page.css }}">{% endif %}
+  <link rel="stylesheet" href="/assets/css/screen.css?v={{ css_version }}">
+  {% if page.css %}<link rel="stylesheet" href="/assets/css/blog/{{ page.css }}?v={{ css_version }}">{% endif %}
   <link rel="canonical" href="{{ url | prepend: site.url | prepend: site.url_protocol }}">
   <meta name="robots" content="index,follow,archive">
   <meta name="author" content="{{ site.author.name }}">
@@ -45,16 +45,16 @@
 {% include footer.html %}
 
 <div id="fb-root"></div>
-<script src="/assets/js/jonsuh.js"></script>
+<script src="/assets/js/jonsuh.js?v={{ js_version }}"></script>
 {% strip %}
   {% if page.js %}
     {% for js in page.js %}
-      <script src="/assets/js/{{ js }}"></script>
+      <script src="/assets/js/{{ js }}?v={{ js_version }}"></script>
     {% endfor %}
   {% endif %}
   {% if url == "/" and site.posts.first.js %}
     {% for js in site.posts.first.js %}
-      <script src="/assets/js/{{ js }}"></script>
+      <script src="/assets/js/{{ js }}?v={{ js_version }}"></script>
     {% endfor %}
   {% endif %}
 {% endstrip %}
