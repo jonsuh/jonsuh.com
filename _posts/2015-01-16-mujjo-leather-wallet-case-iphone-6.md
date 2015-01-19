@@ -10,6 +10,8 @@ tags:
 - review
 ---
 
+{% include post-rating.html rating=9 comments="Top-quality, beautiful product—Highly recommended." %}
+
 Couple iPhone 6’s Apple Pay and Mujjo’s Leather Wallet Case together, and you’ll find yourself carrying fewer cards. Not only is the case functional, but it’s also pretty&mdash;it’s bound to catch eyes and start conversations.
 
 <!--more-->
