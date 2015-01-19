@@ -9,9 +9,11 @@ tags:
 - lock
 - smart
 - review
+review:
+  name: August Smart Lock
+  rating: 7
+  comments: Solid product. Has its flaws. Still improving.
 ---
-
-{% include post-rating.html rating=7 comments="Solid product. Has its flaws. Still improving." %}
 
 Spend less time fiddling with keys when unlocking your door; instead, unlock your door with an app on your smartphone; better yet, have it unlock as you’re walking up to it. August Smart Locks allows you to do just that. Well... sometimes.
 
