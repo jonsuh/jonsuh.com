@@ -108,7 +108,7 @@ An indicator light on the frontplate turns green when it unlocks and red when it
 
 ## Usage and Performance
 
-When August Smart Lock works like it’s designed to work or like you’d expect it to work, it’s fantastic, and on paper the features sound great; unfortunately, in practice the integration lacks harmony and still needs a lot of work.
+When August Smart Lock works like it’s designed to work or like you’d expect it to work, it’s fantastic, and on paper the features sound great; unfortunately, in practice the integration lacks harmony and still needs work.
 
 Connecting to it can range from painless to utter and sheer frustration and resentment, and most of the time it’s the latter. It’s unreliable and usually takes several seconds, sometimes longer, and occasionally never (at least until my patience runs out as I’m staring at my phone waiting for it to connect or until my phone auto locks). A majority of the time I still pull out my keys because it’s faster than waiting for it to connect.
 
@@ -124,7 +124,7 @@ August Smart Lock costs $249 and you can order one from <a href="http://august.c
 
 August Connect costs $49.99 and you can pre-order it from <a href="http://august.com" target="_blank">August.com</a> or <a href="http://www.amazon.com/August-Connect-Secure-Remote-Access/dp/B00RPM6UZA/?tag=jonsuhcom-20" target="_blank">Amazon.com</a> (free shipping).
 
-Although August Smart Lock still needs a lot of work, I trust it to make the proper software and firmware improvements to smooth out the wrinkles of its unreliability and connection woes. When I pre-ordered it, I knew I was investing in a work-in-progress, and I’ve accepted that in spite of my frustrations.
+Although August Smart Lock still needs work, I trust it to make the proper software and firmware improvements to smooth out the wrinkles of its unreliability and connection woes. When I pre-ordered it, I knew I was investing in a work-in-progress, and I’ve accepted that in spite of my frustrations.
 
 It’s also possible that August Connect would improve connectivity and reliability since it’ll be a stationary device, and when it’s installed, more than likely rely on August Connect to pair with and control August Smart Lock as opposed to the phone.
 
