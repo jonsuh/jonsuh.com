@@ -7,8 +7,9 @@
       {% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}
     </span>
   </span>
-  <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating" class="post-rating-value">
-    <span itemprop="value">{{ include.rating }}</span>/<span itemprop="best">10</span>
+  <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing"><meta itemprop="name" content="{{ include.name }}"></span>
+  <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="post-rating-value">
+    <span itemprop="ratingValue">{{ include.rating }}</span>/<span itemprop="bestRating">10</span>
   </span>
   {% if include.comments %}
     <span class="post-rating-comments">{{ include.comments }}</span>
