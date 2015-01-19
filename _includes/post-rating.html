@@ -1,0 +1,16 @@
+<div class="post-rating">
+  <span class="post-rating-stars">
+    <span class="post-rating-stars-background">
+      {% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}
+    </span>
+    <span class="post-rating-stars-foreground" style="width: {{ include.rating | divided_by: 2.0 | times: 100 | divided_by: 5.0 }}%">
+      {% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}
+    </span>
+  </span>
+  <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating" class="post-rating-value">
+    <span itemprop="value">{{ include.rating }}</span>/<span itemprop="best">10</span>
+  </span>
+  {% if include.comments %}
+    <span class="post-rating-comments">{{ include.comments }}</span>
+  {% endif %}
+</div>

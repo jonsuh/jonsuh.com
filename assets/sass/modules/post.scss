@@ -212,6 +212,63 @@
   }
 }
 
+// Rating
+// ==================================================
+.post-rating {
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+.post-rating-stars {
+  margin-right: .3em;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+
+  .svg-icon-star {
+    width: em-calc(12);
+    height: em-calc(12);
+    margin-left: em-calc(1);
+    margin-right: em-calc(1);
+  }
+}
+
+.post-rating-stars-background {
+  .svg-icon-star {
+    fill: $grey-lighter;
+  }
+}
+
+.post-rating-stars-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .svg-icon-star {
+    fill: $yellow;
+  }
+}
+
+.post-rating-value,
+.post-rating-comments {
+  color: $grey;
+  position: relative;
+}
+
+.post-rating-value {
+  $font-size: 14;
+  font-size: em-calc($font-size);
+  font-weight: 700;
+  bottom: em-calc(1, $font-size);
+  margin-right: .3em;
+}
+
+.post-rating-comments {
+  font-family: $serif;
+  font-style: italic;
+  bottom: em-calc(1);
+}
+
 // Share
 // ==================================================
 .post-share {
