@@ -2,7 +2,6 @@
 layout: post
 title: August Smart Lock Review
 date: "2015-01-19 09:17:00"
-excerpt: Spend less time fiddling with keys when unlocking your door; instead, unlock your door with an app on your smartphone; better yet, have it unlock as you’re walking up to it. August Smart Locks allows you to do just that. Well... sometimes.
 share_image: "https://farm8.staticflickr.com/7503/16117739367_d99ab6ace8_c.jpg"
 comments: false
 tags:
