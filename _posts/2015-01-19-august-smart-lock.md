@@ -48,6 +48,8 @@ Once you’ve signed up for an account and signed in, it’ll scan for your lock
 
 The August app allows you to easily lock or unlock August Smart Lock with a single tap once you’ve selected the property. It also allows you to manage and add multiple locks and properties. The user interface is well designed and makes using the app a pleasant experience.
 
+!["August app lock and unlock screens"](https://farm9.staticflickr.com/8584/15691276443_4236e63e30_c.jpg)
+
 August Smart Lock requires 4 AA batteries (included) and relies on Bluetooth Low Energy (BLE) to pair with your phone. Since it relies on BLE instead of Wi-Fi, it says it can last almost a year before having to replace its batteries, and during a power outage you’ll still be able to connect to it (assuming your batteries aren’t dead either). You’ll also get a reminder when batteries get low. Since August Smart Lock doesn’t replace your entire lock system, if you forget your phone you can still lock or unlock with your original key from the outside.
 
 !["August Smart Lock inside"](https://farm8.staticflickr.com/7576/15681174534_0612a61ffe_c.jpg)
@@ -66,7 +68,11 @@ Everlock automatically relocks your door shortly after you’ve unlocked it (tha
 
 ### User Management
 
-The app allows you to add users you want to grant access to (the user would have to have a phone compatible with August Smart Lock). For each user, you can set them as an owner or a guest, and for guests you can grant them permanent, temporary, or recurring/schedule-based access. User access can easily be changed or revoked.
+The app allows you to add users you want to grant access to (the user would have to have a phone compatible with August Smart Lock).
+
+!["August app guest permissions"](https://farm8.staticflickr.com/7519/16285208566_28eb349051_c.jpg)
+
+For each user, you can set them as an owner or a guest, and for guests you can grant them permanent, temporary, or recurring/schedule-based access. User access can easily be changed or revoked.
 
 ### Apps
 
@@ -100,9 +106,9 @@ An indicator light on the frontplate turns green when it unlocks and red when it
 
 When August Smart Lock works like it’s designed to work or like you’d expect it to work, it’s fantastic, and on paper the features sound great; unfortunately, in practice the integration lacks harmony and still needs a lot of work.
 
-Connecting to it can range from painless to utter and sheer frustration and resentment, and most of the time it’s the latter. It’s unreliable and usually takes several seconds, sometimes longer, and occasionally never (at least until my patience runs out as I’m staring at my phone waiting for it to connect or until my phone auto locks). I often find myself having to pull out my keys because it’s faster than waiting for it to connect.
+Connecting to it can range from painless to utter and sheer frustration and resentment, and most of the time it’s the latter. It’s unreliable and usually takes several seconds, sometimes longer, and occasionally never (at least until my patience runs out as I’m staring at my phone waiting for it to connect or until my phone auto locks). A majority of the time I still pull out my keys because it’s faster than waiting for it to connect.
 
-When auto-unlock works, it’s amazing, like thaumaturgy, sorcery, magic; unfortunately, from personal experience, it only works about 40–60% of the time—at the very attempt to open my door, I’ll find that it’s still locked.
+When auto-unlock works, it’s amazing, like thaumaturgy, sorcery, magic, and from personal experience, it works about 60–70% of the time—occasionally at the very attempt to open my door, I’ll find that it’s still locked.
 
 I haven’t used Everlock, but based on the unreliability of auto-unlock, I wouldn’t trust Everlock to automatically lock the door behind me, especially when I’m leaving the house—I can imagine coming home and, to my horror, finding my door unlocked.
 
