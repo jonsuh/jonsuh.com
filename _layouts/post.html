@@ -13,7 +13,9 @@ layout: default
           </p>
         </header>
         {% if page.tags contains 'review' %}
-          {% include post-rating.html name=page.review.name rating=page.review.rating comments=page.review.comments %}
+          {% if page.review.name %}
+            {% include post-rating.html name=page.review.name rating=page.review.rating comments=page.review.comments %}
+          {% endif %}
         {% endif %}
         <section class="post-content" itemprop="{% if page.tags contains 'review' %}reviewBody{% else %}articleBody{% endif %}">
           {{ content }}
