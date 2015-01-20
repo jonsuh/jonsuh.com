@@ -18,7 +18,7 @@ Spend less time fiddling with keys when unlocking your door; instead, unlock you
 
 <!--more-->
 
-I got my August Smart Lock in October 2014 and have been using it ever since. I love it, and I hate it. So what’s there to love and hate? Here’s my first-hand review of August and my 3 months of using it.
+I got my August Smart Lock in October 2014 and have been using it ever since. I love it, and I hate it. So what’s there to love and hate? Here’s my first-hand review of August Smart Lock and my 3 months of using it.
 
 !["August Smart Lock packaging"](https://farm8.staticflickr.com/7558/16117741417_63cc970c1e_c.jpg)
 
