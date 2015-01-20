@@ -2,16 +2,16 @@
 layout: post
 title: Mujjo Leather Wallet Case for iPhone 6 Review
 date: "2015-01-16 09:17:00"
-comments: false
-share_image: https://farm9.staticflickr.com/8612/16108648579_f1bce4940b_c.jpg
-tags:
-- case
-- iphone
-- review
 review:
   name: Mujjo Leather Wallet Case for iPhone 6
   rating: 9
   comments: Top-quality, beautiful product—Highly recommended.
+share_image: https://farm9.staticflickr.com/8612/16108648579_f1bce4940b_c.jpg
+comments: false
+tags:
+- case
+- iphone
+- review
 ---
 
 Couple iPhone 6’s Apple Pay and Mujjo’s Leather Wallet Case together, and you’ll find yourself carrying fewer cards. Not only is the case functional, but it’s also pretty&mdash;it’s bound to catch eyes and start conversations.
