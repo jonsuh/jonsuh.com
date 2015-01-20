@@ -42,7 +42,7 @@ Based on the kind of lock system you have, you’ll only use 1 of 3 mounting pla
 
 !["August Smart Lock installed on my door"](https://farm9.staticflickr.com/8589/16117439229_10a1a59cfc_c.jpg)
 
-Finally, enable the lock on by removing the faceplate (turn it counterclockwise with your palm) and removing the plastic tabs from the batteries; then put the faceplate back on.
+Finally, turn the lock on by removing the faceplate (turn it counterclockwise with your palm) and removing the plastic tabs from the batteries; then put the faceplate back on.
 
 Setting up and connecting August Smart Lock to your device is simple as well. Download and open the August app for <a href="https://itunes.apple.com/us/app/august-smart-lock/id648730592?mt=8" target="_blank">iOS</a> or <a href="https://play.google.com/store/apps/details?id=com.august.app&hl=en" target="_blank">Android</a> (<a href="http://august.com/phones" target="_blank">list of compatible phones</a>). It’s evident that the user interface and experience was well thought out.
 
@@ -98,7 +98,7 @@ Designed by Yves Béhar, August Smart Lock is a gorgeous piece of machinery and 
 
 Although it looks bulky in person, when turning it manually it doesn’t feel awkward and turns with ease, almost effortless. The face plate tends to become loose and falls off sometimes when you’re unlocking it manually (it may be just the way I’m gripping it, but the same thing happens to my wife).
 
-August Smart Lock comes in 4 flavors from you to choose from: silver, champagne, silver, and red.
+August Smart Lock comes in 4 flavors from you to choose from: silver, champagne, black, and red.
 
 ![](https://augusthomeinc.files.wordpress.com/2014/07/lock_colors2c_angled.jpg)
 
