@@ -64,6 +64,52 @@ module.exports = function(grunt) {
             'assets/js/vendor/Chart.legend.js'
           ],
           'assets/js/blog/https-increased-organic-search-impressions-by-144-percent.js': ['assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js'],
+          '_includes/critical/js/global.js': ['assets/js/src/critical.js'],
+        }
+      }
+    },
+
+    criticalcss: {
+      options: {
+        filename: '/Users/jsuh/Work/jonsuh.com/assets/css/screen.css',
+        width: 1025,
+        height: 700,
+        buffer: 800*1024
+      },
+      home: {
+        options: {
+          url: 'http://jonsuh.local/',
+          outputfile: '_includes/critical/css/home.css',
+        }
+      },
+      about: {
+        options: {
+          url: 'http://jonsuh.local/about/',
+          outputfile: '_includes/critical/css/about.css',
+        }
+      },
+      blog: {
+        options: {
+          url: 'http://jonsuh.local/blog/',
+          outputfile: '_includes/critical/css/blog.css',
+        }
+      },
+      blog_post: {
+        options: {
+          url: 'http://jonsuh.local/blog/august-smart-lock/',
+          outputfile: '_includes/critical/css/blog-post.css',
+        }
+      },
+      contact: {
+        options: {
+          url: 'http://jonsuh.local/contact/',
+          outputfile: '_includes/critical/css/contact.css',
+        }
+      },
+      work: {
+        options: {
+          url: 'http://jonsuh.local/work/',
+          outputfile: '_includes/critical/css/work.css',
         }
       }
     },
@@ -131,6 +177,15 @@ module.exports = function(grunt) {
       options: {
         report: 'min'
       },
+      critical: {
+        files: [{
+          expand: true,
+          cwd: '_includes/critical/css/',
+          src: ['**/*.css'],
+          dest: '_includes/critical/css/',
+          ext: '.css'
+        }]
+      },
       production: {
         files: [{
           expand: true,
@@ -145,6 +200,17 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         report: 'gzip'
+      },
+      critical: {
+        files: [{
+          expand: true,
+          cwd: '_includes/critical/js/',
+          src: [
+            '**/*.js'
+          ],
+          dest: '_includes/critical/js/',
+          ext: '.js'
+        }]
       },
       production: {
         files: [{
