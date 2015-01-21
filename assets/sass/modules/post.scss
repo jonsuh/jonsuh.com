@@ -367,6 +367,42 @@
   }
 }
 
+// Comments
+// ==================================================
+.post-comments {
+  margin-top: em-calc(25);
+  @include clearfix;
+  display: none;
+
+  &.is-loaded {
+    display: block;
+  }
+}
+
+.post-comments-link {
+  font-weight: 700;
+  color: $grey-dark;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $grey-lightest;
+  border: 0;
+  display: block;
+  padding: rem-calc(20 0);
+
+  &:hover {
+    color: $grey-darkest;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.post-comments-count {
+  color: map-get($color-orange, "900");
+}
+
 // Navigation
 // ==================================================
 .post-navigation {
@@ -577,6 +613,7 @@
     }
   }
 
+  .post-comments,
   .post-navigation,
   .post-related {
     margin-top: em-calc(25);
@@ -620,6 +657,7 @@
     }
   }
 
+  .post-comments,
   .post-navigation,
   .post-related {
     margin-top: em-calc(35);
@@ -661,6 +699,7 @@
     margin-bottom: 0;
   }
 
+  .post-comments,
   .post-navigation,
   .post-related {
     margin-top: em-calc(45);

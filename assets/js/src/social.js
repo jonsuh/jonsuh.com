@@ -1,13 +1,20 @@
 var Social = Social || {};
 
 Social = {
-  facebookAppId: "", // PARTS OF THIS LINE HAVE BEEN REMOVED
+  facebookAppId: "146160702084886", // PARTS OF THIS LINE HAVE BEEN REMOVED
+  disqusShortName: "jonsuh",
 
   load: function() {
     var twitterShare = document.querySelector(".js-social-twitter-share");
     if (twitterShare) {
       Social.twitterLoad();
       Social.facebookLoad();
+    }
+
+    var comments = document.querySelector(".post-comments");
+    if (comments) {
+      Utility.addClass(comments, "is-loaded");
+      Social.commentsInit();
     }
   },
 
@@ -19,6 +26,19 @@ Social = {
         Social.googleInit();
       });
     }
+  },
+
+  commentsLoad: function(e) {
+    e.preventDefault();
+    Utility.getScript("//" + Social.disqusShortName + ".disqus.com/embed.js");
+    Utility.addClass(this, "is-hidden");
+  },
+
+  commentsInit: function() {
+    var commentsLoads = document.querySelectorAll(".js-comments-load");
+    [].forEach.call(commentsLoads, function(commentsLoad) {
+      commentsLoad.addEventListener("click", Social.commentsLoad);
+    });
   },
 
   facebookLoad: function() {
