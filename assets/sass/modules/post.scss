@@ -503,7 +503,12 @@
 }
 
 .post-pagination-link {
-  @extend .button;
+  font-size: rem-calc(16);
+  font-weight: 700;
+  color: $grey-dark;
+  letter-spacing: 0.02em;
+  padding: rem-calc(15 0);
+  border-bottom: em-calc(2) solid map-get($color-blue, "100");
 }
 
 .post-pagination-link--previous {
