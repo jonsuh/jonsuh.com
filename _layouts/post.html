@@ -9,7 +9,7 @@ layout: default
           <h1 class="post-title" itemprop="name"><a href="{{ page.url | append: '/' }}" class="post-link">{{ page.title }}</a></h1>
           <p class="post-meta">
             <time content="{{ page.date | date: "%Y-%m-%d" }}" datetime="{{ page.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
-            <span class="post-meta-bullet">&bull;</span> <span class="post-meta-author"><a href="/about/" class="post-meta-author-link">By <span itemprop="author">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</span></a></span>
+            <span class="post-meta-bullet">&bull;</span> <span class="post-meta-author"><a href="/about/" class="post-meta-author-link">By <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</span></span></a></span>
           </p>
         </header>
         {% if page.tags contains 'review' %}
