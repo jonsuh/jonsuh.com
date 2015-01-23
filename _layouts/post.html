@@ -14,6 +14,7 @@ layout: default
         </header>
         {% if page.tags contains 'review' %}
           {% if page.review.name %}
+            {% if site.environment == 'development' %}<script>var disqus_developer = 1;</script>{% endif %}
             {% include post-rating.html name=page.review.name rating=page.review.rating comments=page.review.comments %}
           {% endif %}
         {% endif %}
