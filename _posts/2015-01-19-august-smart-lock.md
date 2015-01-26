@@ -50,7 +50,7 @@ Once you’ve signed up for an account and signed in, it’ll scan for your lock
 
 ## Features
 
-The August app allows you to easily lock or unlock August Smart Lock with a single tap once you’ve selected the property. It also allows you to manage and add multiple locks and properties. The user interface is well designed and makes using the app a pleasant experience.
+The August app allows you to easily lock or unlock August Smart Lock with a single tap once you’ve selected the lock—It allows you to add and add multiple locks. The user interface is well designed and makes using the app a pleasant experience.
 
 !["August app lock and unlock screens"](https://farm9.staticflickr.com/8584/15691276443_4236e63e30_c.jpg)
 
