@@ -19,15 +19,15 @@ If you are not on Windows or can’t get your hands on one, I have an alternativ
 ### If you are running Windows
 
 1.  Make sure you have the proper drivers for the Incredible so your machine recognizes your device. If you are unsure, download and install HTC Sync from [htc.com/us/support/droid-incredible-verizon/downloads](http://www.htc.com/us/support/droid-incredible-verizon/downloads/), which should install the proper drivers on your computer.
-2.  [Download](http://jonsuh.me/MvkO) and run RUU.
+2.  [Download](https://docs.google.com/uc?id=0B1Z3FsizLUAGSWhSUFAybXpzWUk&export=download) and run RUU.
 3.  Follow the simple prompts. (If during the RUU process it times out after "Waiting for Bootloader...", click Exit, *do not unplug your phone*, restart RUU and follow the prompts again.)
 
 ### If you are not running Windows
 
-1.  You need to make sure you have the stock radio (2.15.00.07.28). If you do not or don’t know, [download](http://jonsuh.me/MwPZ) and flash PB31IMG.
-2.  You next to first achieve S-ON. [Download](http://jonsuh.me/Mvg2) and flash Unrevoked’s S-ON
+1.  You need to make sure you have the stock radio (2.15.00.07.28). If you do not or don’t know, [download](https://docs.google.com/uc?id=0B1Z3FsizLUAGT0NwS2I0bnV3ZnM&export=download) and flash PB31IMG.
+2.  You next to first achieve S-ON. [Download](https://docs.google.com/uc?id=0B1Z3FsizLUAGenJrbzBDLW43SjA&export=download) and flash Unrevoked’s S-ON
 3.  Make sure your SDCARD is formatted to FAT32.
-4.  [Download the stock image](http://jonsuh.me/Mw2p). (build-3.26.605.1-release-152016-baseband-2.15.00.07.28-hboot-0.92.0000_PB31IMG.zip)
+4.  [Download the stock image](https://docs.google.com/uc?id=0B1Z3FsizLUAGRndSeWR0U0pTMHc&export=download). (build-3.26.605.1-release-152016-baseband-2.15.00.07.28-hboot-0.92.0000_PB31IMG.zip)
 5.  Copy the file to the root of your SDCARD and rename it to PB31IMG.zip.
 6.  Power off your phone and power it back up in HBOOT with Volume Down + Power.
 7.  Wait for the prompt for the upgrade and select *Yes*.

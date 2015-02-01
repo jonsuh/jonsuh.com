@@ -20,4 +20,4 @@ Inspired by the original *Keep Calm and Carry On* poster, I initially designed t
 
 Pre-formatted versions for standard, widescreen, iPhone 4S/4, iPhone 5, iPod touch, iPad, Kindle Fire HD, and Galaxy S3 are included in this wallpaper pack. I zipped them up for your downloading convenience. Enjoy it, and get to work!
 
-<blockquote class="quote"><a title="Download the Keep Calm and Get to Work wallpaper pack (ZIP)" href="http://jonsuh.me/NgAD"><strong>Download</strong> the wallpaper pack (ZIP) &rarr;</a></blockquote>
+<blockquote class="quote"><a title="Download the Keep Calm and Get to Work wallpaper pack (ZIP)" href="https://docs.google.com/uc?id=0B1Z3FsizLUAGQWVBN0hBbHJMdUk&export=download"><strong>Download</strong> the wallpaper pack (ZIP) &rarr;</a></blockquote>
