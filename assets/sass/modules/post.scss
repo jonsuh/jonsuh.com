@@ -210,6 +210,26 @@
       margin: em-calc(40 0);
     }
   }
+
+  table {
+    @extend p;
+
+    th {
+      background-color: $grey-lighter;
+    }
+
+    th,
+    td {
+      font-size: 90%;
+      padding: .1em 1em;
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: scale-color($grey-lighter, $lightness: 50%);
+      }
+    }
+  }
 }
 
 // Rating
