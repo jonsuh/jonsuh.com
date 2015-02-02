@@ -43,6 +43,9 @@
   @media #{$medium-up} {
     max-height: em-calc(700);
   }
+  @media #{$large-up} {
+    max-height: em-calc(800);
+  }
   margin-bottom: $paragraph-margin-bottom;
   position: relative;
   overflow: hidden;
@@ -110,16 +113,16 @@
   }
 }
 
-@media #{$large-up} {
-  .post-overflow {
-    max-height: inherit;
-  }
+// @media #{$large-up} {
+//   .post-overflow {
+//     max-height: inherit;
+//   }
 
-  .post-overflow-overlay,
-  .post-overflow-toggle {
-    display: none;
-  }
-}
+//   .post-overflow-overlay,
+//   .post-overflow-toggle {
+//     display: none;
+//   }
+// }
 
 // Header
 // ==================================================
