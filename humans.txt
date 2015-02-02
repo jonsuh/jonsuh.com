@@ -16,10 +16,4 @@ visit. Feel free to hit me up on Twitter @jonsuh or via my
 site if you have questions or just want to say hey.
 
 Twitter: @jonsuh
-Contact: http://jonsuh.com/contact
-
-Standards:      HTML5, CSS3
-Components:     Bourbon, Bower, Capistrano, Grunt,
-                Jekyll, jQuery, Neat, Sass,
-                Google Fonts, Typekit
-Software:       Fireworks, Sublime Text
+Contact: https://jonsuh.com/contact/
