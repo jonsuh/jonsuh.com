@@ -133,7 +133,7 @@ You can also replace the “Share on Twitter” text with a custom image:
 
 ## Enhance with JavaScript
 
-Now that we’ve gotten the share links to work without JavaScript, let’s enhance them by adding some JavaScript to open the share URL in a popup window.
+Now that we’ve gotten the share links to work without JavaScript, let’s enhance them by adding some JavaScript to open the share URL in a popup window. Here’s the function we’ll use to handle the popup window.
 
 {% highlight js %}
 function windowPopup(url, width, height) {
