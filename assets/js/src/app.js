@@ -12,7 +12,7 @@ App = {
 
     // Load external scripts
     // ==================================================
-    Utility.getScript("//www.google-analytics.com/analytics.js");
+    loadJS("//www.google-analytics.com/analytics.js");
     Social.load();
 
     // Initialize pages
