@@ -5,11 +5,11 @@ Social = {
   disqusShortName: "jonsuh",
 
   load: function() {
-    // var twitterShare = document.querySelector(".js-social-twitter-share");
-    // if (twitterShare) {
-    //   Social.twitterLoad();
-    //   Social.facebookLoad();
-    // }
+    var twitterShare = document.querySelector(".twitter-follow-button");
+    if (twitterShare) {
+      Social.twitterLoad();
+      // Social.facebookLoad();
+    }
 
     var comments = document.querySelector(".post-comments");
     if (comments) {
@@ -83,9 +83,9 @@ Social = {
     Utility.windowOpen(this.getAttribute("href"), 600, 360);
   },
 
-  // twitterLoad: function() {
-  //   Utility.getScript("//platform.twitter.com/widgets.js");
-  // }
+  twitterLoad: function() {
+    loadJS("//platform.twitter.com/widgets.js");
+  }
 
   twitterInit: function() {
     var twitterShares = document.querySelectorAll(".js-social-twitter-share");
