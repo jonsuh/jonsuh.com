@@ -85,7 +85,7 @@ Social = {
 
   twitterLoad: function() {
     loadJS("//platform.twitter.com/widgets.js");
-  }
+  },
 
   twitterInit: function() {
     var twitterShares = document.querySelectorAll(".js-social-twitter-share");
