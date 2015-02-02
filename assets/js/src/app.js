@@ -124,6 +124,12 @@ App = {
     Utility.addClass(overflow, "has-transition");
     Utility.addClass(overflow, "is-reading");
     overflow.addEventListener(App.transitionEnd, overflowTransitionEnd);
+    if (ga) {
+      ga("send", "pageview", {
+        "page" : this.getAttribute("data-url") + "index.html",
+        "title": this.getAttribute("data-title")
+      });
+    }
 
     function overflowTransitionEnd() {
       overflow.style.maxHeight = "inherit";
