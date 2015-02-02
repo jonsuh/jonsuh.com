@@ -19,7 +19,7 @@ Social share scripts are convenient and easy to copy & paste but rely on JavaScr
 
 It’s important to design and build sites responsibly—people pay for data and to truly serve a global audience where 3G and 4G networks are luxuries or nonexistent, every byte of data transferred matters.
 
-Here’s a breakdown of loading social share scripts:
+Here’s a breakdown of loading social share scripts from some of the most popular sites:
 
 | Site       | Files    | Size        |
 | :--------- |:--------:| -----------:|
@@ -261,4 +261,4 @@ All parameters are optional. <a href="https://dev.twitter.com/web/tweet-button/w
 
 ## Conclusion
 
-There are some limitations to using traditional share URLs (for example you can’t set custom captions and descriptions with Facebook’s; therefore, you’d have to use <a href="https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.2" target="_blank">Facebook’s SDK and Feed Dialog</a>) but unless it’s necessary, the benefits of not loading third-party scripts outweight the cons.
+There are some limitations to using traditional share URLs (for example you can’t set custom captions and descriptions with Facebook’s; therefore, you’d have to use <a href="https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.2" target="_blank">Facebook’s SDK and Feed Dialog</a>, or not being able to show the like/tweet/share count) but unless it’s necessary, the benefits of not loading third-party scripts outweight the cons.
