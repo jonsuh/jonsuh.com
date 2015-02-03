@@ -390,6 +390,125 @@
   }
 }
 
+// Tags
+// ==================================================
+.post-tags {
+  
+}
+
+.post-tags-item {
+  display: inline-block;
+  margin-bottom: .4em;
+}
+
+.post-tag {
+  font-size: 16px;
+  color: $grey-dark;
+  background-color: $grey-lightest;
+  height: em-calc(22);
+  line-height: em-calc(19);
+  padding: em-calc(0 7);
+  display: inline-block;
+  margin-right: em-calc(2);
+  margin-left: em-calc(10);
+  position: relative;
+  filter: drop-shadow(em-calc(2) em-calc(2) 0 $grey-lighter);
+  border: 0;
+  border-top-right-radius: em-calc(2);
+  border-bottom-right-radius: em-calc(2);
+  border-right: em-calc(4) solid $blue;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+  }
+
+  &:before {
+    border-top: em-calc(11) solid transparent;
+    border-bottom: em-calc(11) solid transparent;
+    border-right: em-calc(11) solid $grey-lightest;
+    top: 0;
+    left: em-calc(-11);
+    transition: border-color $transition-duration linear;
+  }
+
+  &:after {
+    width: em-calc(4);
+    height: em-calc(4);
+    background-color: $white;
+    top: 50%;
+    margin-top: em-calc(-2);
+    left: em-calc(-2);
+    border-radius: em-calc(4);
+    box-shadow: inset em-calc(1) em-calc(1) 0 $grey-lighter;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+    border-right-color: map-get($color-blue, "300");
+
+    &:before {
+      border-right-color: $blue;
+    }
+  }
+}
+
+.post-tag--cyan {
+  border-right-color: $cyan;
+  &:hover {
+    background-color: $cyan;
+    border-right-color: map-get($color-cyan, "300");
+    &:before {border-right-color: $cyan}
+  }
+}
+
+.post-tag--green {
+  border-right-color: $green;
+  &:hover {
+    background-color: $green;
+    border-right-color: map-get($color-green, "300");
+    &:before {border-right-color: $green}
+  }
+}
+
+.post-tag--grey {
+  border-right-color: map-get($color-grey, "600");
+  &:hover {
+    background-color: map-get($color-grey, "600");
+    border-right-color: map-get($color-grey, "500");
+    &:before {border-right-color: map-get($color-grey, "600")}
+  }
+}
+
+.post-tag--orange {
+  border-right-color: $orange;
+  &:hover {
+    background-color: $orange;
+    border-right-color: map-get($color-orange, "300");
+    &:before {border-right-color: $orange}
+  }
+}
+
+.post-tag--pink {
+  border-right-color: $pink;
+  &:hover {
+    background-color: $pink;
+    border-right-color: map-get($color-pink, "300");
+    &:before {border-right-color: $pink}
+  }
+}
+
+.post-tag--design {@extend .post-tag--cyan}
+.post-tag--development {@extend .post-tag--orange}
+.post-tag--review {@extend .post-tag--pink}
+.post-tag--tutorial {@extend .post-tag--green}
+
+.post-tag-label {
+  font-size: em-calc(13);
+}
+
 // Comments
 // ==================================================
 .post-comments {

@@ -1,0 +1,12 @@
+<div class="sidebar-section">
+  <h4 class="sidebar-title">Post Topics</h4>
+  <ul class="sidebar-list">
+    {% for topic in site.data.posts-topics %}
+      <li class="post-tags-item">
+        <a href="" class="post-tag post-tag--{{ topic }}">
+          <span class="post-tag-label">{{ topic | capitalize }}{% if topic == 'tutorial' or topic == 'review' %}s{% endif %}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
