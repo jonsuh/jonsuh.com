@@ -11,6 +11,10 @@ module.exports = function(grunt) {
       build: {
         src: 'assets/css/screen.css',
         dest: 'assets/css/screen.css'
+      },
+      jekyll: {
+        src: '_site/assets/css/screen.css',
+        dest: '_site/assets/css/screen.css'
       }
     },
 
@@ -294,7 +298,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['assets/sass/**/*.scss'],
-        tasks: ['sass:jekyll']
+        tasks: ['sass:jekyll', 'autoprefixer:jekyll']
       }
     }
   });
@@ -302,7 +306,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['newer:copy:normalize', 'sass:build', 'concat:build', 'jekyll:build']);
   grunt.registerTask('default', ['build', 'concurrent:watch']);
 
-  grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer', 'concat:build', 'cssmin:production', 'uglify:production', 'jekyll:production'])
+  grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer:build', 'concat:build', 'cssmin:production', 'uglify:production', 'jekyll:production'])
 
   grunt.registerTask('deploy:staging', [
     'build',                  // Grunt build
