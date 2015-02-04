@@ -5,11 +5,11 @@ date: "2014-09-30 09:17:00"
 comments: false
 tags:
 - development
+- tutorial
 - front-end-development
 - javascript
 - json
 - php
-- tutorial
 ---
 
 If you’re working with JSON (JavaScript Object Notation) and either need to convert a JSON string to array or object and loop through it or vice-versa, take an array or object and convert it to a JSON string to return, both can be done in PHP or JavaScript.

@@ -5,9 +5,9 @@ date: "2010-11-29"
 comments: false
 excerpt: Rooting the Incredible is now easier than ever. This simple step-by-step guide will help you root your device! This guide now supports the rooting of AMOLED and SLCD Incredibles with the latest Nov OTA!
 tags:
+- tutorial
 - android
 - tech
-- tutorial
 ---
 
 Do you own a Droid Incredible? Open up the possibilities of your Incredible by rooting it. Rooting the Incredible is now easier than ever. This simple step-by-step guide will help you root your device! This guide now supports the rooting of AMOLED and SLCD Incredibles with the latest Nov OTA!

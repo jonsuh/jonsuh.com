@@ -4,6 +4,9 @@ title: Organizing z-index with Sass
 date: "2014-05-29 13:00:00"
 comments: false
 tags:
+- design
+- development
+- tutorial
 - css
 - front-end-development
 - sass

@@ -5,9 +5,9 @@ date: "2011-01-05"
 comments: false
 excerpt: Getting the Incredible back to stock is pretty simple. This guide will not only help you remove root, but it will give you S-ON and restore your ROM, radio, and kernel back to stock, making it safe to return to Verizon.
 tags:
+- tutorial
 - android
 - tech
-- tutorial
 ---
 
 I hope that the only reason you need to unroot your Droid Incredible is because you encountered a problem or you need to return it for a replacement. Well, whatever the reason is, getting the Incredible back to stock is pretty simple. I’ve provided an easy step-by-step guide to unroot and fully restore your Incredible to stock. This guide will not only help you remove root, but it will give you S-ON and restore your ROM, radio, and kernel back to stock, making it safe to return to Verizon.

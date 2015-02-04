@@ -5,9 +5,9 @@ date: "2012-11-16"
 comments: false
 excerpt: Your localhost or virtual hosts stop working and won’t resolve for some reason? This problem began for me after I upgraded my OS to Mac OS X 10.8.2. The fix is easy.
 tags:
+- tutorial
 - os-x
 - tech
-- tutorial
 ---
 
 Did your localhost or virtual hosts stop working and won’t resolve for some reason? Don’t freak out, panic, and/or format your computer! (I already went through the trouble for you). This problem began for me after I upgraded my OS to Mac OS X 10.8.2. The fix is easy.

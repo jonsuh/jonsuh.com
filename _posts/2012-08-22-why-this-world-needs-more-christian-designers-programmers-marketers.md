@@ -6,7 +6,6 @@ comments: false
 excerpt: This world lacks Christian designers, programmers, marketers, videographers, and photographers who have a passion to take their God-given skills and develop, hone, and use them to for His purpose.
 tags:
 - design
-- faith
 - journal
 ---
 

@@ -5,9 +5,9 @@ date: "2013-09-21"
 comments: false
 excerpt: In line for review is the Lexx leather wallet case for the iPhone 5/5s by Vaultskin. I’ll be honest&mdash;I’ve never been a fan of wallet cases, but I took this one for a run with me for a couple of weeks. I can say I was pleased.
 tags:
+- review
 - iphone
 - case
-- review
 ---
 
 In line for review is the Lexx leather wallet case for the iPhone 5/5s by <a href="http://vaultskin.com" target="_blank">Vaultskin</a>. I’ll be honest&mdash;I’ve never been a fan of wallet cases, but I took this one for a run with me for a couple of weeks. I can say I was pleased.

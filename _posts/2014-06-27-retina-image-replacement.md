@@ -4,9 +4,11 @@ title: Retina Image Replacement
 date: "2014-06-27 09:11:00"
 comments: false
 tags:
+- design
+- development
+- tutorial
 - javascript
 - front-end-development
-- tutorial
 ---
 
 To ensure your images are sharp and crisp on retina-enabled devices, you want to serve images that are twice as large and scale them down appropriately; however, keeping mobile users and their limited speeds and data plans in mind, it’s important to only serve retina images on retina-enabled devices or when necessary.

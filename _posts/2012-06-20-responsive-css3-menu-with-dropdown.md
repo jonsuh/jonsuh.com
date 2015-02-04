@@ -5,6 +5,8 @@ date: "2012-06-20"
 comments: false
 excerpt: Here’s a tutorial on how to create a navigation menu with dropdowns purely in CSS. I’ll take you step-by-step to make it horizontal, vertical, and responsive.
 tags:
+- design
+- development
 - css
 - front-end-development
 - responsive

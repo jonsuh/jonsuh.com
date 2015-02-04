@@ -6,7 +6,7 @@ excerpt: A few months ago, I launched the redesign of my website. I enabled HTTP
 comments: false
 tags:
 - development
-- SEO
+- seo
 js:
 - chart.js
 - blog/https-increased-organic-search-impressions-by-144-percent.js

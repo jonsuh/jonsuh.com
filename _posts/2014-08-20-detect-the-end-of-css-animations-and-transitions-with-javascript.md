@@ -4,10 +4,12 @@ title: Detect the End of CSS Animations and Transitions with JavaScript
 date: "2014-08-20 09:00:00"
 comments: false
 tags:
+- design
+- development
+- tutorial
 - css
 - front-end-development
 - javascript
-- tutorial
 ---
 
 CSS allows you to create animations with transitions and keyframes that once were only possible with JavaScript or Flash. Unfortunately, with CSS there’s no way to perform a callback when an animation is complete. With JavaScript, it’s possible to detect the end of a CSS transition or animation and then trigger a function.

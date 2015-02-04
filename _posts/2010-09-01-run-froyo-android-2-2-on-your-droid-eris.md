@@ -5,9 +5,9 @@ date: "2010-09-01"
 comments: false
 excerpt: If you own the HTC Droid Eris, you probably feel left out. Well, now you can run latest Android OS on my Verizon HTC Droid Eris thanks to punk.kaos and the XDA Developers. I’ll run you through some simple steps on how.
 tags:
+- tutorial
 - android
 - tech
-- tutorial
 ---
 
 If you own the HTC Droid Eris, and you’re somewhat familiar with cell phones and the constant development of the Android operating system &#40;OS&#41;, you probably feel left out. The Eris and its older cousin, the Motorola Droid, sparked the now insatiable Android craze that has made Android the top-selling OS in American smart phones as of August, 2010. I purchased the Eris the day after Thanksgiving–it came stock with Android 1.5 (Cupcake)–and immediately fell in love with the OS. With the recent releases of the HTC Droid Incredible, Motorola Droid X, and the Motorola Droid 2, HTC, Motorola, and Verizon have decided to push the newest OS, Android 2.2 aka Froyo, to all the “Droid” phones except the Eris. Feeling abandoned?

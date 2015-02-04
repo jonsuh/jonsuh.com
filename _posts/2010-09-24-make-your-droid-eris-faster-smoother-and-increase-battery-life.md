@@ -5,9 +5,9 @@ date: "2010-09-24"
 comments: false
 excerpt: Increase performance, stability, and battery life on the Droid Eris by running a ported version of Android 2.2 and some custom apps and tweaks.
 tags:
+- tutorial
 - android
 - tech
-- tutorial
 ---
 
 I got my Droid Eris in November of 2009 (the month it came out) and since then, the Droid Incredible, Droid X, and Droid 2 have been released. Comparing stock firmwares and their average performances, the Droid Eris is last on that list. In addition, Android 2.2 has been officially released for all the Droids **except** the Eris!

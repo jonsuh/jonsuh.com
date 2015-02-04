@@ -5,9 +5,9 @@ date: "2010-09-24"
 comments: false
 excerpt: Here is a simple step-by-step guide to unroot your Droid Eris, making it safe to return to Verizon!
 tags:
+- tutorial
 - android
 - tech
-- tutorial
 ---
 
 I’d like to hope and think that the only reason you’re unrooting your Droid Eris is because you have a problem with it and you need to return it to Verizon for a replacement. The custom 2.1 and 2.2 ROMs (i.e. KaosFroyo) available for the Eris are far superior to the stock firmware. Anyway, here is a simple step-by-step guide to unroot your Droid Eris, making it safe to return to Verizon!

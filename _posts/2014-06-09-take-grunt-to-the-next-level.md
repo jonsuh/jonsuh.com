@@ -5,9 +5,9 @@ date: "2014-06-08 12:30:00"
 comments: false
 tags:
 - development
+- tutorial
 - grunt
 - front-end-development
-- tutorial
 ---
 
 Now that you’ve started to integrate Grunt into your development workflow, here are a few tips to tidy up and optimize your Grunt setup along with plugins that you may find useful for development.

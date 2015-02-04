@@ -5,9 +5,10 @@ date: "2013-04-25"
 comments: false
 excerpt: Traditional scroll-to approaches do not play well with all responsive sites. Here I’ll present the problem with the traditional approach and present a better solution.
 tags:
+- development
+- tutorial
 - front-end-development
 - javascript
-- tutorial
 ---
 
 We’ve all seen sites that have anchor links (links that navigate you to the top or to another position or section of the page). Some take extra steps to enhance that experience by using JavaScript to scroll you to that position.

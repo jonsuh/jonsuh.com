@@ -4,10 +4,13 @@ title: Sass BEM-Selector Support and Trailing Ampersand
 date: "2014-06-06 11:42:00"
 comments: false
 tags:
+- design
+- development
+- tutorial
+- bem
 - css
 - front-end-development
 - sass
-- tutorial
 ---
 
 Sass 3.3 has introduced some neat features with the ampersand&mdash;it now has BEM-selector support and allows you to prepend a class to the parent element.

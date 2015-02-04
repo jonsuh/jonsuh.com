@@ -5,9 +5,12 @@ date: "2012-12-03"
 comments: false
 excerpt: With some basic JavaScript and one line of CSS, make your Google AdSense ads responsive.
 tags:
+- design
+- development
 - css
 - front-end-development
 - javascript
+- responsive
 ---
 
 In a world where more and more people are visiting websites on mobile devices, such as tablets and smartphones, it’s important that even your Google AdSense ads don’t detract from the visitor’s mobile experience; therefore, it’s necessary to make your AdSense ads responsive. With a basic JavaScript hack and one line of CSS, you can make your Google AdSense ads responsive.

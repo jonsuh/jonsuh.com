@@ -5,8 +5,10 @@ date: "2012-07-05"
 comments: false
 excerpt: Make YouTube, Vimeo, embed, and HTML5 videos responsive with CSS.
 tags:
-- css
+- design
+- development
 - front-end-development
+- css
 - responsive
 ---
 

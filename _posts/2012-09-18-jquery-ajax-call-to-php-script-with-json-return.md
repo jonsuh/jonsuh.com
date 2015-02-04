@@ -5,13 +5,13 @@ date: "2012-09-18"
 comments: false
 excerpt: Ajax allows you to run server-side validations, form submissions, data retrieval, and other server-side stuff in the background (asynchronously) without interfering with the existing page where the request was made. It’s a beautiful thing, but best of all it’s not very difficult to do.
 tags:
-- front-end-development
 - development
+- tutorial
+- front-end-development
 - javascript
 - json
 - jquery
 - php
-- tutorial
 ---
 
 User experience plays a vital role in excellent web design. Ajax allows you to run server-side validations, form submissions, data retrieval, and other server-side stuff in the background (asynchronously) without interfering with the existing page where the request was made. It’s a beautiful thing, but best of all it’s not very difficult to do.

@@ -5,8 +5,9 @@ date: "2014-04-15 12:00:00"
 comments: false
 tags:
 - development
-- php
 - tutorial
+- php
+- security
 ---
 
 PHP 5.5+ now comes baked with a `password_hash` function to generate secure, one-way hashes along with a `password_verify` function to match a hash with the given password&mdash;If you’re a PHP developer, you should always be securely storing user passwords, **no** excuses.

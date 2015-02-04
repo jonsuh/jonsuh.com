@@ -5,12 +5,12 @@ date: "2013-02-05"
 comments: false
 excerpt: Have you ever gotten this warning on your iOS device, "You are running out of disk space" on your iOS device and wondered, "I didn’t think I had that much music or that many photos, not that I thought at least..." or checked your Storage statistics and thought "Facebook is using how many MBs!?" I think you understand.
 tags:
+- tutorial
 - ios
 - ipad
 - iphone
 - software
 - tech
-- tutorial
 ---
 
 Some apps you use on your iPhone, iPad, or iPod Touch use more space on your phone than you think, especially social apps you check often like Facebook, Instagram, and a more recent egregious culprit, Vine. If you’ve ever gotten the "Warning: you are running out of disk space" message and wondered, "I didn’t think I had that much music or that many photos, not that I thought at least..." or checked your Storage statistics and thought "Facebook is using how many MBs!?" I think you understand.

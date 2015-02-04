@@ -5,10 +5,12 @@ date: "2014-7-09 08:30:00"
 css: animate-svg-with-css.css
 comments: false
 tags:
+- design
+- development
+- tutorial
 - css
 - front-end-development
 - svg
-- tutorial
 ---
 
 Animating SVG with CSS is like animating any other element with CSS&mdash;it can be done with transitions, transforms, and keyframe animations. Once you’re familiar with the markup of an SVG, the rest is fairly straight forward.

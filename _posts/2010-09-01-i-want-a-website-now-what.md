@@ -4,8 +4,6 @@ title: I Want a Website. Now What?
 date: "2010-09-01"
 comments: false
 excerpt: From obtaining a domain name and web host and wireframing to typography, CSS, and markups, I tried my best to put together a rather simple how-to in getting your own website started from my 15 years of experience in web design and development.
-tags:
-- design
 ---
 
 I often have people come to me and say, "I want to start a website. What do I need to do?" The web is commonly associated with the following words: "free," "instant," "quick," and "easy." Although those words do describe the web, they only describes a small portion of it and most of the time the people who know, understand, or have little to nothing to do with web design and development tend to loosely use those terms when referring to the web.

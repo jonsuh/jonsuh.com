@@ -4,8 +4,9 @@ title: Best Practices to Stay Safe on the Web
 date: "2014-04-08 20:00:00"
 comments: false
 tags:
-- software
 - tutorial
+- security
+- software
 ---
 
 A serious security vulnerability that affects a large part of the web was discovered this week&mdash;this is a good time to reevaluate how you log in to websites and use the web, and implement best practices to keep yourself safe.

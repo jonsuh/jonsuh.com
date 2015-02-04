@@ -8,9 +8,9 @@ review:
   comments: High-quality, beautiful product. Not cheap but a worthwhile investment.
 comments: false
 tags:
-- MacBook
-- case
 - review
+- case
+- macbook
 ---
 
 If you’re looking for a sleeve for your 13” MacBook, you may want to consider the Folio Sleeve by Mujjo&mdash;not only does it protect your MacBook from the perils of the outside world, but it’s also a thing of beauty.

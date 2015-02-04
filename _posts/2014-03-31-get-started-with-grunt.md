@@ -6,9 +6,9 @@ comments: false
 image: get-started-with-grunt-header.jpg
 tags:
 - development
+- tutorial
 - front-end-development
 - grunt
-- tutorial
 ---
 
 Grunt has become an essential part of my workflow—like Sass, I never start a web project without it. Here’s an introduction to Grunt, its benefits and what it can do for you along with a guide to help you get started.

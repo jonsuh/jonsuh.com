@@ -5,8 +5,8 @@ date: "2013-03-19"
 comments: false
 excerpt: Warning&#58; If you don’t want to be inspired, if you don’t want to be compelled to jump out of your seat and do or create something, if you’re content with where you are and where you’re headed, do not read this book.
 tags:
-- book
 - review
+- book
 ---
 
 ***Warning**: If you don’t want to be inspired, if you don’t want to be compelled to jump out of your seat and do or create something, if you’re content with where you are and where you’re headed, do **not** read this book.*

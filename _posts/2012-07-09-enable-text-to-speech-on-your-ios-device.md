@@ -9,7 +9,6 @@ tags:
 - ipad
 - iphone
 - tech
-- tutorial
 ---
 
 Did you know your iOS device is smart enough to read to you aloud? By default, this feature is disabled, but it’s super easy to turn on iOS’ text-to-speech feature. As long as you’re running iOS 5+, you can have your iPhone, iPad, or iPod touch read you an email you received, an article you found on the web, or even a book in iBooks.

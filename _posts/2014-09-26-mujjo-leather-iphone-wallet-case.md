@@ -5,9 +5,9 @@ date: "2014-09-26 09:17:00"
 excerpt: "If you don’t like carrying a lot in your pockets, the Mujjo Leather Wallet Case is for you&mdash;it’s designed to carry your iPhone along with a couple of bare essentials like your bank card, ID and cash. It’s slim, functional and beautiful."
 comments: false
 tags:
+- review
 - case
 - iphone
-- review
 ---
 
 *Note: There’s a newer version of the Leather Wallet Case for the <span class="no-break">iPhone 6</span>. <a href="/blog/mujjo-leather-wallet-case-iphone-6">Read the review</a>.*

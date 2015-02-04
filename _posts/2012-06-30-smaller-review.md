@@ -5,8 +5,9 @@ date: "2012-06-30"
 comments: false
 excerpt: Smaller allows you to combine and minify files with a simple GUI and does all the command-line magic in the background for you. Minifying and compressing files are now simpler than ever with Smaller.
 tags:
-- front-end-development
+- development
 - review
+- front-end-development
 - software
 - tech
 ---

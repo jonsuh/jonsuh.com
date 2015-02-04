@@ -5,10 +5,10 @@ date: "2015-02-01 08:00:00"
 comments: false
 tags:
 - development
+- tutorial
 - front-end-development
 - javascript
 - performance
-- tutorial
 ---
 
 Social share scripts are convenient and easy to copy & paste but rely on JavaScript and add additional overhead to your site, which means more HTTP requests and slower load times. Instead, use share links that don’t require you to load scripts for each social site.

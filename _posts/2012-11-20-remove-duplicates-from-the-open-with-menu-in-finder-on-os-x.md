@@ -5,9 +5,9 @@ date: "2012-11-20"
 comments: false
 excerpt: Remove duplicate entries in the Open With menu in Finder by resetting it in just 3 steps.
 tags:
+- tutorial
 - os-x
 - tech
-- tutorial
 ---
 
 When you want to open up a document or file with another application in Finder, you can easily do so by right-clicking the file and using the Open With menu. If you use the Open With menu enough, may notice duplicate entries of the same application; sometimes that list can get ridiculously long due to multiple dupliates. Fortunately, you can easily reset the Open With menu and remove those duplicates in just 3 steps.

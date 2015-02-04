@@ -5,10 +5,11 @@ date: "2014-03-11 10:00:00"
 comments: false
 image: need-for-speed-header.jpg
 tags:
-- design
 - development
 - front-end-development
+- jekyll
 - grunt
+- nginx
 - sass
 ---
 
