@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="post post--posts">
+    <section class="post-main">
+      <header class="posts-header">
+        <div class="posts-header-column">
+          <span class="posts-header-label posts-header-label--tag">Posts in topic </span>
+          <span class="post-tag post-tag--{{ page.tag }}">
+            <div class="post-tag-label">{{ page.tag | capitalize }}</div>
+          </span>
+        </div>
+        {% if paginator.page > 1 %}
+          <div class="posts-header-column">
+            <span class="posts-header-label posts-header-label--page">Page {{ paginator.page }}</span>
+          </div>
+        {% endif %}
+      </header>
+      {% for post in paginator.posts %}
+        {% for tag in post.tags %}
+          {% if tag == page.tag %}
+            <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+              <h2 class="post-title" itemprop="name">
+                <a href="{{ post.url | append: "/" }}" class="post-link">{{ post.title }}</a>
+              </h2>
+              <p class="post-meta">
+                <time content="{{ post.date | date: "%Y-%m-%d" }}" datetime="{{ post.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
+              </p>
+              <section class="post-content">
+                {{ post.excerpt | markdownify }}
+              </section>
+            </article>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      <section class="post-pagination">
+        <span class="post-pagination-page"><span class="post-pagination-page-label">Page&nbsp;</span>{{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.previous_page %}
+          <a href="/blog/topic/{{ page.tag }}/{% if paginator.previous_page > 1 %}{{ paginator.previous_page | prepend: "page/" | append: "/" }}{% endif %}" class="post-pagination-link post-pagination-link--previous"><span class="post-pagination-arrow">&larr;</span> Previous<span class="post-pagination-label">&nbsp;Page</span></a>
+        {% endif %}
+        {% if paginator.next_page %}
+          <a href="/blog/topic/{{ page.tag }}/page/{{ paginator.next_page | append: "/" }}" class="post-pagination-link post-pagination-link--next">Next <span class="post-pagination-label">Page&nbsp;</span><span class="post-pagination-arrow">&rarr;</span></a>
+        {% endif %}
+      </section>
+    </section>
+    <aside class="post-sidebar">
+      {% include sidebar/carbon-ads.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/posts-selected.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/posts-topics.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/hey.html %}
+
+      <hr class="section-break-half">
+
+      {% include sidebar/newsletter.html %}
+    </aside>
+  </div>
+</div>

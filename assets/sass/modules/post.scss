@@ -14,6 +14,8 @@
   @include max-span-columns(7);
 }
 
+// Posts
+// ==================================================
 .post--posts {
   .post-article {
     border-bottom: 1px dotted $grey-lighter;
@@ -31,6 +33,29 @@
       margin-bottom: 0;
     }
   }
+}
+
+.posts-header {
+  margin-bottom: em-calc(20);
+  @include clearfix;
+  @media #{$small-up} {
+    margin-bottom: em-calc(25);
+  }
+  @media #{$medium-up} {
+    margin-bottom: em-calc(30);
+  }
+  @media #{$large-up} {
+    margin-bottom: em-calc(35);
+  }
+}
+
+.posts-header-column {
+  width: 70%;
+  display: inline-block;
+}
+.posts-header-column + .posts-header-column {
+  text-align: right;
+  width: 28%;
 }
 
 // Overflow
@@ -398,18 +423,29 @@
 
 .post-tags-item {
   display: inline-block;
-  margin-bottom: .4em;
+  margin-bottom: .7em;
+}
+
+@mixin post-tag($height: 24) {
+  height: em-calc($height);
+  line-height: em-calc($height);
+
+  &:before {
+    border-top-width: em-calc($height / 2);
+    border-bottom-width: em-calc($height / 2);
+    border-right-width: em-calc($height / 2);
+    width: em-calc($height);
+    left: em-calc($height * -1);
+  }
 }
 
 .post-tag {
-  font-size: 16px;
+  @include post-tag(26);
   color: $grey-dark;
   background-color: $grey-lightest;
-  height: em-calc(22);
-  line-height: em-calc(19);
   padding: em-calc(0 7);
   display: inline-block;
-  margin-right: em-calc(2);
+  margin-right: em-calc(5);
   margin-left: em-calc(10);
   position: relative;
   filter: drop-shadow(em-calc(2) em-calc(2) 0 $grey-lighter);
@@ -425,13 +461,14 @@
   }
 
   &:before {
-    border-top: em-calc(11) solid transparent;
-    border-bottom: em-calc(11) solid transparent;
-    border-right: em-calc(11) solid $grey-lightest;
+    border-style: solid;
+    border-color: transparent;
+    border-right-color: $grey-lightest;
     top: 0;
-    left: em-calc(-11);
     transition: border-color $transition-duration linear;
   }
+
+  padding: em-calc(0 10);
 
   &:after {
     width: em-calc(4);
@@ -441,73 +478,128 @@
     margin-top: em-calc(-2);
     left: em-calc(-2);
     border-radius: em-calc(4);
-    box-shadow: inset em-calc(1) em-calc(1) 0 $grey-lighter;
+    box-shadow: inset em-calc(2) em-calc(1) 0 $grey-lighter;
   }
+}
 
-  &:hover {
-    color: $white;
-    background-color: $blue;
-    border-right-color: map-get($color-blue, "300");
+a.post-tag:hover {
+  color: $white;
+  background-color: $blue;
+  border-right-color: map-get($color-blue, "300");
 
-    &:before {
-      border-right-color: $blue;
+  &:before {
+    border-right-color: $blue;
+  }
+}
+
+.post-tag-label {
+  font-size: em-calc(14);
+  font-weight: 500;
+}
+
+.posts-header-label--tag {
+  font-family: $serif;
+  font-style: italic;
+  padding-right: em-calc(8);
+  @media #{$small-up} {
+    font-size: em-calc(17);
+  }
+  @media #{$medium-up} {
+    font-size: em-calc(18);
+  }
+}
+
+.post--posts {
+  .post-main {
+    .post-tag {
+      padding: em-calc(0 10);
     }
+
+    @media #{$small-up} {
+      .post-tag {
+        @include post-tag(28);
+      }
+
+      .post-tag-label {
+        font-size: em-calc(15);
+      }
+    }
+
+    @media #{$medium-up} {
+      .post-tag {
+        @include post-tag(30);
+        padding: em-calc(0 12);
+      }
+
+      .post-tag-label {
+        font-size: em-calc(16);
+      }
+    }
+
+    @media #{$large-up} {
+      .post-tag {
+        @include post-tag(32);
+        padding: em-calc(0 14);
+      }
+    }
+  }
+}
+
+.post-sidebar {
+  .post-tag {
+    font-size: 16px;
   }
 }
 
 .post-tag--cyan {
   border-right-color: $cyan;
-  &:hover {
-    background-color: $cyan;
-    border-right-color: map-get($color-cyan, "300");
-    &:before {border-right-color: $cyan}
-  }
+}
+a.post-tag--cyan:hover {
+  background-color: $cyan;
+  border-right-color: map-get($color-cyan, "300");
+  &:before {border-right-color: $cyan}
 }
 
 .post-tag--green {
   border-right-color: $green;
-  &:hover {
-    background-color: $green;
-    border-right-color: map-get($color-green, "300");
-    &:before {border-right-color: $green}
-  }
+}
+a.post-tag--green:hover {
+  background-color: $green;
+  border-right-color: map-get($color-green, "300");
+  &:before {border-right-color: $green}
 }
 
 .post-tag--grey {
   border-right-color: map-get($color-grey, "600");
-  &:hover {
-    background-color: map-get($color-grey, "600");
-    border-right-color: map-get($color-grey, "500");
-    &:before {border-right-color: map-get($color-grey, "600")}
-  }
+}
+a.post-tag--grey:hover {
+  background-color: map-get($color-grey, "600");
+  border-right-color: map-get($color-grey, "500");
+  &:before {border-right-color: map-get($color-grey, "600")}
 }
 
 .post-tag--orange {
   border-right-color: $orange;
-  &:hover {
-    background-color: $orange;
-    border-right-color: map-get($color-orange, "300");
-    &:before {border-right-color: $orange}
-  }
+}
+a.post-tag--orange:hover {
+  background-color: $orange;
+  border-right-color: map-get($color-orange, "300");
+  &:before {border-right-color: $orange}
 }
 
 .post-tag--pink {
   border-right-color: $pink;
-  &:hover {
-    background-color: $pink;
-    border-right-color: map-get($color-pink, "300");
-    &:before {border-right-color: $pink}
-  }
+}
+a.post-tag--pink:hover {
+  background-color: $pink;
+  border-right-color: map-get($color-pink, "300");
+  &:before {border-right-color: $pink}
 }
 
 .post-tag--design {@extend .post-tag--cyan}
 .post-tag--development {@extend .post-tag--orange}
 .post-tag--review {@extend .post-tag--pink}
 .post-tag--tutorial {@extend .post-tag--green}
-
-.post-tag-label {
-  font-size: em-calc(13);
-}
 
 // Comments
 // ==================================================
@@ -626,6 +718,11 @@
 
 // Pagination
 // ==================================================
+.posts-header-label--page {
+  font-size: em-calc(14);
+  color: $grey-light;
+}
+
 .post-pagination {
   text-align: center;
   @include clearfix;
