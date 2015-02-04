@@ -237,7 +237,7 @@ Parameter `mini` is required and must be true, `url` is required. <a href="https
 
 {% highlight html %}
 <a href="https://www.pinterest.com/pin/create/button/
-     &url={{ 'https://jonsuh.com/' | encode_url }}
+     ?url={{ 'https://jonsuh.com/' | encode_url }}
      &media={{ 'https://jonsuh.com/icon.png' | encode_url }}
      &description={{ 'Short description' | encode_url }}
      &hashtags=web,development" 
