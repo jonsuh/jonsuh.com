@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Securely hash passwords with PHP
+title: Securely Hash Passwords with PHP
 date: "2014-04-15 12:00:00"
 comments: false
 tags:
