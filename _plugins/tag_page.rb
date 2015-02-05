@@ -16,11 +16,11 @@ module Jekyll
     end
 
     def paginate(site, tag)
-      tag_posts = site.posts.find_all {|post| post.tags.include?(tag)}.sort_by {|post| -post.date.to_f}
-      num_pages = TagPager.calculate_pages(tag_posts, site.config['paginate'].to_i)
+      posts = site.posts.find_all {|post| post.tags.include?(tag)}.sort_by {|post| -post.date.to_f}
+      pages = TagPagination.calculate_pages(posts, site.config['paginate'].to_i)
 
-      (1..num_pages).each do |page|
-        pager = TagPager.new(site, page, tag_posts, tag, num_pages)
+      (1..pages).each do |page|
+        pager = TagPagination.new(site, page, posts, tag, pages)
         dir = File.join('blog/topic/', tag, page > 1 ? "page/#{page}" : '')
         page = TagPage.new(site, site.source, dir, tag)
         page.pager = pager
@@ -43,12 +43,12 @@ module Jekyll
     end
   end
 
-  class TagPager < Jekyll::Paginate::Pager 
+  class TagPagination < Jekyll::Paginate::Pager 
     attr_reader :tag
 
-    def initialize(site, page, all_posts, tag, num_pages = nil)
+    def initialize(site, page, posts, tag, pages = nil)
       @tag = tag
-      super site, page, all_posts, num_pages
+      super site, page, posts, pages
     end
 
     alias_method :original_to_liquid, :to_liquid
