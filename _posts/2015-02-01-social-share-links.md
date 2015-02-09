@@ -56,7 +56,7 @@ http%3A%2F%2Fjonsuh.com%2F
 Depending on the language(s) or framework you’re using, there are various ways to URL encode. With PHP:
 
 {% highlight php %}
-<?php echo urlencode('http://jonsuh.com/'); ?>
+<?php echo urlencode('https://jonsuh.com/'); ?>
 {% endhighlight %}
 
 With Jekyll I use <a href="https://gist.github.com/jonsuh/2a88c7799461623d9d82" target="_blank">this plugin</a> and do the following:
@@ -72,7 +72,7 @@ With Jekyll I use <a href="https://gist.github.com/jonsuh/2a88c7799461623d9d82" 
 Construct the Facebook share URL by appending the encoded URL immediately after `u=` (the question mark denotes the start of query strings):
 
 {% highlight html %}
-https://www.facebook.com/sharer/sharer.php?u={{ 'http://jonsuh.com/' | encode_url }}
+https://www.facebook.com/sharer/sharer.php?u={{ 'https://jonsuh.com/' | encode_url }}
 {% endhighlight %}
 
 Then create the share link by using an anchor `<a>` with `target=_blank`, which should look like the following:
@@ -81,7 +81,7 @@ Then create the share link by using an anchor `<a>` with `target=_blank`, which 
 
 {% highlight html %}
 <a href="https://www.facebook.com/sharer/sharer.php
-     ?u={{ 'http://jonsuh.com/' | encode_url }}"
+     ?u={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Facebook</a>
 {% endhighlight %}
 
@@ -213,7 +213,7 @@ Here’s a collection of common social share URLs and examples of their structur
 
 {% highlight html %}
 <a href="https://www.facebook.com/sharer/sharer.php
-     ?u={{ 'http://jonsuh.com/' | encode_url }}"
+     ?u={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Facebook</a>
 {% endhighlight %}
 
@@ -223,7 +223,7 @@ Parameter `u` is required.
 
 {% highlight html %}
 <a href="https://plus.google.com/share
-     ?url={{ 'http://jonsuh.com/' | encode_url }}"
+     ?url={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Google+</a>
 {% endhighlight %}
 
@@ -232,7 +232,7 @@ Parameter `url` is required. <a href="https://developers.google.com/+/web/share/
 ### LinkedIn
 
 {% highlight html %}
-<a href="http://www.linkedin.com/shareArticle
+<a href="https://www.linkedin.com/shareArticle
      ?mini=true
      &url={{ 'https://jonsuh.com/' | encode_url }}
      &title={{ 'Jonathan Suh' | encode_url }}
@@ -255,6 +255,16 @@ Parameter `mini` is required and must be true, `url` is required. <a href="https
 {% endhighlight %}
 
 Parameter `url` is required. <a href="https://developers.pinterest.com/pin_it/" title="Pinterest Pin It button documentation" target="_blank">Read the documentation</a>
+
+### Reddit
+
+{% highlight html %}
+<a href="http://www.reddit.com/submit/
+     ?url={{ 'https://jonsuh.com/' | encode_url }}"
+   target="_blank">Share on Reddit</a>
+{% endhighlight %}
+
+Parameter `url` is required. <a href="http://www.reddit.com/buttons/" title="Reddit Share button documentation" target="_blank">Read the documentation</a>
 
 ### Twitter
 
