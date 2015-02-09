@@ -95,6 +95,7 @@ Social = {
   },
 
   twitterShare: function(e) {
+    e.stopPropagation();
     e.preventDefault();
 
     Utility.windowOpen(this.getAttribute("href"), 600, 300);
