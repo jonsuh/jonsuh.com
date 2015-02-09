@@ -180,16 +180,13 @@ if (jsSocialShares) {
 <p>
   <a href="https://twitter.com/intent/tweet/?text={{ 'Check out my new website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" class="js-social-share button" target="_blank">Share on Twitter (Popup)</a>
   <script>
-  var jsSocialShares = document.querySelectorAll(".js-social-share");
-  if (jsSocialShares) {
-    [].forEach.call(jsSocialShares, function(anchor) {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
+  var jsSocialShare = document.querySelector(".js-social-share");
+  jsSocialShare.addEventListener("click", function(e) {
+    e.stopPropagation();
+    e.preventDefault();
 
-        Utility.windowOpen(this.href, 500, 300);
-      });
-    });
-  }
+    Utility.windowOpen(this.href, 500, 300);
+  });
   </script>
 </p>
 
