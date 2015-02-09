@@ -40,7 +40,8 @@ function loadJS( src, cb ){
 
 var metaTags     = document.getElementsByTagName("meta"),
     metaArray    = [],
-    metaContent  = ["fontsCSS", "fontsJS", "mainCSS", "mainJS", "pageCSS", "pageJS"];
+    // metaContent  = ["fontsCSS", "fontsJS", "mainCSS", "mainJS", "pageCSS", "pageJS"];
+    metaContent  = ["fontsCSS", "fontsJS", "pageCSS"];
 
 for (var i = 0; i < metaTags.length; i++) {
   if (metaContent.indexOf(metaTags[i].getAttribute("name")) > -1) {

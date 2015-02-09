@@ -6,20 +6,13 @@
   <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
 
   <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=RobotoDraft:400,700,500,300">
-  <!--<meta name="mainCSS" content="/assets/css/screen.css?v={{ css_version }}">-->
   <link rel="stylesheet" href="/assets/css/screen.css?v={{ css_version }}">
-  <meta name="mainJS" content="/assets/js/jonsuh.js?v={{ js_version }}">
   <meta name="fontsJS" content="//use.typekit.net/iko7pqe.js">
   {% strip %}
   {% if page.css %}
     <meta name="pageCSS" content="/assets/css/blog/{{ page.css }}?v={{ css_version }}">
   {% endif %}
 
-  {% if page.js %}
-    {% for js in page.js %}
-      <meta name="pageJS" content="/assets/js/{{ js }}?v={{ js_version }}">
-    {% endfor %}
-  {% endif %}
   {% if url == "/" and site.posts.first.js %}
     {% for js in site.posts.first.js %}
       <meta name="pageJS" content="/assets/js/{{ js }}?v={{ js_version }}">
@@ -76,6 +69,12 @@
 
 {% include footer.html %}
 
+<script src="/assets/js/jonsuh.js?v={{ js_version }}" async></script>
+  {% if page.js %}
+    {% for js in page.js %}
+      <script src="/assets/js/{{ js }}?v={{ js_version }}" async></script>
+    {% endfor %}
+  {% endif %}
 <script>try{Typekit.load();}catch(e){}</script>
 </body>
 </html>
