@@ -32,7 +32,7 @@
   </noscript>
 
   <link rel="canonical" href="{{ url | prepend: site.url | prepend: site.url_protocol }}">
-  <meta name="robots" content="index,follow,archive">
+  <meta name="robots" content="{% if page.robots == nil %}all{% else %}{{ page.robots }}{% endif %}">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="author" href="{{ site.social.google }}">
 
