@@ -5,11 +5,11 @@ Social = {
   disqusShortName: "jonsuh",
 
   load: function() {
-    var twitterShare = document.querySelector(".twitter-follow-button");
-    if (twitterShare) {
-      Social.twitterLoad();
+    // var twitterShare = document.querySelector(".twitter-follow-button");
+    // if (twitterShare) {
+      // Social.twitterLoad();
       // Social.facebookLoad();
-    }
+    // }
 
     var comments = document.querySelector(".post-comments");
     if (comments) {
@@ -19,13 +19,13 @@ Social = {
   },
 
   init: function() {
-    var twitterShares = document.querySelectorAll(".js-social-twitter-share");
-    if (twitterShares) {
-      [].forEach.call(twitterShares, function(twitterShare) {
+    var twitterShare = document.querySelector(".js-social-twitter-share");
+    if (twitterShare) {
+      // [].forEach.call(twitterShares, function(twitterShare) {
         Social.facebookInit();
         Social.googleInit();
         Social.twitterInit();
-      });
+      // });
     }
   },
 
@@ -83,9 +83,9 @@ Social = {
     Utility.windowOpen(this.getAttribute("href"), 600, 360);
   },
 
-  twitterLoad: function() {
-    loadJS("//platform.twitter.com/widgets.js");
-  },
+  // twitterLoad: function() {
+  //   loadJS("//platform.twitter.com/widgets.js");
+  // },
 
   twitterInit: function() {
     var twitterShares = document.querySelectorAll(".js-social-twitter-share");
@@ -95,7 +95,6 @@ Social = {
   },
 
   twitterShare: function(e) {
-    e.stopPropagation();
     e.preventDefault();
 
     Utility.windowOpen(this.getAttribute("href"), 600, 300);

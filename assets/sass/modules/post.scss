@@ -706,14 +706,44 @@ a.post-tag--pink:hover {
   overflow: hidden;
 }
 
-.post-author-twitter:before {
-  content: "\000A\000A";
-  white-space: pre;
+.post-author-twitter {
+  font-size: 16px;
+
+  &::before {
+    content: "\000A\000A";
+    white-space: pre;
+  }
 }
 
-.post-author-twitter[data-twttr-rendered="true"] {
-  display: block;
-  margin-top: em-calc(15);
+.post-author-twitter-link {
+  font-size: em-calc(14);
+  font-weight: 500;
+  color: $grey-darker;
+  border: 1px solid $grey-lighter;
+  border-radius: em-calc(5);
+  padding: .4em .75em;
+  background-color: $grey-lightest;
+  display: inline-block;
+  vertical-align: middle;
+
+  @media #{$medium-up} {
+    font-size: em-calc(15);
+    padding: .5em 1em;
+  }
+}
+
+.post-author-twitter-icon {
+  width: em-calc(19);
+  height: em-calc(19);
+  margin-right: em-calc(5);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: em-calc(-1);
+
+  .svg-icon-path {
+    fill: map-get($color-social, twitter);
+  }
 }
 
 // Pagination
