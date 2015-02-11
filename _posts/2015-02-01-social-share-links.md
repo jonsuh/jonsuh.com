@@ -125,9 +125,9 @@ You can also replace the “Share on Twitter” text with a custom image:
 {% endhighlight %}
 
 <a href="https://twitter.com/intent/tweet/?text=Check%20out%20my%20new%20website!&url=https%3A%2F%2Fjonsuh.com%2F&via=jonsuh" target="_blank" style="border: 0">
-  <img src="/assets/images/blog/responsible-social-share-links/twitter-share.png"
-       srcset="/assets/images/blog/responsible-social-share-links/twitter-share.png 1x,
-               /assets/images/blog/responsible-social-share-links/twitter-share@2x.png 2x" 
+  <img src="/assets/images/blog/social-share-links/twitter-share.png"
+       srcset="/assets/images/blog/social-share-links/twitter-share.png 1x,
+               /assets/images/blog/social-share-links/twitter-share@2x.png 2x" 
     style="max-width: 170px">
 </a>
 
