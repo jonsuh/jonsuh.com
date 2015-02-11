@@ -306,7 +306,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['newer:copy:normalize', 'sass:build', 'autoprefixer:build', 'concat:build', 'jekyll:build']);
   grunt.registerTask('default', ['build', 'concurrent:watch']);
 
-  grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer:build', 'concat:build', 'cssmin:production', 'uglify:production', 'jekyll:production'])
+  grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer:build', 'concat:build', 'cssmin:production', 'uglify:production', 'uglify:critical', 'jekyll:production'])
 
   grunt.registerTask('deploy:staging', [
     'build',                  // Grunt build
