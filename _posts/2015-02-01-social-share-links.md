@@ -110,7 +110,7 @@ via : jonsuh
    target="_blank">Share on Twitter</a>
 {% endhighlight %}
 
-<a href="https://twitter.com/intent/tweet/?text=Check%20out%20my%20new%20website!&url=https%3A%2F%2Fjonsuh.com%2F&via=jonsuh" class="button js-stop-propagation" target="_blank">Share on Twitter (_blank)</a>
+<a href="https://twitter.com/intent/tweet/?text=Check%20out%20my%20new%20website!&url=https%3A%2F%2Fjonsuh.com%2F&via=jonsuh" class="button" target="_blank">Share on Twitter (_blank)</a>
 
 You can also replace the “Share on Twitter” text with a custom image:
 
@@ -128,7 +128,7 @@ You can also replace the “Share on Twitter” text with a custom image:
   <img src="/assets/images/blog/responsible-social-share-links/twitter-share.png"
        srcset="/assets/images/blog/responsible-social-share-links/twitter-share.png 1x,
                /assets/images/blog/responsible-social-share-links/twitter-share@2x.png 2x" 
-    style="max-width: 170px" class="js-stop-propagation">
+    style="max-width: 170px">
 </a>
 
 ## Enhance with JavaScript
@@ -188,15 +188,6 @@ if (jsSocialShares) {
         e.preventDefault();
 
         Utility.windowOpen(this.href, 500, 300);
-      });
-    });
-  }
-
-  var jsStopPropagations = document.querySelectorAll(".js-stop-propagation");
-  if (jsStopPropagations) {
-    [].forEach.call(jsStopPropagations, function(anchor) {
-      anchor.addEventListener("click", function(e) {
-        e.stopPropagation();
       });
     });
   }
