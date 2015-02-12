@@ -4,7 +4,7 @@ title: August Smart Lock Review
 date: "2015-01-19 09:17:00"
 review:
   name: August Smart Lock
-  rating: 7
+  rating: 7.5
   comments: Solid product. Has its flaws. Still improving.
 share_image: "https://farm8.staticflickr.com/7503/16117739367_d99ab6ace8_c.jpg"
 comments: false
@@ -55,7 +55,7 @@ The August app allows you to easily lock or unlock August Smart Lock with a sing
 
 !["August app lock and unlock screens"](https://farm9.staticflickr.com/8584/15691276443_4236e63e30_c.jpg)
 
-August Smart Lock requires 4 AA batteries (included) and relies on Bluetooth Low Energy (BLE) to pair with your phone. Since it relies on BLE instead of Wi-Fi, it says it can last almost a year before having to replace its batteries, and during a power outage you’ll still be able to connect to it (assuming your batteries aren’t dead either). You’ll also get a reminder when batteries get low. Since August Smart Lock doesn’t replace your entire lock system, if you forget your phone you can still lock or unlock with your original key from the outside.
+August Smart Lock requires 4 AA batteries (included) and relies on Bluetooth Low Energy (BLE) to pair with your phone. Since it relies on BLE instead of Wi-Fi, it says it can last almost a year before having to replace its batteries[^1], and during a power outage you’ll still be able to connect to it (assuming your batteries aren’t dead either). You’ll also get a reminder when batteries get low. Since August Smart Lock doesn’t replace your entire lock system, if you forget your phone you can still lock or unlock with your original key from the outside.
 
 !["August Smart Lock inside"](https://farm8.staticflickr.com/7576/15681174534_0612a61ffe_c.jpg)
 
@@ -113,9 +113,9 @@ When August Smart Lock works like it’s designed to work or like you’d expect
 
 Connecting to it can range from painless to utter and sheer frustration and resentment, and most of the time it’s the latter. It’s unreliable and usually takes several seconds, sometimes longer, and occasionally never (at least until my patience runs out as I’m staring at my phone waiting for it to connect or until my phone auto locks). A majority of the time I still pull out my keys because it’s faster than waiting for it to connect.
 
-When auto-unlock works, it’s amazing, like thaumaturgy, sorcery, magic, and from personal experience, it works about 60–70% of the time—occasionally at the very attempt to open my door, I’ll find that it’s still locked.
+When auto-unlock works, it’s amazing, like thaumaturgy, sorcery, magic. August has released a few updates which have improved the reliability of auto-unlock. From personal experience it works about 80% of the time[^2], although on rare occasions I’ll still find my door locked.
 
-I haven’t used Everlock, but based on the unreliability of auto-unlock, I wouldn’t trust Everlock to automatically lock the door behind me, especially when I’m leaving the house—I can imagine coming home and, to my horror, finding my door unlocked.
+I haven’t used Everlock, but based on the very fact that auto-unlock isn’t perfect, I wouldn’t trust Everlock to automatically lock the door behind me, especially when I’m leaving the house—I can imagine coming home and, to my horror, finding my door unlocked.
 
 With that said, of all the available smart locks out there (like <a href="https://ockitron" target="_blank">Lockitron</a>, <a href="http://www.gojiaccess.com" target="_blank">Goji</a>, <a href="https://www.mykevo.com" target="_blank">Kevo</a> to name a few), August Smart Lock is still my preference and choice.
 
@@ -130,3 +130,9 @@ Although August Smart Lock still needs work, I trust it to make the proper softw
 It’s also possible that August Connect would improve connectivity and reliability since it’ll be a stationary device, and when it’s installed, more than likely rely on August Connect to pair with and control August Smart Lock as opposed to the phone.
 
 <a href="https://www.flickr.com/photos/jonsuhcom/sets/72157648020084853/" class="button" target="_blank">More photos of August Smart Lock on Flickr</a>
+
+---
+
+[^1]: I’m not too sure about the 1-year battery life that’s advertised—my batteries were at 25% after only 6 months.
+
+[^2]: Previously: “...from personal experience, it works about 60–70% of the time—occasionally at the very attempt to open my door, I’ll find that it’s still locked.”
