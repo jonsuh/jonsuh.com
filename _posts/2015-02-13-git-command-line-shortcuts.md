@@ -2,6 +2,7 @@
 layout: post
 title: Git Command-Line Shortcuts
 date: "2015-02-13 08:00:00"
+share_image: git-log-graph.gif
 comments: false
 tags:
 - development
@@ -14,9 +15,11 @@ A lot of my time is spent in Terminal and a majority of it is spent typing Git c
 
 <!--more-->
 
-## Git Aliases and Functions
+## Git Bash Aliases and Functions
 
-Here’s my list of Git aliases and functions. To use them as your own, just add them to the file you store your aliases/functions. (i.e. `~/.bash_profile` or `~/.bashrc`)
+Git allows you to set aliases but they’re limited and only save you a few keystrokes (i.e. instead of `git checkout` you can type `git co`, but you still have to type `git`). Since Bash is Terminal’s default command-line interpreter, you can also set Bash aliases to reduce your keystrokes even further.
+
+Here’s my list of Git Bash aliases and functions. To use them as your own, just add them to the file you store your aliases/functions. (i.e. `~/.bash_profile` or `~/.bashrc`)
 
 <small>Notes: If you’ve never set an alias before, don’t know where to put them, or have no clue what I’m talking about, read my post on <a href="/blog/bash-command-line-shortcuts/" target="_blank">Terminal/Bash Command-Line Shortcuts with Aliases</a> before continuing.</small>
 
@@ -57,7 +60,13 @@ alias gstd='git stash drop'
 function glf() { git log --all --grep="$1"; }
 {% endhighlight %}
 
-You can quickly see how these aliases can save you keystrokes. Most of the aliases are pretty straight forward—for example, instead of `git checkout -b <branch-name>`:
+You can quickly see how these aliases can save you keystrokes. Most of the aliases are pretty straight forward—for example, instead of `git add assets/css/screen.css`, you can run:
+
+{% highlight bash %}
+ga assets/css/screen.css
+{% endhighlight %}
+
+or instead of `git checkout -b <branch-name>`:
 
 {% highlight bash %}
 gcb <branch-name>
