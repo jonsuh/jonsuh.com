@@ -14,7 +14,7 @@ A lot of my time is spent in Terminal and a majority of it is spent typing Git c
 
 <!--more-->
 
-## Git Aliases
+## Git Aliases and Functions
 
 Here’s my list of Git aliases and functions. To use them as your own, just add them to the file you store your aliases/functions. (i.e. `~/.bash_profile` or `~/.bashrc`)
 
