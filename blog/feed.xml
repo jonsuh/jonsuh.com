@@ -13,7 +13,20 @@
       <title>{{ post.title | xml_escape }}</title>
       <published>{{ post.date | date_to_xmlschema }}</published>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <content type="html">{{ post.excerpt | xml_escape }} &lt;p&gt;&lt;a href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}"&gt;&lt;b&gt;Continue reading&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;</content>
+      <content type="html">
+      {% strip %}
+      {% assign share_image = "" %}
+      {% if post.share_image != nil %}
+        {% if post.share_image contains 'http://' or post.share_image contains 'https://' %}
+          {% assign share_image = post.share_image %}
+        {% else %}
+          {% assign share_image = url | prepend: post.url | prepend: '/assets/images' | prepend: site.url | prepend: site.url_protocol | append: "/" | append: post.share_image %}
+        {% endif %}
+      {% endif %}{% endstrip %}
+      {% if share_image != nil and share_image != "" %}
+        &lt;p&gt;&lt;img alt="" src="{{ share_image }}"/&gt;&lt;/p&gt;
+      {% endif %}
+      {{ post.excerpt | xml_escape }} &lt;p&gt;&lt;a href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}"&gt;&lt;b&gt;Continue reading&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;</content>
       <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}"/>
       <id>{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</id>
       <author>
