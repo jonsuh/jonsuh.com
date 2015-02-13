@@ -153,8 +153,9 @@ code {
   color: $paragraph-font-color;
 }
 
-p > code {
-  font-size: 1em;
+p > code,
+p > small > code {
+  font-size: 0.95em;
   background-color: $code-background-color;
   padding: em-calc(4 7 2);
   border-radius: em-calc($code-border-radius);
