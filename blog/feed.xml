@@ -1,25 +1,24 @@
 ---
 
 ---
-<?xml version="1.0"?>
-<rss version="2.0">
-  <channel>
-    <title>{{ site.name | xml_escape }}</title>  
-    <link>{{ site.url | prepend: site.url_protocol }}</link>
-    <description>{{ site.description }}</description>
-    <copyright>Copyright &amp;copy; {{ site.time | date: "%Y" }}, {{ site.author.name }}. All rights reserved.</copyright>
-    <language>en-us</language>
-    <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
-    {% for post in site.posts limit:20 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <link>{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</link>
-        <author>{{ site.author.name }}</author>
-        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-        <description>{{ post.excerpt | strip_html | xml_escape }}</description>
-        <guid>{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</guid>
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>{{ site.name | xml_escape }}</title>
+  <icon>{{ site.url | prepend: site.url_protocol | append: "/icon.png" }}</icon>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url | prepend: site.url_protocol | append: "/blog/feed.xml" }}</id>
+  <link type="text/html" href="{{ site.url | prepend: site.url_protocol | append: "/" }}"/>
+  {% for post in site.posts limit:20 %}
+    <entry>
+      <title>{{ post.title | xml_escape }}</title>
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <content type="html">{{ post.excerpt | xml_escape }} &lt;p&gt;&lt;a href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}"&gt;&lt;b&gt;Continue reading&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;</content>
+      <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}"/>
+      <id>{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</id>
+      <author>
+        <name>{{ site.author.name }}</name>
+      </author>
+    </entry>
+  {% endfor %}
+</feed>
