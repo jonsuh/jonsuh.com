@@ -63,6 +63,8 @@ From the command line, open to edit the file by running the following:
 nano ~/.bash_profile
 {% endhighlight %}
 
+<small>(You can also open and edit it with your code editor, i.e. `subl ~/.bash_profile`)</small>
+
 Add the following lines either at the bottom of the file or wherever you’d like:
 
 {% highlight bash %}
