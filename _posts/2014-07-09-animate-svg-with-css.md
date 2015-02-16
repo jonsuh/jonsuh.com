@@ -288,17 +288,14 @@ Now let’s make the flames red and animate them. To give them a flame-like effe
   100% {transform: scale(1, 1)}
 }
 
-.building-flames {
+.building-flames path {
+  fill: #d84437;
   animation       : building-flames .15s ease infinite;
   transform-origin: center top;
 }
-
-.building-flames path {
-  fill: #d84437;
-}
 {% endhighlight %}
 
-It’s important to note that the `transform-origin` is set as `center top`; otherwise, it will scale at the center of the element, throwing off the positioning.
+A couple of notes: `transform-origin` is set as `center top`; otherwise, it will scale at the center of the element, throwing off the positioning. Firefox does not support `transform-origin` for groups; therefore, we have to animate the `path`.
 
 ## Graceful Degradation
 

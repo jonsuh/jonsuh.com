@@ -42,9 +42,9 @@
 .building-flames {
   path {
     fill: $red;
+    @include animation(building-flames .15s ease infinite);
+    @include transform-origin(center top);
   }
-  @include animation(building-flames .15s ease infinite);
-  @include transform-origin(center top);
 }
 
 @include keyframes(ufo-building-float) {
