@@ -98,3 +98,5 @@ alias ldir="ls -al | grep ^d" # List all directories in current directory in lon
 alias o="open ." # Open the current directory in Finder
 alias ut="uptime" # Computer uptime
 {% endhighlight %}
+
+If you use Git in the command-line, I also wrote a post on <a href="/blog/git-command-line-shortcuts/" target="_blank">Git Command-Line Shortcuts</a>, which includes my personal set of Git Bash aliases and functions.
