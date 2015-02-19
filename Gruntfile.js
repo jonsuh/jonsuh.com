@@ -119,6 +119,9 @@ module.exports = function(grunt) {
     },
 
     jekyll: {
+      options: {
+        bundleExec: true
+      },
       build: {
         options: {
           config: '_config.yml'
@@ -272,7 +275,7 @@ module.exports = function(grunt) {
         command: 'npm update caniuse-db'
       },
       jekyll: {
-        command: 'jekyll build --watch'
+        command: 'bundle exec jekyll build --watch'
       },
       deploy_staging: {
         command: 'bundle exec cap staging deploy'
