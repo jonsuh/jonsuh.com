@@ -45,13 +45,13 @@ $project-color: #eb372f;
 .hero--redlegg {
   background-color: $project-color;
   @include retina-background-image("work/redlegg/hero.gif");
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(233);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     height: em-calc(266);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     height: em-calc(300);
     background-image: image-url("work/redlegg/hero@2x.gif");
   }
@@ -59,7 +59,7 @@ $project-color: #eb372f;
 
 .redlegg-logo {
   max-width: em-calc(200);
-  @media #{$small-up} {
+  @include mq(small) {
     max-width: inherit;
   }
 }
@@ -72,10 +72,10 @@ $project-color: #eb372f;
 
 .redlegg-introduction-image {
   @include max-span-columns(10);
-  @media #{$small-up} {
+  @include mq(small) {
     padding-top: em-calc(10);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     padding-top: em-calc(20);
   }
 }
@@ -110,15 +110,15 @@ $project-color: #eb372f;
 }
 
 .redlegg-responsive-image {
-  @media #{$small-up} {
+  @include mq(small) {
     padding-top: em-calc(10);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     padding-top: em-calc(20);
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   .redlegg-responsive-description {
     @include span-columns(4);
     padding-top: em-calc(20);
@@ -130,7 +130,7 @@ $project-color: #eb372f;
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .redlegg-responsive-description {
     @include span-columns(3);
     padding-top: em-calc(30);

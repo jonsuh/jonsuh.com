@@ -3,11 +3,11 @@
 // ==================================================
 .hero--home {
   height: em-calc(350);
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(425);
   }
   @include retina-background-image("audi.jpg");
-  @media #{$medium-up} {
+  @include mq(medium) {
     background-image: image-url("audi@2x.jpg");
   }
 
@@ -30,7 +30,7 @@
   width: em-calc(73 * 1.8);
   height: em-calc(80 * 1.8);
   margin-top: em-calc(30);
-  @media #{$small-up} {
+  @include mq(small) {
     margin-top: em-calc(50);
   }
   polygon {
@@ -95,7 +95,7 @@
   display: inline-block;
   position: relative;
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     padding: em-calc(15 35, $font-size);
   }
 
@@ -154,7 +154,7 @@
   }
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .home-hero-svg {
     width: em-calc(73 * 2);
     height: em-calc(80 * 2);
@@ -177,7 +177,7 @@
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .hero--home {
     height: em-calc(400);
 
@@ -217,16 +217,16 @@
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   .hero--home {
     height: -webkit-calc(100% - #{em-calc(90 + 25)});
     height: calc(100% - #{em-calc(90 + 25)});
     min-height: em-calc(400);
     max-height: em-calc(500);
-    @media #{$screen} and (min-height: em-calc(700)) {
+    @include mq(700) {
       max-height: em-calc(600);
     }
-    // @media #{$screen} and (min-height: em-calc(800)) {
+    // @include mq(800) {
     //   max-height: em-calc(700);
     // }
   }
@@ -253,7 +253,7 @@
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .home-hero-name {
     $font-size: 40;
 

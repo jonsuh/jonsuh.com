@@ -182,7 +182,7 @@ pre {
 
 // Responsive font sizes
 // ==================================================
-@media #{$small-up} {
+@include mq(small) {
   $header-1-font-size : em-calc(32);
   $header-2-font-size : em-calc(22);
   $header-3-font-size : em-calc(19);
@@ -199,7 +199,7 @@ pre {
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   $header-1-font-size : em-calc(34);
   $header-2-font-size : em-calc(24);
   $header-3-font-size : em-calc(20);
@@ -216,7 +216,7 @@ pre {
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   $header-1-font-size : em-calc(36);
   $header-2-font-size : em-calc(26);
   $header-3-font-size : em-calc(21);

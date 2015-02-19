@@ -47,23 +47,23 @@
 
 .errors-title {
   font-size: em-calc(40);
-  @media #{$small-up} {
+  @include mq(small) {
     font-size: em-calc(50);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: em-calc(60);
   }
 }
 
 .errors-container {
   @include max-span-columns(3.2);
-  @media #{$small-up} {
+  @include mq(small) {
     @include max-span-columns(3.5);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     @include max-span-columns(3.7);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     max-width: inherit;
   }
 }

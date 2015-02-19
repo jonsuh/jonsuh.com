@@ -47,7 +47,7 @@
   }
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .form--sidebar-newsletter {
     .form-field-group,
     .form-submit {
@@ -62,7 +62,7 @@
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .sidebar-title {
     font-size: inherit;
   }
@@ -85,7 +85,7 @@
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .sidebar-section {
     font-size: 90%;
   }

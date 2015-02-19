@@ -37,14 +37,14 @@ $video-widescreen-padding-bottom: 56.34%;
   font-size: 1em;
   @include video-container;
 
-  @media #{$small-up} {
+  @include mq(small) {
     $font-size: 17;
 
     font-size: em-calc($font-size);
     padding-top: em-calc($video-padding-top, $font-size);
   }
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     $font-size: 18;
 
     font-size: em-calc($font-size);

@@ -31,15 +31,15 @@
     background-color: map-get($color-cyan, "300");
   }
 
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(250);
   }
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     height: em-calc(300);
   }
 
-  @media #{$large-up} {
+  @include mq(large) {
     width: 50%;
     float: left;
   }
@@ -52,7 +52,7 @@
   left: em-calc(10);
   bottom: em-calc(10);
   z-index: 2;
-  @media #{$small-up} {
+  @include mq(small) {
     left: 0;
     bottom: 0;
   }
@@ -71,17 +71,17 @@
   display: inline-block;
   margin-bottom: rem-calc(10);
 
-  @media #{$screen} and (min-width: em-calc(380)) {
+  @include mq(380) {
     font-size: em-calc(22);
     font-weight: 300;
   }
 
-  @media #{$small-up} {
+  @include mq(small) {
     font-size: em-calc(24);
     font-weight: 300;
   }
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: em-calc(28);
   }
 }
@@ -89,15 +89,15 @@
 @mixin work-item-introduction($wit-tiny, $wit-little, $wit-small, $wit-medium) {
   .work-item-introduction {
     max-width: em-calc($wit-tiny, 18);
-    @media #{$screen} and (min-width: em-calc(380)) {
+    @include mq(380) {
       max-width: em-calc($wit-little, 22);
     }
 
-    @media #{$small-up} {
+    @include mq(small) {
       max-width: em-calc($wit-small, 24);
     }
 
-    @media #{$medium-up} {
+    @include mq(medium) {
       max-width: em-calc($wit-medium, 28);
     }
   }
@@ -137,11 +137,11 @@
     }
   }
 
-  @media #{$small-up} {
+  @include mq(small) {
     padding: em-calc(15 25, $font-size);
   }
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     padding: em-calc(15 35, $font-size);
   }
 }
@@ -170,13 +170,13 @@
 
 .work-selected-item {
   height: em-calc(100);
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(125);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     height: em-calc(150);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     height: em-calc(125);
   }
   position: relative;

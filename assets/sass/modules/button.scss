@@ -17,13 +17,13 @@
   }
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .button {
     padding: rem-calc(15 30);
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .button {
     padding: rem-calc(15 40);
   }

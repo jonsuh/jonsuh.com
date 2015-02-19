@@ -27,17 +27,17 @@ $project-color-secondary: #48100a;
   background-color: $project-color;
   background-position: bottom center;
   @include retina-background-image("work/foodize/thumbnail.jpg");
-  @media #{$large-up} {
+  @include mq(large) {
     background-image: image-url("work/foodize/thumbnail@2x.jpg");
   }
 }
 
 .foodize-logo {
   max-width: em-calc(150);
-  @media #{$little-up} {
+  @include mq(321) {
     max-width: em-calc(150);
   }
-  @media #{$small-up} {
+  @include mq(small) {
     max-width: 100%;
   }
 }
@@ -51,10 +51,10 @@ $project-color-secondary: #48100a;
 .foodize-introduction-image {
   text-align: center;
   margin-top: em-calc(10);
-  @media #{$medium-up} {
+  @include mq(medium) {
     margin-top: em-calc(30);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     margin-top: em-calc(40);
   }
 }
@@ -70,7 +70,7 @@ $project-color-secondary: #48100a;
 .foodize-homescreen-image {
   @include max-span-columns(5);
   margin-top: em-calc(10);
-  @media #{$medium-up} {
+  @include mq(medium) {
     margin-top: em-calc(30);
   }
 }

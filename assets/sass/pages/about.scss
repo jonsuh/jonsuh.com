@@ -4,7 +4,7 @@
 .hero--about {
   background-color: $green;
   @include retina-background-image("about/jonathan-suh.jpg");
-  @media #{$large-up} {
+  @include mq(large) {
     background-image: image-url("about/jonathan-suh@2x.jpg");
   }
 }
@@ -248,7 +248,7 @@
 
 // Responsive
 // ==================================================
-@media #{$medium-up} {
+@include mq(medium) {
   $about-mosaic-tile-gutter: em-calc(15);
 
   .about-mosaic {
@@ -284,7 +284,7 @@
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .about-main {
     @include span-columns(7.5);
   }

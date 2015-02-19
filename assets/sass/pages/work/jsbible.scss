@@ -26,13 +26,13 @@ $project-color-secondary: #000;
 .hero--jsbible {
   background-color: $project-color-secondary;
   @include retina-background-image("work/jsbible/thumbnail.jpg");
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(233);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     height: em-calc(266);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     height: em-calc(300);
     background-image: image-url("work/jsbible/thumbnail@2x.jpg");
   }
@@ -46,10 +46,10 @@ $project-color-secondary: #000;
 
 .jsbible-logo {
   max-width: em-calc(170);
-  @media #{$small-up} {
+  @include mq(small) {
     max-width: em-calc(200);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     max-width: 100%;
   }
   position: relative;
@@ -102,15 +102,15 @@ $project-color-secondary: #000;
   }
 
   padding-top: em-calc(10);
-  @media #{$small-up} {
+  @include mq(small) {
     padding-top: em-calc(20);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     padding-top: em-calc(30);
   }
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .jsbible-build-image-jquery,
   .jsbible-build-image-plus,
   .jsbible-build-image-biblia {
@@ -118,13 +118,13 @@ $project-color-secondary: #000;
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .jsbible-build-image-plus {
     display: inline;
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .jsbible-build-image-jquery,
   .jsbible-build-image-plus,
   .jsbible-build-image-biblia {
@@ -164,7 +164,7 @@ $project-color-secondary: #000;
   margin: em-calc(15) auto 0;
   max-width: em-calc(200);
   padding: em-calc(15 0);
-  @media #{$medium-up} {
+  @include mq(medium) {
     max-width: em-calc(220);
     padding: em-calc(20 0);
     margin-top: em-calc(25);

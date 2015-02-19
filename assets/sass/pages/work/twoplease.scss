@@ -56,7 +56,7 @@ $project-color-tertiary : #808184;
 .hero--twoplease {
   background-color: $project-color;
   @include retina-background-image("work/twoplease/hero.jpg");
-  @media #{$large-up} {
+  @include mq(large) {
     background-image: image-url("work/twoplease/hero@2x.jpg");
   }
 
@@ -69,10 +69,10 @@ $project-color-tertiary : #808184;
 
 .twoplease-logo {
   max-width: em-calc(200);
-  @media #{$small-up} {
+  @include mq(small) {
     max-width: em-calc(250);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     max-width: 100%;
   }
   position: relative;
@@ -86,7 +86,7 @@ $project-color-tertiary : #808184;
 }
 
 .twoplease-introduction-description {
-  @media #{$ipad-up} {
+  @include mq(ipad) {
     @include span-columns(7);
   }
 }
@@ -96,7 +96,7 @@ $project-color-tertiary : #808184;
     margin-top: em-calc(10);
   }
 
-  @media #{$ipad-up} {
+  @include mq(ipad) {
     @include span-columns(5);
 
     img {
@@ -140,7 +140,7 @@ $project-color-tertiary : #808184;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(600)) {
+@include mq(600) {
   .twoplease-responsive-description {
     @include span-columns(6);
     @include shift(.5);
@@ -162,7 +162,7 @@ $project-color-tertiary : #808184;
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   .twoplease-responsive-description {
     @include span-columns(5);
     @include shift(1);
@@ -175,7 +175,7 @@ $project-color-tertiary : #808184;
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .twoplease-responsive-description {
     @include span-columns(4);
     @include shift(0);
@@ -211,7 +211,7 @@ $project-color-tertiary : #808184;
   
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .twoplease-screenshots-image-1 {
     width: 60%;
     position: absolute;
@@ -256,7 +256,7 @@ p.twoplease-testimonial-quote-by {
   padding-right: 10%;
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .twoplease-testimonial-pots {
     margin-bottom: em-calc(30);
   }
@@ -266,7 +266,7 @@ p.twoplease-testimonial-quote-by {
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   .twoplease-testimonial-pots {
     @include span-columns(3.5);
   }

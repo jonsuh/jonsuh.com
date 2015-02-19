@@ -7,10 +7,6 @@ body {
   height: 100%;
 }
 
-#fb-root {
-  display: none;
-}
-
 // Silent classes
 // ==================================================
 $bumper-padding: 15;
@@ -30,7 +26,7 @@ $bumper-padding: 15;
   @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
 }
 
-@media #{$small-up} {
+@include mq(small) {
   $bumper-padding: 25;
 
   %bumper {
@@ -49,7 +45,7 @@ $bumper-padding: 15;
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   $bumper-padding: 50;
 
   %bumper {
@@ -126,7 +122,7 @@ $section-padding: 25;
   padding-top: em-calc($section-padding / 2);
 }
 
-@media #{$small-up} {
+@include mq(small) {
   $section-padding: 40;
 
   .section {
@@ -143,7 +139,7 @@ $section-padding: 25;
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   $section-padding: 60;
 
   .section {

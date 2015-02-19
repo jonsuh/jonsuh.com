@@ -46,7 +46,7 @@ $project-color-secondary: #424242;
 .hero--juice-interactive {
   background-color: $project-color;
   @include retina-background-image("work/juice-interactive/thumbnail.jpg");
-  @media #{$large-up} {
+  @include mq(large) {
     background-image: image-url("work/juice-interactive/thumbnail@2x.jpg");
   }
 
@@ -59,10 +59,10 @@ $project-color-secondary: #424242;
 
 .juice-interactive-logo {
   max-width: em-calc(170);
-  @media #{$small-up} {
+  @include mq(small) {
     max-width: em-calc(200);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     max-width: 100%;
   }
   position: relative;
@@ -79,7 +79,7 @@ $project-color-secondary: #424242;
   margin-top: em-calc(10);
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .juice-interactive-facelift-image {
     margin-top: em-calc(40);
   }
@@ -91,7 +91,7 @@ $project-color-secondary: #424242;
 
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .juice-interactive-honest-description {
     @include span-columns(6);
     padding-top: em-calc(25);
@@ -102,7 +102,7 @@ $project-color-secondary: #424242;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(930)) {
+@include mq(930) {
   .juice-interactive-honest-description {
     @include span-columns(6);
     @include shift(.5);
@@ -133,7 +133,7 @@ $project-color-secondary: #424242;
   margin-top: em-calc(10);
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .juice-interactive-responsive-image {
     margin-top: em-calc(40);
   }
@@ -147,12 +147,12 @@ $project-color-secondary: #424242;
 
 .juice-interactive-animations-example {
   @extend %max-span-columns-7;
-  @media #{$small-up} {
+  @include mq(small) {
     padding-top: em-calc(10);
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .juice-interactive-animations-description {
     @include span-columns(5);
   }
@@ -162,7 +162,7 @@ $project-color-secondary: #424242;
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .juice-interactive-animations-description {
     padding-top: em-calc(30);
   }
@@ -176,15 +176,15 @@ $project-color-secondary: #424242;
 
 .juice-interactive-browsers-images {
   text-align: center;
-  @media #{$small-up} {
+  @include mq(small) {
     padding-top: em-calc(10);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     padding-top: em-calc(20);
   }
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .juice-interactive-browsers-images-break {
     display: none;
   }

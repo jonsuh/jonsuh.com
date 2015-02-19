@@ -4,10 +4,10 @@
 .hero {
   @extend %bumper;
   height: em-calc(200);
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(300);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     height: em-calc(400);
   }
   background-position: center;

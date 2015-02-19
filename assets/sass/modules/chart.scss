@@ -45,7 +45,7 @@
   letter-spacing: 0.025em;
 }
 
-@media #{$small-up} {
+@include mq(small) {
   .chart-legend-item-title {
     font-size: em-calc(12);
   }

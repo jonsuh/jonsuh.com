@@ -7,13 +7,13 @@
   position: relative;
   margin-top: em-calc(15);
   margin-bottom: em-calc(15);
-  @media #{$small-up} {
+  @include mq(small) {
     margin-bottom: em-calc(10);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     margin-top: em-calc(25);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     margin-top: 0;
     margin-bottom: 0;
   }

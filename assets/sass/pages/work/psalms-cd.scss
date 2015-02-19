@@ -27,13 +27,13 @@ $project-color-secondary: #16243c;
   background-color: $project-color;
   background-position: top center;
   @include retina-background-image("work/psalms-cd/thumbnail.jpg");
-  @media #{$small-up} {
+  @include mq(small) {
     height: em-calc(233);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     height: em-calc(266);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     height: em-calc(300);
     background-image: image-url("work/psalms-cd/thumbnail@2x.jpg");
   }
@@ -41,10 +41,10 @@ $project-color-secondary: #16243c;
 
 .psalms-cd-logo {
   max-width: em-calc(200);
-  @media #{$little-up} {
+  @include mq(321) {
     max-width: em-calc(250);
   }
-  @media #{$small-up} {
+  @include mq(small) {
     max-width: 100%;
   }
 }
@@ -90,13 +90,13 @@ $project-color-secondary: #16243c;
     right: 0;
   }
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     &-brand-logo {
       margin-top: em-calc(20);
     }
   }
 
-  @media #{$screen} and (min-width: em-calc(850)) {
+  @include mq(850) {
     &-brand-logo {
       margin-top: em-calc(30);
     }
@@ -130,7 +130,7 @@ $project-color-secondary: #16243c;
     @extend %max-span-columns-7;
     margin-top: em-calc(20);
     overflow: hidden;
-    @media #{$small-up} {
+    @include mq(small) {
       margin-top: em-calc(30);
     }
   }
@@ -179,7 +179,7 @@ $project-color-secondary: #16243c;
     padding-top: em-calc(10);
   }
 
-  @media #{$screen} and (min-width: em-calc(850)) {
+  @include mq(850) {
     &-website-player-purchase-image {
       @include span-columns(8);
     }
@@ -201,7 +201,7 @@ $project-color-secondary: #16243c;
     text-align: center;
   }
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     &-website-mobile-description {
       @include span-columns(5);
       padding-top: em-calc(45);
@@ -214,7 +214,7 @@ $project-color-secondary: #16243c;
     }
   }
 
-  @media #{$large-up} {
+  @include mq(large) {
     &-website-mobile-description {
       padding-top: em-calc(80);
     }

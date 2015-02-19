@@ -145,6 +145,7 @@ module.exports = function(grunt) {
       options: {
         includePaths: [
           'bower_components/bourbon/dist',
+          'bower_components/mq-sass/stylesheets',
           'bower_components/neat/app/assets/stylesheets'
         ]
       },

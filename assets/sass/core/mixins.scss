@@ -110,9 +110,9 @@ $image-url-path: "/assets/images/" !default;
   $rbi-extension_index: str-length($rbi-image_path) - 3;
   $rbi-retina-path    : str-insert($rbi-image_path, "@2x", $rbi-extension_index);
 
-  @media #{$retina} {
+  @include mq(retina) {
     @if ($rbi-small-up == true) {
-      @media #{$small-up} {
+      @include mq(small) {
         background-image: image-url("#{$rbi-retina-path}");
       }
     } @else {

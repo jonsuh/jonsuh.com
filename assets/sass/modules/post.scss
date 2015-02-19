@@ -38,13 +38,13 @@
 .posts-header {
   margin-bottom: em-calc(20);
   @include clearfix;
-  @media #{$small-up} {
+  @include mq(small) {
     margin-bottom: em-calc(25);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     margin-bottom: em-calc(30);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     margin-bottom: em-calc(35);
   }
 }
@@ -62,13 +62,13 @@
 // ==================================================
 .post-overflow {
   max-height: em-calc(500);
-  @media #{$small-up} {
+  @include mq(small) {
     max-height: em-calc(600);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     max-height: em-calc(700);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     max-height: em-calc(800);
   }
   margin-bottom: $paragraph-margin-bottom;
@@ -77,13 +77,13 @@
 
   .post-title {
     font-size: em-calc(22);
-    @media #{$small-up} {
+    @include mq(small) {
       font-size: em-calc(24);
     }
-    @media #{$medium-up} {
+    @include mq(medium) {
       font-size: em-calc(26);
     }
-    @media #{$large-up} {
+    @include mq(large) {
       font-size: em-calc(28);
     }
   }
@@ -131,14 +131,14 @@
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .post-overflow-toggle {
     font-size: 1em;
     padding: em-calc(20);
   }
 }
 
-// @media #{$large-up} {
+// @include mq(large) {
 //   .post-overflow {
 //     max-height: inherit;
 //   }
@@ -172,10 +172,10 @@
 .post-meta {
   font-size: em-calc(14);
   color: $grey;
-  @media #{$small-up} {
+  @include mq(small) {
     font-size: em-calc(15);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: 1em;
   }
 }
@@ -206,10 +206,10 @@
     + h1,
     + h2 {
       margin-top: rem-calc(20);
-      @media #{$small-up} {
+      @include mq(small) {
         margin-top: rem-calc(25);
       }
-      @media #{$medium-up} {
+      @include mq(medium) {
         margin-top: rem-calc(30);
       }
     }
@@ -220,7 +220,7 @@
     + h3,
     + h4,
     + h5 {
-      @media #{$medium-up} {
+      @include mq(medium) {
         margin-top: rem-calc(15);
       }
     }
@@ -231,10 +231,10 @@
     border: 0;
     border-top: 1px solid $grey-lighter;
     margin: em-calc(25 0);
-    @media #{$small-up} {
+    @include mq(small) {
       margin: em-calc(30 0);
     }
-    @media #{$medium-up} {
+    @include mq(medium) {
       margin: em-calc(40 0);
     }
   }
@@ -277,7 +277,7 @@
 
     ol {
       font-size: 90%;
-      @media #{$medium-up} {
+      @include mq(medium) {
         font-size: 80%;
       }
     }
@@ -344,10 +344,10 @@
 // Share
 // ==================================================
 .post-share {
-  @media #{$medium-up} {
+  @include mq(medium) {
     margin-top: em-calc(20);
   }
-  @media #{$large-up} {
+  @include mq(large) {
     margin-top: em-calc(30);
   }
 }
@@ -366,7 +366,7 @@
 
 .post-share-menu-title {
   font-size: 95%;
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: 1em;
   }
   font-weight: 700;
@@ -525,10 +525,10 @@ a.post-tag:hover {
   font-family: $serif;
   font-style: italic;
   padding-right: em-calc(8);
-  @media #{$small-up} {
+  @include mq(small) {
     font-size: em-calc(17);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: em-calc(18);
   }
 }
@@ -539,7 +539,7 @@ a.post-tag:hover {
       padding: em-calc(0 10);
     }
 
-    @media #{$small-up} {
+    @include mq(small) {
       .post-tag {
         @include post-tag(28);
       }
@@ -549,7 +549,7 @@ a.post-tag:hover {
       }
     }
 
-    @media #{$medium-up} {
+    @include mq(medium) {
       .post-tag {
         @include post-tag(30);
         padding: em-calc(0 12);
@@ -560,7 +560,7 @@ a.post-tag:hover {
       }
     }
 
-    @media #{$large-up} {
+    @include mq(large) {
       .post-tag {
         @include post-tag(32);
         padding: em-calc(0 14);
@@ -721,10 +721,10 @@ a.post-tag--pink:hover {
 .post-author-about {
   font-size: em-calc(15);
   text-align: left;
-  @media #{$small-up} {
+  @include mq(small) {
     font-size: em-calc(16);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: em-calc(17);
   }
   overflow: hidden;
@@ -750,7 +750,7 @@ a.post-tag--pink:hover {
   display: inline-block;
   vertical-align: middle;
 
-  @media #{$medium-up} {
+  @include mq(medium) {
     font-size: em-calc(15);
     padding: .5em 1em;
   }
@@ -899,7 +899,7 @@ a.post-tag--pink:hover {
 
 // Responsive
 // ==================================================
-@media #{$small-up} {
+@include mq(small) {
   .post--posts {
     .post-article {
       padding-bottom: em-calc(25);
@@ -937,13 +937,13 @@ a.post-tag--pink:hover {
   }
 }
 
-@media #{$screen} and (min-width: em-calc(520)) {
+@include mq(520) {
   .post-pagination-label {
     display: inline;
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .post--posts {
     .post-article {
       padding-bottom: em-calc(30);
@@ -976,13 +976,13 @@ a.post-tag--pink:hover {
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   .post-pagination-bumper {
     display: block;
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .post-main {
     @include span-columns(7.5);
   }
@@ -1013,14 +1013,14 @@ a.post-tag--pink:hover {
   }
 }
 
-@media #{$screen} and (min-width: em-calc(1150)) {
+@include mq(1150) {
   .post-pagination-bumper {
     width: em-calc(60);
     display: block;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(1240)) {
+@include mq(1240) {
   .post-pagination-bumper {
     width: em-calc(80);
     display: block;

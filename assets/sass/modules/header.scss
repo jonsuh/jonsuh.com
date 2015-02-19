@@ -239,7 +239,7 @@ $logo-width: 50;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(365)) {
+@include mq(365) {
   $logo-width: 65;
 
   .logo {
@@ -270,14 +270,14 @@ $logo-width: 50;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(400)) {
+@include mq(400) {
   .navigation-link {
     padding-left: em-calc(12);
     padding-right: em-calc(12);
   }
 }
 
-@media #{$small-up} {
+@include mq(small) {
   $header-height: em-calc(70);
 
   .header {
@@ -329,14 +329,14 @@ $logo-width: 50;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(550)) {
+@include mq(550) {
   .navigation-link {
     padding-left: em-calc(18);
     padding-right: em-calc(18);
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   @include logo-width(79);
 
   .navigation-link {
@@ -345,7 +345,7 @@ $logo-width: 50;
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   $header-height: em-calc(90);
 
   .header {
@@ -370,7 +370,7 @@ $logo-width: 50;
   }
 }
 
-@media #{$screen} and (min-width: em-calc(900)) {
+@include mq(900) {
   @include logo-width(132);
 
   .navigation-link {

@@ -172,7 +172,7 @@ a.footer-top-link:hover {
   }
 }
 
-@media #{$little-up} {
+@include mq(321) {
   .footer-navigation-link {
     padding: em-calc(7 5);
 
@@ -249,7 +249,7 @@ a.footer-top-link:hover {
 
 // Responsive
 // ==================================================
-@media #{$screen} and (min-width: em-calc(820)) {
+@include mq(820) {
   .footer {
     text-align: left;
   }
@@ -290,7 +290,7 @@ a.footer-top-link:hover {
   }
 }
 
-@media #{$large-up} {
+@include mq(large) {
   .footer-top {
     display: none;
   }

@@ -7,8 +7,9 @@
 @import "bourbon";
 @import "core/neat-settings";
 @import "neat";
+@import "core/mq-settings";
+@import "mq-sass";
 @import "core/mixins";
-@import "core/media-queries";
 @import "core/colors";
 @import "core/variables";
 @import "core/z-index";

@@ -4,7 +4,7 @@
 .hero--contact {
   background-color: map-get($color-yellow, "700");
   @include retina-background-image("contact/manufactured-by.jpg");
-  @media #{$large-up} {
+  @include mq(large) {
     background-image: image-url("contact/manufactured-by@2x.jpg");
   }
 }
@@ -12,7 +12,7 @@
 .contact-main {
   @include max-span-columns(7);
 
-  @media #{$large-up} {
+  @include mq(large) {
     #carbonads {
       position: absolute;
       top: 0;
@@ -39,11 +39,11 @@
 .contact-email {
   margin-top: em-calc(20);
   margin-bottom: em-calc(20);
-  @media #{$small-up} {
+  @include mq(small) {
     margin-top: em-calc(25);
     margin-bottom: em-calc(25);
   }
-  @media #{$medium-up} {
+  @include mq(medium) {
     margin-top: em-calc(30);
     margin-bottom: em-calc(30);
   }
@@ -69,7 +69,7 @@
     width: 100%;
   }
 
-  @media #{$ipad-up} {
+  @include mq(ipad) {
     .form-field-group--first-name {
       width: em-calc(190);
       display: block;
@@ -168,7 +168,7 @@
 
 // Responsive
 // ==================================================
-@media #{$small-up} {
+@include mq(small) {
   .form--contact {
     .form-field-group,
     .form-submit {
@@ -187,7 +187,7 @@
   }
 }
 
-@media #{$medium-up} {
+@include mq(medium) {
   .form--contact {
     .form-field-group {
       width: em-calc(270);
@@ -195,7 +195,7 @@
   }
 }
 
-@media #{$ipad-up} {
+@include mq(ipad) {
   .form--contact {
     .form-field-group--first-name {
       width: em-calc(150);
