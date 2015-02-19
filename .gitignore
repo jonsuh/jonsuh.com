@@ -7,6 +7,7 @@ node_modules
 
 _drafts
 _site
+_includes/critical/**/*
 assets/css
 assets/js/*
 !assets/js/src
