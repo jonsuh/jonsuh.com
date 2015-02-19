@@ -33,8 +33,19 @@
   }
 }
 
-.sidebar-newsletter {
-  
+.sidebar-subscribe {
+
+}
+
+.sidebar-subscribe-link--rss {
+  .svg-icon {
+    width: em-calc(12);
+    height: em-calc(12);
+  }
+
+  .svg-icon-path {
+    fill: map-get($color-orange, "700");
+  }
 }
 
 .form--sidebar-newsletter {
