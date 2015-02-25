@@ -129,6 +129,7 @@ module.exports = function(grunt) {
       },
       watch: {
         options: {
+          config: '_config.yml',
           watch: true
         }
       },
@@ -177,7 +178,7 @@ module.exports = function(grunt) {
         options: {
           logConcurrentOutput: true
         },
-        tasks: ['shell:jekyll', 'watch'],
+        tasks: ['jekyll:watch', 'watch'],
       }
     },
 
@@ -290,12 +291,6 @@ module.exports = function(grunt) {
         files: ['Gruntfile.js'],
         tasks: ['concat:build']
       },
-      jekyll: {
-        files: ['_site/assets/css/*.css'],
-        options: {
-          livereload: true
-        }
-      },
       js: {
         files: ['assets/js/src/**/*.js'],
         tasks: ['concat:build']
@@ -304,11 +299,39 @@ module.exports = function(grunt) {
         files: ['assets/sass/**/*.scss'],
         tasks: ['sass:jekyll', 'autoprefixer:jekyll']
       }
+    },
+
+    browserSync: {
+      watch: {
+        options: {
+          watchTask: true,
+          proxy: 'http://jonsuh.local'
+        },
+        bsFiles: {
+          src: [
+            '_site/assets/css/*.css'
+          ]
+        }
+      }
     }
   });
 
-  grunt.registerTask('build', ['newer:copy:normalize', 'sass:build', 'autoprefixer:build', 'concat:build', 'jekyll:build']);
-  grunt.registerTask('default', ['build', 'concurrent:watch']);
+  grunt.registerTask('build', [
+    'newer:copy:normalize',
+    'sass:build',
+    'autoprefixer:build',
+    'concat:build',
+    'jekyll:build'
+  ]);
+
+  grunt.registerTask('default', [
+    'newer:copy:normalize',
+    'sass:build',
+    'autoprefixer:build',
+    'concat:build',
+    'browserSync',
+    'concurrent:watch'
+  ]);
 
   grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer:build', 'concat:build', 'cssmin:production', 'uglify:production', 'uglify:critical', 'jekyll:production'])
 
