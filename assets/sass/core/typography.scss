@@ -154,6 +154,7 @@ code {
 }
 
 p > code,
+li > code,
 p > small > code {
   font-size: 0.95em;
   background-color: $code-background-color;
