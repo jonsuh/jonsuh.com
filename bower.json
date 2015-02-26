@@ -3,8 +3,8 @@
   "dependencies": {},
   "devDependencies": {
     "normalize-css": "~3.0.2",
-    "bourbon": "~4.0.2",
-    "neat": "~1.7.0",
+    "bourbon": "~4.2.1",
+    "neat": "~1.7.1",
     "picturefill": "~2.1.0",
     "chartjs": "~1.0.1-beta.4",
     "mq-sass": "*"
