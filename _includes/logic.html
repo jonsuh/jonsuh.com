@@ -17,6 +17,8 @@
   {% assign description = page.excerpt | strip_html | strip_newlines %}
 {% elsif type == 'case-study' %}
   {% assign description = page.introduction %}
+{% elsif page.description != nil %}
+  {% assign description = page.description %}
 {% endif %}
 
 {% if page.share_image == nil %}
