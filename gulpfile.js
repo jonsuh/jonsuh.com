@@ -4,6 +4,7 @@ var gulp         = require('gulp'),
     concat       = require('gulp-concat'),
     filter       = require('gulp-filter'),
     merge        = require('merge-stream'),
+    newer        = require('gulp-newer'),
     reload       = browserSync.reload,
     shell        = require('gulp-shell'),
     sass         = require('gulp-sass');
@@ -88,12 +89,14 @@ gulp.task('concat-jekyll', function() {
     'assets/js/src/work.js',
     'assets/js/src/app.js'
   ])
+    .pipe(newer('_site/assets/js/jonsuh.com'))
     .pipe(concat('jonsuh.js'))
     .pipe(gulp.dest('_site/assets/js'));
 
   var critical = gulp.src([
     'assets/js/src/critical.js'
   ])
+    .pipe(newer('_includes/critical/js/jonsuh.js'))
     .pipe(concat('jonsuh.js'))
     .pipe(gulp.dest('_includes/critical/js'));
 
@@ -102,12 +105,14 @@ gulp.task('concat-jekyll', function() {
     'bower_components/chartjs/src/Chart.Line.js',
     'assets/js/vendor/Chart.legend.js'
   ])
+    .pipe(newer('_site/assets/js/chart.js'))
     .pipe(concat('chart.js'))
     .pipe(gulp.dest('_site/assets/js'));
 
   var blog_https_increased = gulp.src([
     'assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js',
   ])
+    .pipe(newer('_site/assets/js/blog/https-increased-organic-search-impressions-by-144-percent.js'))
     .pipe(concat('https-increased-organic-search-impressions-by-144-percent.js'))
     .pipe(gulp.dest('_site/assets/js/blog'));
 
