@@ -131,6 +131,96 @@ You can also replace the “Share on Twitter” text with a custom image:
     style="max-width: 170px">
 </a>
 
+Even better, customize it with CSS:
+
+{% highlight html %}
+<a class="custom-share-button" href="https://twitter.com/intent/tweet/
+     ?text={{ 'Check out my new website!' | encode_url }}
+     &url={{ 'https://jonsuh.com/' | encode_url }}
+     &via=jonsuh" 
+   target="_blank">
+  <span class="custom-share-button-icon"><svg viewBox="0 0 12 12" preserveAspectRatio="xMidYMid meet" class="svg-icon svg-icon-twitter"><path class="svg-icon-path" d="M10.8,3.5c0,0.1,0,0.2,0,0.3c0,3.3-2.5,7-7,7c-1.4,0-2.7-0.3-3.8-1c0.2,0,0.4,0,0.6,0c1.1,0,2.2-0.5,3.1-1.2 c-1.1,0-2-0.7-2.3-1.7c0.2,0,0.3,0,0.5,0s0.4,0,0.7-0.1c-1.1-0.2-2-1.2-2-2.4l0,0c0.3,0.2,0.7,0.3,1.1,0.3C1,4.3,0.6,3.5,0.6,2.7 c0-0.5,0.1-0.8,0.3-1.2c1.2,1.6,3,2.5,5,2.6c0-0.2-0.1-0.4-0.1-0.6c0-1.3,1.1-2.4,2.5-2.4c0.7,0,1.4,0.3,1.8,0.8 c0.6-0.1,1.1-0.3,1.6-0.6c-0.2,0.6-0.6,1.1-1.1,1.4c0.5-0.1,1-0.2,1.4-0.4C11.7,2.8,11.2,3.2,10.8,3.5z"/></svg></span>
+  <span class="custom-share-button-label">Share on Twitter</span>
+</a>
+
+<style>
+.custom-share-button {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: #55acee;
+  padding: .8em 1.2em;
+  border-radius: 3px;
+  display: inline-block;
+}
+.custom-share-button-icon,
+.custom-share-button-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.custom-share-button-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: .2em;
+}
+.custom-share-button-icon path { fill: #fff; }
+.custom-share-button-label {
+  font-size: .9em;
+  font-weight: 500;
+}
+.custom-share-button:hover { background-color: #70b7ec; }
+</style>
+{% endhighlight %}
+{% strip %}
+<style>
+.custom-share-button {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  background-color: #55acee;
+  padding: .8em 1.2em;
+  border: 0;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  display: inline-block;
+}
+
+.custom-share-button-icon,
+.custom-share-button-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.custom-share-button-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: .2em;
+}
+
+.custom-share-button-icon path {
+  fill: #fff;
+}
+
+.custom-share-button-label {
+  font-size: .9em;
+  font-weight: 500;
+}
+
+.custom-share-button:hover {
+  color: #fff;
+  background-color: #70b7ec;
+}
+
+.custom-share-button:hover .custom-share-button-label {
+  color: #fff;
+}
+</style>
+{% endstrip %}
+<a class="custom-share-button" href="https://twitter.com/intent/tweet/?text={{ 'Check out my new website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" target="_blank">
+  <span class="custom-share-button-icon">{% include svg/twitter.html %}</span>
+  <span class="custom-share-button-label">Share on Twitter</span>
+</a>
+
 ## Enhance with JavaScript
 
 Now that we’ve gotten the share links to work without JavaScript, let’s enhance them by adding some JavaScript to open the share URL in a popup window. Here’s the function we’ll use to handle the popup window.
