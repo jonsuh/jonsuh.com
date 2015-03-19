@@ -24,7 +24,11 @@ Resize your browser, view this page on your mobile device, or change your device
 
 The HTML is extremely simple.
 
-{% gist 3026455 js-video.html %}
+{% highlight html %}
+<div class="js-video [vimeo, widescreen]">
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/wN3gueLT0D8?showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+{% endhighlight %}
 
 Simply wrap the iframe, embed, or video tags with a div with class `js-video`. The optional `.widescreen` gives support for widescreen 16:9 videos and `.vimeo` tweaks any Vimeo videos you embed for the best experience.
 
@@ -34,7 +38,24 @@ Although the CSS is not quite as simple as the HTML, it’s pretty simple. We’
 
 ## Video container
 
-{% gist 3026455 js-video-basic.css %}
+{% highlight css %}
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.js-video.widescreen {
+  padding-bottom: 56.34%;
+}
+ 
+.js-video.vimeo {
+  padding-top: 0;
+}
+{% endhighlight %}
 
 Because a div is a block element and by default its width is 100%, it’s horizontally responsive. However, because we want the video to be responsive, we need to be able to proportionally size the video according to its ratio.
 
@@ -46,7 +67,15 @@ Adding support for widescreen 16:9 videos is easy by simply adjusting the paddin
 
 ## Video
 
-{% gist 3026455 js-video-video.css %}
+{% highlight css %}
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+{% endhighlight %}
 
 We now need to manipulate the iframe, embed, object, or video tag inside the div. Since the proportions are set for us by the parent div, we need to position the video absolutely and set the width and height to 100%.
 

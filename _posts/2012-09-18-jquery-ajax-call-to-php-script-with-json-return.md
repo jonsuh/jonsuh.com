@@ -24,19 +24,62 @@ User experience plays a vital role in excellent web design. Ajax allows you to r
 
 We’ll first start with a form that you’d like to process with Ajax.
 
-{% gist 3739844 js-ajax-php-json.html %}
+{% highlight html %}
+<form action="return.php" class="js-ajax-php-json" method="post" accept-charset="utf-8">
+  <input type="text" name="favorite_beverage" value="" placeholder="Favorite restaurant" />
+  <input type="text" name="favorite_restaurant" value="" placeholder="Favorite beverage" />
+  <select name="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <input type="submit" name="submit" value="Submit form"  />
+</form>
+{% endhighlight %}
 
 You’ll add the form somewhere in the `<body>`. I added two input fields and one dropdown field for this demo to give you a preview of how the information is processed and returned.
 
 Now we’ll add just a placeholder `<div>` that we’ll use to give you a visual of the information returned.
 
-{% gist 3739844 js-ajax-php-json-return.html %}
+{% highlight html %}
+<div class="the-return">
+  [HTML is replaced when successful.]
+</div>
+{% endhighlight %}
 
 ## PHP
 
 This is where the information that is given from the form will be passed through and processed. In this demo, we’ll save the file as `response.php` in the same location of the HTML file above.
 
-{% gist 3739844 response.php %}
+{% highlight php %}
+<?php
+if (is_ajax()) {
+  if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
+    $action = $_POST["action"];
+    switch($action) { //Switch case for value of action
+      case "test": test_function(); break;
+    }
+  }
+}
+
+//Function to check if the request is an AJAX request
+function is_ajax() {
+  return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+}
+
+function test_function(){
+  $return = $_POST;
+  
+  //Do what you need to do with the info. The following are some examples.
+  //if ($return["favorite_beverage"] == ""){
+  //  $return["favorite_beverage"] = "Coke";
+  //}
+  //$return["favorite_restaurant"] = "McDonald's";
+  
+  $return["json"] = json_encode($return);
+  echo json_encode($return);
+}
+?>
+{% endhighlight %}
 
 **Line 2:** First, check that the request that’s being made is an Ajax request with `is_ajax()`.
 
@@ -52,7 +95,32 @@ Once a switch value match is found for `action`, in this example `test`, it will
 
 This is where the magic of processing the form and getting the returned values by `response.php` asynchronously happens. You’ll put the following in the `<head>`.
 
-{% gist 3739844 js-ajax-php-json-script.html %}
+{% highlight javascript %}
+<script type="text/javascript">
+$("document").ready(function(){
+  $(".js-ajax-php-json").submit(function(){
+    var data = {
+      "action": "test"
+    };
+    data = $(this).serialize() + "&" + $.param(data);
+    $.ajax({
+      type: "POST",
+      dataType: "json",
+      url: "response.php", //Relative or absolute path to response.php file
+      data: data,
+      success: function(data) {
+        $(".the-return").html(
+          "Favorite beverage: " + data["favorite_beverage"] + "<br />Favorite restaurant: " + data["favorite_restaurant"] + "<br />Gender: " + data["gender"] + "<br />JSON: " + data["json"]
+        );
+
+        alert("Form submitted successfully.\nReturned json: " + data["json"]);
+      }
+    });
+    return false;
+  });
+});
+</script>
+{% endhighlight %}
 
 For this demo, you’ll be pointing to `response.php` relatively because it should be in the same location.
 
