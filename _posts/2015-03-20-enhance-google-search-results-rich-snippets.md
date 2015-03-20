@@ -98,7 +98,7 @@ For example, if your blog post gives the product a review of 8 stars, users may 
 
 Google can understand the markup of your content to provide rich snippets for <a href="https://support.google.com/webmasters/answer/answer.py?answer=146861" target="_blank">businesses and organizations</a>, <a href="https://support.google.com/webmasters/answer/answer.py?answer=164506" target="_blank">events</a>, <a href="https://support.google.com/webmasters/answer/1623047?hl=en" target="_blank">music</a>, <a href="https://support.google.com/webmasters/answer/answer.py?answer=146646" target="_blank">people</a>, <a href="https://support.google.com/webmasters/answer/answer.py?answer=146750" target="_blank">products</a>, <a href="https://support.google.com/webmasters/answer/answer.py?answer=173379" target="_blank">recipes</a>, and <a href="https://support.google.com/webmasters/answer/answer.py?answer=146645" target="_blank">reviews</a>.
 
-Each type can contain a different number of properties, but Google recognizes specific vocabulary based on the item type to create rich snippets. I’ll cover reviews and recipes as examples, but the links in the paragraph above provide documentation for the corresponding item types.
+Each type can contain a different number of properties, but Google recognizes specific vocabulary based on the item type to create rich snippets. I’ll cover reviews as examples, but the links in the paragraph above provide documentation for the corresponding item types.
 
 ### Reviews
 
