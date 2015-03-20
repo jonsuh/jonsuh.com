@@ -93,6 +93,7 @@ exclude: [
   "config",
   "Gemfile",
   "Gemfile.lock",
+  "gulpfile.js",
   "Gruntfile.js",
   "node_modules",
   "package.json",

@@ -135,9 +135,9 @@ gulp.task('watch', function() {
 
 gulp.task('browsersync', function() {
   browserSync({
-    server: {
-      baseDir: './_site'
-    }
+    proxy: 'jonsuh.local',
+    open: false,
+    notify: false,
   });
 });
 
