@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true,
         filter: 'isFile',
-        src: 'bower_components/normalize-css/normalize.css',
+        src: 'bower_components/normalize-css/_normalize.css',
         dest: 'assets/sass/core/',
         rename: function(dest, src) {
           return dest + src.replace('.css', '.scss');
