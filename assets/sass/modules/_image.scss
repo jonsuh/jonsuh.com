@@ -2,8 +2,7 @@
 // Image
 // ==================================================
 figure {
-  margin: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  @extend p;
   @include clearfix;
 
   img {
@@ -12,6 +11,8 @@ figure {
 }
 
 figcaption {
+  font-family: $serif;
+  font-style: italic;
   font-size: em-calc(14);
   color: scale-color($paragraph-font-color, $lightness: 30%);
   text-align: center;

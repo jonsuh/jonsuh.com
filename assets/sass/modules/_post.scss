@@ -204,7 +204,8 @@
   .highlight,
   .twitter-tweet {
     + h1,
-    + h2 {
+    + h2,
+    + h3 {
       margin-top: rem-calc(20);
       @include mq(small) {
         margin-top: rem-calc(25);
