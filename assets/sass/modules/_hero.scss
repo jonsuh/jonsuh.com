@@ -18,7 +18,7 @@
   @include transition(height .25s ease);
   @include transition-property(height, max-height);
   &:before {
-    @extend %content-overlay;
+    @include content-overlay;;
     z-index: 1;
   }
 }

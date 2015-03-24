@@ -1,14 +1,14 @@
 // ==================================================
 // SVG
 // ==================================================
-%svg-overflow {
+@mixin svg-overflow {
   overflow: visible;
   overflow-x: visible;
   overflow-y: visible;
 }
 
 .svg-icon {
-  @extend %svg-overflow;
+  @include svg-overflow;
 }
 
 a .svg-icon {

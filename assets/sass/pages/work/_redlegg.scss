@@ -67,7 +67,7 @@ $project-color: #eb372f;
 // Introduction
 // ==================================================
 .redlegg-introduction-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .redlegg-introduction-image {
@@ -83,19 +83,19 @@ $project-color: #eb372f;
 // SVG Animations
 // ==================================================
 .redlegg-svg-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .redlegg-svg-example {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .redlegg-svg-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .redlegg-svg-example {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 // Responsive
@@ -106,7 +106,7 @@ $project-color: #eb372f;
 }
 
 .redlegg-responsive-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .redlegg-responsive-image {

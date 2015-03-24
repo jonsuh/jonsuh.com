@@ -45,7 +45,7 @@ $project-color-secondary: #48100a;
 // Introduction
 // ==================================================
 .foodize-introduction-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .foodize-introduction-image {
@@ -62,7 +62,7 @@ $project-color-secondary: #48100a;
 // Responsive
 // ==================================================
 .foodize-responsive-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 // Homescreen
@@ -76,7 +76,7 @@ $project-color-secondary: #48100a;
 }
 
 .foodize-homescreen-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 // Devices

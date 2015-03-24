@@ -354,7 +354,7 @@
 }
 
 .post-share-menu {
-  @extend %list-reset;
+  @include list-reset;
   font-size: 1em;
 }
 
@@ -680,7 +680,7 @@ a.post-tag--pink:hover {
 }
 
 .post-related-list {
-  @extend %list-reset;
+  @include list-reset;
 }
 
 .post-related-list-item {

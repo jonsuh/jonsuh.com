@@ -53,7 +53,7 @@ $project-color-secondary: #16243c;
   // Brand
   // ==================================================
   &-brand-description {
-    @extend %max-span-columns-7;
+    @include max-span-columns(7);
   }
 
   &-brand-logo {
@@ -110,7 +110,7 @@ $project-color-secondary: #16243c;
   }
 
   &-product {
-    @extend %max-span-columns-7;
+    @include max-span-columns(7);
 
     > h2 {
       color: $white;
@@ -127,7 +127,7 @@ $project-color-secondary: #16243c;
   }
 
   &-product-container {
-    @extend %max-span-columns-7;
+    @include max-span-columns(7);
     margin-top: em-calc(20);
     overflow: hidden;
     @include mq(small) {
@@ -161,7 +161,7 @@ $project-color-secondary: #16243c;
   // Website
   // ==================================================
   &-website-description {
-    @extend %max-span-columns-7;
+    @include max-span-columns(7);
   }
 
   &-website-screenshot {
@@ -172,7 +172,7 @@ $project-color-secondary: #16243c;
   }
 
   &-website-player-purchase {
-    @extend %max-span-columns-7;
+    @include max-span-columns(7);
   }
 
   &-website-mobile-image {

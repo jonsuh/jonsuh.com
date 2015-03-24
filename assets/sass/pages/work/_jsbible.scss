@@ -38,7 +38,7 @@ $project-color-secondary: #000;
   }
 
   &:before {
-    @extend %content-overlay;
+    @include content-overlay;;
     background-color: rgba($project-color-secondary, 0.3);
     @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
   }
@@ -59,7 +59,7 @@ $project-color-secondary: #000;
 // Need
 // ==================================================
 .jsbible-need {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 // Build
@@ -89,7 +89,7 @@ $project-color-secondary: #000;
 }
 
 .jsbible-build-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 
   &,
   a {
@@ -135,7 +135,7 @@ $project-color-secondary: #000;
 // Website
 // ==================================================
 .jsbible-website {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 // Open Source
@@ -150,7 +150,7 @@ $project-color-secondary: #000;
 }
 
 .jsbible-open-source {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .jsbible-open-source-link {

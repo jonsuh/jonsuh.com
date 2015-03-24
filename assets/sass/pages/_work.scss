@@ -18,7 +18,7 @@
   position: relative;
 
   &:after {
-    @extend %content-overlay;
+    @include content-overlay;;
   }
 
   &:nth-child(3n+1) {
@@ -194,7 +194,7 @@
   background-size: cover;
   background-position: center;
   &:before {
-    @extend %content-overlay;
+    @include content-overlay;;
     z-index: 1;
   }
 

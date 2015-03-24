@@ -17,7 +17,7 @@
 }
 
 .sidebar-list {
-  @extend %list-reset;
+  @include list-reset;
 }
 
 .sidebar-list-item {

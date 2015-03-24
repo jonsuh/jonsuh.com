@@ -51,7 +51,7 @@ $project-color-secondary: #424242;
   }
 
   &:before {
-    @extend %content-overlay;
+    @include content-overlay;;
     background-color: rgba($project-color-secondary, 0.5);
     @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
   }
@@ -72,7 +72,7 @@ $project-color-secondary: #424242;
 // Facelift
 // ==================================================
 .juice-interactive-facelift-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .juice-interactive-facelift-image {
@@ -126,7 +126,7 @@ $project-color-secondary: #424242;
 }
 
 .juice-interactive-responsive-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .juice-interactive-responsive-image {
@@ -142,11 +142,11 @@ $project-color-secondary: #424242;
 // Animations
 // ==================================================
 .juice-interactive-animations-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .juice-interactive-animations-example {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
   @include mq(small) {
     padding-top: em-calc(10);
   }
@@ -171,7 +171,7 @@ $project-color-secondary: #424242;
 // Browsers
 // ==================================================
 .juice-interactive-browsers-description {
-  @extend %max-span-columns-7;
+  @include max-span-columns(7);
 }
 
 .juice-interactive-browsers-images {

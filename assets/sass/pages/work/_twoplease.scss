@@ -61,7 +61,7 @@ $project-color-tertiary : #808184;
   }
 
   &:before {
-    @extend %content-overlay;
+    @include content-overlay;;
     background-color: rgba($project-color, 0.5);
     @include linear-gradient(to right, rgba($project-color, 0.5), rgba($project-color, 0.8));
   }

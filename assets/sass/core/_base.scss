@@ -64,30 +64,6 @@ $bumper-padding: 15;
   }
 }
 
-%content-overlay {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-%font-smoothing {
-  @include font-smoothing;
-}
-
-%list-reset {
-  @include list-reset;
-}
-
-// Grid classes
-// ==================================================
-%max-span-columns-7 {
-  @include max-span-columns(7);
-}
-
 // Layout classes
 // ==================================================
 .container {
