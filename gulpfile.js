@@ -72,13 +72,19 @@ gulp.task('concat', function() {
     .pipe(concat('chart.js'))
     .pipe(gulp.dest('assets/js'));
 
+  var flickity = gulp.src([
+    'bower_components/flickity/dist/flickity.pkgd.js'
+  ])
+    .pipe(concat('flickity.js'))
+    .pipe(gulp.dest('assets/js'));
+
   var blog_https_increased = gulp.src([
     'assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js',
   ])
     .pipe(concat('https-increased-organic-search-impressions-by-144-percent.js'))
     .pipe(gulp.dest('assets/js/blog'));
 
-  return merge(jonsuh, critical, chart, blog_https_increased);
+  return merge(jonsuh, critical, chart, flickity, blog_https_increased);
 });
 
 gulp.task('concat-jekyll', function() {
@@ -109,6 +115,12 @@ gulp.task('concat-jekyll', function() {
     .pipe(concat('chart.js'))
     .pipe(gulp.dest('_site/assets/js'));
 
+  var flickity = gulp.src([
+    'bower_components/flickity/dist/flickity.pkgd.js'
+  ])
+    .pipe(concat('flickity.js'))
+    .pipe(gulp.dest('assets/js'));
+
   var blog_https_increased = gulp.src([
     'assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js',
   ])
@@ -116,7 +128,7 @@ gulp.task('concat-jekyll', function() {
     .pipe(concat('https-increased-organic-search-impressions-by-144-percent.js'))
     .pipe(gulp.dest('_site/assets/js/blog'));
 
-  return merge(jonsuh, critical, chart, blog_https_increased);
+  return merge(jonsuh, critical, chart, flickity, blog_https_increased);
 });
 
 gulp.task('jekyll', shell.task([
@@ -141,6 +153,6 @@ gulp.task('browsersync', function() {
   });
 });
 
-gulp.task('build', ['sass', 'jekyll']);
+gulp.task('build', ['sass', 'concat', 'jekyll']);
 
-gulp.task('default', ['sass', 'browsersync', 'watch']);
+gulp.task('default', ['sass', 'concat', 'browsersync', 'watch']);
