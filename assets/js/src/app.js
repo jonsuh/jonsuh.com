@@ -23,6 +23,7 @@ App = {
 
     // Other
     // ==================================================
+    App.flickityInit();
     var postOverflow = document.querySelector(".js-post-overflow");
     if (postOverflow) {
       postOverflow.addEventListener("click", App.postOverflow);
@@ -56,6 +57,13 @@ App = {
         audio.volume = 0.5;
         audio.play();
       });
+    }
+  },
+
+  flickityInit: function() {
+    var flickity = document.querySelector(".js-flickity");
+    if (flickity) {
+      loadJS("/assets/js/flickity.js");
     }
   },
 

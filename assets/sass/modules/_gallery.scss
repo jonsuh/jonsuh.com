@@ -1,0 +1,17 @@
+// ==================================================
+// Gallery
+// ==================================================
+.flickity--images {
+  @extend p;
+
+  img {
+    display: block;
+    height: em-calc(300);
+    @include mq(medium) {
+      height: em-calc(400);
+    }
+    @include mq(ipad) {
+      height: em-calc(500);
+    }
+  }
+}
