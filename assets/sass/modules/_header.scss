@@ -177,12 +177,6 @@ $logo-width: 50;
 
 .navigation-link {
   font-weight: 500;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.navigation-link {
-  font-weight: 500;
   color: $grey-light;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -190,12 +184,17 @@ $logo-width: 50;
   border-bottom-color: transparent;
   padding-left: em-calc(7);
   padding-right: em-calc(7);
+  margin-left: em-calc(-5);
   display: inline-block;
   position: relative;
   @include z-index("header-link");
 
   &:hover {
     color: $white;
+  }
+
+  &:first-child {
+    margin-left: 0;
   }
 }
 
