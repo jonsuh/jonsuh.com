@@ -240,17 +240,94 @@
 
     th {
       background-color: $grey-lighter;
+      text-align: left;
     }
 
     th,
     td {
       font-size: 90%;
-      padding: .1em 1em;
+      line-height: 1.3;
+      padding: .5em .7em;
     }
 
     tbody {
       tr:nth-child(even) {
         background-color: scale-color($grey-lighter, $lightness: 50%);
+      }
+    }
+  }
+
+  table.table--responsive {
+    width: 100%;
+    border-bottom: 5px solid $grey-lighter;
+
+    th {
+      display: none;
+    }
+
+    tr:first-child {
+      border-top: 5px solid $grey-lighter;
+    }
+
+    td {
+      padding: .15em .7em;
+      display: block;
+
+      &:before {
+        content: attr(data-th)": ";
+        font-weight: 700;
+        padding-right: em-calc(10);
+        width: em-calc(125);
+        @include mq(iphone6) {
+          width: em-calc(175);
+        }
+        @include mq(small) {
+          width: em-calc(200);
+        }
+        display: inline-block;
+        vertical-align: bottom;
+      }
+
+      &:first-child {
+        padding-top: .5em;
+      }
+      &:last-child {
+        padding-bottom: .5em;
+      }
+    }
+
+    @include mq(medium) {
+      display: table;
+      border-bottom: 0;
+
+      tr:first-child {
+        border-top: 0;
+      }
+
+      th,
+      td {
+        display: table-cell;
+      }
+
+      td {
+        padding: .5em .7em;
+
+        &:before {
+          display: none;
+        }
+
+        &:first-child {
+          padding-top: .5em;
+        }
+        &:last-child {
+          padding-bottom: .5em;
+        }
+      }
+    }
+
+    @include mq(639, max) {
+      td {
+        text-align: left;
       }
     }
   }
