@@ -6,7 +6,7 @@ sitemap:
 ---
 <div class="section">
   <div class="post post--posts">
-    <section class="post-main">
+    <section class="main">
       {% for post in paginator.posts %}
         <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
           <h2 class="post-title" itemprop="name">
@@ -30,7 +30,7 @@ sitemap:
         {% endif %}
       </section>
     </section>
-    <aside class="post-sidebar">
+    <aside class="sidebar">
       {% include sidebar/carbon-ads.html %}
 
       <hr class="section-break-half">

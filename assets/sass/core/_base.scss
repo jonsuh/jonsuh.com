@@ -227,3 +227,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+// Main, Sidebar
+// ==================================================
+.main,
+.sidebar {
+  @include max-span-columns(7);
+}
+
+@include mq(large) {
+  .main {
+    @include span-columns(7.5);
+  }
+
+  .sidebar {
+    @include span-columns(4);
+    @include shift(.5);
+  }
+}

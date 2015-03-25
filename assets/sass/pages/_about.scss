@@ -9,11 +9,6 @@
   }
 }
 
-.about-main,
-.about-sidebar {
-  @include max-span-columns(7);
-}
-
 // Introduction
 // ==================================================
 .about-introduction {
@@ -285,15 +280,6 @@
 }
 
 @include mq(large) {
-  .about-main {
-    @include span-columns(7.5);
-  }
-
-  .about-sidebar {
-    @include span-columns(4);
-    @include shift(.5);
-  }
-
   .about-mosaic {
     width: 173%;
     @include clearfix;

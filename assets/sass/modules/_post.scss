@@ -9,11 +9,6 @@
   @include container;
 }
 
-.post-main,
-.post-sidebar {
-  @include max-span-columns(7);
-}
-
 // Posts
 // ==================================================
 .post--posts {
@@ -535,7 +530,7 @@ a.post-tag:hover {
 }
 
 .post--posts {
-  .post-main {
+  .main {
     .post-tag {
       padding: em-calc(0 10);
     }
@@ -570,7 +565,7 @@ a.post-tag:hover {
   }
 }
 
-.post-sidebar {
+.sidebar {
   .post-tag {
     font-size: 16px;
   }
@@ -984,15 +979,6 @@ a.post-tag--pink:hover {
 }
 
 @include mq(large) {
-  .post-main {
-    @include span-columns(7.5);
-  }
-
-  .post-sidebar {
-    @include span-columns(4);
-    @include shift(.5);
-  }
-
   .post-pagination {
     margin-top: em-calc(50);
     margin-bottom: 0;

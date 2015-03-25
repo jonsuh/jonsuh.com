@@ -7,7 +7,7 @@ sitemap:
 ---
 <div class="section">
   <div class="post post--posts">
-    <section class="post-main">
+    <section class="main">
       {% for post in site.posts %}{% strip %}
         {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
         {% capture year_next %}{{ post.next.date | date: '%Y' }}{% endcapture %}
@@ -20,7 +20,7 @@ sitemap:
       {% endfor %}
       </ul>
     </section>
-    <aside class="post-sidebar">
+    <aside class="sidebar">
       {% include sidebar/carbon-ads.html %}
 
       <hr class="section-break-half">
