@@ -6,7 +6,7 @@
 }
 
 .post {
-  @extend .container;
+  @include container;
 }
 
 .post-main,

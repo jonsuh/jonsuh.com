@@ -16,6 +16,12 @@
   z-index: 1;
 }
 
+@mixin svg-overflow {
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
 // Em to Pixel (Thanks ZURB)
 // ==================================================
 @function strip-unit($num) {

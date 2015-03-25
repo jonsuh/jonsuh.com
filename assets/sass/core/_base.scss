@@ -7,69 +7,63 @@ body {
   height: 100%;
 }
 
-// Silent classes
+// Layout mixins
 // ==================================================
-$bumper-padding: 15;
-
-%bumper {
-  padding-left: em-calc($bumper-padding);
-  padding-right: em-calc($bumper-padding);
-}
-
-%bumper-v {
-  padding-top: em-calc($bumper-padding);
-  padding-bottom: em-calc($bumper-padding);
-}
-
-%container-override {
-  left: em-calc($bumper-padding * -1);
-  @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
-}
-
-@include mq(small) {
-  $bumper-padding: 25;
-
-  %bumper {
+@mixin bumper($type: x) {
+  $bumper-padding: 15;
+  @if $type == "x" {
     padding-left: em-calc($bumper-padding);
     padding-right: em-calc($bumper-padding);
   }
-
-  %bumper-v {
+  @else if $type == "y" {
     padding-top: em-calc($bumper-padding);
     padding-bottom: em-calc($bumper-padding);
   }
+  @else if $type == "both" {
+    padding: em-calc($bumper-padding);
+  }
 
-  %container-override-small-up {
-    left: em-calc($bumper-padding * -1);
-    @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
+  @include mq(small) {
+    $bumper-padding: 25;
+    @if $type == "x" {
+      padding-left: em-calc($bumper-padding);
+      padding-right: em-calc($bumper-padding);
+    }
+    @else if $type == "y" {
+      padding-top: em-calc($bumper-padding);
+      padding-bottom: em-calc($bumper-padding);
+    }
+    @else if $type == "both" {
+      padding: em-calc($bumper-padding);
+    }
+  }
+
+  @include mq(medium) {
+    $bumper-padding: 50;
+    @if $type == "lr" {
+      padding-left: em-calc($bumper-padding);
+      padding-right: em-calc($bumper-padding);
+    }
+    @else if $type == "y" {
+      padding-top: em-calc($bumper-padding);
+      padding-bottom: em-calc($bumper-padding);
+    }
+    @else if $type == "both" {
+      padding: em-calc($bumper-padding);
+    }
   }
 }
 
-@include mq(medium) {
-  $bumper-padding: 50;
-
-  %bumper {
-    padding-left: em-calc($bumper-padding);
-    padding-right: em-calc($bumper-padding);
-  }
-
-  %bumper-v {
-    padding-top: em-calc($bumper-padding);
-    padding-bottom: em-calc($bumper-padding);
-  }
-
-  %container-override-medium-up {
-    left: em-calc($bumper-padding * -1);
-    @include calc(width, 100% + #{em-calc($bumper-padding * 2)});
-  }
+@mixin container {
+  @include bumper;
+  @include outer-container;
+  position: relative;
 }
 
 // Layout classes
 // ==================================================
 .container {
-  @extend %bumper;
-  @include outer-container;
-  position: relative;
+  @include container;
 }
 
 $section-padding: 25;

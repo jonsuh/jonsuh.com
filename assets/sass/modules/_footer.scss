@@ -5,7 +5,7 @@
   color: $grey;
   text-align: center;
   background-color: $grey-darkest;
-  @extend %bumper-v;
+  @include bumper(y);
   position: relative;
   @include z-index(footer);
 
@@ -231,7 +231,7 @@ a.footer-top-link:hover {
     width: em-calc(20);
     height: em-calc(20);
     display: inline;
-    @extend %svg-overflow;
+    @include svg-overflow;
     position: relative;
     top: em-calc(3);
     @include animation(heart-thump 1.5s linear infinite);

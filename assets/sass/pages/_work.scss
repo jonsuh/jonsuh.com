@@ -46,8 +46,7 @@
 }
 
 .work-item-content {
-  @extend %bumper;
-  @extend %bumper-v;
+  @include bumper(both);
   position: absolute;
   left: em-calc(10);
   bottom: em-calc(10);

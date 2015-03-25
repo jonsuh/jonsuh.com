@@ -33,8 +33,7 @@
 // Content
 // ==================================================
 .errors-content {
-  @extend .container;
-  position: relative;
+  @include container;
   z-index: 2;
 }
 

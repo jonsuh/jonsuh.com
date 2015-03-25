@@ -2,7 +2,7 @@
 // Hero
 // ==================================================
 .hero {
-  @extend %bumper;
+  @include bumper;
   height: em-calc(200);
   @include mq(small) {
     height: em-calc(300);
