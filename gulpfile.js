@@ -5,12 +5,23 @@ var gulp         = require('gulp'),
     filter       = require('gulp-filter'),
     merge        = require('merge-stream'),
     newer        = require('gulp-newer'),
+    notify       = require('gulp-notify'),
+    plumber      = require('gulp-plumber'),
     reload       = browserSync.reload,
     shell        = require('gulp-shell'),
     sass         = require('gulp-sass');
 
+var onError = function(err) {
+  notify.onError({
+    title:    "Error",
+    message:  "<%= error.message %>",
+  })(err);
+  this.emit('end');
+};
+
 gulp.task('sass', function() {
   return gulp.src('assets/sass/**/*.scss')
+    .pipe(plumber({errorHandler: onError}))
     // .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
@@ -30,6 +41,7 @@ gulp.task('sass', function() {
 
 gulp.task('sass-jekyll', function() {
   return gulp.src('assets/sass/**/*.scss')
+    .pipe(plumber({errorHandler: onError}))
     // .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
