@@ -3,9 +3,10 @@
 // ==================================================
 .flickity--images {
   @extend p;
+  overflow: hidden;
 
+  &,
   img {
-    display: block;
     height: em-calc(300);
     @include mq(medium) {
       height: em-calc(400);
@@ -13,5 +14,9 @@
     @include mq(ipad) {
       height: em-calc(500);
     }
+  }
+
+  img {
+    display: block;
   }
 }
