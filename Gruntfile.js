@@ -67,7 +67,7 @@ module.exports = function(grunt) {
             'bower_components/chartjs/src/Chart.Line.js',
             'assets/js/vendor/Chart.legend.js'
           ],
-          'assets/js/flickity.js': ['bower_components/dist/flickity.pkgd.js'],
+          'assets/js/flickity.js': ['bower_components/flickity/dist/flickity.pkgd.js'],
           'assets/js/blog/https-increased-organic-search-impressions-by-144-percent.js': ['assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js'],
           '_includes/critical/js/global.js': ['assets/js/src/critical.js'],
         }
