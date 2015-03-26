@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsible and Faster Social Share Links
+title: Responsible, Faster Social Share Links
 date: "2015-02-01 08:00:00"
 comments: false
 tags:
