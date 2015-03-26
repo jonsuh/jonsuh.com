@@ -2,6 +2,7 @@
 layout: post
 title: Responsible, Faster Social Share Links
 date: "2015-02-01 08:00:00"
+updated: "2015-03-26 10:10:00"
 comments: false
 tags:
 - development
