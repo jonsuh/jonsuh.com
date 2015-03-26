@@ -43,13 +43,13 @@ Canary packs a lot of features into its tiny body—it stands 6” high and 3”
 
 ### Camera and Motion Detection
 
-It has a 1080p HD camera equipped with a 147° wide-angle lens so it can see and record a large area of your home and night vision it can see in the dark. The wide-angle lens allows it to view multiple rooms if you position it properly at certain spots of your home.
+It has a 1080p HD camera equipped with a 147° wide-angle lens so it can see and record a large area of your home and night vision so it can see in the dark. The wide-angle lens allows it to view multiple rooms when positioned at certain spots of your home.
 
 Motion detection allows Canary to record activity when it detects motion when motion-activated recording is enabled, and a built-in microphone also records sound. Both the video and audio are stored in Canary’s cloud storage for up to 90 days (based on your subscription plan). When it detects motion, you’ll get a push notification on your device.
 
 !["The bottom of Canary"](https://farm8.staticflickr.com/7576/16117779817_b642401150_c.jpg)
 
-Canary has an intuitive indicator light at the bottom, which glows yellow when it’s functioning properly and red when there’s an issue.
+Canary has an intuitive indicator light at the bottom, which glows yellow when it’s functioning properly and red when there’s an issue, such as connectivity.
 
 ### Modes
 
@@ -59,7 +59,7 @@ Canary can be put into 3 modes: Armed, Disarmed, and Privacy.
 - **Disarmed** - Motion-activated recording without mobile notifications.
 - **Privacy** - Canary and microphone are completely off.
 
-Canary auto arms when you leave and disarms when you get home—it uses your phone’s GPS to intelligently know when you’re leaving or coming home.
+Canary auto arms when you leave and disarms when you get home—it intelligently uses your phone’s GPS.
 
 <div class="flickity--images js-flickity"
   data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false }'>
@@ -71,11 +71,11 @@ Canary auto arms when you leave and disarms when you get home—it uses your pho
 
 ### Watch Live
 
-When Canary is in Armed or Disarmed mode, you can use the app to watch and listen to what’s going on. I notice about a 5–7-second delay, but the quality of the video is very good. You can even zoom in/out of the video (2x and 3x) by double-clicking and pan when zoomed in. You can record on-demand by clicking “Record” within Watch Live.
+When Canary is in Armed or Disarmed mode, you can use the app to watch and listen to what’s going on. I notice about a 5–7-second delay, but the quality of the video is very good. Zoom in/out of the video (2x and 3x) by double-tapping and pan by swiping. Record on-demand by clicking “Record” within Watch Live.
 
 ### Activity Archive
 
-The activity list keeps track of Canary’s actions, such as whether Canary was armed or unarmed or it recorded activity, which is accessible via the Canary app.
+The activity list keeps track of Canary’s actions, such as whether it was armed or unarmed or it recorded activity, which is accessible via the app.
 
 <div class="flickity--images js-flickity"
   data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false }'>
@@ -84,49 +84,53 @@ The activity list keeps track of Canary’s actions, such as whether Canary was 
   <img src="https://farm8.staticflickr.com/7614/16723555037_ffb336c63f_c.jpg" alt="Canary saved events">
 </div>
 
-You can also watch clips from Canary’s archive of motion-activated recordings. To save a clip, simply bookmark it, which you can then find in Saved Events. Past recordings and bookmarked clips are limited to your subscription plan.
+Watch clips from Canary’s archive of motion-activated recordings. To save a clip, simply bookmark it, then find it in Saved Events. Past recordings and bookmarked clips are limited to your subscription plan.
 
 ### HomeHealth
 
-Canary has built-in sensors that monitor the air quality, temperature, and humidity of your home. HomeHealth is designed to notify you if something is unusual at your home, such as a fire, which would cause a sudden spike in temperature and drop in humidity.
+Canary has built-in sensors that monitor the air quality, temperature, and humidity of your home. HomeHealth is designed to notify you if something is unusual at home, such as a fire, which would cause a sudden spike in temperature and drop in humidity.
 
 <p><img src="https://farm9.staticflickr.com/8710/16744069519_72861337bf_c.jpg" alt="Canary HomeHealth temperature and humidity" style="width: 50%"><img src="https://farm8.staticflickr.com/7640/16928981932_22f0cf1429_c.jpg" alt="Canary HomeHealth air quality" style="width: 50%"></p>
 
-It gives you a snapshot of each on the home screen while clicking into it opens up graphs that’ll show you the progression/change of each within a 12-hour period. You can also tap and swipe to get the HomeHealth status at a specific time within that 12-hour period.
+It gives a snapshot of each on the home screen, and clicking into it opens up graphs which show the progression/change of each within a 12-hour period. Tap and swipe a graph to get the status of a specific time.
 
-The air-quality information is very basic and doesn’t provide much information other than that the air quality is normal, abnormal, and very abnormal.
+The air-quality information is very basic and doesn’t provide much information other than that the air quality is normal, abnormal, or very abnormal.
 
 ### Member and Device management
 
-You can add other members that you’d like Canary to authorize and recognize, for features such as managing Canary from the app or arming/disarming by location.
+Add other members to give Canary access to for features such as managing Canary from the app or auto arming/disarming by location.
 
-You can also add multiple Canary devices in the same location so they can work together and house all of its data into one account. You can have up to 4 Canary devices in one location.
+Add multiple Canary devices in the same location so they can work together and house all of its data in one account—you can have up to 4 Canary devices in one location.
 
 ### Siren and Accelerometer
 
-Canary comes equipped with a loud speaker for a siren, which you can activate from within the app if you’d like to warn off any intruders or notify others around of unusual activity.
+Canary comes equipped with a loud speaker for a siren, which you can activate from within the app to warn off any intruders or notify those around.
 
-A built-in accelerometer is designed to warn you when Canary detects unusual physical activity, such Canary falling off of a table because of a strong earthquake or someone knocking it off.
+A built-in accelerometer is designed to warn you when it detects unusual physical activity, like falling off of a table.
 
 ---
 
 ## Usage and Performance
 
-Canary lives up to a lot of its features and promises. Its auto-unarm feature makes it convenient to come home and have Canary auto unarm for you; push notifications are quick and prompt; its high-quality camera produces great video, which wasn’t the case for the previous security camera I owned; the app is well designed.
+Canary lives up to a lot of its features and promises. Its auto-unarm feature makes it convenient to come home and have it auto unarm; push notifications are quick and prompt; its high-quality camera produces great video, which wasn’t the case for the previous security camera I owned; the app is well designed.
 
-I’ve also experienced issues with it. Canary occasionally randomly goes offline even though my Internet is up or it fails to arm or disarm when I try to change its mode—if you’re like me, I start to panic and start dreaming up the worst (like someone breaking into my house because Canary went offline). I find it uneasy that Canary fails to let me know when it goes offline, so you have no clue until you come home or check. I’d like to see Canary inform you when it goes offline via a push notification, SMS/text message, or email. Most recently it fails to auto disarm when I come home so I have to manually disarm it.
+I’ve also experienced issues with it. Canary occasionally randomly goes offline even though my Internet is up or it fails to arm or disarm when I try to change its mode—if you’re like me, I start to panic and start dreaming up the worst (like someone breaking into my house because Canary went offline). I find it uneasy that Canary fails to let me know when it goes offline, so you have no clue until you come home or check. I’d like to see Canary inform you when it goes offline via a push notification, SMS/text message or email. I think it’d also be nice in general to have the option to receive SMS/text/email notifications. In addition, it most recently fails to auto disarm when I come home so I have to manually disarm it.
 
 Canary doesn’t have a web app (yet) so you need your phone with you, but it needs one.
 
-Videos are on Canary’s servers, and there’s no way for you to download them locally. Personally it’d be nice to be able to download and store the videos locally.
+Videos are on Canary’s servers, but there’s no way for you to download them locally. It’d be nice to be able to download and store them locally so I can have a personal archive of videos without complete dependency on Canary.
 
-I dislike how the videos are organized. There’s no way to quickly jump to a time or date. If Canary is in Unarmed mode it still records motion activity throughout the day so you have to endlessly scroll to get to the video you want. It’d be nice to see a better, more intuitive way to browse or filter through past videos.
+I dislike how the videos are organized—there’s no way to quickly jump to a time or date. If Canary is in Unarmed mode it still records motion activity throughout the day; therefore, you have to endlessly scroll to get to the desired video. It’d be nice to see a better, more intuitive way to browse or filter through past videos.
 
 ## Conclusion
 
-Overall I’m extremely happy with Canary and its features. I don’t think Canary replaces a fully-featured, robust home-security system, but they are expensive and near impossible for the average consumer to afford. Canary provides you with enough security features at a low cost to feel at ease when you leave your home, which is better than having no security system at all.
+Overall I’m extremely happy with Canary and its features. I don’t think Canary replaces a fully-featured, robust home-security system, but they are expensive and near impossible for the average consumer to afford. Canary provides enough security features at a low cost to feel at ease when you leave your home, which is better than having no security system at all.
 
-I was tempted to get one of its alternatives, such as <a href="http://www.amazon.com/Dropcam-Wireless-Monitoring-Security-Camera/dp/B00F9FCW7K/?tag=jonsuhcom-20" target="_blank">Dropcom</a> or <a href="http://www.amazon.com/Security-Monitoring-Wireless-Surveillance-Automation/dp/B00MB3LMP6/?tag=jonsuhcom-20">Piper</a> but I’m glad I got Canary—it’s a great and worthy alternative for an affordable, feature-packed security device.
+I was tempted to get one of its alternatives, such as <a href="http://www.amazon.com/Dropcam-Wireless-Monitoring-Security-Camera/dp/B00F9FCW7K/?tag=jonsuhcom-20" target="_blank">Dropcam</a> or <a href="http://www.amazon.com/Security-Monitoring-Wireless-Surveillance-Automation/dp/B00MB3LMP6/?tag=jonsuhcom-20">Piper</a> but I’m glad I got Canary—it’s a great and worthy alternative for an affordable, feature-packed security device.
+
+I fully expect Canary’s features and reliability to improve over time, and look forward to its changes.
+
+*Update: Canary has informed me that they’re working on all of the issues I’ve experienced, which is good news indeed—at least from a distance.*
 
 Canary All-in-One Home Security costs $249 and is available to order from <a href="http://store.canary.is/" target="_blank">Canary.is</a> or on <a href="{% amazon_url http://www.amazon.com/Canary-All---One-Security-Device/dp/B00NW31YSE/ %}" target="_blank">Amazon.com</a>.
 
@@ -174,4 +178,4 @@ An account comes with Canary’s basic, free plan, but if you’d like longer or
   </tbody>
 </table>
 
-You can find more information about the Canary All-in-One Home Security System at <a href="http://canary.is" target="_blank">Canary.is</a>.
+Find more information about the Canary All-in-One Home Security System at <a href="http://canary.is" target="_blank">Canary.is</a>.
