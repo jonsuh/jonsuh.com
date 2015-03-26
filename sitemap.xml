@@ -16,6 +16,9 @@
       <loc>{{ url }}</loc>
       {% if page.lastmod %}<lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>{% endif %}
       <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
+      {% if page.updated != nil %}
+        <lastmod>{{ page.updated | date: "%Y-%m-%d" }}</lastmod>
+      {% endif %}
       <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.5{% endif %}</priority>
     </url>
   {% endif %}
@@ -26,6 +29,9 @@
   <url>
     <loc>{{ work.url | prepend: site.url | prepend: site.url_protocol }}</loc>
     <changefreq>monthly</changefreq>
+    {% if work.updated != nil %}
+      <lastmod>{{ work.updated | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
     <priority>0.8</priority>
   </url>
 {% endfor %}
@@ -34,6 +40,9 @@
   <url>
     <loc>{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</loc>
     <changefreq>monthly</changefreq>
+    {% if page.updated != nil %}
+      <lastmod>{{ page.updated | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
     <priority>0.8</priority>
   </url>
 {% endfor %}
