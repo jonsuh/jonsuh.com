@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsible Social Share Links
+title: Responsible and Faster Social Share Links
 date: "2015-02-01 08:00:00"
 comments: false
 tags:
@@ -19,7 +19,7 @@ Social share scripts are convenient and easy to copy & paste but rely on JavaScr
 
 It’s important to design and build sites responsibly—people pay for data and to truly serve a global audience where 3G and 4G networks are luxuries or nonexistent, every byte of data transferred matters.
 
-Here’s a breakdown of loading social share scripts from some of the most popular sites:
+Here’s a breakdown of loading social sharing scripts from some of the most popular sites:
 
 | Site       | Files    | Size        |
 | :--------- |:--------:| -----------:|
@@ -33,9 +33,11 @@ Here’s a breakdown of loading social share scripts from some of the most popul
 
 That’s 11 additional requests and although it took 1.29 seconds to load on my connection, my connection advertises 50-105 Mbps. When I throttle the loading to an EDGE network, it takes 7 seconds.
 
+The privacy of your users is another thing to consider—loading third-party share scripts allows them to track users on your site. Using share links not dependent on third-party scripts is not only faster, but you’re being more responsible and cautious with the privacy of your users, which is another huge plus.
+
 ## Use Share URLs
 
-Each social site has its own unique share URL that accepts custom parameters used to pull in the information to be displayed. Most importantly they do not require JavaScript to work.
+Each social network has its own unique share URL that accepts custom parameters used to pull in the information to be displayed. Most importantly they do not require JavaScript to work.
 
 Let’s take a look at Facebook’s share URL:
 
@@ -223,7 +225,7 @@ Even better, customize it with CSS:
 
 ## Enhance with JavaScript
 
-Now that we’ve gotten the share links to work without JavaScript, let’s enhance them by adding some JavaScript to open the share URL in a popup window. Here’s the function we’ll use to handle the popup window.
+Now that we’ve gotten social sharing links to work without JavaScript, let’s enhance them by adding some JavaScript to open the share URL in a popup window. Here’s the function we’ll use to handle the popup window.
 
 {% highlight js %}
 function windowPopup(url, width, height) {
