@@ -52,6 +52,7 @@ module.exports = function(grunt) {
       build: {
         files: {
           'assets/js/jonsuh.js': [
+            'assets/js/vendor/promise.js',
             'bower_components/picturefill/dist/picturefill.js',
             'bower_components/fontfaceobserver/fontfaceobserver.js',
             'assets/js/src/utility.js',

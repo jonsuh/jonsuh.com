@@ -61,6 +61,7 @@ gulp.task('sass-jekyll', function() {
 
 gulp.task('concat', function() {
   var jonsuh = gulp.src([
+    'assets/js/vendor/promise.js',
     'bower_components/picturefill/dist/picturefill.js',
     'bower_components/fontfaceobserver/fontfaceobserver.js',
     'assets/js/src/utility.js',
@@ -103,6 +104,7 @@ gulp.task('concat', function() {
 
 gulp.task('concat-jekyll', function() {
   var jonsuh = gulp.src([
+    'assets/js/vendor/promise.js',
     'bower_components/picturefill/dist/picturefill.js',
     'bower_components/fontfaceobserver/fontfaceobserver.js',
     'assets/js/src/utility.js',
