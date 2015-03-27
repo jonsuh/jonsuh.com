@@ -1,8 +1,5 @@
 var App = App || {};
 
-var docHtml = document.getElementById("html"),
-    docBody = document.body;
-
 App = {
   googleAnalyticsUA: "", // PARTS OF THIS LINE HAVE BEEN REMOVED
   transitionEnd: null,
