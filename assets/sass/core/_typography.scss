@@ -10,8 +10,12 @@ $paragraph-margin-bottom : .75em;
 
 body,
 html {
-  font-family: $sans-serif;
+  font-family: $sans-serif-fallback;
   color: $paragraph-font-color;
+
+  .fonts-loaded & {
+    font-family: $sans-serif;
+  }
 }
 
 body,
