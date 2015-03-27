@@ -62,6 +62,7 @@ gulp.task('sass-jekyll', function() {
 gulp.task('concat', function() {
   var jonsuh = gulp.src([
     'bower_components/picturefill/dist/picturefill.js',
+    'bower_components/fontfaceobserver/fontfaceobserver.js',
     'assets/js/src/utility.js',
     'assets/js/src/social.js',
     'assets/js/src/work.js',
@@ -71,6 +72,7 @@ gulp.task('concat', function() {
     .pipe(gulp.dest('assets/js'));
 
   var critical = gulp.src([
+    'bower_components/loadcss/loadCSS.js',
     'assets/js/src/critical.js'
   ])
     .pipe(concat('jonsuh.js'))
@@ -102,6 +104,7 @@ gulp.task('concat', function() {
 gulp.task('concat-jekyll', function() {
   var jonsuh = gulp.src([
     'bower_components/picturefill/dist/picturefill.js',
+    'bower_components/fontfaceobserver/fontfaceobserver.js',
     'assets/js/src/utility.js',
     'assets/js/src/social.js',
     'assets/js/src/work.js',
@@ -112,6 +115,7 @@ gulp.task('concat-jekyll', function() {
     .pipe(gulp.dest('_site/assets/js'));
 
   var critical = gulp.src([
+    'bower_components/loadcss/loadCSS.js',
     'assets/js/src/critical.js'
   ])
     .pipe(newer('_includes/critical/js/jonsuh.js'))
