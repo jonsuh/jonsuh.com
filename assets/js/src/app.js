@@ -76,10 +76,13 @@ App = {
       weight: 700
     });
 
-    Promise.all([roboto400.check(), roboto500.check(), roboto700.check()])
-           .then(function() {
-              document.documentElement.className += " fonts-loaded";
-           });
+    Promise.all([
+      roboto400.check(),
+      roboto500.check(),
+      roboto700.check()
+    ]).then(function() {
+      document.documentElement.className += " fonts-loaded";
+    });
   },
 
   googleAnalytics: function() {
