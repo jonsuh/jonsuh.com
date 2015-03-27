@@ -8,6 +8,8 @@
     "picturefill": "~2.1.0",
     "chartjs": "~1.0.1-beta.4",
     "mq-sass": "*",
-    "flickity": "~1.0.0"
+    "flickity": "~1.0.0",
+    "loadcss": "~0.1.6",
+    "fontfaceobserver": "~1.4.3"
   }
 }
