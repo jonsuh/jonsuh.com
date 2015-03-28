@@ -110,7 +110,7 @@ The result? No sign of FOIT!
 
 You can see that although Roboto wasn’t available until the 3rd frame, the text was visible the entire time.
 
-Another note about Font Face Observer’s—if the connection is extremely slow and it gives up on font loading, the given solution above will cause the document to stay in its fallback state (in this case the text will remain set in `Helvetica, Arial, sans-serif`).
+Another note about Font Face Observer’s—if the connection is extremely slow and it gives up on checking the font loading, the given solution above will cause the document to stay in its fallback state (in this case the text will remain set in `Helvetica, Arial, sans-serif`).
 
 We can use the catch to give the `html` element a unique class name to handle the timeout state.
 
