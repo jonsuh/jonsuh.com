@@ -82,6 +82,8 @@ App = {
       roboto700.check()
     ]).then(function() {
       document.documentElement.className += " fonts-loaded";
+    }, function() {
+      document.documentElement.className += " fonts-timeout";
     });
   },
 

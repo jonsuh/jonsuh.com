@@ -10,11 +10,15 @@ $paragraph-margin-bottom : .75em;
 
 body,
 html {
-  font-family: $sans-serif-fallback;
+  font-family: $sans-serif-local;
   color: $paragraph-font-color;
 
   .fonts-loaded & {
     font-family: $sans-serif;
+  }
+
+  .fonts-timeout & {
+    font-family: $sans-serif-fallback;
   }
 }
 

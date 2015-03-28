@@ -7,7 +7,8 @@ $rem-base: 16px !default;
 // Fonts
 // ==================================================
 $sans-serif         : "Roboto", Helvetica, Arial, sans-serif;
-$sans-serif-fallback: "RobotoLocal", Helvetica, Arial, sans-serif;
+$sans-serif-local   : "RobotoLocal", Helvetica, Arial, sans-serif;
+$sans-serif-fallback: "RobotoLocal", "Roboto", Helvetica, Arial, sans-serif;
 $serif              : "freight-text-pro", "FreightText Pro", "FreightText", Georgia, "Times New Roman", serif;
 
 // Colors
