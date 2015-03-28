@@ -2,6 +2,7 @@
 layout: post
 title: Faster and Better Font Loading with Font Events
 date: "2015-03-28 01:30:00"
+share_image: foit-solved.jpg
 comments: false
 tags:
 - development
