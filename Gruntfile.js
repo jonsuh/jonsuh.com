@@ -102,7 +102,7 @@ module.exports = function(grunt) {
       },
       blog_post: {
         options: {
-          url: 'http://jonsuh.local/blog/august-smart-lock/',
+          url: 'http://jonsuh.local/blog/font-loading-with-font-events/',
           outputfile: '_includes/critical/css/blog-post.css',
         }
       },
@@ -236,6 +236,23 @@ module.exports = function(grunt) {
           ext: '.js'
         }]
       },
+    },
+
+    imagemin: {
+      production: {
+        options: {
+          optimizationLevel: 7,
+        },
+        files: [{
+          expand: true,
+          cwd: 'assets/images',
+          src: [
+            '**/*.{gif,jpg,png}',
+            '!_site'
+          ],
+          dest: 'assets/images'
+        }]
+      }
     },
 
     rsync: {
