@@ -76,7 +76,7 @@ var roboto = new FontFaceObserver("Roboto", {
   weight: 400
 });
 
-observer.check().then(function() {
+roboto.check().then(function() {
   document.getElement.className += "fonts-loaded";
 });
 {% endhighlight %}
