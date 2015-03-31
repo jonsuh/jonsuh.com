@@ -36,6 +36,14 @@ module.exports = function(grunt) {
           dest: '_site/'
         }]
       },
+      critical_css: {
+        files: [{
+          expand: true,
+          flatten: true,
+          src: ['_includes/critical/css/src/**'],
+          dest: '_includes/critical/css/',
+        }]
+      },
       normalize: {
         expand: true,
         flatten: true,
@@ -192,7 +200,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '_includes/critical/css/',
-          src: ['**/*.css'],
+          src: ['*.css'],
           dest: '_includes/critical/css/',
           ext: '.css'
         }]
@@ -339,6 +347,7 @@ module.exports = function(grunt) {
     'newer:copy:normalize',
     'sass:build',
     'autoprefixer:build',
+    'copy:critical_css',
     'concat:build',
     'jekyll:build'
   ]);
@@ -347,12 +356,25 @@ module.exports = function(grunt) {
     'newer:copy:normalize',
     'sass:build',
     'autoprefixer:build',
+    'copy:critical_css',
     'concat:build',
     'browserSync',
     'concurrent:watch'
   ]);
 
-  grunt.registerTask('production', ['copy:normalize', 'sass:build', 'clean:css_maps', 'autoprefixer:build', 'concat:build', 'cssmin:production', 'uglify:production', 'uglify:critical', 'jekyll:production'])
+  grunt.registerTask('production', [
+    'copy:normalize',
+    'sass:build',
+    'clean:css_maps',
+    'autoprefixer:build',
+    'concat:build',
+    'cssmin:production',
+    'copy:critical_css',
+    'cssmin:critical',
+    'uglify:production',
+    'uglify:critical',
+    'jekyll:production'
+  ]);
 
   grunt.registerTask('deploy:staging', [
     'build',                  // Grunt build
