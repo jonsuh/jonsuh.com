@@ -6,7 +6,16 @@
   <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
 
   <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=Roboto:400,700,500,300">
-  <link rel="stylesheet" href="/assets/css/screen.css?v={{ css_version }}">
+  <style>{% if url == '/' %}
+      {% include critical/css/home.css %}
+    {% elsif url contains '/about/' %}
+      {% include critical/css/blog.css %}
+    {% elsif url contains '/work/' %}
+      {% include critical/css/work.css %}
+    {% elsif url contains '/blog/' %}
+      {% if page.tags %}{% include critical/css/blog-post.css %}{% else %}{% include critical/css/blog.css %}{% endif %}
+    {% endif %}</style>
+  <meta name="mainCSS" content="/assets/css/screen.css?v={{ css_version }}">
 {% strip %}
   {% if page.css %}
     <meta name="pageCSS" content="/assets/css/blog/{{ page.css }}?v={{ css_version }}">
@@ -18,6 +27,7 @@
 
   <noscript>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500,300">
+    <link rel="stylesheet" href="/assets/css/screen.css?v={{ css_version }}">
     {% if page.css %}
       <link rel="stylesheet" href="/assets/css/blog/{{ page.css }}?v={{ css_version }}">
     {% endif %}
