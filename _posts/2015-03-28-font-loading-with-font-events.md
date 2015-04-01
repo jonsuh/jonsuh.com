@@ -21,7 +21,9 @@ FOIT is a result of the browser timing out by displaying text in a default font 
 
 {% include image.html src="foit.jpg" caption="FOIT when traditionally loading custom web fonts (throttled on a 3G network)" %}
 
-Notice that as the page loads, the text becomes invisible in frames 2 and 3 (the type is set in Helvetica in frame 1 and Roboto in frame 4), which makes the content of the page unreadable. Although in many cases the FOIT lasted only 2–4 seconds, it’s definitely noticeable. Your goal should be to get the content to your users as quickly as possible, and when it becomes available, avoid interruptions that may otherwise detract from the experience.
+Notice that as the page loads, the text becomes invisible in frames 2 and 3 (the type is set in Helvetica in frame 1 and Roboto in frame 4), which makes the content of the page unreadable. Although in many cases the FOIT lasted only 2–4 seconds, it’s definitely noticeable. I’ve also experienced the worst-case scenario, which is the content being permanently invisible.
+
+the goal here is to get the content to your users as quickly as possible at the expense of FOUT and visual changes that occur when the font becomes available.
 
 ## Detect when fonts have been loaded
 
