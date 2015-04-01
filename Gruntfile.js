@@ -53,6 +53,14 @@ module.exports = function(grunt) {
         rename: function(dest, src) {
           return dest + src.replace('.css', '.scss');
         }
+      },
+      robots_staging: {
+        src: 'robots.staging.txt',
+        dest: 'robots.txt'
+      },
+      robots_production: {
+        src: 'robots.production.txt',
+        dest: 'robots.txt'
       }
     },
 
@@ -382,12 +390,14 @@ module.exports = function(grunt) {
     'rsync:images_staging',   // Rsync _site/assets/images to staging environment
     'rsync:media_staging',    // Rsync _site/assets/media to staging environment
     'clean:site_assets',      // Clean _site/assets/(images,media) to prep for deployment
+    'copy:robots_staging',    // Copy the staging version of robots.txt for deployment
     'shell:deploy_staging'    // Capistrano deploy to staging environment
   ]);
 
   grunt.registerTask('deploy:production', [
     'production',              // Grunt production
     'clean:site_assets',       // Clean _site/assets/(images,media) to prep for deployment
+    'copy:robots_production',  // Copy the production version of robots.txt for deployment
     'shell:deploy_production'  // Capistrano deploy to production environment
   ]);
 
@@ -396,6 +406,7 @@ module.exports = function(grunt) {
     'rsync:images_production', // Rsync _site/assets/images to production environment
     'rsync:media_production',  // Rsync _site/assets/media to production environment
     'clean:site_assets',       // Clean _site/assets/(images,media) to prep for deployment
+    'copy:robots_production',  // Copy the production version of robots.txt for deployment
     'shell:deploy_production'  // Capistrano deploy to production environment
   ]);
 };
