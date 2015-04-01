@@ -238,6 +238,9 @@
 
   &.has-carbonads {
     margin-top: em-calc(95);
+    @include mq(1100) {
+      margin-top: em-calc(60);
+    }
   }
 }
 
@@ -281,7 +284,8 @@
 
 @include mq(large) {
   .about-mosaic {
-    width: 173%;
+    width: 165%;
+    left: 0;
     @include clearfix;
   }
 
