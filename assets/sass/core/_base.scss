@@ -215,6 +215,18 @@ ol, ul, li {
   }
 }
 
+.serif {
+  font-family: $serif-local;
+
+  .wf-active & {
+    font-family: $serif;
+  }
+
+  .wf-inactive {
+    font-family: $serif-fallback;
+  }
+}
+
 // Elements
 // ==================================================
 a {
