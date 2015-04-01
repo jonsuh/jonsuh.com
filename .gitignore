@@ -21,4 +21,7 @@ assets/js/*
 !assets/js/vendor
 !assets/js/vendor/**/*
 assets/images/blog
+
+assets/media
+cmi2014
 robots.txt
