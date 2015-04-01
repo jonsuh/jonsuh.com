@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /cmi2014/
+Disallow: /aiga-2014-11/
