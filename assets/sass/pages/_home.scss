@@ -223,12 +223,6 @@
     height: calc(100% - #{em-calc(90 + 25)});
     min-height: em-calc(400);
     max-height: em-calc(500);
-    @include mq(700) {
-      max-height: em-calc(600);
-    }
-    // @include mq(800) {
-    //   max-height: em-calc(700);
-    // }
   }
 
   .home-hero-introduction {
@@ -252,6 +246,18 @@
     display: inline-block;
   }
 }
+
+@include mq(700) {
+  .home--hero {
+    max-height: em-calc(600);
+  }
+}
+
+// @include mq(800) {
+//   .home--hero {
+//     max-height: em-calc(700);
+//   }
+// }
 
 @include mq(large) {
   .home-hero-name {
