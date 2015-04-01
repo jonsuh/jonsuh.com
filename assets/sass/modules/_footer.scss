@@ -111,8 +111,9 @@ a.footer-top-link:hover {
 
 .footer-navigation-link-home,
 .footer-navigation-link-twitter {
-  padding-left: em-calc(5); // .footer-navigation-link padding-left
-  padding-right: em-calc(5);
+  padding-left: em-calc(7); // .footer-navigation-link padding-left
+  padding-right: em-calc(7);
+  margin-bottom: em-calc(10);
 }
 
 .footer-navigation-link-home {
@@ -134,10 +135,10 @@ a.footer-top-link:hover {
   }
 
   .svg-icon {
-    width: em-calc(20);
-    height: em-calc(20);
+    width: em-calc(22);
+    height: em-calc(22);
     position: relative;
-    top: em-calc(4);
+    top: em-calc(5);
   }
 
   .svg-icon-path {
@@ -279,6 +280,11 @@ a.footer-top-link:hover {
     margin-top: em-calc(25);
     margin-bottom: inherit;
     display: block;
+  }
+
+  .footer-navigation-link-home,
+  .footer-navigation-link-twitter {
+    margin-bottom: inherit;
   }
 
   .footer-copyright {
