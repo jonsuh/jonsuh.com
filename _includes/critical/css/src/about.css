@@ -86,11 +86,20 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .sidebar-list-item { margin-bottom: 0.3em; }
 .sidebar-list-link { color: rgb(137, 138, 146); border-bottom-color: rgb(230, 231, 235); }
 .sidebar-subscribe-link--rss .svg-icon-path { fill: #f57c00; }
-.hero--about { background-color: rgb(76, 175, 80); }
+.hero--about { background-color: rgb(76, 175, 80); background-image: url(/assets/images/about/jonathan-suh.jpg); }
 .about-mosaic { margin-bottom: 0.75em; position: relative; }
 .about-mosaic::after { clear: both; content: ''; display: table; }
 .about-mosaic-tile { background-size: cover; position: relative; float: left; background-position: 50% 50%; background-repeat: no-repeat no-repeat; }
 .about-mosaic-tile-proportion { width: 100%; display: block; }
+.about-mosaic-tile--jonathan-becky { width: 60%; background-image: url(/assets/images/about/jonathan-becky.jpg); }
+.about-mosaic-tile--jonathan-silas { width: 50%; }
+.about-mosaic-tile--jonathan-silas { background-image: url(/assets/images/about/jonathan-silas.jpg); }
+.about-mosaic-tile--silas-katelyn { width: 40%; background-image: url(/assets/images/about/silas-katelyn.jpg); position: absolute; top: 0px; right: 0px; }
+.about-location-image { width: 100%; display: block; }
+.about-location-image-path { fill: #ec407a; }
+.about-location-pin, .about-location-beacon { display: inline-block; position: absolute; }
+.about-location-pin { width: 0.875em; height: 0.875em; background-color: rgb(244, 143, 177); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(233, 30, 99); border-right-color: rgb(233, 30, 99); border-bottom-color: rgb(233, 30, 99); border-left-color: rgb(233, 30, 99); border-top-left-radius: 0.875em 0.875em; border-top-right-radius: 0.875em 0.875em; border-bottom-right-radius: 0.875em 0.875em; border-bottom-left-radius: 0.875em 0.875em; top: 2em; left: 7.625em; }
+.about-location-beacon { width: 3.125em; height: 3.125em; border-top-left-radius: 3.125em 3.125em; border-top-right-radius: 3.125em 3.125em; border-bottom-right-radius: 3.125em 3.125em; border-bottom-left-radius: 3.125em 3.125em; top: 0.875em; left: 6.5em; background-color: rgb(255, 255, 255); opacity: 0.5; -webkit-animation-name: about-location-beacon; -webkit-animation-duration: 2s; -webkit-animation-timing-function: linear; -webkit-animation-delay: initial; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: initial; -webkit-animation-fill-mode: initial; -webkit-transform: scale3d(0.25, 0.25, 0.25); }
 .sidebar-list--about-people .sidebar-list-item { display: inline-block; }
 .sidebar-list--about-people .sidebar-list-item::after { content: ', '; }
 .about-location-image { width: 100%; display: block; }
@@ -168,6 +177,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   .sidebar { float: left; display: block; margin-right: 3.63636%; width: 30.90909%; margin-left: 4.31818%; }
   .sidebar:last-child { margin-right: 0px; }
   .sidebar-section { font-size: 90%; }
+  .hero--about { background-image: url(/assets/images/about/jonathan-suh@2x.jpg); }
   .about-mosaic { width: 173%; }
   .about-mosaic::after { clear: both; content: ''; display: table; }
   .about-sidebar-break { display: block; }
