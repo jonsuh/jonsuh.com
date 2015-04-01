@@ -25,6 +25,8 @@ h2 { font-size: 1.25em; line-height: 1.3em; margin-bottom: 0.35em; }
 h4 { font-size: 1em; line-height: 1.4em; margin-bottom: 0.5em; }
 p, figure { font-size: 1em; letter-spacing: 0px; line-height: 1.5em; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0.75em; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
 p > code { font-size: 0.95em; background-color: rgb(244, 245, 246); padding-top: 0.25em; padding-right: 0.4375em; padding-bottom: 0.125em; padding-left: 0.4375em; border-top-left-radius: 0.1875em 0.1875em; border-top-right-radius: 0.1875em 0.1875em; border-bottom-right-radius: 0.1875em 0.1875em; border-bottom-left-radius: 0.1875em 0.1875em; }
+ul { font-size: 1em; letter-spacing: 0px; line-height: 1.5em; padding-left: 1.5em; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0.75em; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
+ul li { font-size: 1em; line-height: 1.5em; }
 a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(187, 222, 251); background-color: transparent; }
 
 .container { padding-left: 0.9375em; padding-right: 0.9375em; max-width: 68.75em; margin-left: auto; margin-right: auto; position: relative; }
@@ -134,6 +136,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   h1 { font-size: 2em; }
   h2 { font-size: 1.375em; }
   p, figure { font-size: 1.0625em; }
+  ul { font-size: 1.0625em; }
   form { font-size: 1.0625em; }
   .container { padding-left: 1.5625em; padding-right: 1.5625em; }
   .section { padding-top: 2.5em; padding-bottom: 2.5em; }
@@ -161,6 +164,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   h1 { font-size: 2.125em; }
   h2 { font-size: 1.5em; }
   p, figure { font-size: 1.125em; }
+  ul { font-size: 1.125em; }
   form { font-size: 1.125em; }
   .section { padding-top: 3.75em; padding-bottom: 3.75em; }
   .section-break-half { padding-top: 1.875em; }
@@ -193,6 +197,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   h2 { font-size: 1.625em; }
   h4 { font-size: 1.0625em; }
   p, figure { font-size: 1.1875em; }
+  ul { font-size: 1.1875em; }
   form { font-size: 1.1875em; }
   .main { float: left; display: block; margin-right: 3.63636%; width: 61.13636%; }
   .sidebar { float: left; display: block; margin-right: 3.63636%; width: 30.90909%; margin-left: 4.31818%; }
