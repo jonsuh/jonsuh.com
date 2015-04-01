@@ -9,7 +9,9 @@
   <style>{% if url == '/' %}
       {% include critical/css/home.css %}
     {% elsif url contains '/about/' %}
-      {% include critical/css/blog.css %}
+      {% include critical/css/about.css %}
+    {% elsif url contains '/contact/' %}
+      {% include critical/css/contact.css %}
     {% elsif url contains '/work/' %}
       {% include critical/css/work.css %}
     {% elsif url contains '/blog/' %}
