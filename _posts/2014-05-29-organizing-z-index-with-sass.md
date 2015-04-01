@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Organizing z-index with Sass
+title: Organizing z-index with SASS
 date: "2014-05-29 13:00:00"
 comments: false
 tags:
@@ -12,11 +12,11 @@ tags:
 - sass
 ---
 
-Keeping track of all your z-index values can be quite a task, especially on large projects or projects that involve more than 1 developer. Sass and its recent introduction of the `maps` data-type can help you keep track of your z-index by having them all in one place.
+Keeping track of all your z-index values can be quite a task, especially on large projects or projects that involve more than 1 developer. SASS and its recent introduction of the `maps` data-type can help you keep track of your z-index by having them all in one place.
 
 <!--more-->
 
-If you’re not familiar with [Sass maps](/blog/sass-maps/), I wrote a post that should help you get familiarized with them: [Sass maps](/blog/sass-maps/)
+If you’re not familiar with [SASS maps](/blog/sass-maps/), I wrote a post that should help you get familiarized with them: [SASS maps](/blog/sass-maps/)
 
 ## z-index with maps
 
@@ -92,7 +92,7 @@ I still didn’t like the redundancy of `z-index: z-index(navigation);` so I wen
 
 ## Separate file
 
-I like breaking up my Sass into separate files to keep things like variables, mixins, and functions separate.
+I like breaking up my SASS into separate files to keep things like variables, mixins, and functions separate.
 
 Create a separate file, `_z-index.scss` to house your `z-index` map as well as the function and mixin:
 
@@ -116,7 +116,7 @@ $z-index: (
 }
 {% endhighlight %}
 
-Then wherever you need to access your `z-index`, import it at the very top of your Sass file:
+Then wherever you need to access your `z-index`, import it at the very top of your SASS file:
 
 {% highlight sass %}
 @import "z-index";

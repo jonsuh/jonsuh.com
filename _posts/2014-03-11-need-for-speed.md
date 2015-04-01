@@ -42,7 +42,7 @@ base_url: http://jonsuh.com
 
 ## Grunt
 
-I dove into <a href="http://gruntjs.com" target="_blank">Grunt</a>, and I’ll say that it has become a tool that is almost as valuable to me as <a href="http://sass-lang.com" target="_blank">Sass</a> is&mdash;It has sped up my development workflow and has saved me *countless* hours.
+I dove into <a href="http://gruntjs.com" target="_blank">Grunt</a>, and I’ll say that it has become a tool that is almost as valuable to me as <a href="http://sass-lang.com" target="_blank">SASS</a> is&mdash;It has sped up my development workflow and has saved me *countless* hours.
 
 No more `compass watch` in one window and `jekyll build --watch` in another. <a href="https://github.com/sindresorhus/grunt-concurrent" target="_blank">grunt-concurrent</a> allows me to do both along with JavaScript concatenation simultaneously without breaking a sweat. Here’s a look at the concurrent task:
 
@@ -57,7 +57,7 @@ concurrent: {
 }
 {% endhighlight %}
 
-As a matter of fact, Grunt handles all of my development and production tasks: Jekyll build, Sass and Compass compile, CSS minification, JavaScript concatenation and uglification, Capistrano and Amazon S3 deployment. Here’s a look at my dependencies:
+As a matter of fact, Grunt handles all of my development and production tasks: Jekyll build, SASS and Compass compile, CSS minification, JavaScript concatenation and uglification, Capistrano and Amazon S3 deployment. Here’s a look at my dependencies:
 
 {% highlight json %}
 "devDependencies": {
@@ -83,15 +83,15 @@ As a matter of fact, Grunt handles all of my development and production tasks: J
 
 ## Compass and Bourbon
 
-Compile my Sass with <a href="https://github.com/sindresorhus/grunt-sass" target="_blank">libsass</a> or <a href="http://compass-style.org" target="_blank">Compass</a>?&mdash;that was a tough decision. Libsass was *blazing* fast. Compared to Compass, I was noticing performance increases up to 190%!
+Compile my SASS with <a href="https://github.com/sindresorhus/grunt-sass" target="_blank">LibSASS</a> or <a href="http://compass-style.org" target="_blank">Compass</a>?&mdash;that was a tough decision. LibSASS was *blazing* fast. Compared to Compass, I was noticing performance increases up to 190%!
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/danielmall">@danielmall</a> Give or take ~190% performance increase with my new set up. This stuff gets me giddy <a href="http://t.co/PxCCvNsyUn">pic.twitter.com/PxCCvNsyUn</a></p>&mdash; Jonathan Suh (@jonsuh) <a href="https://twitter.com/jonsuh/statuses/429328070541967361">January 31, 2014</a></blockquote>
 
 However, Compass has its advantages.
 
-The fundamental difference is Libsass is just a compiler while Compass is a framework. As a result, Compass provides extremely useful helper functions like `image-url` and `font-url` which generate the correct path to the asset found in the images directory of your project. Because I deploy my assets to Amazon S3, it’s important that those paths are relative, and with these helper functions require less typing. They also offer cache busting, which was the added benefit that took it over the edge.
+The fundamental difference is LibSASS is just a compiler while Compass is a framework. As a result, Compass provides extremely useful helper functions like `image-url` and `font-url` which generate the correct path to the asset found in the images directory of your project. Because I deploy my assets to Amazon S3, it’s important that those paths are relative, and with these helper functions require less typing. They also offer cache busting, which was the added benefit that took it over the edge.
 
-**Libsass/Sass**
+**LibSASS/SASS**
 
 {% highlight sass %}
 background: url("../images/bg.jpg");
@@ -136,7 +136,7 @@ additional_import_paths = [
 ]
 {% endhighlight %}
 
-You can use Foundation with Grunt + Libsass or Compass: <a href="http://foundation.zurb.com/docs/sass.html" target="_blank">Read more</a>.
+You can use Foundation with Grunt + LibSASS or Compass: <a href="http://foundation.zurb.com/docs/sass.html" target="_blank">Read more</a>.
 
 ## Nginx
 

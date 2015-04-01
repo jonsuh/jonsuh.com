@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sass BEM-Selector Support and Trailing Ampersand
+title: SASS BEM-Selector Support and Trailing Ampersand
 date: "2014-06-06 11:42:00"
 comments: false
 tags:
@@ -13,7 +13,7 @@ tags:
 - sass
 ---
 
-Sass 3.3 has introduced some neat features with the ampersand&mdash;it now has BEM-selector support and allows you to prepend a class to the parent element.
+SASS 3.3 has introduced some neat features with the ampersand&mdash;it now has BEM-selector support and allows you to prepend a class to the parent element.
 
 <!--more-->
 
@@ -181,9 +181,9 @@ Resulting CSS:
 }
 {% endhighlight %}
 
-## Sass 3.3
+## SASS 3.3
 
-In order to take advantage of BEM-selector support and the trailing ampersand, you’ll need to be running Sass >= 3.3. To upgrade Sass on your machine, run the following in your command line:
+In order to take advantage of BEM-selector support and the trailing ampersand, you’ll need to be running SASS >= 3.3. To upgrade SASS on your machine, run the following in your command line:
 
 {% highlight bash %}
 gem update sass
@@ -191,7 +191,7 @@ gem update sass
 
 <small>You *may* have to run the command with sudo: `sudo gem update sass`</small>
 
-To see what version of Sass you’re running, run the following:
+To see what version of SASS you’re running, run the following:
 
 {% highlight bash %}
 sass -v
