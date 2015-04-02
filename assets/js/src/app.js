@@ -6,7 +6,7 @@ App = {
 
   init: function() {
     Utility.init();
-    App.fontsInit();
+    // App.fontsInit();
 
     // Load external scripts
     // ==================================================
@@ -65,27 +65,27 @@ App = {
     }
   },
 
-  fontsInit: function() {
-    var roboto400 = new FontFaceObserver("Roboto", {
-      weight: 400
-    });
-    var roboto500 = new FontFaceObserver("Roboto", {
-      weight: 500
-    });
-    var roboto700 = new FontFaceObserver("Roboto", {
-      weight: 700
-    });
+  // fontsInit: function() {
+  //   var roboto400 = new FontFaceObserver("Roboto", {
+  //     weight: 400
+  //   });
+  //   var roboto500 = new FontFaceObserver("Roboto", {
+  //     weight: 500
+  //   });
+  //   var roboto700 = new FontFaceObserver("Roboto", {
+  //     weight: 700
+  //   });
 
-    Promise.all([
-      roboto400.check(),
-      roboto500.check(),
-      roboto700.check()
-    ]).then(function() {
-      document.documentElement.className += " fonts-loaded";
-    }, function() {
-      document.documentElement.className += " fonts-timeout";
-    });
-  },
+  //   Promise.all([
+  //     roboto400.check(),
+  //     roboto500.check(),
+  //     roboto700.check()
+  //   ]).then(function() {
+  //     document.documentElement.className += " fonts-loaded";
+  //   }, function() {
+  //     document.documentElement.className += " fonts-timeout";
+  //   });
+  // },
 
   googleAnalytics: function() {
     ga = function() {

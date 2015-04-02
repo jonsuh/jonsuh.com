@@ -10,16 +10,17 @@ $paragraph-margin-bottom : .75em;
 
 body,
 html {
-  font-family: $sans-serif-local;
+  // font-family: $sans-serif-local;
+  font-family: $sans-serif;
   color: $paragraph-font-color;
 
-  .fonts-loaded & {
-    font-family: $sans-serif;
-  }
+  // .fonts-loaded & {
+  //   font-family: $sans-serif;
+  // }
 
-  .fonts-timeout & {
-    font-family: $sans-serif-fallback;
-  }
+  // .fonts-timeout & {
+  //   font-family: $sans-serif-fallback;
+  // }
 }
 
 body,
@@ -99,6 +100,12 @@ ul {
   li {
     font-size: $paragraph-font-size;
     line-height: $paragraph-line-height;
+  }
+
+  ol,
+  ul {
+    font-size: 1em;
+    margin-bottom: 0;
   }
 }
 
