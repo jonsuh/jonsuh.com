@@ -11,7 +11,7 @@ tags:
 - grunt
 ---
 
-Grunt has become an essential part of my workflow—like SASS, I never start a web project without it. Here’s an introduction to Grunt, its benefits and what it can do for you along with a guide to help you get started.
+Grunt has become an essential part of my workflow—like Sass, I never start a web project without it. Here’s an introduction to Grunt, its benefits and what it can do for you along with a guide to help you get started.
 
 <!--more-->
 
@@ -26,8 +26,8 @@ It also has an active community with a strong ecosystem that provides hundreds o
 ## What can you do with Grunt?
 With hundreds of plugins, the choices are endless; however, here are a few tasks I rely on that you may find valuable.
 
-**Compile SASS/Less**  
-Compile SASS or LESS, and also easily integrate mixin libraries like Bourbon or frameworks like Compass, Bootstrap, or Foundation.
+**Compile Sass/Less**  
+Compile Sass or LESS, and also easily integrate mixin libraries like Bourbon or frameworks like Compass, Bootstrap, or Foundation.
 
 **Concatenate/Merge**  
 Merge multiple JavaScript and/or CSS files together to minimize http calls and optimize your site.
@@ -50,7 +50,7 @@ Run a set of tasks in a specific order (like a macro) with an "alias task.""
 <p class="flush">To prepare my site for deployment, I do the following:</p>
 
 1. Clean temporary folders
-2. Compile SASS
+2. Compile Sass
 3. Minify CSS
 4. Concatenate JavaScript
 5. Uglify JavaScript
@@ -260,7 +260,7 @@ This is a great way to break up your tasks so you can run specific tasks for spe
 
 ## <a id="sample-project"></a>Create a Sample Project
 
-Now that you know the basic anatomy and setup of Grunt and its files, let’s go ahead and create a sample, working Grunt project. This sample project will cover SASS compilation and minification, JavaScript concatenation and minification, and watching for changes in your files.
+Now that you know the basic anatomy and setup of Grunt and its files, let’s go ahead and create a sample, working Grunt project. This sample project will cover Sass compilation and minification, JavaScript concatenation and minification, and watching for changes in your files.
 
 ### Set up project files
 
