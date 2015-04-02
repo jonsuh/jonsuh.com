@@ -26,46 +26,24 @@ sitemap:
   </a>
 </div>
 <div id="home-section" class="section">
-  <div class="post">
+  <div class="post post--posts">
     <section class="main">
-      <div class="post-overflow">
+      <h4 class="home-posts-title">Latest blog posts</h4>
+      {% for post in site.posts limit:3 %}
         <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name"><a href="{{ site.posts.first.url | append: '/' }}" class="post-link">{{ site.posts.first.title }}</a></h1>
-            <p class="post-meta">
-              <time content="{{ site.posts.first.date | date: "%Y-%m-%d" }}" datetime="{{ site.posts.first.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ site.posts.first.date | date: "%B %-d, %Y" }}</time>
-              <span class="post-meta-bullet">&bull;</span> <span class="post-meta-author"><a href="/about/" class="post-meta-author-link">By <span itemprop="author">{% if site.posts.first.author %}{{ site.posts.first.author }}{% else %}{{ site.author.name }}{% endif %}</span></a></span>
-            </p>
-          </header>
-          <section class="post-content" itemprop="articleBody">
-            {{ site.posts.first.content }}
-          </section>
-          {% capture share_url %}{% strip %}
-            {{ site.posts.first.url | prepend: site.url | prepend: site.url_protocol | append: '/' | encode_url }}
-          {% endstrip %}{% endcapture %}
-          <section class="post-share">
-            <ul class="post-share-menu">
-              <li class="post-share-menu-title">Share</li>
-              <li class="post-share-menu-item">
-                <a href="https://twitter.com/intent/tweet?text={{ site.posts.first.title | encode_url }}&url={{ share_url }}&via={{ site.social.username }}" class="post-share-menu-link post-share-menu-link--twitter js-social-twitter-share" title="Share on Twitter" target="_blank">{% include svg/twitter.html %}</a>
-              </li>
-              <li class="post-share-menu-item">
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" data-share-url="{{ site.posts.first.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-share-menu-link post-share-menu-link--facebook js-social-facebook-share" title="Share on Facebook" target="_blank">{% include svg/facebook.html %}</a>
-              </li>
-              <li class="post-share-menu-item">
-                <a href="https://plus.google.com/share?url={{ share_url }}" class="post-share-menu-link post-share-menu-link--google js-social-google-share" title="Share on Google+" target="_blank">{% include svg/google.html %}</a>
-              </li>
-              <li class="post-share-menu-item">
-                <a href="{{ site.posts.first.url | append: '/' }}" class="post-share-menu-link post-share-menu-link--link" title="Permalink">{% include svg/link.html %}</a>
-              </li>
-            </ul>
+          <h2 class="post-title" itemprop="name">
+            <a href="{{ post.url | append: "/" }}" class="post-link">{{ post.title }}</a>
+          </h2>
+          <p class="post-meta">
+            <time content="{{ post.date | date: "%Y-%m-%d" }}" datetime="{{ post.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
+          </p>
+          <section class="post-content">
+            {{ post.excerpt | markdownify }}
           </section>
         </article>
-        <div class="post-overflow-overlay"></div>
-        <div class="post-overflow-toggle js-post-overflow" data-title="{{ site.posts.first.title }}" data-url="{{ site.posts.first.url | append: '/' }}">Keep Reading</div>
-      </div>
+      {% endfor %}
       <hr class="section-break-half">
-      <p><a href="/blog/" class="button">See more blog posts</a></p>
+      <p><a href="/blog/" class="button">More blog posts</a></p>
     </section>
     <aside class="sidebar">
       {% include sidebar/carbon-ads.html %}

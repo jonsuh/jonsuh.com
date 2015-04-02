@@ -154,6 +154,22 @@
   }
 }
 
+.home-posts-title {
+  font-size: em-calc(15);
+  color: $grey;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+
+  @include mq(small) {
+    font-size: em-calc(15);
+  }
+
+  @include mq(large) {
+    font-size: em-calc(14.5);
+  }
+}
+
 @include mq(small) {
   .home-hero-svg {
     width: em-calc(73 * 2);
