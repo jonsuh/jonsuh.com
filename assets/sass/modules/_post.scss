@@ -55,83 +55,83 @@
 
 // Overflow
 // ==================================================
-.post-overflow {
-  max-height: em-calc(500);
-  @include mq(small) {
-    max-height: em-calc(600);
-  }
-  @include mq(medium) {
-    max-height: em-calc(700);
-  }
-  @include mq(large) {
-    max-height: em-calc(800);
-  }
-  margin-bottom: $paragraph-margin-bottom;
-  position: relative;
-  overflow: hidden;
+// .post-overflow {
+//   max-height: em-calc(500);
+//   @include mq(small) {
+//     max-height: em-calc(600);
+//   }
+//   @include mq(medium) {
+//     max-height: em-calc(700);
+//   }
+//   @include mq(large) {
+//     max-height: em-calc(800);
+//   }
+//   margin-bottom: $paragraph-margin-bottom;
+//   position: relative;
+//   overflow: hidden;
 
-  .post-title {
-    font-size: em-calc(22);
-    @include mq(small) {
-      font-size: em-calc(24);
-    }
-    @include mq(medium) {
-      font-size: em-calc(26);
-    }
-    @include mq(large) {
-      font-size: em-calc(28);
-    }
-  }
-}
+//   .post-title {
+//     font-size: em-calc(22);
+//     @include mq(small) {
+//       font-size: em-calc(24);
+//     }
+//     @include mq(medium) {
+//       font-size: em-calc(26);
+//     }
+//     @include mq(large) {
+//       font-size: em-calc(28);
+//     }
+//   }
+// }
 
-.post-overflow-overlay {
-  position: absolute;
-  bottom: em-calc(45);
-  left: 0;
-  right: 0;
-  height: em-calc(75);
-  @include linear-gradient(to bottom, rgba($white, 0), rgba($white, 1) 75%);
-}
+// .post-overflow-overlay {
+//   position: absolute;
+//   bottom: em-calc(45);
+//   left: 0;
+//   right: 0;
+//   height: em-calc(75);
+//   @include linear-gradient(to bottom, rgba($white, 0), rgba($white, 1) 75%);
+// }
 
-.post-overflow-toggle {
-  font-size: em-calc(15);
-  font-weight: 600;
-  color: $grey-darker;
-  letter-spacing: 0.02em;
-  text-align: center;
-  padding: rem-calc(15);
-  border: 2px solid map-get($color-orange, "100");
-  background: $white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  cursor: pointer;
-  @include transition(border-color $transition-duration linear);
-  &:hover {
-    border-color: map-get($color-orange, "300");
-  }
-}
+// .post-overflow-toggle {
+//   font-size: em-calc(15);
+//   font-weight: 600;
+//   color: $grey-darker;
+//   letter-spacing: 0.02em;
+//   text-align: center;
+//   padding: rem-calc(15);
+//   border: 2px solid map-get($color-orange, "100");
+//   background: $white;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   cursor: pointer;
+//   @include transition(border-color $transition-duration linear);
+//   &:hover {
+//     border-color: map-get($color-orange, "300");
+//   }
+// }
 
-.post-overflow.has-transition {
-  @include transition(max-height .25s ease);
-}
+// .post-overflow.has-transition {
+//   @include transition(max-height .25s ease);
+// }
 
-.post-overflow.is-reading {
-  max-height: em-calc(999);
+// .post-overflow.is-reading {
+//   max-height: em-calc(999);
 
-  .post-overflow-overlay,
-  .post-overflow-toggle {
-    display: none;
-  }
-}
+//   .post-overflow-overlay,
+//   .post-overflow-toggle {
+//     display: none;
+//   }
+// }
 
-@include mq(medium) {
-  .post-overflow-toggle {
-    font-size: 1em;
-    padding: em-calc(20);
-  }
-}
+// @include mq(medium) {
+//   .post-overflow-toggle {
+//     font-size: 1em;
+//     padding: em-calc(20);
+//   }
+// }
 
 // @include mq(large) {
 //   .post-overflow {

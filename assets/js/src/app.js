@@ -22,10 +22,10 @@ App = {
     // Other
     // ==================================================
     App.flickityInit();
-    var postOverflow = document.querySelector(".js-post-overflow");
-    if (postOverflow) {
-      postOverflow.addEventListener("click", App.postOverflow);
-    }
+    // var postOverflow = document.querySelector(".js-post-overflow");
+    // if (postOverflow) {
+    //   postOverflow.addEventListener("click", App.postOverflow);
+    // }
 
     // Initialize social and tracking
     // ==================================================
@@ -142,28 +142,28 @@ App = {
     }
   },
 
-  postOverflow: function(e) {
-    e.preventDefault();
+  // postOverflow: function(e) {
+  //   e.preventDefault();
 
-    var overflow = document.querySelector(".post-overflow"),
-        contentHeight = document.querySelector(".post-article").offsetHeight;
+  //   var overflow = document.querySelector(".post-overflow"),
+  //       contentHeight = document.querySelector(".post-article").offsetHeight;
 
-    overflow.style.maxHeight = contentHeight + "px";
-    Utility.addClass(overflow, "has-transition");
-    Utility.addClass(overflow, "is-reading");
-    overflow.addEventListener(App.transitionEnd, overflowTransitionEnd);
-    if (ga) {
-      ga("send", "pageview", {
-        "page" : this.getAttribute("data-url") + "index.html",
-        "title": this.getAttribute("data-title")
-      });
-    }
+  //   overflow.style.maxHeight = contentHeight + "px";
+  //   Utility.addClass(overflow, "has-transition");
+  //   Utility.addClass(overflow, "is-reading");
+  //   overflow.addEventListener(App.transitionEnd, overflowTransitionEnd);
+  //   if (ga) {
+  //     ga("send", "pageview", {
+  //       "page" : this.getAttribute("data-url"),
+  //       "title": this.getAttribute("data-title")
+  //     });
+  //   }
 
-    function overflowTransitionEnd() {
-      overflow.style.maxHeight = "inherit";
-      Utility.removeClass(overflow, "has-transition");
-    }
-  },
+  //   function overflowTransitionEnd() {
+  //     overflow.style.maxHeight = "inherit";
+  //     Utility.removeClass(overflow, "has-transition");
+  //   }
+  // },
 };
 
 App.init();
