@@ -109,6 +109,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .home-hero-arrow { border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; padding-top: 1.25em; padding-right: 1.875em; padding-bottom: 1.25em; padding-left: 1.875em; left: 50%; bottom: 0px; margin-left: -2.8125em; position: absolute; z-index: 2; display: none; }
 .home-hero-arrow .svg-icon { width: 1.875em; height: 1.09375em; }
 .home-hero-arrow path { fill: rgba(255, 255, 255, 0.29804); }
+.home-posts-title { font-size: 0.9375em; color: #999aa1; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 1em; }
 .work-selected-item-title { color: rgb(255, 255, 255); }
 .work-selected-item-title { font-size: 1em; text-transform: uppercase; margin-bottom: 0.9375em; }
 .work-selected { list-style-type: none; list-style-position: initial; list-style-image: initial; padding-left: 0px; }
@@ -158,6 +159,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   .home-hero-name { font-size: 1.875em; }
   .home-hero-tagline { font-size: 0.9375em; letter-spacing: 0.12em; margin-bottom: 1.3333333333em; }
   .home-hero-disclaimer { bottom: 1.25em; }
+  .home-posts-title { font-size: 0.9375em; }
   .work-selected-item { height: 7.8125em; }
 }
 @media only screen and (min-width: 34.375em) {
@@ -217,5 +219,6 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   .sidebar-section { font-size: 90%; }
   .home-hero-name { font-size: 2.5em; margin-bottom: 0.125em; }
   .home-hero-tagline { letter-spacing: 0.3em; }
+  .home-posts-title { font-size: 0.90625em; }
   .work-selected-item { height: 7.8125em; }
 }
