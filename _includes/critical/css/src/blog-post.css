@@ -25,8 +25,8 @@ h2 { font-size: 1.25em; line-height: 1.3em; margin-bottom: 0.35em; }
 h4 { font-size: 1em; line-height: 1.4em; margin-bottom: 0.5em; }
 p, figure { font-size: 1em; letter-spacing: 0px; line-height: 1.5em; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0.75em; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
 p > code { font-size: 0.95em; background-color: rgb(244, 245, 246); padding-top: 0.25em; padding-right: 0.4375em; padding-bottom: 0.125em; padding-left: 0.4375em; border-top-left-radius: 0.1875em 0.1875em; border-top-right-radius: 0.1875em 0.1875em; border-bottom-right-radius: 0.1875em 0.1875em; border-bottom-left-radius: 0.1875em 0.1875em; }
-ul { font-size: 1em; letter-spacing: 0px; line-height: 1.5em; padding-left: 1.5em; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0.75em; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
-ul li { font-size: 1em; line-height: 1.5em; }
+ul, ol { font-size: 1em; letter-spacing: 0px; line-height: 1.5em; padding-left: 1.5em; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0.75em; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
+ul li, ol li { font-size: 1em; line-height: 1.5em; }
 a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(187, 222, 251); background-color: transparent; }
 
 .container { padding-left: 0.9375em; padding-right: 0.9375em; max-width: 68.75em; margin-left: auto; margin-right: auto; position: relative; }
@@ -106,6 +106,14 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .post-meta { font-size: 0.875em; color: rgb(153, 154, 161); }
 .post-meta-bullet { margin-left: 0.2em; margin-right: 0.2em; }
 .post-meta-author-link { color: rgb(153, 154, 161); border-bottom-color: transparent; }
+.post-rating { margin-bottom: 0.75em; }
+.post-rating-stars { margin-right: .3em; display: inline-block; position: relative; white-space: nowrap; }
+.post-rating-stars .svg-icon-star { width: 0.75em; height: 0.75em; margin-left: 0.0625em; margin-right: 0.0625em; }
+.post-rating-stars-background .svg-icon-star { fill: #e6e7eb; }
+.post-rating-stars-foreground { position: absolute; top: 0; left: 0; overflow: hidden; }
+.post-rating-stars-foreground .svg-icon-star { fill: #f9ce1d; }
+.post-rating-value, .post-rating-comments { color: #999aa1; position: relative; }
+.post-rating-value { font-size: 0.875em; font-weight: 700; bottom: 0.0714285714em; margin-right: .3em; }
 .post-content p + h2 { margin-top: 1.25rem; }
 .post-tags-item { display: inline-block; margin-bottom: 0.7em; }
 .post-tag { height: 1.625em; line-height: 1.625em; color: rgb(102, 103, 110); background-color: rgb(244, 245, 246); display: inline-block; margin-right: 0.3125em; margin-left: 0.625em; position: relative; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-right-radius: 0.125em 0.125em; border-bottom-right-radius: 0.125em 0.125em; border-right-width: 0.25em; border-right-style: solid; border-right-color: rgb(33, 150, 243); padding-top: 0px; padding-right: 0.625em; padding-bottom: 0px; padding-left: 0.625em; }
@@ -136,7 +144,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   h1 { font-size: 2em; }
   h2 { font-size: 1.375em; }
   p, figure { font-size: 1.0625em; }
-  ul { font-size: 1.0625em; }
+  ul, ol { font-size: 1.0625em; }
   form { font-size: 1.0625em; }
   .container { padding-left: 1.5625em; padding-right: 1.5625em; }
   .section { padding-top: 2.5em; padding-bottom: 2.5em; }
@@ -164,7 +172,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   h1 { font-size: 2.125em; }
   h2 { font-size: 1.5em; }
   p, figure { font-size: 1.125em; }
-  ul { font-size: 1.125em; }
+  ul, ol { font-size: 1.125em; }
   form { font-size: 1.125em; }
   .section { padding-top: 3.75em; padding-bottom: 3.75em; }
   .section-break-half { padding-top: 1.875em; }
@@ -197,7 +205,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   h2 { font-size: 1.625em; }
   h4 { font-size: 1.0625em; }
   p, figure { font-size: 1.1875em; }
-  ul { font-size: 1.1875em; }
+  ul, ol { font-size: 1.1875em; }
   form { font-size: 1.1875em; }
   .main { float: left; display: block; margin-right: 3.63636%; width: 61.13636%; }
   .sidebar { float: left; display: block; margin-right: 3.63636%; width: 30.90909%; margin-left: 4.31818%; }
