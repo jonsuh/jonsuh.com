@@ -10,6 +10,6 @@
     "mq-sass": "*",
     "flickity": "~1.0.0",
     "loadcss": "~0.1.6",
-    "fontfaceobserver": "~1.4.3"
+    "fontfaceobserver": "~1.4.5"
   }
 }
