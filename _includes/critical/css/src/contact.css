@@ -94,6 +94,22 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .contact-stalk { padding-left: 0px; max-width: 21.25em; }
 .contact-stalk-item { display: inline-block; margin-right: 0.3125em; }
 .contact-stalk-link { color: rgb(153, 154, 161); border-top-color: rgb(230, 231, 235); border-right-color: rgb(230, 231, 235); border-bottom-color: rgb(230, 231, 235); border-left-color: rgb(230, 231, 235); }
+.footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
+a.footer-top-link { display: inline-block; }
+a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }
+a.footer-top-link .svg-icon-path { fill: #66676e; }
+.footer-top-link-label { font-size: 0.75em; color: rgb(102, 103, 110); font-weight: 600; text-transform: uppercase; }
+.footer-logo-canvas { width: 4.5625em; height: 5em; position: relative; display: inline-block; }
+.footer-logo-svg polygon { stroke: #bbbcc3; stroke-width: 1px; fill: rgba(0, 0, 0, 0.0); }
+.footer-navigation-link-home { font-weight: 700; color: rgb(255, 255, 255); letter-spacing: 0.03em; display: inline-block; }
+.footer-navigation-link-twitter .svg-icon { width: 1.375em; height: 1.375em; position: relative; top: 0.3125em; }
+.footer-navigation-link-twitter .svg-icon-path { fill: #55acee; }
+.footer-navigation-link { color: rgb(153, 154, 161); display: inline-block; }
+.footer-navigation-link--rss .svg-icon { width: 0.75em; height: 0.75em; }
+.footer-navigation-link--rss .svg-icon-path { fill: #66676e; }
+.footer-copyright { font-size: 0.9em; margin-bottom: 0px; }
+.footer-made-with { font-size: 0.85em; }
+.footer-made-with .svg-icon { fill: #e91e63; width: 1.25em; height: 1.25em; display: inline; overflow-x: visible; overflow-y: visible; position: relative; }
 
 @media only screen and (min-width: 22.8125em) {
   .logo { width: 4.0625em; float: left; position: relative; left: -0.1875em; }
@@ -156,6 +172,11 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   .form--contact .form-field-group--first-name { width: 9.375em; display: block; }
   .form--contact .form-field-group--email { width: 12.5em; }
   .form--contact .form-submit { width: 8.75em; }
+}
+@media only screen and (min-width: 51.25em) {
+  .footer-column--left { float: left; width: 25em; }
+  .footer-column--right { text-align: right; padding-top: 1.8125em; float: right; width: 18.75em; }
+  .footer-logo { float: left; }
 }
 @media only screen and (min-width: 56.25em) {
   .logo { width: 8.25em; }
