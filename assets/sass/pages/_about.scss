@@ -233,13 +233,16 @@
 // ==================================================
 .about-sidebar-break {
   width: 100%;
-  margin-top: em-calc(165);
+  margin-top: em-calc(205);
+  @include mq(1100) {
+    margin-top: em-calc(170);
+  }
   display: none;
 
   &.has-carbonads {
-    margin-top: em-calc(95);
+    margin-top: em-calc(105);
     @include mq(1100) {
-      margin-top: em-calc(60);
+      margin-top: em-calc(70);
     }
   }
 }
