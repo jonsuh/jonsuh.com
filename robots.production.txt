@@ -1,3 +1,6 @@
 User-agent: *
+Disallow: /blog/archives/
+Disallow: /blog/page/
+Disallow: /blog/topic/
 Disallow: /cmi2014/
 Disallow: /aiga-2014-11/
