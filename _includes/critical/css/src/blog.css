@@ -111,6 +111,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .post-tag--development { border-right-color: rgb(255, 152, 0); }
 .post-tag--review { border-right-color: rgb(233, 30, 99); }
 .post-pagination-page-label { display: none; }
+.footer { position: relative; }
 .footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
 a.footer-top-link { display: inline-block; }
 a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }

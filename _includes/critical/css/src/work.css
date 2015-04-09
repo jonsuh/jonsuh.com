@@ -96,6 +96,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .work-menu-item--twoplease { background-color: rgb(80, 9, 75) !important; }
 .work-menu-item--twoplease::after { background-color: rgba(80, 9, 75, 0.496094); }
 .work-menu-item--twoplease .work-item-introduction { max-width: 15.55556em; }
+.footer { position: relative; }
 .footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
 a.footer-top-link { display: inline-block; }
 a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }

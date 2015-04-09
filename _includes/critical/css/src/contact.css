@@ -94,6 +94,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .contact-stalk { padding-left: 0px; max-width: 21.25em; }
 .contact-stalk-item { display: inline-block; margin-right: 0.3125em; }
 .contact-stalk-link { color: rgb(153, 154, 161); border-top-color: rgb(230, 231, 235); border-right-color: rgb(230, 231, 235); border-bottom-color: rgb(230, 231, 235); border-left-color: rgb(230, 231, 235); }
+.footer { position: relative; }
 .footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
 a.footer-top-link { display: inline-block; }
 a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }

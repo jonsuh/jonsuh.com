@@ -105,6 +105,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .about-location-image { width: 100%; display: block; }
 .about-location-image-path { fill: #ec407a; }
 .about-sidebar-break { width: 100%; margin-top: 10.3125em; display: none; }
+.footer { position: relative; }
 .footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
 a.footer-top-link { display: inline-block; }
 a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }

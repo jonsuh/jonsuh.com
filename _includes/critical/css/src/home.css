@@ -118,12 +118,13 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .work-selected-item-link::before { content: ''; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 1; }
 .work-selected-item-content { position: absolute; left: 0.9375em; bottom: 0.625em; }
 .work-selected-item-title { font-size: 95%; margin-bottom: 0px; position: relative; z-index: 2; }
-.work-selected-item-link--juice-interactive { background-color: rgb(248, 132, 0); background-image: url(/assets/images/work/juice-interactive/thumbnail.jpg); }
+.work-selected-item-link--juice-interactive { background-color: rgb(248, 132, 0); }
 .work-selected-item-link--juice-interactive::before { background-color: rgba(248, 132, 0, 0.496094); }
-.work-selected-item-link--redlegg { background-color: rgb(235, 55, 47); background-image: url(/assets/images/work/redlegg/thumbnail.gif); }
+.work-selected-item-link--redlegg { background-color: rgb(235, 55, 47); }
 .work-selected-item-link--redlegg::before { background-color: rgba(235, 55, 47, 0.597656); }
-.work-selected-item-link--twoplease { background-color: rgb(80, 9, 75); background-image: url(/assets/images/work/twoplease/thumbnail.jpg); }
+.work-selected-item-link--twoplease { background-color: rgb(80, 9, 75); }
 .work-selected-item-link--twoplease::before { background-color: rgba(80, 9, 75, 0.597656); }
+.footer { position: relative; }
 .footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
 a.footer-top-link { display: inline-block; }
 a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }
@@ -196,7 +197,7 @@ a.footer-top-link .svg-icon-path { fill: #66676e; }
   .post-meta { font-size: 1em; }
   .post--posts .post-article { padding-bottom: 1.875em; margin-bottom: 1.875em; }
   .post-pagination-page-label { display: inline; }
-  .hero--home { height: 25em; background-image: url(/assets/images/audi@2x.jpg); }
+  .hero--home { height: 25em; }
   .hero--home .align-cell { text-align: left; width: 50%; height: 100%; display: table-cell; }
   .hero--home .align-cell--home-hero-logo { text-align: right; }
   .home-hero-svg { width: 13.6875em; height: 15em; margin-top: 0px; }
@@ -238,6 +239,7 @@ a.footer-top-link .svg-icon-path { fill: #66676e; }
   .sidebar { float: left; display: block; margin-right: 3.6363636364%; width: 30.9090909091%; margin-left: 4.3181818182%; }
   .sidebar:last-child { margin-right: 0px; }
   .sidebar-section { font-size: 90%; }
+  .hero--home { background-image: url(/assets/images/audi@2x.jpg); }
   .home-hero-name { font-size: 2.5em; margin-bottom: 0.125em; }
   .home-hero-tagline { letter-spacing: 0.3em; }
   .home-posts-title { font-size: 0.90625em; }

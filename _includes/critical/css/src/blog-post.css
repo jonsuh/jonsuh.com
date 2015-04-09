@@ -136,6 +136,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .post-author-twitter-icon .svg-icon-path { fill: #55acee; }
 .post-pagination-bumper { border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; position: fixed; width: 3.125em; height: 12.5em; top: 50%; margin-top: -6.25em; display: none; z-index: 1; }
 .post-pagination-bumper .svg-icon { fill: #bbbcc3; width: 1.25em; height: 2.125em; position: absolute; top: 50%; left: 50%; margin-left: -0.625em; margin-top: -1.0625em; }
+.footer { position: relative; }
 .footer-top { text-align: right; position: absolute; top: 0px; left: 0px; right: 0px; z-index: 3; }
 a.footer-top-link { display: inline-block; }
 a.footer-top-link .svg-icon { width: 0.75em; height: 0.4375em; }
