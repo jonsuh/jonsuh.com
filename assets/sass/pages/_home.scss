@@ -7,7 +7,7 @@
     height: em-calc(425);
   }
   @include retina-background-image("audi.jpg");
-  @include mq(medium) {
+  @include mq(large) {
     background-image: image-url("audi@2x.jpg");
   }
 

@@ -7,7 +7,7 @@ $project-color: #eb372f;
 // ==================================================
 .work-selected-item-link--redlegg {
   background-color: $project-color;
-  @include retina-background-image("work/redlegg/thumbnail.gif");
+  @include retina-background-image("work/redlegg/thumbnail.png");
   &:before {
     background-color: rgba($project-color, 0.6);
     @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
@@ -27,7 +27,7 @@ $project-color: #eb372f;
 // ==================================================
 .work-menu-item--redlegg {
   background-color: $project-color !important;
-  @include retina-background-image("work/redlegg/thumbnail.gif");
+  @include retina-background-image("work/redlegg/thumbnail.png");
   &:after {
     background-color: rgba($project-color, 0.5);
     @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
@@ -44,7 +44,7 @@ $project-color: #eb372f;
 // ==================================================
 .hero--redlegg {
   background-color: $project-color;
-  @include retina-background-image("work/redlegg/hero.gif");
+  @include retina-background-image("work/redlegg/hero.png");
   @include mq(small) {
     height: em-calc(233);
   }
@@ -53,7 +53,7 @@ $project-color: #eb372f;
   }
   @include mq(large) {
     height: em-calc(300);
-    background-image: image-url("work/redlegg/hero@2x.gif");
+    background-image: image-url("work/redlegg/hero@2x.png");
   }
 }
 
