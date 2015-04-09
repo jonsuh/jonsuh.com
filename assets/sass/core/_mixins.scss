@@ -128,7 +128,7 @@ $image-url-path: "/assets/images/" !default;
 
   @include mq(retina) {
     @if ($rbi-small-up == true) {
-      @include mq(small) {
+      @include mq(ipad) {
         background-image: image-url("#{$rbi-retina-path}");
       }
     } @else {
