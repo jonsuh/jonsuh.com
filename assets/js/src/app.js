@@ -6,7 +6,7 @@ App = {
 
   init: function() {
     Utility.init();
-    // App.fontsInit();
+    App.fontsInit();
 
     // Load external scripts
     // ==================================================
@@ -65,27 +65,35 @@ App = {
     }
   },
 
-  // fontsInit: function() {
-  //   var roboto400 = new FontFaceObserver("Roboto", {
-  //     weight: 400
-  //   });
-  //   var roboto500 = new FontFaceObserver("Roboto", {
-  //     weight: 500
-  //   });
-  //   var roboto700 = new FontFaceObserver("Roboto", {
-  //     weight: 700
-  //   });
-
-  //   Promise.all([
-  //     roboto400.check(),
-  //     roboto500.check(),
-  //     roboto700.check()
-  //   ]).then(function() {
-  //     document.documentElement.className += " fonts-loaded";
-  //   }, function() {
-  //     document.documentElement.className += " fonts-timeout";
-  //   });
-  // },
+  fontsInit: function() {
+    (function(d) {
+      var config = {
+          kitId: "iko7pqe",
+          scriptTimeout: 3000
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "//use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  },
 
   googleAnalytics: function() {
     ga = function() {
