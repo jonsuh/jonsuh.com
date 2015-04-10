@@ -22,9 +22,9 @@ Canary is an all-in-one home security device that’ll watch your home and make 
 
 After using Canary for several weeks, I’m ready to write a review about my experience with it thus far. It’s still a relatively new device and has its quirks and issues, but it’s promising.
 
-!["Canary packaging"](https://farm9.staticflickr.com/8629/16277701766_ffb6d14c7a_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8629/16277701766_ffb6d14c7a_c.jpg" alt="Canary packaging" async="1" %}
 
-!["Canary unboxed"](https://farm9.staticflickr.com/8670/15681218044_e3e1d8fce4_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8670/15681218044_e3e1d8fce4_c.jpg" alt="Canary unboxed" async="1" %}
 
 ## Setup
 
@@ -37,7 +37,7 @@ Setting up Canary was a piece of cake. Once you’ve downloaded the Canary app f
 
 ## Features
 
-<p style="margin-left: 5%"><img src="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-2.jpg" style="width: 43.3%; margin-left: -10%"><img src="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-3.jpg" style="width: 43.3%; margin-left: -10%"><img src="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-3.jpg" style="width: 43.3%; margin-left: -10%"></p>
+<p style="margin-left: 5%"><img data-aload="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-2.jpg" style="width: 43.3%; margin-left: -10%"><img data-aload="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-3.jpg" style="width: 43.3%; margin-left: -10%"><img data-aload="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-3.jpg" style="width: 43.3%; margin-left: -10%"><noscript><img src="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-2.jpg" style="width: 43.3%; margin-left: -10%"><img src="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-3.jpg" style="width: 43.3%; margin-left: -10%"><img src="http://cdn.shopify.com/s/files/1/0266/1295/products/slider-3.jpg" style="width: 43.3%; margin-left: -10%"></noscript></p>
 
 Canary packs a lot of features into its tiny body—it stands 6” high and 3” wide—and is available in 3 colors: black, white, and silver. It’s powered by a micro-USB power adapter and connects to your network via ethernet or wireless.
 
@@ -47,7 +47,7 @@ It has a 1080p HD camera equipped with a 147° wide-angle lens so it can see and
 
 Motion detection allows Canary to record activity when it detects motion when motion-activated recording is enabled, and a built-in microphone also records sound. Both the video and audio are stored in Canary’s cloud storage for up to 90 days (based on your subscription plan). When it detects motion, you’ll get a push notification on your device.
 
-!["The bottom of Canary"](https://farm8.staticflickr.com/7576/16117779817_b642401150_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7576/16117779817_b642401150_c.jpg" alt="The bottom of Canary" async="1" %}
 
 Canary has an intuitive indicator light at the bottom, which glows yellow when it’s functioning properly and red when there’s an issue, such as connectivity.
 
@@ -63,10 +63,16 @@ Canary auto arms when you leave and disarms when you get home—it intelligently
 
 <div class="flickity--images js-flickity"
   data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false }'>
-  <img src="https://farm8.staticflickr.com/7281/16722964287_c2019e0445_c.jpg" alt="Canary dashboard">
-  <img src="https://farm9.staticflickr.com/8694/16310249933_f4cbfcfb6d_c.jpg" alt="Canary available modes">
-  <img src="https://farm8.staticflickr.com/7605/16928994462_bae506fe9c_b.jpg" alt="Canary watch live">
-  <img src="https://farm8.staticflickr.com/7600/16928994412_97211031a9_c.jpg" alt="Canary emergency options">
+  <img data-aload="https://farm8.staticflickr.com/7281/16722964287_c2019e0445_c.jpg" alt="Canary dashboard">
+  <img data-aload="https://farm9.staticflickr.com/8694/16310249933_f4cbfcfb6d_c.jpg" alt="Canary available modes">
+  <img data-aload="https://farm8.staticflickr.com/7605/16928994462_bae506fe9c_b.jpg" alt="Canary watch live">
+  <img data-aload="https://farm8.staticflickr.com/7600/16928994412_97211031a9_c.jpg" alt="Canary emergency options">
+  <noscript>
+    <img src="https://farm8.staticflickr.com/7281/16722964287_c2019e0445_c.jpg" alt="Canary dashboard">
+    <img src="https://farm9.staticflickr.com/8694/16310249933_f4cbfcfb6d_c.jpg" alt="Canary available modes">
+    <img src="https://farm8.staticflickr.com/7605/16928994462_bae506fe9c_b.jpg" alt="Canary watch live">
+    <img src="https://farm8.staticflickr.com/7600/16928994412_97211031a9_c.jpg" alt="Canary emergency options">
+  </noscript>
 </div>
 
 ### Watch Live
@@ -79,9 +85,14 @@ The activity list keeps track of Canary’s actions, such as whether it was arme
 
 <div class="flickity--images js-flickity"
   data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false }'>
-  <img src="https://farm9.staticflickr.com/8720/16308481514_d8273e3f0d_c.jpg" alt="Canary watch video">
-  <img src="https://farm8.staticflickr.com/7624/16929899661_fbd7f35ff4_c.jpg" alt="Canary activity list">
-  <img src="https://farm8.staticflickr.com/7614/16723555037_ffb336c63f_c.jpg" alt="Canary saved events">
+  <img data-aload="https://farm9.staticflickr.com/8720/16308481514_d8273e3f0d_c.jpg" alt="Canary watch video">
+  <img data-aload="https://farm8.staticflickr.com/7624/16929899661_fbd7f35ff4_c.jpg" alt="Canary activity list">
+  <img data-aload="https://farm8.staticflickr.com/7614/16723555037_ffb336c63f_c.jpg" alt="Canary saved events">
+  <noscript>
+    <img src="https://farm9.staticflickr.com/8720/16308481514_d8273e3f0d_c.jpg" alt="Canary watch video">
+    <img src="https://farm8.staticflickr.com/7624/16929899661_fbd7f35ff4_c.jpg" alt="Canary activity list">
+    <img src="https://farm8.staticflickr.com/7614/16723555037_ffb336c63f_c.jpg" alt="Canary saved events">
+  </noscript>
 </div>
 
 Watch clips from Canary’s archive of motion-activated recordings. To save a clip, simply bookmark it, then find it in Saved Events. Past recordings and bookmarked clips are limited to your subscription plan.
@@ -90,7 +101,7 @@ Watch clips from Canary’s archive of motion-activated recordings. To save a cl
 
 Canary has built-in sensors that monitor the air quality, temperature, and humidity of your home. HomeHealth is designed to notify you if something is unusual at home, such as a fire, which would cause a sudden spike in temperature and drop in humidity.
 
-<p><img src="https://farm9.staticflickr.com/8710/16744069519_72861337bf_c.jpg" alt="Canary HomeHealth temperature and humidity" style="width: 50%"><img src="https://farm8.staticflickr.com/7640/16928981932_22f0cf1429_c.jpg" alt="Canary HomeHealth air quality" style="width: 50%"></p>
+<p><img data-aload="https://farm9.staticflickr.com/8710/16744069519_72861337bf_c.jpg" alt="Canary HomeHealth temperature and humidity" style="width: 50%"><img data-aload="https://farm8.staticflickr.com/7640/16928981932_22f0cf1429_c.jpg" alt="Canary HomeHealth air quality" style="width: 50%"><noscript><img src="https://farm9.staticflickr.com/8710/16744069519_72861337bf_c.jpg" alt="Canary HomeHealth temperature and humidity" style="width: 50%"><img src="https://farm8.staticflickr.com/7640/16928981932_22f0cf1429_c.jpg" alt="Canary HomeHealth air quality" style="width: 50%"></noscript></p>
 
 It gives a snapshot of each on the home screen, and clicking into it opens up graphs which show the progression/change of each within a 12-hour period. Tap and swipe a graph to get the status of a specific time.
 

@@ -19,7 +19,7 @@ Web fonts are great and make the web a more beautiful space; however, loading th
 
 FOIT is a result of the browser timing out by displaying text in a default font after attempting to load a web font. During its attempt to load the web font, the browser hides the text for a period of time, usually a few seconds but is known to go up as high as 30 seconds. Here’s what FOIT looked like on my site when I loaded fonts with CSS `@font-face` rules:
 
-{% include image.html src="foit.jpg" caption="FOIT when traditionally loading custom web fonts (throttled on a 3G network)" %}
+{% include image.html src="foit.jpg" caption="FOIT when traditionally loading custom web fonts (throttled on a 3G network)" async="1" %}
 
 Notice that as the page loads, the text becomes invisible in frames 2 and 3 (the type is set in Helvetica in frame 1 and Roboto in frame 4), which makes the content of the page unreadable. Although in many cases the FOIT lasted only 2–4 seconds, it’s definitely noticeable. I’ve also experienced the worst-case scenario, which is the content being permanently invisible.
 
@@ -109,7 +109,7 @@ This method also uses a Promise. Keep in mind if you’re not using Font Face Ob
 
 The result? No sign of FOIT!
 
-{% include image.html src="foit-solved.jpg" caption="Detecting the loading of custom web fonts with Font Face Observer (throttled on a 3G network)" %}
+{% include image.html src="foit-solved.jpg" caption="Detecting the loading of custom web fonts with Font Face Observer (throttled on a 3G network)" async="1" %}
 
 You can see that although Roboto wasn’t available until the 3rd frame, the text was visible the entire time.
 
