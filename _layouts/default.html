@@ -17,10 +17,10 @@
     {% elsif url contains '/blog/' %}
       {% if page.tags %}{% include critical/css/blog-post.css %}{% else %}{% include critical/css/blog.css %}{% endif %}
     {% endif %}</style>
-  <meta name="mainCSS" content="/assets/css/screen.css?v={{ css_version }}">
+  <meta name="mainCSS" content="{% cdn_url /assets/css/screen.css%}?v={{ css_version }}">
 {% strip %}
   {% if page.css %}
-    <meta name="pageCSS" content="/assets/css/blog/{{ page.css }}?v={{ css_version }}">
+    <meta name="pageCSS" content="{% cdn_url /assets/css/blog/%}{{ page.css }}?v={{ css_version }}">
   {% endif %}
 {% endstrip %}
   <script>
@@ -29,9 +29,9 @@
 
   <noscript>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500,300">
-    <link rel="stylesheet" href="/assets/css/screen.css?v={{ css_version }}">
+    <link rel="stylesheet" href="{% cdn_url /assets/css/screen.css%}?v={{ css_version }}">
     {% if page.css %}
-      <link rel="stylesheet" href="/assets/css/blog/{{ page.css }}?v={{ css_version }}">
+      <link rel="stylesheet" href="{% cdn_url /assets/css/blog/%}{{ page.css }}?v={{ css_version }}">
     {% endif %}
   </noscript>
 
@@ -73,16 +73,16 @@
 
 {% include footer.html %}
 
-<script src="/assets/js/jonsuh.js?v={{ js_version }}" async></script>
+<script src="{% cdn_url /assets/js/jonsuh.js%}?v={{ js_version }}" async></script>
 {% strip %}
   {% if page.js %}
     {% for js in page.js %}
-      <script src="/assets/js/{{ js }}?v={{ js_version }}" async></script>
+      <script src="{% cdn_url /assets/js/%}{{ js }}?v={{ js_version }}" async></script>
     {% endfor %}
   {% endif %}
   {% if url == "/" and site.posts.first.js %}
     {% for js in site.posts.first.js %}
-      <script src="/assets/js/{{ js }}?v={{ js_version }}" async></script>
+      <script src="{% cdn_url /assets/js/%}{{ js }}?v={{ js_version }}" async></script>
     {% endfor %}
   {% endif %}
 {% endstrip %}
