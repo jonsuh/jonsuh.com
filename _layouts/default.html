@@ -73,7 +73,7 @@
 
 {% include footer.html %}
 
-<script src="{{ '/assets/js/jonsuh.js' | prepend: site.cdn_url }}?v={{ js_version }}" async></script>
+<script>loadJS("{{ '/assets/js/jonsuh.js' | prepend: site.cdn_url }}?v={{ js_version }}")</script>
 {% strip %}
   {% if page.js %}
     {% for js in page.js %}
