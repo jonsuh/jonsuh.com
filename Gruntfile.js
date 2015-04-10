@@ -25,6 +25,9 @@ module.exports = function(grunt) {
       ],
       css_maps: [
         'assets/css/**/*.map'
+      ],
+      s3: [
+        '_s3'
       ]
     },
 
@@ -61,6 +64,12 @@ module.exports = function(grunt) {
       robots_production: {
         src: 'robots.production.txt',
         dest: 'robots.txt'
+      },
+      images_production: {
+        expand: true,
+        cwd: '_site/assets/images',
+        src: ['**/*'],
+        dest: '_s3/assets/images',
       }
     },
 
@@ -271,6 +280,82 @@ module.exports = function(grunt) {
       }
     },
 
+    aws: grunt.file.readJSON('aws-keys.json'),
+    aws_s3: {
+      options: {
+        accessKeyId: '<%= aws.AWSAccessKeyId %>',
+        secretAccessKey: '<%= aws.AWSSecretKey %>',
+        uploadConcurrency: 5,
+        downloadConcurrency: 5,
+        access: 'public-read',
+      },
+      production: {
+        options: {
+          bucket: 'jonsuh.com',
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '_s3/assets',
+            src: ['**/*.{css,js}'],
+            dest: 'assets',
+            params: {
+              ContentEncoding: 'gzip',
+              CacheControl: 'max-age=86400, public'
+            }
+          },
+          {
+            expand: true,
+            cwd: '_s3/assets/images',
+            src: ['**/*'],
+            dest: 'assets/images',
+            differential: true,
+            params: {
+              CacheControl: 'max-age=86400, public'
+            }
+          },
+        ]
+      }
+    },
+
+    compress: {
+      production: {
+        options: {
+          mode: 'gzip',
+          level: 6
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'assets',
+            src: ['**/*.{css,js}', '!js/src/**/*', '!js/vendor/**/*'],
+            dest: '_s3/assets'
+          }
+        ]
+      }
+    },
+
+    replace: {
+      critical_css: {
+        options: {
+          patterns: [
+            {
+              match: /url\(\/assets/g,
+              replacement: 'url(https://s3.amazonaws.com/jonsuh.com/assets'
+            }
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '_includes/critical/css',
+            src: ['*.css'],
+            dest: '_includes/critical/css'
+          }
+        ]
+      }
+    },
+
     rsync: {
       options: {
         args: ["-a"],
@@ -374,13 +459,16 @@ module.exports = function(grunt) {
     'copy:normalize',
     'sass:build',
     'clean:css_maps',
+    'clean:s3',
     'autoprefixer:build',
     'concat:build',
     'cssmin:production',
     'copy:critical_css',
+    'replace:critical_css',
     'cssmin:critical',
     'uglify:production',
     'uglify:critical',
+    'compress:production',
     'jekyll:production'
   ]);
 
@@ -398,13 +486,16 @@ module.exports = function(grunt) {
     'production',              // Grunt production
     'clean:site_assets',       // Clean _site/assets/(images,media) to prep for deployment
     'copy:robots_production',  // Copy the production version of robots.txt for deployment
-    'shell:deploy_production'  // Capistrano deploy to production environment
+    'shell:deploy_production', // Capistrano deploy to production environment
+    'aws_s3:production'        // Deploy gzipped CSS and JS to S3
   ]);
 
   grunt.registerTask('deploy:production:all', [
     'production',              // Grunt production
     'rsync:images_production', // Rsync _site/assets/images to production environment
     'rsync:media_production',  // Rsync _site/assets/media to production environment
+    'copy:images_production',  // Copy _site/assets/images to _s3 to prep for S3 deployment
+    'aws_s3:production',       // Deploy gzipped CSS and JS, and images to S3
     'clean:site_assets',       // Clean _site/assets/(images,media) to prep for deployment
     'copy:robots_production',  // Copy the production version of robots.txt for deployment
     'shell:deploy_production'  // Capistrano deploy to production environment
