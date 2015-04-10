@@ -14,15 +14,15 @@ date: "2014-02-23"
     </div>
   </div>
 </div>
-<div class="section section--{{ page.slug }}-introduction">
+<div class="section section--{{ page.slug }}-intro">
   <div class="container">
-    <div class="{{ page.slug }}-introduction-description">
+    <div class="{{ page.slug }}-intro-description">
       <h2>Will work for food?</h2>
       <p>I’ve followed and admired Brian Hoff for years&mdash;when I had this chance to work with him, I was beyond thrilled. I worked with Brian to announce <em>TwoPlease</em>, a side project that he and his wife, Kathleen, had been working together on.</p>
       <p>He was in need of a landing page for TwoPlease that would describe the purpose and intentions behind it as well as communicate his desire to find back-end and iOS engineers interested in joining him and Kathleen on this venture.</p>
       <p>Nearly complete with the design, Brian reached out to see if I was available to help him build out this page.</p>
     </div>
-    <div class="{{ page.slug }}-introduction-image">
+    <div class="{{ page.slug }}-intro-image">
       <img src="/assets/images/work/{{ page.slug }}/macbook-pro.jpg"
            srcset="/assets/images/work/{{ page.slug }}/macbook-pro.jpg 1x,
                    /assets/images/work/{{ page.slug }}/macbook-pro@2x.jpg 2x" alt="MacBook Pro">

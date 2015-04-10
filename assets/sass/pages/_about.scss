@@ -11,7 +11,7 @@
 
 // Introduction
 // ==================================================
-.about-introduction {
+.about-intro {
   @extend .paragraph;
 }
 
@@ -36,25 +36,25 @@
   display: block;
 }
 
-.about-mosaic-tile--jonathan-becky {
+.about-mosaic-tile--jb {
   width: 60%;
   @include retina-background-image("about/jonathan-becky.jpg");
 }
 
-.about-mosaic-tile--jonathan-silas,
-.about-mosaic-tile--becky-silas {
+.about-mosaic-tile--js,
+.about-mosaic-tile--bs {
   width: 50%;
 }
 
-.about-mosaic-tile--jonathan-silas {
+.about-mosaic-tile--js {
   @include retina-background-image("about/jonathan-silas.jpg");
 }
 
-.about-mosaic-tile--becky-silas {
+.about-mosaic-tile--bs {
   @include retina-background-image("about/becky-silas.jpg");
 }
 
-.about-mosaic-tile--silas-katelyn {
+.about-mosaic-tile--sk {
   width: 40%;
   @include retina-background-image("about/silas-katelyn.jpg");
   position: absolute;
@@ -257,26 +257,26 @@
     left: -5%;
   }
 
-  .about-mosaic-tile--jonathan-becky {
+  .about-mosaic-tile--jb {
     // @include calc(width, 41% - #{$about-mosaic-tile-gutter});
     width: -webkit-calc(41% - #{$about-mosaic-tile-gutter});
     width: calc(41% - #{$about-mosaic-tile-gutter});
     margin-right: $about-mosaic-tile-gutter;
   }
 
-  .about-mosaic-tile--jonathan-silas,
-  .about-mosaic-tile--becky-silas {
+  .about-mosaic-tile--js,
+  .about-mosaic-tile--bs {
     // @include calc(width, 36% - #{$about-mosaic-tile-gutter});
     width: -webkit-calc(36% - #{$about-mosaic-tile-gutter});
     width: calc(36% - #{$about-mosaic-tile-gutter});
     margin-right: $about-mosaic-tile-gutter;
   }
 
-  .about-mosaic-tile--jonathan-silas {
+  .about-mosaic-tile--js {
     margin-bottom: $about-mosaic-tile-gutter;
   }
 
-  .about-mosaic-tile--silas-katelyn {
+  .about-mosaic-tile--sk {
     width: 23%;
   }
 

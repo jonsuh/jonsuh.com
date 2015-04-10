@@ -14,13 +14,13 @@ date: "2014-07-10"
     </div>
   </div>
 </div>
-<div class="section section--{{ page.slug }}-introduction">
+<div class="section">
   <div class="container">
-    <div class="{{ page.slug }}-introduction-description">
+    <div class="{{ page.slug }}-intro-description">
       <h2>Making one’s vision a reality</h2>
       <p>RedLegg had a vision to redesign their website so they’d stand out from their competitors—they approached Juice Interactive, and we were thrilled to partner with RedLegg to help make their vision a reality. Once the designs were complete, I got to handle the front-end development—I had a lot of fun bringing the designs to life, especially the fun, interactive parts of the site.</p>
     </div>
-    <div class="{{ page.slug }}-introduction-image">
+    <div class="{{ page.slug }}-intro-image">
       <img src="/assets/images/work/{{ page.slug }}/home.jpg" alt="Home">
     </div>
   </div>

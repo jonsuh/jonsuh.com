@@ -16,11 +16,11 @@ date: "2013-06-04"
 </div>
 <div class="section">
   <div class="container">
-    <div class="{{ page.slug }}-introduction-description">
+    <div class="{{ page.slug }}-intro-description">
       <h2>It all began with hunger</h2>
       <p>One hungry afternoon my coworkers and I were trying to decide where to eat for lunch. It took us at least 15 minutes of throwing around a dozen places only to result in being unable to choose where before we finally ended up eating. I thought to myself, “There’s gotta be an easier way”—that’s when I thought up Foodize.</p>
     </div>
-    <div class="{{ page.slug }}-introduction-image">
+    <div class="{{ page.slug }}-intro-image">
       <p><img src="/assets/images/work/{{ page.slug }}/iphones.jpg"
           srcset="/assets/images/work/{{ page.slug }}/iphones.jpg 1x,
                   /assets/images/work/{{ page.slug }}/iphones@2x.jpg 2x" alt="iPhones"></p>

@@ -35,7 +35,7 @@ $project-color-tertiary : #808184;
     @include linear-gradient(to right, rgba($project-color, 0.5), rgba($project-color, 0));
   }
 
-  @include work-item-introduction(280, 340, 370, 420);
+  @include work-item-intro(280, 340, 370, 420);
 
   .work-item-link:hover {
     color: $project-color;
@@ -81,17 +81,17 @@ $project-color-tertiary : #808184;
 
 // Introduction
 // ==================================================
-.section--twoplease-introduction {
+.section--twoplease-intro {
   overflow: hidden;
 }
 
-.twoplease-introduction-description {
+.twoplease-intro-description {
   @include mq(ipad) {
     @include span-columns(7);
   }
 }
 
-.twoplease-introduction-image {
+.twoplease-intro-image {
   img {
     margin-top: em-calc(10);
   }

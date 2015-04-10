@@ -736,7 +736,7 @@ a.post-tag--pink:hover {
 
 // Navigation
 // ==================================================
-.post-navigation {
+.post-nav {
   margin-top: em-calc(25);
   @include clearfix;
 }
@@ -985,7 +985,7 @@ a.post-tag--pink:hover {
   }
 
   .post-comments,
-  .post-navigation,
+  .post-nav,
   .post-related {
     margin-top: em-calc(25);
   }
@@ -1029,7 +1029,7 @@ a.post-tag--pink:hover {
   }
 
   .post-comments,
-  .post-navigation,
+  .post-nav,
   .post-related {
     margin-top: em-calc(35);
   }
@@ -1062,7 +1062,7 @@ a.post-tag--pink:hover {
   }
 
   .post-comments,
-  .post-navigation,
+  .post-nav,
   .post-related {
     margin-top: em-calc(45);
   }

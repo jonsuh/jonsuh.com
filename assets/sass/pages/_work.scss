@@ -58,11 +58,11 @@
 }
 
 .work-item-title,
-.work-item-introduction {
+.work-item-intro {
   color: $white;
 }
 
-.work-item-introduction {
+.work-item-intro {
   $font-size: 18;
 
   font-size: em-calc($font-size);
@@ -85,8 +85,8 @@
   }
 }
 
-@mixin work-item-introduction($wit-tiny, $wit-little, $wit-small, $wit-medium) {
-  .work-item-introduction {
+@mixin work-item-intro($wit-tiny, $wit-little, $wit-small, $wit-medium) {
+  .work-item-intro {
     max-width: em-calc($wit-tiny, 18);
     @include mq(380) {
       max-width: em-calc($wit-little, 22);

@@ -33,7 +33,7 @@ $project-color: #eb372f;
     @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
   }
 
-  @include work-item-introduction(250, 300, 335, 390);
+  @include work-item-intro(250, 300, 335, 390);
 
   .work-item-link:hover {
     color: $project-color;
@@ -66,11 +66,11 @@ $project-color: #eb372f;
 
 // Introduction
 // ==================================================
-.redlegg-introduction-description {
+.redlegg-intro-description {
   @include max-span-columns(7);
 }
 
-.redlegg-introduction-image {
+.redlegg-intro-image {
   @include max-span-columns(10);
   @include mq(small) {
     padding-top: em-calc(10);

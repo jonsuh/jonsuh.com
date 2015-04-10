@@ -9,7 +9,7 @@ layout: default
     {% if work.title != page.title %}
       <div class="work-menu-item work-menu-item--{{ work.slug }}">
         <div class="work-item-content">
-          <h3 class="work-item-introduction">{{ work.introduction }}</h3>
+          <h3 class="work-item-intro">{{ work.introduction }}</h3>
           <h2 class="work-item-title">{{ work.title }}</h2>
           <a href="{{ work.url }}" title="{{ work.title }}" class="work-item-link">View Work</a>
         </div>
@@ -19,7 +19,7 @@ layout: default
   {% if page.url != '/work/' %}
     <div class="work-menu-item work-menu-item--contact">
       <div class="work-item-content">
-        <h3 class="work-item-introduction">Wanna work together?</h3>
+        <h3 class="work-item-intro">Wanna work together?</h3>
         <h2></h2>
         <a href="/contact/" title="" class="work-item-link">Let’s chat</a>
       </div>

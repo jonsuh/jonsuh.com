@@ -105,18 +105,18 @@ a.footer-top-link:hover {
 
 // Navigation
 // ==================================================
-.footer-navigation {
+.footer-nav {
   margin-bottom: em-calc(20);
 }
 
-.footer-navigation-link-home,
-.footer-navigation-link-twitter {
-  padding-left: em-calc(7); // .footer-navigation-link padding-left
+.footer-link-home,
+.footer-link-twitter {
+  padding-left: em-calc(7); // .footer-link padding-left
   padding-right: em-calc(7);
   margin-bottom: em-calc(10);
 }
 
-.footer-navigation-link-home {
+.footer-link-home {
   font-weight: 700;
   color: $white;
   letter-spacing: 0.03em;
@@ -127,7 +127,7 @@ a.footer-top-link:hover {
   }
 }
 
-.footer-navigation-link-twitter {
+.footer-link-twitter {
   &:after {
     content: "\000A";
     white-space: pre;
@@ -152,7 +152,7 @@ a.footer-top-link:hover {
   }
 }
 
-.footer-navigation-link {
+.footer-link {
   color: $grey;
   padding: em-calc(7 3);
   display: inline-block;
@@ -174,7 +174,7 @@ a.footer-top-link:hover {
 }
 
 @include mq(321) {
-  .footer-navigation-link {
+  .footer-link {
     padding: em-calc(7 5);
 
     &:after {
@@ -183,13 +183,13 @@ a.footer-top-link:hover {
   }
 }
 
-.footer-navigation-link--blog {
+.footer-link--blog {
   &:after {
     display: none;
   }
 }
 
-.footer-navigation-link--rss {
+.footer-link--rss {
   .svg-icon {
     width: em-calc(12);
     height: em-calc(12);
@@ -276,14 +276,14 @@ a.footer-top-link:hover {
     height: em-calc(100);
   }
 
-  .footer-navigation {
+  .footer-nav {
     margin-top: em-calc(25);
     margin-bottom: inherit;
     display: block;
   }
 
-  .footer-navigation-link-home,
-  .footer-navigation-link-twitter {
+  .footer-link-home,
+  .footer-link-twitter {
     margin-bottom: inherit;
   }
 

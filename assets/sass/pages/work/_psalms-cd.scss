@@ -14,7 +14,7 @@ $project-color-secondary: #16243c;
     @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
   }
 
-  @include work-item-introduction(225, 270, 290, 350);
+  @include work-item-intro(225, 270, 290, 350);
 
   .work-item-link:hover {
     color: $project-color;

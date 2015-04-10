@@ -14,7 +14,7 @@ $project-color-secondary: #48100a;
     @include linear-gradient(to right, rgba($project-color-secondary, 0.5), rgba($project-color-secondary, 0));
   }
 
-  @include work-item-introduction(160, 190, 220, 250);
+  @include work-item-intro(160, 190, 220, 250);
 
   .work-item-link:hover {
     color: $project-color;
@@ -44,11 +44,11 @@ $project-color-secondary: #48100a;
 
 // Introduction
 // ==================================================
-.foodize-introduction-description {
+.foodize-intro-description {
   @include max-span-columns(7);
 }
 
-.foodize-introduction-image {
+.foodize-intro-image {
   text-align: center;
   margin-top: em-calc(10);
   @include mq(medium) {

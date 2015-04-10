@@ -89,38 +89,38 @@ $logo-width: 50;
 }
 
 .logo-svg {
-  &-green-1  {fill: #3fae52; @extend %logo-svg-transition-1}
-  &-green-2  {fill: #7cc686; @extend %logo-svg-transition-2}
-  &-green-3  {fill: #2d8d43; @extend %logo-svg-transition-3}
-  &-cyan-1   {fill: #00bad2; @extend %logo-svg-transition-1}
-  &-cyan-2   {fill: #0097a7; @extend %logo-svg-transition-2}
-  &-cyan-3   {fill: #4ac4d7; @extend %logo-svg-transition-3}
-  &-cyan-4   {fill: #00bad2; @extend %logo-svg-transition-1}
-  &-blue-1   {fill: #62b3e4; @extend %logo-svg-transition-2}
-  &-blue-2   {fill: #1b77bd; @extend %logo-svg-transition-3}
-  &-blue-3   {fill: #62b3e4; @extend %logo-svg-transition-1}
-  &-blue-4   {fill: #3191cf; @extend %logo-svg-transition-2}
-  &-purple-1 {fill: #7a3594; @extend %logo-svg-transition-3}
-  &-purple-2 {fill: #944198; @extend %logo-svg-transition-1}
-  &-purple-3 {fill: #b06eae; @extend %logo-svg-transition-2}
-  &-purple-4 {fill: #944198; @extend %logo-svg-transition-3}
-  &-pink-1   {fill: #e81f64; @extend %logo-svg-transition-1}
-  &-pink-2   {fill: #c21e5c; @extend %logo-svg-transition-2}
-  &-pink-3   {fill: #f06392; @extend %logo-svg-transition-3}
-  &-pink-4   {fill: #e81f64; @extend %logo-svg-transition-1}
-  &-pink-5   {fill: #c21e5c; @extend %logo-svg-transition-2}
-  &-red-1    {fill: #ef4438; @extend %logo-svg-transition-3}
-  &-red-2    {fill: #e57373; @extend %logo-svg-transition-1}
-  &-red-3    {fill: #d32e2e; @extend %logo-svg-transition-2}
-  &-red-4    {fill: #ef4438; @extend %logo-svg-transition-3}
-  &-red-5    {fill: #d32e2e; @extend %logo-svg-transition-1}
-  &-orange-1 {fill: #f47c20; @extend %logo-svg-transition-2}
-  &-orange-2 {fill: #f8951f; @extend %logo-svg-transition-3}
-  &-orange-3 {fill: #f47c20; @extend %logo-svg-transition-1}
-  &-orange-4 {fill: #fcb452; @extend %logo-svg-transition-2}
-  &-yellow-1 {fill: #fedc63; @extend %logo-svg-transition-3}
-  &-yellow-2 {fill: #fecd27; @extend %logo-svg-transition-1}
-  &-yellow-3 {fill: #faa71c; @extend %logo-svg-transition-2}
+  &-g-1  {fill: #3fae52; @extend %logo-svg-transition-1}
+  &-g-2  {fill: #7cc686; @extend %logo-svg-transition-2}
+  &-g-3  {fill: #2d8d43; @extend %logo-svg-transition-3}
+  &-c-1  {fill: #00bad2; @extend %logo-svg-transition-1}
+  &-c-2  {fill: #0097a7; @extend %logo-svg-transition-2}
+  &-c-3  {fill: #4ac4d7; @extend %logo-svg-transition-3}
+  &-c-4  {fill: #00bad2; @extend %logo-svg-transition-1}
+  &-b-1  {fill: #62b3e4; @extend %logo-svg-transition-2}
+  &-b-2  {fill: #1b77bd; @extend %logo-svg-transition-3}
+  &-b-3  {fill: #62b3e4; @extend %logo-svg-transition-1}
+  &-b-4  {fill: #3191cf; @extend %logo-svg-transition-2}
+  &-pu-1 {fill: #7a3594; @extend %logo-svg-transition-3}
+  &-pu-2 {fill: #944198; @extend %logo-svg-transition-1}
+  &-pu-3 {fill: #b06eae; @extend %logo-svg-transition-2}
+  &-pu-4 {fill: #944198; @extend %logo-svg-transition-3}
+  &-pi-1 {fill: #e81f64; @extend %logo-svg-transition-1}
+  &-pi-2 {fill: #c21e5c; @extend %logo-svg-transition-2}
+  &-pi-3 {fill: #f06392; @extend %logo-svg-transition-3}
+  &-pi-4 {fill: #e81f64; @extend %logo-svg-transition-1}
+  &-pi-5 {fill: #c21e5c; @extend %logo-svg-transition-2}
+  &-r-1  {fill: #ef4438; @extend %logo-svg-transition-3}
+  &-r-2  {fill: #e57373; @extend %logo-svg-transition-1}
+  &-r-3  {fill: #d32e2e; @extend %logo-svg-transition-2}
+  &-r-4  {fill: #ef4438; @extend %logo-svg-transition-3}
+  &-r-5  {fill: #d32e2e; @extend %logo-svg-transition-1}
+  &-o-1  {fill: #f47c20; @extend %logo-svg-transition-2}
+  &-o-2  {fill: #f8951f; @extend %logo-svg-transition-3}
+  &-o-3  {fill: #f47c20; @extend %logo-svg-transition-1}
+  &-o-4  {fill: #fcb452; @extend %logo-svg-transition-2}
+  &-y-1  {fill: #fedc63; @extend %logo-svg-transition-3}
+  &-y-2  {fill: #fecd27; @extend %logo-svg-transition-1}
+  &-y-3  {fill: #faa71c; @extend %logo-svg-transition-2}
 }
 
 @mixin logo-svg-transform($transform-rotate, $transform-x, $transform-y) {
@@ -129,44 +129,44 @@ $logo-width: 50;
 
 .logo-link:hover {
   .logo-svg {
-    &-green-1  {@include logo-svg-transform(-15deg, 30, 0)}
-    &-green-2  {@include logo-svg-transform(-10deg, -10, -30)}
-    &-green-3  {@include logo-svg-transform(14deg, 20, -110)}
-    &-cyan-1   {@include logo-svg-transform(-7deg, -85, -50)}
-    &-cyan-2   {@include logo-svg-transform(22deg, 70, -180)}
-    &-cyan-3   {@include logo-svg-transform(12deg, -20, -80)}
-    &-cyan-4   {@include logo-svg-transform(-25deg, 0, 80)}
-    &-blue-1   {@include logo-svg-transform(7deg, -35, -60)}
-    &-blue-2   {@include logo-svg-transform(13deg, 100, -150)}
-    &-blue-3   {@include logo-svg-transform(2deg, 50, -50)}
-    &-blue-4   {@include logo-svg-transform(-10deg, 50, 60)}
-    &-purple-1 {@include logo-svg-transform(5deg, -80, -150)}
-    &-purple-2 {@include logo-svg-transform(8deg, -20, -120)}
-    &-purple-3 {@include logo-svg-transform(-30deg, -80, 120)}
-    &-purple-4 {@include logo-svg-transform(20deg, 150, -80)}
-    &-pink-1   {@include logo-svg-transform(10deg, 40, -120)}
-    &-pink-2   {@include logo-svg-transform(-30deg, -120, 0)}
-    &-pink-3   {@include logo-svg-transform(11deg, 90, 0)}
-    &-pink-4   {@include logo-svg-transform(-60deg, -350, -10)}
-    &-pink-5   {@include logo-svg-transform(-22deg, -120, 90)}
-    &-red-1    {@include logo-svg-transform(5deg, 50, -30)}
-    &-red-2    {@include logo-svg-transform(-20deg, -95, 15)}
-    &-red-3    {@include logo-svg-transform(17deg, 80, 0)}
-    &-red-4    {@include logo-svg-transform(9deg, 50, 20)}
-    &-red-5    {@include logo-svg-transform(-12deg, -70, 50)}
-    &-orange-1 {@include logo-svg-transform(8deg, 70, -35)}
-    &-orange-2 {@include logo-svg-transform(-23deg, -100, 0)}
-    &-orange-3 {@include logo-svg-transform(15deg, 10, 18)}
-    &-orange-4 {@include logo-svg-transform(10deg, 40, 28)}
-    &-yellow-1 {@include logo-svg-transform(20deg, 50, 0)}
-    &-yellow-2 {@include logo-svg-transform(-14deg, -80, -17)}
-    &-yellow-3 {@include logo-svg-transform(-5deg, -15, -20)}
+    &-g-1  {@include logo-svg-transform(-15deg, 30, 0)}
+    &-g-2  {@include logo-svg-transform(-10deg, -10, -30)}
+    &-g-3  {@include logo-svg-transform(14deg, 20, -110)}
+    &-c-1  {@include logo-svg-transform(-7deg, -85, -50)}
+    &-c-2  {@include logo-svg-transform(22deg, 70, -180)}
+    &-c-3  {@include logo-svg-transform(12deg, -20, -80)}
+    &-c-4  {@include logo-svg-transform(-25deg, 0, 80)}
+    &-b-1  {@include logo-svg-transform(7deg, -35, -60)}
+    &-b-2  {@include logo-svg-transform(13deg, 100, -150)}
+    &-b-3  {@include logo-svg-transform(2deg, 50, -50)}
+    &-b-4  {@include logo-svg-transform(-10deg, 50, 60)}
+    &-pu-1 {@include logo-svg-transform(5deg, -80, -150)}
+    &-pu-2 {@include logo-svg-transform(8deg, -20, -120)}
+    &-pu-3 {@include logo-svg-transform(-30deg, -80, 120)}
+    &-pu-4 {@include logo-svg-transform(20deg, 150, -80)}
+    &-pi-1 {@include logo-svg-transform(10deg, 40, -120)}
+    &-pi-2 {@include logo-svg-transform(-30deg, -120, 0)}
+    &-pi-3 {@include logo-svg-transform(11deg, 90, 0)}
+    &-pi-4 {@include logo-svg-transform(-60deg, -350, -10)}
+    &-pi-5 {@include logo-svg-transform(-22deg, -120, 90)}
+    &-r-1  {@include logo-svg-transform(5deg, 50, -30)}
+    &-r-2  {@include logo-svg-transform(-20deg, -95, 15)}
+    &-r-3  {@include logo-svg-transform(17deg, 80, 0)}
+    &-r-4  {@include logo-svg-transform(9deg, 50, 20)}
+    &-r-5  {@include logo-svg-transform(-12deg, -70, 50)}
+    &-o-1  {@include logo-svg-transform(8deg, 70, -35)}
+    &-o-2  {@include logo-svg-transform(-23deg, -100, 0)}
+    &-o-3  {@include logo-svg-transform(15deg, 10, 18)}
+    &-o-4  {@include logo-svg-transform(10deg, 40, 28)}
+    &-y-1 {@include logo-svg-transform(20deg, 50, 0)}
+    &-y-2 {@include logo-svg-transform(-14deg, -80, -17)}
+    &-y-3 {@include logo-svg-transform(-5deg, -15, -20)}
   }
 }
 
 // Navigation
 // ==================================================
-.navigation {
+.nav {
   text-align: center;
   background-color: $grey-darkest;
   border-top: 1px solid scale-color($grey-darker, $lightness: 4%);
@@ -175,7 +175,7 @@ $logo-width: 50;
   float: right;
 }
 
-.navigation-link {
+.nav-link {
   font-weight: 500;
   color: $grey-light;
   letter-spacing: 0.03em;
@@ -198,7 +198,7 @@ $logo-width: 50;
   }
 }
 
-.navigation-label {
+.nav-label {
   $font-size: 13;
 
   font-size: em-calc(13);
@@ -212,7 +212,7 @@ $logo-width: 50;
   border-color: $blue;
 }
 
-.navigation-link {
+.nav-link {
   &:hover,
   &.is-current {
     color: $white;
@@ -231,7 +231,7 @@ $logo-width: 50;
     width: em-calc($logo-width);
   }
 
-  .navigation {
+  .nav {
     // @include calc(width, 100% - #{em-calc($logo-width)});
     width: -webkit-calc(100% - #{em-calc($logo-width)});
     width: calc(100% - #{em-calc($logo-width)});
@@ -249,7 +249,7 @@ $logo-width: 50;
     left: em-calc(-3);
   }
 
-  .navigation-link {
+  .nav-link {
     padding-left: em-calc(10);
     padding-right: em-calc(10);
   }
@@ -261,7 +261,7 @@ $logo-width: 50;
     top: em-calc(3.5);
   }
 
-  .navigation-label {
+  .nav-label {
     $font-size: 13;
 
     font-size: em-calc(14);
@@ -270,7 +270,7 @@ $logo-width: 50;
 }
 
 @include mq(400) {
-  .navigation-link {
+  .nav-link {
     padding-left: em-calc(12);
     padding-right: em-calc(12);
   }
@@ -301,7 +301,7 @@ $logo-width: 50;
     top: 0;
   }
 
-  .navigation {
+  .nav {
     background-color: $white;
     text-align: right;
     height: inherit;
@@ -311,7 +311,7 @@ $logo-width: 50;
     clear: inherit;
   }
 
-  .navigation-link {
+  .nav-link {
     color: $grey-dark;
     padding-left: em-calc(11);
     padding-right: em-calc(11);
@@ -322,14 +322,14 @@ $logo-width: 50;
     }
   }
 
-  .navigation-label {
+  .nav-label {
     font-size: 1em;
     padding-top: initial;
   }
 }
 
 @include mq(550) {
-  .navigation-link {
+  .nav-link {
     padding-left: em-calc(18);
     padding-right: em-calc(18);
   }
@@ -338,7 +338,7 @@ $logo-width: 50;
 @include mq(medium) {
   @include logo-width(79);
 
-  .navigation-link {
+  .nav-link {
     padding-left: em-calc(22);
     padding-right: em-calc(22);
   }
@@ -363,7 +363,7 @@ $logo-width: 50;
     height: em-calc(87);
   }
 
-  .navigation-link {
+  .nav-link {
     padding-left: em-calc(25);
     padding-right: em-calc(25);
   }
@@ -372,7 +372,7 @@ $logo-width: 50;
 @include mq(900) {
   @include logo-width(132);
 
-  .navigation-link {
+  .nav-link {
     padding-left: em-calc(40);
     padding-right: em-calc(40);
   }
