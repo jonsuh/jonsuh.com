@@ -5,6 +5,9 @@ _orig
 bower_components
 node_modules
 
+aws-keys.json
+_s3
+
 _drafts
 _site
 !_includes
