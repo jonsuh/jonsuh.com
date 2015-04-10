@@ -214,7 +214,7 @@ a.footer-top-link .svg-icon-path { fill: #66676e; }
   .logo-canvas { height: 5.4375em; }
   .logo-svg { width: 5em; height: 5.4375em; }
   .nav-link { padding-left: 1.5625em; padding-right: 1.5625em; }
-  .hero--home { min-height: 25em; max-height: 31.25em; }
+  .hero--home { height: calc(100% - 7.1875em); min-height: 25em; max-height: 31.25em; }
   .home-hero-introduction { max-width: 18.75rem; }
   .home-hero-name { font-size: 2.25em; margin-bottom: 0.1388888889em; }
   .home-hero-tagline { font-size: 1em; letter-spacing: 0.21em; margin-bottom: 1.25em; }
