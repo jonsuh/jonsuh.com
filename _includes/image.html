@@ -1,8 +1,9 @@
 {% if include.caption %}
 <figure>
-  <img src="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="">
+  <img {% if include.async %}data-aload{% else %}src{% endif %}="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="">
+  {% if include.async %}<noscript><img src="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt=""></noscript>{% endif %}
   <figcaption>{{ include.caption }}</figcaption>
 </figure>
 {% else %}
-<p><img src="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="{{ include.alt }}"></p>
+<p><img {% if include.async %}data-aload{% else %}src{% endif %}="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="{{ include.alt }}">{% if include.async %}<noscript><img src="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="{{ include.alt }}"></noscript>{% endif %}</p>
 {% endif %}
