@@ -56,7 +56,7 @@
 
 // Image URL
 // ==================================================
-$image-url-path: "/assets/images/" !default;
+$image-url-path: "../images/" !default;
 @function image-url($url) {
   @return url("#{$image-url-path}#{$url}");
 }
