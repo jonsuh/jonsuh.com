@@ -301,7 +301,7 @@ module.exports = function(grunt) {
             dest: 'assets',
             params: {
               ContentEncoding: 'gzip',
-              CacheControl: 'max-age=86400, public'
+              CacheControl: 'max-age=2629000'
             }
           },
           {
@@ -311,7 +311,7 @@ module.exports = function(grunt) {
             dest: 'assets/images',
             differential: true,
             params: {
-              CacheControl: 'max-age=86400, public'
+              CacheControl: 'max-age=86400'
             }
           },
         ]
@@ -341,7 +341,7 @@ module.exports = function(grunt) {
           patterns: [
             {
               match: /url\(\/assets/g,
-              replacement: 'url(https://s3.amazonaws.com/jonsuh.com/assets'
+              replacement: 'url(https://d281e42xwg0cwl.cloudfront.net/assets'
             }
           ]
         },

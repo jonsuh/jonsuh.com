@@ -4,7 +4,8 @@ environment: production
 url    : "//jonsuh.com"
 url_protocol: "https:"
 labs_url: "http://labs.jonsuh.com"
-cdn_url: "https://s3.amazonaws.com/jonsuh.com"
+# cdn_url: "//s3.amazonaws.com/jonsuh.com"
+cdn_url: "//d281e42xwg0cwl.cloudfront.net"
 
 paginate   : 10
 limit_posts: 0
