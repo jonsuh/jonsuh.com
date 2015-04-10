@@ -72,9 +72,9 @@ gulp.task('sass-jekyll', function() {
 var concatOptions = {
   concat: {
     src: [
-      'assets/js/vendor/promise.js',
-      'bower_components/picturefill/dist/picturefill.js',
-      'bower_components/fontfaceobserver/fontfaceobserver.js',
+      // 'assets/js/vendor/promise.js',
+      // 'bower_components/picturefill/dist/picturefill.js',
+      // 'bower_components/fontfaceobserver/fontfaceobserver.js',
       'assets/js/src/utility.js',
       'assets/js/src/social.js',
       'assets/js/src/work.js',
@@ -85,6 +85,8 @@ var concatOptions = {
   critical: {
     src: [
       'bower_components/loadcss/loadCSS.js',
+      'assets/js/vendor/promise.js',
+      'bower_components/fontfaceobserver/fontfaceobserver.js',
       'assets/js/src/critical.js'
     ],
     filename: 'jonsuh.js',

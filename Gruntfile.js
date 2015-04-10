@@ -77,9 +77,9 @@ module.exports = function(grunt) {
       build: {
         files: {
           'assets/js/jonsuh.js': [
-            'assets/js/vendor/promise.js',
-            'bower_components/picturefill/dist/picturefill.js',
-            'bower_components/fontfaceobserver/fontfaceobserver.js',
+            // 'assets/js/vendor/promise.js',
+            // 'bower_components/picturefill/dist/picturefill.js',
+            // 'bower_components/fontfaceobserver/fontfaceobserver.js',
             'assets/js/src/utility.js',
             'assets/js/src/social.js',
             'assets/js/src/work.js',
@@ -94,7 +94,9 @@ module.exports = function(grunt) {
           'assets/js/blog/https-increased-organic-search-impressions-by-144-percent.js': ['assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js'],
           '_includes/critical/js/jonsuh.js': [
             'bower_components/loadcss/loadCSS.js',
-            'assets/js/src/critical.js'
+            'assets/js/vendor/promise.js',
+            'bower_components/fontfaceobserver/fontfaceobserver.js',
+            'assets/js/src/critical.js',
           ],
         }
       }
