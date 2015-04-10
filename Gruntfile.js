@@ -68,7 +68,7 @@ module.exports = function(grunt) {
       images_production: {
         expand: true,
         cwd: '_site/assets/images',
-        src: ['**/*'],
+        src: ['**/*', '!blog', '!blog/**/*', '!browsers', '!browsers/**/*'],
         dest: '_s3/assets/images',
       }
     },
