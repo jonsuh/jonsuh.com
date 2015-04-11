@@ -72,12 +72,10 @@
 
   @include mq(380) {
     font-size: em-calc(22);
-    font-weight: 300;
   }
 
   @include mq(small) {
     font-size: em-calc(24);
-    font-weight: 300;
   }
 
   @include mq(medium) {

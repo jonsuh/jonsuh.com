@@ -33,7 +33,7 @@ $project-color: #eb372f;
     @include linear-gradient(to right, rgba($project-color, 0.6), rgba($project-color, 0));
   }
 
-  @include work-item-intro(250, 300, 335, 390);
+  @include work-item-intro(250, 310, 335, 390);
 
   .work-item-link:hover {
     color: $project-color;

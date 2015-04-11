@@ -1,3 +1,6 @@
+// ==================================================
+// Get <meta> content values
+// ==================================================
 var metaTags     = document.getElementsByTagName("meta"),
     metaArray    = [],
     // metaContent  = ["fontsCSS", "fontsJS", "mainCSS", "mainJS", "pageCSS", "pageJS"];
@@ -9,31 +12,39 @@ for (var i = 0; i < metaTags.length; i++) {
   }
 }
 
+// ==================================================
+// loadCSS
+// ==================================================
 for (var i = 0; i < metaArray.length; i++) {
   if (metaArray[i].getAttribute("name").match(/CSS/)) {
     loadCSS(metaArray[i].getAttribute("content"));
   }
 }
 
-var roboto400 = new FontFaceObserver("Roboto", {
-  weight: 400
-});
-var roboto500 = new FontFaceObserver("Roboto", {
-  weight: 500
-});
-var roboto700 = new FontFaceObserver("Roboto", {
-  weight: 700
-});
+// ==================================================
+// Detect fonts with FontFaceObserver
+// ==================================================
+(function() {
+  var roboto400 = new FontFaceObserver("Roboto", {
+    weight: 400
+  });
+  var roboto500 = new FontFaceObserver("Roboto", {
+    weight: 500
+  });
+  var roboto700 = new FontFaceObserver("Roboto", {
+    weight: 700
+  });
 
-Promise.all([
-  roboto400.check(),
-  roboto500.check(),
-  roboto700.check()
-]).then(function() {
-  document.documentElement.className += " fonts-loaded";
-}, function() {
-  document.documentElement.className += " fonts-timeout";
-});
+  Promise.all([
+    roboto400.check(),
+    roboto500.check(),
+    roboto700.check()
+  ]).then(function() {
+    document.documentElement.className += " fonts-loaded";
+  }, function() {
+    document.documentElement.className += " fonts-timeout";
+  });
+})();
 
 // (function () {
 //   "use strict";
@@ -116,6 +127,9 @@ Promise.all([
 
 // }());
 
+// ==================================================
+// loadJS
+// ==================================================
 function loadJS( src, cb ){
   "use strict";
   var ref = window.document.getElementsByTagName( "script" )[ 0 ];

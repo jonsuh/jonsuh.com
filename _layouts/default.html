@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
   {% if site.cdn_url contains '//' %}<link rel="prefetch" href="{{ '/assets/css/screen.css' | prepend: site.cdn_url }}?v={{ css_version }}">{% endif %}
-  <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=Roboto:400,700,500,300">
+  <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=Roboto:400,700,500">
   <style>{% if url == '/' %}
       {% include critical/css/home.css %}
     {% elsif url contains '/about/' %}
@@ -28,7 +28,7 @@
   </script>
 
   <noscript>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500,300">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500">
     <link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.cdn_url }}?v={{ css_version }}">
     {% if page.css %}
       <link rel="stylesheet" href="{{ '/assets/css/blog/' | prepend: site.cdn_url | append: page.css }}?v={{ css_version }}">
