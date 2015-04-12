@@ -59,7 +59,7 @@ The above solution works, but the problem is, depending on the browser, it can f
 
 Here’s what the console returns when I log the event in Chrome:
 
-<img src="{% cdn_url /assets/images/blog/2014/detect-the-end-of-css-animations-and-transitions-with-javascript/console-twice.png %}">
+<img src="/assets/images/blog/2014/detect-the-end-of-css-animations-and-transitions-with-javascript/console-twice.png">
 
 ## Detect the supported event property name
 
@@ -98,7 +98,7 @@ $(".button").click(function(){
 
 This ensures that, even in Chrome, the event only fires once:
 
-<img src="{% cdn_url /assets/images/blog/2014/detect-the-end-of-css-animations-and-transitions-with-javascript/console-once.png %}">
+<img src="/assets/images/blog/2014/detect-the-end-of-css-animations-and-transitions-with-javascript/console-once.png">
 
 Here’s a demo:
 

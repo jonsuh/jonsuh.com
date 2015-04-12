@@ -13,7 +13,7 @@ If someone stole your work, explicitly copied it, and you saw it on his website,
 
 So here’s the scoop. I regularly check Google Analytics to study what’s going on on my site, but a couple of days ago, I saw something strange&mdash;Hits on pages that didn’t exist on my site were being registered.
 
-![]({% cdn_url /assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/google-analytics-strange.jpg %})
+![](/assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/google-analytics-strange.jpg)
 
 At first thought it was a glitch, so I ignored it. The next day, the hits increased. I dug in and came across a site that looked awfully familiar.
 
@@ -51,6 +51,6 @@ So... am I flattered? The answer to that question doesn’t matter.
 
 And for the curious, here are a couple of side-by-side comparisons. (I’ve decided to remove all references to their name/identity to maintain their integrity)
 
-<a href="{% cdn_url /assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-comparison.jpg %}"><img src="{% cdn_url /assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-comparison-thumbnail.jpg %}" /></a>
+<a href="/assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-comparison.jpg"><img src="/assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-comparison-thumbnail.jpg"></a>
 
-<a href="{% cdn_url /assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-source-comparison.jpg %}"><img src="{% cdn_url /assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-source-comparison-thumbnail.jpg %}" /></a>
+<a href="/assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-source-comparison.jpg"><img src="/assets/images/blog/2013/someone-stole-my-work-should-i-call-them-out/jonsuh-vs-copy-source-comparison-thumbnail.jpg"></a>

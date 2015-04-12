@@ -16,19 +16,19 @@ If there is one feature missing from Mac OS, it’s tabs for Finder. Now you can
 
 If you open up as many Finder windows as I do on occasion, you would agree that it gets annoying clicking through the Finder windows to find the one you need. TotalFinder allows you to organize all your Finder windows by adding Tabs to Finder.
 
-![Total Finder UI]({% cdn_url /assets/images/blog/2010/binaryage-totalfinder-review/totalfinder-ui.jpg %})
+![Total Finder UI](/assets/images/blog/2010/binaryage-totalfinder-review/totalfinder-ui.jpg)
 
 If you want to drag a tab out to create a new Finder window, simply mousedown on the tab, drag it out of Finder, and let go. You can also drag a tab back into Finder! If you want to reorganize your tabs, just drag it to the left or right.
 
 ### Dual mode
 
-![Dual mode]({% cdn_url /assets/images/blog/2010/binaryage-totalfinder-review/totalfinder-dual-mode.jpg %})
+![Dual mode](/assets/images/blog/2010/binaryage-totalfinder-review/totalfinder-dual-mode.jpg)
 
 Dual mode allows you to view two tabs side-by-side if you ever want to view them simultaneously. Simply press CMD+U or double click a tab and it will toggle dual mode with the tab to the right of it. The hotkey to toggle dual mode can be configured to something different.
 
 ### Visor
 
-![Visor]({% cdn_url /assets/images/blog/2010/binaryage-totalfinder-review/totalfinder-visor.jpg %})
+![Visor](/assets/images/blog/2010/binaryage-totalfinder-review/totalfinder-visor.jpg)
 
 When visor is enabled and the hotkey is configured, Finder will slide up from the bottom of your desktop instead of opening a window when you need it. When you’re done, simply press the hotkey again and it will slide down and disappear.
 

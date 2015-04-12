@@ -21,7 +21,7 @@ At this point, I’m going to assume that you already have a Google AdSense acco
 
 After you create an ad and you select *Get code*, you should see a dialog box with the script you would typically copy and paste to put on your page. It should look something like this:
 
-![]({% cdn_url /assets/images/blog/2012/responsive-google-adsense-ads/responsive-google-adsense-ads-ad-example.jpg %})
+![](/assets/images/blog/2012/responsive-google-adsense-ads/responsive-google-adsense-ads-ad-example.jpg)
 
 ## JavaScript
 

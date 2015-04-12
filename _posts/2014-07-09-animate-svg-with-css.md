@@ -61,7 +61,7 @@ First step’s first&mdash;drawing. The drawings above were done in Illustrator 
 
 Size the artboard. Because we’ll be making the SVG responsive, actual size doesn’t really matter, but proportion does. Position the images on the artboard as it would look in the first frame of the animation.
 
-<img src="{% cdn_url /assets/images/blog/2014/animate-svg-with-css/illustrator-canvas.jpg %}">
+<img src="/assets/images/blog/2014/animate-svg-with-css/illustrator-canvas.jpg">
 
 Separate the parts of your drawing into layers and groups (like you would in Photoshop), especially if any of them are going to be animated. (I’ll further explain why later, but basically this will help you identify the components of your drawing in the markup of the SVG)
 
@@ -73,7 +73,7 @@ When you’re done, save it as an SVG. From Illustrator: `File > Save As...` and
 
 You’ll then be asked to set your SVG options. Set them as follows, then save:
 
-<img src="{% cdn_url /assets/images/blog/2014/animate-svg-with-css/illustrator-svg-options.png %}">
+<img src="/assets/images/blog/2014/animate-svg-with-css/illustrator-svg-options.png">
 
 - SVG Profiles: SVG 1.1
 - Fonts Type: SVG
@@ -81,7 +81,7 @@ You’ll then be asked to set your SVG options. Set them as follows, then save:
 
 Open the SVG file in your text editor&mdash;you’ll notice the markup has the names of the layers and groups you created in Illustrator as `id`s. This is extremely helpful when identifying the elements of your illustration.
 
-<img src="{% cdn_url /assets/images/blog/2014/animate-svg-with-css/svg-markup.png %}">
+<img src="/assets/images/blog/2014/animate-svg-with-css/svg-markup.png">
 
 ## HTML
 

@@ -412,7 +412,7 @@ Now let’s run the default Grunt task:
 grunt
 {% endhighlight %}
 
-<img src="{% cdn_url /assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-grunt.png %}">
+<img src="/assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-grunt.png">
 
 The default task was configured as follows:
 
@@ -424,7 +424,7 @@ After running `concat` and `sass:dist`, Grunt waits and watches for changes to a
 
 Go ahead and make changes to `screen.scss` and one of the JavaScript files in `js/` and save your changes.
 
-<img src="{% cdn_url /assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-watch.png %}">
+<img src="/assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-watch.png">
 
 You’ll notice in Terminal that Grunt detected your changes and ran the corresponding task based on the files that were changed. Refresh `index.html` again and you should notice the changes you’ve made.
 
@@ -434,7 +434,7 @@ Let’s say you’re done with development and you’re ready to make the files 
 grunt production
 {% endhighlight %}
 
-<img src="{% cdn_url /assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-production.png %}">
+<img src="/assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-production.png">
 
 The custom production task was configured as follows:
 

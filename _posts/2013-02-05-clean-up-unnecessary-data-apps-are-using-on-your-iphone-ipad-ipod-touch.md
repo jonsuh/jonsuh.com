@@ -41,7 +41,7 @@ Reclaim the space your apps are using with an easy-to-use app called [PhoneClean
 3.  Once your device has been detected, click *Start Scan*. (This may take several minutes)
 4.  Once the scan has completed, you can choose to customize the clean before you initiate it.  
 4a. You can customize the clean by clicking the arrow to the right in the Detail column and unchecking the items you want PhoneClean to ignore. (I typically only select apps in the "Cache and Off-line Files" section that take up a lot of space [100MB+])  
-![]({% cdn_url /assets/images/blog/2013/clean-up-unnecessary-data-apps-are-using-on-your-iphone-ipad-ipod-touch/customize-clean.jpg %})
+![](/assets/images/blog/2013/clean-up-unnecessary-data-apps-are-using-on-your-iphone-ipad-ipod-touch/customize-clean.jpg)
 5.  Click *Clean Up*, sit back, relax, and wait for the clean to finish.
 
 It’s as simple as that. I was able to reclaim **896MB** with my most recent clean, that’s equivalent to roughly **110-175** photos! I suggest you do this at least once every six months at the most, if not every few months. It’ll be good for your phone and its space.

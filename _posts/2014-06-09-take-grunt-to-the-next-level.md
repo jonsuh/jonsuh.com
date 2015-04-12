@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 
 That’s it! Now when you run a task, you should get a breakdown of each task and its time of execution:
 
-<img src="{% cdn_url /assets/images/blog/2014/take-grunt-to-the-next-level/time-grunt.png %}">
+<img src="/assets/images/blog/2014/take-grunt-to-the-next-level/time-grunt.png">
 
 ## Only build files that have changed with grunt-newer
 

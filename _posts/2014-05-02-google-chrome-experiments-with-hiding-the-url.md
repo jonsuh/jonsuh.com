@@ -13,10 +13,10 @@ A couple of days ago, Google pushed an update to both Canary and beta builds of 
 <!--more-->
 
 *Before*  
-![]({% cdn_url /assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-url-before.png %})
+![](/assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-url-before.png)
 
 *After*  
-![]({% cdn_url /assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-url-after.png %})
+![](/assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-url-after.png)
 
 Affected versions of Chrome:  
 
@@ -31,7 +31,7 @@ With Chrome’s latest updates, regardless of how deep you go in a site, only th
 
 The interaction and functionality of the Omnibox (better known as the address bar) is not clear, especially with this update. Although the full URL is initially hidden, you can still reveal the full URL and edit it by clicking the area where the top-level domain is shown.
 
-![]({% cdn_url /assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-omnibox.gif %})
+![](/assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-omnibox.gif)
 
 My thought is the designers tried to build in a hint of the new functionality&mdash;you can tell when you mouseover the area where the top-level domain is, there’s a hover state that indicates &ldquo;this is a button.&rdquo;
 
@@ -73,5 +73,5 @@ If Chrome is doing this to you and you hate it, you can disable it by doing the 
 
 1. Type [`chrome://flags/#origin-chip-in-omnibox`](chrome://flags/#origin-chip-in-omnibox) in the URL bar and press Enter.
 2. Disable *Enable origin chip in Omnibox* by selecting *Disabled* from the dropdown.  
-![]({% cdn_url /assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-url-unhide.png %})
+![](/assets/images/blog/2014/google-chrome-experiments-with-hiding-the-url/chrome-url-unhide.png)
 3. Restart Chrome.

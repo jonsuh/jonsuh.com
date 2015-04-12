@@ -30,11 +30,11 @@ Back in May of 2010, Kaos started working on porting Froyo over to the Droid Eri
 
 This section is what I’m sure you’ve all been waiting for. With the tweaks I’ve made to my Eris, it runs smoother than cutting butter with a hot knife; smoother than a baby’s butt; as smooth as silk (however you want to say it!).
 
-![Quadrant and Linpack stats with normal settings]({% cdn_url /assets/images/blog/2010/make-your-droid-eris-faster-smoother-and-increase-battery-life/droid-eris-quad-linpack-2010-0909.jpg %})
+![Quadrant and Linpack stats with normal settings](/assets/images/blog/2010/make-your-droid-eris-faster-smoother-and-increase-battery-life/droid-eris-quad-linpack-2010-0909.jpg)
 
 Above is my Quadrant and Linpack stats when my phone is at normal, every-day settings. I am not a huge fan of overclocking my phone for higher stats and numbers; it’s a phone for Pete’s sake! Overclocking your phone will give you higher performance numbers, but you’re at risk of your phone running more unstable than it should.
 
-![Quadrant and Linpack Stats slightly overclocked]({% cdn_url /assets/images/blog/2010/make-your-droid-eris-faster-smoother-and-increase-battery-life/droid-eris-quad-linpack-oc-2010-0909.jpg %})
+![Quadrant and Linpack Stats slightly overclocked](/assets/images/blog/2010/make-your-droid-eris-faster-smoother-and-increase-battery-life/droid-eris-quad-linpack-oc-2010-0909.jpg)
 
 For those who are interested, the numbers above are just an example of the kind of performance you can get with some overclocking (SetCPU was set at 806400). However, I’m more interested in my phone’s stability and not raw performance.
 

@@ -18,7 +18,7 @@ As a web developer, I see the importance of minifying files for performance and 
 
 Smaller is a powerful little tool that allows you to compress and/or combine CSS, JavaScript, PHP, and HTML files quickly and easily. CSS and JavaScript compression is powered by YUI Compressor while PHP and HTML compression is done with htmlcompressor.
 
-![]({% cdn_url /assets/images/blog/2012/smaller-review/smaller-main-ui.jpg %})
+![](/assets/images/blog/2012/smaller-review/smaller-main-ui.jpg)
 
 Minifying files with Smaller is quick and easy; there’s nothing complicated about Smaller. Locate the file or folder of files you want to minify and drag-and-drop it onto Smaller. That loads it into the minify queue.
 
@@ -28,17 +28,17 @@ When you have loaded all the files you want, click *Minify* and your files will 
 
 If you have multiple files that you want to combine before you minify, simply load the files into the minify queue, select multiple files with ⌘+click, right click and select *Combine*. Unfortunately, Smaller doesn’t allow you to drag and select files, nor does it recognize the "Select-all" keyboard shortcut; therefore,  you’re stuck using the ⌘+click method of selecting multiple files.
 
-![]({% cdn_url /assets/images/blog/2012/smaller-review/smaller-combine.jpg %})
+![](/assets/images/blog/2012/smaller-review/smaller-combine.jpg)
 
 ### Additional features
 
 Smaller’s preferences allows you to tinker with a few of the default settings of Smaller to give you a little control of how the files are created and where they go.
 
-![]({% cdn_url /assets/images/blog/2012/smaller-review/smaller-preferences.jpg %})
+![](/assets/images/blog/2012/smaller-review/smaller-preferences.jpg)
 
 Lastly, if you add Smaller to the dock, you can use it as a droplet. Simply drop files/folders into the dock icon and let Smaller do the work for you.
 
-![]({% cdn_url /assets/images/blog/2012/smaller-review/smaller-droplet.jpg %})
+![](/assets/images/blog/2012/smaller-review/smaller-droplet.jpg)
 
 ## Summary
 
