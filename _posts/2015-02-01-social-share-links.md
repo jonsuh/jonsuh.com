@@ -22,17 +22,17 @@ It’s important to design and build sites responsibly—people pay for data and
 
 Here’s a breakdown of loading social sharing scripts from some of the most popular sites:
 
-| Site       | Files    | Size        |
-| :--------- |:--------:| -----------:|
-| Google+    | 1        | 15.2KB      |
-| Facebook   | 3        | 71.7KB      |
-| LinkedIn   | 2        | 47.9KB      |
-| Pinterest  | 3        | 12.9KB      |
-| Tumblr     | 1        | 1.5KB       |
-| Twitter    | 1        | 34.5KB      |
-| **Total**  | **11**   | **183.7KB** |
+| Site       | Files  | Size        |
+| :--------- |:------:| -----------:|
+| Google+    | 1      | 15.1KB      |
+| Facebook   | 3      | 73.3KB      |
+| LinkedIn   | 2      | 47.7KB      |
+| Pinterest  | 3      | 12.9KB      |
+| Tumblr     | 1      | 1.5KB       |
+| Twitter    | 4      | 52.7KB      |
+| **Total**  | **14** | **203.2KB** |
 
-That’s 11 additional requests and although it took 1.29 seconds to load on my connection, my connection advertises 50-105 Mbps. When I throttle the loading to an EDGE network, it takes 7 seconds.
+That’s 14 additional requests and although it took 1.3 seconds to load on my connection, my connection advertises 50-105 Mbps. When I throttle the loading to an EDGE network, it takes 7.7 seconds.
 
 The privacy of your users is another thing to consider—loading third-party share scripts allows them to track users on your site. Using share links not dependent on third-party scripts is not only faster, but you’re being more responsible and cautious with the privacy of your users, which is another huge plus.
 
