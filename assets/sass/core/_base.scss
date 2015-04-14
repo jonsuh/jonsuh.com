@@ -130,7 +130,7 @@ $section-padding: 25;
 // ==================================================
 blockquote {
   &.indented {
-    font-family: $sans-serif;
+    @include sans-serif;
     font-size: 1em;
     font-style: normal;
     border-left: 0;
@@ -216,15 +216,7 @@ ol, ul, li {
 }
 
 .serif {
-  font-family: $serif-local;
-
-  .wf-active & {
-    font-family: $serif;
-  }
-
-  .wf-inactive {
-    font-family: $serif-fallback;
-  }
+  @include serif;
 }
 
 // Elements

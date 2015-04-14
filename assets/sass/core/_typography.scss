@@ -8,10 +8,8 @@ $paragraph-letter-spacing: 0;
 $paragraph-indent        : 1.5em;
 $paragraph-margin-bottom : .75em;
 
-body,
-html {
+@mixin sans-serif {
   font-family: $sans-serif-local;
-  color: $paragraph-font-color;
 
   .fonts-loaded & {
     font-family: $sans-serif;
@@ -20,6 +18,24 @@ html {
   .fonts-timeout & {
     font-family: $sans-serif-fallback;
   }
+}
+
+@mixin serif {
+  font-family: $serif-local;
+
+  .wf-active & {
+    font-family: $serif;
+  }
+
+  .wf-inactive {
+    font-family: $serif-fallback;
+  }
+}
+
+body,
+html {
+  @include sans-serif;
+  color: $paragraph-font-color;
 }
 
 body,
@@ -111,7 +127,7 @@ ul {
 // Blockquote
 // ==================================================
 blockquote {
-  font-family: $serif;
+  @include serif;
   font-size: 1.15em;
   font-style: italic;
   color: scale-color($paragraph-font-color, $lightness: 15%);

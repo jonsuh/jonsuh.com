@@ -11,7 +11,7 @@ figure {
 }
 
 figcaption {
-  font-family: $serif;
+  @include serif;
   font-style: italic;
   font-size: em-calc(14);
   color: scale-color($paragraph-font-color, $lightness: 30%);

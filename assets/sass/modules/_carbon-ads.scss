@@ -53,7 +53,7 @@
 }
 
 .carbon-poweredby {
-  font-family: $serif;
+  @include serif;
   font-size: em-calc(13);
   font-style: italic;
   padding-top: em-calc(10);

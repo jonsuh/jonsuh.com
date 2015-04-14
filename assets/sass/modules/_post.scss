@@ -409,7 +409,7 @@
 }
 
 .post-rating-comments {
-  font-family: $serif;
+  @include serif;
   font-style: italic;
   bottom: em-calc(1);
 }
@@ -595,7 +595,7 @@ a.post-tag:hover {
 }
 
 .posts-header-label--tag {
-  font-family: $serif;
+  @include serif;
   font-style: italic;
   padding-right: em-calc(8);
   @include mq(small) {
