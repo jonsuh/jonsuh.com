@@ -6,7 +6,7 @@
     "bourbon": "~4.2.1",
     "neat": "~1.7.1",
     "picturefill": "~2.1.0",
-    "chartjs": "~1.0.1-beta.4",
+    "chartjs": "~1.0.2",
     "mq-sass": "*",
     "flickity": "~1.0.0",
     "loadcss": "~0.1.6",
