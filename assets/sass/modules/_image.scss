@@ -19,3 +19,15 @@ figcaption {
   text-align: center;
   margin-top: .75em;
 }
+
+.figure-padding {
+  background: image-url("loading.svg") no-repeat center;
+  padding-bottom: 56%; // 16:9
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}

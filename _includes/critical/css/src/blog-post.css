@@ -36,6 +36,8 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .section-break-half { width: 100%; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
 .section-break-half::after { clear: both; content: ''; display: table; }
 .section-break-half { padding-top: 0.78125em; }
+.figure-padding { background: url("/assets/images/loading.svg") no-repeat center; padding-bottom: 56%; height: 0; position: relative; }
+.figure-padding img { position: absolute; width: 100%; top: 0; }
 .main, .sidebar { max-width: 39.0625em; margin-left: auto; margin-right: auto; }
 .header-border { width: 100%; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 0.1875em; border-top-style: solid; border-top-color: rgb(230, 231, 235); position: absolute; bottom: 0px; left: 0px; z-index: 1; }
 .header { background-color: rgb(34, 35, 38); height: 3.75em; line-height: 3.5625em; overflow-x: hidden; overflow-y: hidden; position: relative; z-index: 3; }

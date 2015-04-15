@@ -332,6 +332,15 @@
     }
   }
 
+  figure {
+    margin-top: $paragraph-margin-bottom + $paragraph-margin-bottom-plus;
+    margin-bottom: $paragraph-margin-bottom + $paragraph-margin-bottom-plus;
+  }
+
+  figure figcaption {
+    margin-bottom: $paragraph-margin-bottom-plus * -1;
+  }
+
   .footnote {
     font-size: 90%;
     font-weight: 500;

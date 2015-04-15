@@ -7,6 +7,7 @@ $paragraph-line-height   : 1.5em;
 $paragraph-letter-spacing: 0;
 $paragraph-indent        : 1.5em;
 $paragraph-margin-bottom : .75em;
+$paragraph-margin-bottom-plus: .35em;
 
 @mixin sans-serif {
   font-family: $sans-serif-local;
