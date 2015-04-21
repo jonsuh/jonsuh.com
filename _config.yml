@@ -84,6 +84,7 @@ collections:
 # safe:         false
 # include:      [".htaccess"]
 exclude: [
+  "aws-keys.json",
   "assets/sass",
   "assets/js/src",
   "assets/js/vendor",
@@ -97,6 +98,8 @@ exclude: [
   "Gruntfile.js",
   "node_modules",
   "package.json",
+  "robots.production.txt",
+  "robots.staging.txt"
 ]
 # keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
