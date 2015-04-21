@@ -21,6 +21,7 @@ App = {
 
     // Other
     // ==================================================
+    App.codePenInit();
     App.flickityInit();
     // var postOverflow = document.querySelector(".js-post-overflow");
     // if (postOverflow) {
@@ -42,6 +43,13 @@ App = {
           Utility.addClass(aboutSidebarBreak, "has-carbonads");
         }
       }, 1000);
+    }
+  },
+
+  codePenInit: function() {
+    var codePen = document.querySelector(".codepen");
+    if (codePen) {
+      loadJS("//assets.codepen.io/assets/embed/ei.js");
     }
   },
 
