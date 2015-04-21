@@ -4,7 +4,7 @@
 {% include logic.html %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
-  {% if site.cdn_url contains '//' %}<link rel="prefetch" href="{{ '/assets/css/screen.css' | prepend: site.cdn_url }}?v={{ css_version }}">{% endif %}
+  {% if site.cdn_url contains '//' %}<link rel="dns-prefetch" href="{{ prepend: site.cdn_url }}">{% endif %}
   <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=Roboto:400,700,500">
   <style>{% if url == '/' %}
       {% include critical/css/home.css %}
@@ -80,12 +80,7 @@
 {% strip %}
   {% if page.js %}
     {% for js in page.js %}
-      <script src="{{ '/assets/js/' | prepend: site.cdn_url | append: js }}?v={{ js_version }}" async></script>
-    {% endfor %}
-  {% endif %}
-  {% if url == "/" and site.posts.first.js %}
-    {% for js in site.posts.first.js %}
-      <script src="{{ '/assets/js/' | prepend: site.cdn_url | append: js }}?v={{ js_version }}" async></script>
+      <script src="{{ '/assets/js/' | prepend: site.cdn_url | append: js }}?v={{ js_version }}"{% if js contains 'chart.js' %}{% else %} async{% endif %}></script>
     {% endfor %}
   {% endif %}
 {% endstrip %}
