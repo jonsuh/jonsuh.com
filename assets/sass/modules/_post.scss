@@ -1086,7 +1086,7 @@ a.post-tag--pink:hover {
   }
 }
 
-@include mq(1150) {
+@include mq(1190) {
   .post-pagination-bumper {
     width: em-calc(60);
     display: block;
