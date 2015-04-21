@@ -59,11 +59,11 @@ module.exports = function(grunt) {
       },
       robots_staging: {
         src: 'robots.staging.txt',
-        dest: 'robots.txt'
+        dest: '_site/robots.txt'
       },
       robots_production: {
         src: 'robots.production.txt',
-        dest: 'robots.txt'
+        dest: '_site/robots.txt'
       },
       images_production: {
         expand: true,
