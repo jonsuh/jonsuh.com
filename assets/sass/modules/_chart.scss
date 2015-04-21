@@ -2,7 +2,10 @@
 // Chart
 // ==================================================
 .chart {
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: $paragraph-margin-bottom + $paragraph-margin-bottom-plus;
+  margin-top: $paragraph-margin-bottom + $paragraph-margin-bottom-plus;
+  margin-left: auto;
+  margin-right: auto;
   @include clearfix;
 
   .chart-legend {
@@ -16,8 +19,11 @@
   }
 }
 
+// Legend
+// ==================================================
 .chart-legend {
   text-align: center;
+  padding-top: em-calc(10);
   @include clearfix;
 }
 
@@ -40,13 +46,43 @@
 }
 
 .chart-legend-item-title {
-  font-size: em-calc(11);
+  font-size: em-calc(12);
   font-weight: 500;
   letter-spacing: 0.025em;
 }
 
-@include mq(small) {
-  .chart-legend-item-title {
-    font-size: em-calc(12);
+// Pie
+// ==================================================
+.chart--pie {
+  position: relative;
+  max-width: em-calc(200);
+
+  .chart-legend {
+    width: 140%;
+    margin-left: -20%;
+  }
+
+  .chart-legend-item {
+    display: block;
+    margin: 0 0 em-calc(2);
+    text-align: left;
+    width: 50%;
+    float: left;
+  }
+
+  @include mq(medium) {
+    .chart-legend {
+      padding-top: 0;
+      width: 85%;
+      position: absolute;
+      top: 0;
+      left: 120%;
+      margin-left: inherit;
+    }
+
+    .chart-legend-item {
+      width: auto;
+      float: none;
+    }
   }
 }

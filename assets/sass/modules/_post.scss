@@ -196,6 +196,7 @@
   ul,
   ol,
   figure,
+  .chart,
   .highlight,
   .twitter-tweet {
     + h1,
@@ -237,6 +238,7 @@
 
   table {
     @extend p;
+    width: 100%;
 
     th {
       background-color: $grey-lighter;
@@ -332,7 +334,8 @@
     }
   }
 
-  figure {
+  figure,
+  table {
     margin-top: $paragraph-margin-bottom + $paragraph-margin-bottom-plus;
     margin-bottom: $paragraph-margin-bottom + $paragraph-margin-bottom-plus;
   }
