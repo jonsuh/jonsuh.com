@@ -88,6 +88,7 @@ module.exports = function(grunt) {
           'assets/js/chart.js': [
             'bower_components/chartjs/src/Chart.Core.js',
             'bower_components/chartjs/src/Chart.Line.js',
+            'bower_components/chartjs/src/Chart.Doughnut.js',
             'assets/js/vendor/Chart.legend.js'
           ],
           'assets/js/flickity.js': ['bower_components/flickity/dist/flickity.pkgd.js'],

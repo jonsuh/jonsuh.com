@@ -96,6 +96,7 @@ var concatOptions = {
     src: [
       'bower_components/chartjs/src/Chart.Core.js',
       'bower_components/chartjs/src/Chart.Line.js',
+      'bower_components/chartjs/src/Chart.Doughnut.js',
       'assets/js/vendor/Chart.legend.js'
     ],
     filename: 'chart.js',
