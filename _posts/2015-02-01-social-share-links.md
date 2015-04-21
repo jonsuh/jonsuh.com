@@ -102,12 +102,12 @@ Let’s take the corresponding values and construct the share URL:
 
 {% highlight html %}
 <!--
-text: Check out my new website!
+text: Check out this website!
 url : https://jonsuh.com/
 via : jonsuh
 -->
 <a href="https://twitter.com/intent/tweet/
-     ?text={{ 'Check out my new website!' | encode_url }}
+     ?text={{ 'Check out this website!' | encode_url }}
      &url={{ 'https://jonsuh.com/' | encode_url }}
      &via=jonsuh" 
    target="_blank">Share on Twitter</a>
@@ -119,7 +119,7 @@ You can also replace the “Share on Twitter” text with a custom image:
 
 {% highlight html %}
 <a href="https://twitter.com/intent/tweet/
-     ?text={{ 'Check out my new website!' | encode_url }}
+     ?text={{ 'Check out this website!' | encode_url }}
      &url={{ 'https://jonsuh.com/' | encode_url }}
      &via=jonsuh" 
    target="_blank">
@@ -138,7 +138,7 @@ Even better, customize it with CSS:
 
 {% highlight html %}
 <a class="custom-share-button" href="https://twitter.com/intent/tweet/
-     ?text={{ 'Check out my new website!' | encode_url }}
+     ?text={{ 'Check out this website!' | encode_url }}
      &url={{ 'https://jonsuh.com/' | encode_url }}
      &via=jonsuh" 
    target="_blank">
@@ -173,7 +173,7 @@ Even better, customize it with CSS:
 .custom-share-button:hover { background-color: #70b7ec; }
 </style>
 {% endhighlight %}
-{% strip %}
+
 <style>
 .custom-share-button {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -218,9 +218,9 @@ Even better, customize it with CSS:
   color: #fff;
 }
 </style>
-{% endstrip %}
-<a class="custom-share-button" href="https://twitter.com/intent/tweet/?text={{ 'Check out my new website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" target="_blank">
-  <span class="custom-share-button-icon">{% include svg/twitter.html %}</span>
+
+<a class="custom-share-button" href="https://twitter.com/intent/tweet/?text={{ 'Check out this website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" target="_blank">
+  <span class="custom-share-button-icon">{% strip %}{% include svg/twitter.html %}{% endstrip %}</span>
   <span class="custom-share-button-label">Share on Twitter</span>
 </a>
 
@@ -246,7 +246,7 @@ function windowPopup(url, width, height) {
 Bind `windowPopup` to when the share link is clicked. In this example, we’ll use a JavaScript-specific utility class `js-social-share`.
 
 {% highlight html %}
-<a class="js-social-share" href="https://twitter.com/intent/tweet/?text={{ 'Check out my new website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" target="_blank">Share on Twitter</a>
+<a class="js-social-share" href="https://twitter.com/intent/tweet/?text={{ 'Check out this website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" target="_blank">Share on Twitter</a>
 {% endhighlight %}
 
 {% highlight js %}
@@ -271,7 +271,7 @@ if (jsSocialShares) {
 {% endhighlight %}
 
 <p>
-  <a href="https://twitter.com/intent/tweet/?text={{ 'Check out my new website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" class="js-social-share button" target="_blank">Share on Twitter (Popup)</a>
+  <a href="https://twitter.com/intent/tweet/?text={{ 'Check out this website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" class="js-social-share button" target="_blank">Share on Twitter (Popup)</a>
   <script>
   var jsSocialShares = document.querySelectorAll(".js-social-share");
   if (jsSocialShares) {
