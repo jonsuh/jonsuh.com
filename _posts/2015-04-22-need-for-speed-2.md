@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Need for Speed 2&#58; Improving Front-End Performance
+title: "Need for Speed 2: Improving Front-End Performance"
 date: "2015-04-22 05:00:00"
 share_image: unoptimized-vs-optimized.png
 comments: false
@@ -312,6 +312,7 @@ I feel that I’ve made a lot of headway and learned a lot over the past few mon
 Chock full of useful resources to get you neck deep in performance.
 
 - <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed Insights</a>
+- <a href="https://speedcurve.com" target="_blank">SpeedCurve</a>
 - <a href="http://www.webpagetest.org" target="_blank">WebPagetest</a>
 - <a href="http://whatdoesmysitecost.com" target="_blank">What Does My Site Cost?</a>
 - <a href="http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/" target="_blank">Front-end performance for web designers and front-end developers</a>
