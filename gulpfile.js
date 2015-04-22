@@ -115,6 +115,14 @@ var concatOptions = {
     destBuild: 'assets/js/blog',
     destJekyll: '_site/assets/js/blog',
   },
+  blogNeedForSpeed2: {
+    src: [
+      'assets/js/src/blog/need-for-speed-2.js'
+    ],
+    filename: 'need-for-speed-2.js',
+    destBuild: 'assets/js/blog',
+    destJekyll: '_site/assets/js/blog',
+  },
   destBuild: 'assets/js',
   destJekyll: '_site/assets/js',
 };
@@ -140,7 +148,11 @@ gulp.task('concat', function() {
     .pipe(concat(concatOptions.blogHttpsIncreased.filename))
     .pipe(gulp.dest(concatOptions.blogHttpsIncreased.destBuild));
 
-  return merge(jonsuh, critical, chart, flickity, blog_https_increased);
+  var blog_need_for_speed_2 = gulp.src(concatOptions.blogNeedForSpeed2.src)
+    .pipe(concat(concatOptions.blogNeedForSpeed2.filename))
+    .pipe(gulp.dest(concatOptions.blogNeedForSpeed2.destBuild));
+
+  return merge(jonsuh, critical, chart, flickity, blog_https_increased, blog_need_for_speed_2);
 });
 
 gulp.task('concat-jekyll', function() {
@@ -164,7 +176,11 @@ gulp.task('concat-jekyll', function() {
     .pipe(concat(concatOptions.blogHttpsIncreased.filename))
     .pipe(gulp.dest(concatOptions.blogHttpsIncreased.destJekyll));
 
-  return merge(jonsuh, critical, chart, flickity, blog_https_increased);
+  var blog_need_for_speed_2 = gulp.src(concatOptions.blogNeedForSpeed2.src)
+    .pipe(concat(concatOptions.blogNeedForSpeed2.filename))
+    .pipe(gulp.dest(concatOptions.blogNeedForSpeed2.destBuild));
+
+  return merge(jonsuh, critical, chart, flickity, blog_https_increased, blog_need_for_speed_2);
 });
 
 gulp.task('jekyll', shell.task([
