@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Need for Speed 2&#58; Front-End Performance
-date: "2015-04-06 10:00:00"
+date: "2015-04-22 10:00:00"
 comments: false
 tags:
 - development
