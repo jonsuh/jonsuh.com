@@ -94,11 +94,14 @@ module.exports = function(grunt) {
           'assets/js/flickity.js': ['bower_components/flickity/dist/flickity.pkgd.js'],
           'assets/js/blog/https-increased-organic-search-impressions-by-144-percent.js': ['assets/js/src/blog/https-increased-organic-search-impressions-by-144-percent.js'],
           'assets/js/blog/need-for-speed-2.js': ['assets/js/src/blog/need-for-speed-2.js'],
-          '_includes/critical/js/jonsuh.js': [
+          '_includes/critical/js/head.js': [
             'bower_components/loadcss/loadCSS.js',
             'assets/js/vendor/promise.js',
             'bower_components/fontfaceobserver/fontfaceobserver.js',
-            'assets/js/src/critical.js',
+            'assets/js/src/critical-head.js',
+          ],
+          '_includes/critical/js/foot.js': [
+            'assets/js/src/critical-foot.js',
           ],
         }
       }

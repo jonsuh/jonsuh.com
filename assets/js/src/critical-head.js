@@ -143,8 +143,8 @@ function loadJS( src, cb ){
   return script;
 }
 
-for (var i = 0; i < metaArray.length; i++) {
-  if (metaArray[i].getAttribute("name").match(/JS/)) {
-    loadJS(metaArray[i].getAttribute("content"));
-  }
-}
+// for (var i = 0; i < metaArray.length; i++) {
+//   if (metaArray[i].getAttribute("name").match(/JS/)) {
+//     loadJS(metaArray[i].getAttribute("content"));
+//   }
+// }

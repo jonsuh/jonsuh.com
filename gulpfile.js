@@ -82,14 +82,21 @@ var concatOptions = {
     ],
     filename: 'jonsuh.js',
   },
-  critical: {
+  criticalHead: {
     src: [
       'bower_components/loadcss/loadCSS.js',
       'assets/js/vendor/promise.js',
       'bower_components/fontfaceobserver/fontfaceobserver.js',
-      'assets/js/src/critical.js'
+      'assets/js/src/critical-head.js'
     ],
-    filename: 'jonsuh.js',
+    filename: 'head.js',
+    dest: '_includes/critical/js',
+  },
+  criticalFoot: {
+    src: [
+      'assets/js/src/critical-foot.js'
+    ],
+    filename: 'foot.js',
     dest: '_includes/critical/js',
   },
   chart: {
@@ -132,9 +139,13 @@ gulp.task('concat', function() {
     .pipe(concat(concatOptions.concat.filename))
     .pipe(gulp.dest(concatOptions.destBuild));
 
-  var critical = gulp.src(concatOptions.critical.src)
-    .pipe(concat(concatOptions.critical.filename))
-    .pipe(gulp.dest(concatOptions.critical.dest));
+  var criticalHead = gulp.src(concatOptions.criticalHead.src)
+    .pipe(concat(concatOptions.criticalHead.filename))
+    .pipe(gulp.dest(concatOptions.criticalHead.dest));
+
+  var criticalFoot = gulp.src(concatOptions.criticalFoot.src)
+    .pipe(concat(concatOptions.criticalFoot.filename))
+    .pipe(gulp.dest(concatOptions.criticalFoot.dest));
 
   var chart = gulp.src(concatOptions.chart.src)
     .pipe(concat(concatOptions.chart.filename))
@@ -152,7 +163,7 @@ gulp.task('concat', function() {
     .pipe(concat(concatOptions.blogNeedForSpeed2.filename))
     .pipe(gulp.dest(concatOptions.blogNeedForSpeed2.destBuild));
 
-  return merge(jonsuh, critical, chart, flickity, blog_https_increased, blog_need_for_speed_2);
+  return merge(jonsuh, criticalHead, criticalFoot, chart, flickity, blog_https_increased, blog_need_for_speed_2);
 });
 
 gulp.task('concat-jekyll', function() {
@@ -160,9 +171,13 @@ gulp.task('concat-jekyll', function() {
     .pipe(concat(concatOptions.concat.filename))
     .pipe(gulp.dest(concatOptions.destJekyll));
 
-  var critical = gulp.src(concatOptions.critical.src)
-    .pipe(concat(concatOptions.critical.filename))
-    .pipe(gulp.dest(concatOptions.critical.dest));
+  var criticalHead = gulp.src(concatOptions.criticalHead.src)
+    .pipe(concat(concatOptions.criticalHead.filename))
+    .pipe(gulp.dest(concatOptions.criticalHead.dest));
+
+  var criticalFoot = gulp.src(concatOptions.criticalFoot.src)
+    .pipe(concat(concatOptions.criticalFoot.filename))
+    .pipe(gulp.dest(concatOptions.criticalFoot.dest));
 
   var chart = gulp.src(concatOptions.chart.src)
     .pipe(concat(concatOptions.chart.filename))
@@ -180,7 +195,7 @@ gulp.task('concat-jekyll', function() {
     .pipe(concat(concatOptions.blogNeedForSpeed2.filename))
     .pipe(gulp.dest(concatOptions.blogNeedForSpeed2.destBuild));
 
-  return merge(jonsuh, critical, chart, flickity, blog_https_increased, blog_need_for_speed_2);
+  return merge(jonsuh, criticalHead, criticalFoot, chart, flickity, blog_https_increased, blog_need_for_speed_2);
 });
 
 gulp.task('jekyll', shell.task([
