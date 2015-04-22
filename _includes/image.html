@@ -1,6 +1,6 @@
-<figure{% if include.padding %}{% if include.caption %}{% else %} class="figure-padding"{% endif %}{% endif %}>
+<figure{% if include.padding %}{% if include.caption %}{% else %} class="figure-padding"{% if include.padding != "1" %} style="padding-bottom: {{ include.padding }}"{% endif %}{% endif %}{% endif %}>
   {% if include.padding %}{% if include.caption %}<div class="figure-padding"{% if include.padding != "1" %} style="padding-bottom: {{ include.padding }}"{% endif %}>{% endif %}{% endif %}
-    <img {% if include.async %}data-aload{% else %}src{% endif %}="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}">
+    <img {% if include.async %}data-aload{% else %}src{% endif %}="{% if include.src contains "://" or include.src contains "/assets/" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}">
     {% if include.async %}<noscript><img src="{% if include.src contains "://" %}{% else %}/assets/images{{ page.url }}/{% endif %}{{ include.src }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}"></noscript>{% endif %}
   {% if include.padding %}{% if include.caption %}</div>{% endif %}{% endif %}
   {% if include.caption %}
