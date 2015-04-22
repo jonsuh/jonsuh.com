@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Need for Speed 2&#58; Front-End Performance
-date: "2015-04-22 10:00:00"
+title: Need for Speed 2&#58; Improving Front-End Performance
+date: "2015-04-22 05:00:00"
+share_image: unoptimized-vs-optimized.png
 comments: false
 tags:
 - development
@@ -39,7 +40,7 @@ Every asset required to render the page (external CSS or JS files, webfonts, ima
 
 My goal was to minimize HTTP requests. One way is to compile or concatenate (combining/merging) CSS and JS into one file each. Automating this process (e.g. using a build tool like <a href="http://gruntjs.com" target="_blank">Grunt</a> or <a href="http://gulpjs.com" target="_blank">Gulp</a>) is ideal, but at the very least should be done manually for production.
 
-Third-party scripts are common culprits for making additional requests—many make more than 1 request to grab additional files such as scripts, images or CSS. Your browser’s built-in developer’s tool can help you sniff out the offenders.
+Third-party scripts are common culprits for making additional requests—many make more than 1 request to grab additional files such as scripts, images or CSS. Your browser’s built-in developer tools can help you sniff out the offenders.
 
 {% include image.html src="developer-tools.jpg" caption="Google Chrome Developer Tools’ Network tab" async="1" padding="58%" %}
 
@@ -63,14 +64,14 @@ Evaluate each third-party script and determine its importance. There may be a wa
 
 ## Compression/Optimization
 
-Now that I had found ways to minimize the requests made, I began looking for ways to cut fat off of the meat. The smaller the files, the faster they load. The <a href="http://httparchive.org/trends.php#bytesTotal&reqTotal" target="_blank">average page size is 1,950KB</a>. Here’s the content breakdown:
+Now that I had found ways to minimize the requests made, I began looking for ways to cut fat off the meat. The smaller the files, the faster they load. The <a href="http://httparchive.org/trends.php#bytesTotal&reqTotal" target="_blank">average page size is 1,950KB</a>. Here’s the content breakdown:
 
 <div class="chart chart--pie">
   <canvas id="content-pie-chart" width="200" height="200"></canvas>
   <div id="content-pie-chart-legend" class="chart-legend"></div>
 </div>
 
-I used these numbers as a reference and starting point to compare and find ways to cut weight where I could. <a href="http://whatdoesmysitecost.com/" target="_blank">What Does My Site Cost?</a> built by <a href="https://twitter.com/tkadlec" target="_blank">Tim Kadlec</a>, is a wonderful tool to help you test and visualize a site or page and tell what it costs to visit your site in around the world.
+I used these numbers as a reference and starting point to compare and find ways to cut weight where I could. <a href="http://whatdoesmysitecost.com/" target="_blank">What Does My Site Cost?</a> built by <a href="https://twitter.com/tkadlec" target="_blank">Tim Kadlec</a>, is a wonderful tool to help you test and visualize what it costs to visit your site from around the world.
 
 ### CSS and JavaScript
 
