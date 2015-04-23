@@ -271,7 +271,7 @@ Progressively loading fonts results in FOUT (Flash of Unstyled Text) and/or FOFT
 
 {% include image.html src="/assets/images/blog/font-loading-with-font-events/foit-solved.jpg" caption="Progressive font loading without FOIT" async="1" padding="34.7142857%" %}
 
-However, the benefit is that the content comes and stays available without going invisible. I wrote an in-depth post on how I defeated FOIT in <a href="blog/font-loading-with-font-events/">Font Loading with Font Events</a>.
+However, the benefit is that the content comes and stays available without going invisible. I wrote an in-depth post on how I defeated FOIT in <a href="/blog/font-loading-with-font-events/">Font Loading with Font Events</a>.
 
 ## Other
 
