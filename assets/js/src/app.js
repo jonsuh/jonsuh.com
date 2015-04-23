@@ -1,7 +1,6 @@
 var App = App || {};
 
 App = {
-  googleAnalyticsUA: "", // PARTS OF THIS LINE HAVE BEEN REMOVED
   transitionEnd: null,
 
   init: function() {
@@ -10,7 +9,7 @@ App = {
 
     // Load external scripts
     // ==================================================
-    loadJS("//www.google-analytics.com/analytics.js");
+    // loadJS("//www.google-analytics.com/analytics.js");
     Social.load();
 
     // Initialize pages
@@ -29,9 +28,9 @@ App = {
     //   postOverflow.addEventListener("click", App.postOverflow);
     // }
 
-    // Initialize social and tracking
+    // Initialize social
     // ==================================================
-    App.googleAnalytics();
+    // App.googleAnalytics();
     Social.init();
 
     // About page Carbon Ads detection
@@ -110,16 +109,16 @@ App = {
     })(document);
   },
 
-  googleAnalytics: function() {
-    ga = function() {
-      ga.q.push(arguments);
-    };
-    ga.q = [
-      ["create", App.googleAnalyticsUA, "auto"],
-      ["send", "pageview"]
-    ];
-    ga.l = 1 * new Date();
-  },
+  // googleAnalytics: function() {
+  //   ga = function() {
+  //     ga.q.push(arguments);
+  //   };
+  //   ga.q = [
+  //     ["create", App.googleAnalyticsUA, "auto"],
+  //     ["send", "pageview"]
+  //   ];
+  //   ga.l = 1 * new Date();
+  // },
 
   newsletterInit: function() {
     var form = document.querySelector(".js-form-newsletter"),
