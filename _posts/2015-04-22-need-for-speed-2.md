@@ -58,20 +58,20 @@ For example, Facebook’s script makes 3 requests. A test environment with socia
 
 <small class="serif"><em>Source: <a href="/blog/social-share-links/">Responsible Social Share Links</a></em></small>
 
-That’s an additional 14 HTTP requests and 203.2KB. Instead, I went with <a href="/blog/social-share-links/">“share-intent” URLs</a>, which are basically links used to pass and construct data into a share and can be used to create social share links using just HTML. It allowed me to strip away the third-party scripts I was using for sharing, which accounted for 7 requests. I wrote more on this matter on <a href="/blog/social-share-links/">Responsible Social Share Links</a>.
+That’s an additional 14 HTTP requests and 203.2KB. Instead, I went with <a href="/blog/social-share-links/" title="Responsible Social Share Links">“share-intent” URLs</a>, which are basically links used to pass and construct data into a share and can be used to create social share links using just HTML. It allowed me to strip away the third-party scripts I was using for sharing, which accounted for 7 requests. I wrote more on this matter on <a href="/blog/social-share-links/">Responsible Social Share Links</a>.
 
 Evaluate each third-party script and determine its importance. There may be a way to accomplish what it does without depending on the third-party. You may lose some functionality (e.g. like/tweet/share count) but ask the question: “Is the like count *that* important?”
 
 ## Compression/Optimization
 
-Now that I had found ways to minimize the requests made, I began looking for ways to cut fat off the meat. The smaller the files, the faster they load. The <a href="http://httparchive.org/trends.php#bytesTotal&reqTotal" target="_blank">average page size is 1,950KB</a>. Here’s the content breakdown:
+Now that I had found ways to minimize requests made, I began looking for ways to cut fat off the meat. The smaller the files, the faster they load. The <a href="http://httparchive.org/trends.php#bytesTotal&reqTotal" target="_blank">average page size is 1,950KB</a>. Here’s the content breakdown:
 
 <div class="chart chart--pie">
   <canvas id="content-pie-chart" width="200" height="200"></canvas>
   <div id="content-pie-chart-legend" class="chart-legend"></div>
 </div>
 
-I used these numbers as a reference and starting point to compare and find ways to cut weight where I could. <a href="http://whatdoesmysitecost.com/" target="_blank">What Does My Site Cost?</a> built by <a href="https://twitter.com/tkadlec" target="_blank">Tim Kadlec</a>, is a wonderful tool to help you test and visualize what it costs to visit your site from around the world.
+I used these numbers as a reference and starting point to compare and find ways to cut weight where I could. <a href="http://whatdoesmysitecost.com/" target="_blank">What Does My Site Cost?</a> built by <a href="https://twitter.com/tkadlec" target="_blank">Tim Kadlec</a>, is a wonderful tool to help you test and visualize what it costs to visit your site from around the world based on the weight of your site.
 
 ### CSS and JavaScript
 
@@ -111,7 +111,7 @@ You can also squeeze bytes out of images by optimizing them. There are 2 ways to
 1. Lossy—lowers image quality
 2. Lossless—doesn’t affect quality
 
-For best results I do both, and the order is important. First, compress images using a lossy method, such as resizing images to sizes no bigger than necessary, then exporting them at a slightly lower quality without compromising too much (i.e. I usually export JPGs at 82–92%)
+For best results I do both, and the order is important. First, compress images using a lossy method, such as resizing images to sizes no bigger than necessary, then exporting them at a slightly lower quality without compromising too much (e.g. I usually export JPGs at 82–92%)
 
 {% include image.html src="imageoptim.jpg" caption="ImageOptim, an image optimization tool for OS X" alt="ImageOptim for OS X" async="1" padding="26.25%" %}
 
@@ -139,7 +139,7 @@ When minimizing the time to first render, we’re giving more attention to the p
 
 ### CSS
 
-Browsers, by default, treat CSS as render blocking; therefore, when it hits the pipeline, browsers hold off rendering until the CSS has been downloaded and processed. External stylesheets increase that wait time because the browser now has to make one or more network trips to fetch the files, and large stylesheets can cause also increase that time.
+Browsers, by default, treat CSS as render blocking; therefore, when it hits the pipeline, browsers hold off rendering until the CSS has been downloaded and processed. External stylesheets mean more network trips, which increase that wait time, and large stylesheets increase that time as well.
 
 We can improve the page render time by inlining “critical CSS” in the `<head>` so the browser can quickly render the above-the-fold content of a page without having to wait to download the entire stylesheet, and then loading the full stylesheet in a non-rendering-blocking way.
 
@@ -299,11 +299,11 @@ That’s an overall 87.5% better than average!—Not bad. Google PageSpeed Insig
 
 {% include image.html src="pagespeed-ok.jpg" caption="Google PageSpeed Insights results after optimizations" async="1" padding="29.25%" %}
 
-In regards to WebPagetest results, I noticed that although bytes increased on the About page, my time to first render and fully loaded decreased considerably.
+In regards to WebPagetest results, I noticed that although bytes increased on the About page, my start-render and fully-loaded times decreased considerably.
 
 {% include image.html src="webpagetest-about-after.jpg" caption="About page WebPagetest results after page-render optimizations" async="1" padding="11.875%" %}
 
-Performance improvements will always be a work-in-progress, and with <a href="https://http2.github.io/" target="_blank">HTTP/2 on its way</a>, some of this may change, and things that used to work may not work anymore.
+Performance improvements will always be a work-in-progress, and with <a href="https://http2.github.io/" target="_blank">HTTP/2 on its way</a>, some of this is bound to change—techniques that used to work well may not work as well anymore, while others may become deprecated altogether.
 
 I feel that I’ve made a lot of headway and learned a lot over the past few months. My site is <a href="https://github.com/jonsuh/jonsuh.com" target="_blank">open-sourced on Github</a>, so feel free to take a peek at what’s going on under the hood. I’ve yet to figure it all out, but I hope that my sharing what I’ve done and learned with you gives you some insight. If you have any questions or wanna chat, feel free to hit me up on Twitter <a href="https://twitter.com/jonsuh" target="_blank">@jonsuh</a> or [drop me an email](/contact/).
 
@@ -322,8 +322,10 @@ Chock full of useful resources to get you neck deep in performance.
 - <a href="https://developers.google.com/web/fundamentals/performance/" target="_blank">Optimizing Performance</a>
 - <a href="http://daverupert.com/2014/07/rwd-bloat/" target="_blank">RWD Bloat Part I</a> and <a href="http://daverupert.com/2014/07/rwd-bloat-part-ii/" target="_blank">Part II</a>
 - <a href="https://developers.google.com/speed/pagespeed/module" target="_blank">Google PageSpeed Module</a>
+- <a href="/blog/social-share-links">Responsible Social Share Links</a>
 - <a href="https://adactio.com/journal/8504" target="_blank">Inlining critical CSS for first-time visits</a>
 - <a href="http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html" target="_blank">async vs defer Attributes</a>
+- <a href="/blog/font-loading-with-font-events/">Font Loading with Font Events</a>
 - <a href="http://www.filamentgroup.com/lab/font-events.html" target="_blank">Font Loading Revisited with Font Events</a>
 - <a href="http://www.zachleat.com/web/foft/" target="_blank">Flash of Faux Text—still more on Font Loading</a>
 - <a href="http://pathtoperf.com/" target="_blank">The Path to Performance Podcast</a>
