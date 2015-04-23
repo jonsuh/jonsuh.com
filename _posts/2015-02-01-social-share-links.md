@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsible, Faster Social Share Links
+title: Responsible Social Share Links
 date: "2015-02-01 08:00:00"
 updated: "2015-03-26 10:10:00"
 comments: false
@@ -38,7 +38,7 @@ The privacy of your users is another thing to consider—loading third-party sha
 
 ## Use Share URLs
 
-Each social network has its own unique share URL that accepts custom parameters used to pull in the information to be displayed. Most importantly they do not require JavaScript to work.
+Each social network has its own unique share URL that accepts custom parameters used to pull in the information to be displayed. Most importantly, social share links work without JavaScript.
 
 Let’s take a look at Facebook’s share URL:
 
@@ -365,4 +365,4 @@ All parameters are optional. <a href="https://dev.twitter.com/web/tweet-button/w
 
 ## Conclusion
 
-There are some limitations to using traditional share URLs (for example you can’t set custom captions and descriptions with Facebook’s; therefore, you’d have to use <a href="https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.2" target="_blank">Facebook’s SDK and Feed Dialog</a>, or not being able to show the like/tweet/share count) but unless it’s necessary, the benefits of not loading third-party scripts outweight the cons.
+Removing third-party social share scripts and using social share URLs will make your site leaner and faster. However, there are some limitations to using traditional share URLs (for example you can’t set custom captions and descriptions with Facebook’s; therefore, you’d have to use <a href="https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.2" target="_blank">Facebook’s SDK and Feed Dialog</a>, or not being able to show the like/tweet/share count) but unless it’s necessary, the benefits of not loading third-party scripts outweight the cons.
