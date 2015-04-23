@@ -18,6 +18,7 @@ App = {
     App.error404Init();
     App.newsletterInit();
     Work.init();
+    App.cookieInit();
 
     // Other
     // ==================================================
@@ -50,6 +51,12 @@ App = {
     var codePen = document.querySelector(".codepen");
     if (codePen) {
       loadJS("//assets.codepen.io/assets/embed/ei.js");
+    }
+  },
+
+  cookieInit: function() {
+    if (document.cookie.indexOf("mainJS=true") == -1) {
+      document.cookie = "mainJS=true";
     }
   },
 

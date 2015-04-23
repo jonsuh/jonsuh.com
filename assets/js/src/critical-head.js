@@ -16,8 +16,16 @@ for (var i = 0; i < metaTags.length; i++) {
 // loadCSS
 // ==================================================
 for (var i = 0; i < metaArray.length; i++) {
-  if (metaArray[i].getAttribute("name").match(/CSS/)) {
-    loadCSS(metaArray[i].getAttribute("content"));
+  var metaAttrName = metaArray[i].getAttribute("name");
+
+  if (metaAttrName.match(/CSS/)) {
+    if (metaAttrName == "mainCSS") {
+      loadCSS(metaArray[i].getAttribute("content"), null, null, function() {
+        document.cookie = "mainCSS=true";
+      });
+    } else {
+      loadCSS(metaArray[i].getAttribute("content"));
+    }
   }
 }
 
@@ -41,6 +49,7 @@ for (var i = 0; i < metaArray.length; i++) {
     roboto700.check()
   ]).then(function() {
     document.documentElement.className += " fonts-loaded";
+    document.cookie = "fonts-loaded=true";
   }, function() {
     document.documentElement.className += " fonts-timeout";
   });
