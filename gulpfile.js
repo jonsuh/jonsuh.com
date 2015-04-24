@@ -14,7 +14,7 @@ var gulp         = require('gulp'),
 var onError = function(err) {
   notify.onError({
     title:    "Error",
-    message:  "<%= error.message %>",
+    message:  "<%= error %>",
   })(err);
   this.emit('end');
 };
