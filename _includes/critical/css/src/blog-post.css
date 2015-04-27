@@ -108,7 +108,6 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .post-title { margin-bottom: 0.5em; }
 .post-link { color: rgb(34, 35, 38); border-bottom-color: transparent; }
 .post-meta { font-size: 0.875em; color: rgb(153, 154, 161); }
-.post-meta-bullet { margin-left: 0.2em; margin-right: 0.2em; }
 .post-meta-author-link { color: rgb(153, 154, 161); border-bottom-color: transparent; }
 .post-rating { margin-bottom: 0.75em; }
 .post-rating-stars { margin-right: .3em; display: inline-block; position: relative; white-space: nowrap; }
