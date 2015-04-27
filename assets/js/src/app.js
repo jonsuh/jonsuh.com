@@ -33,6 +33,10 @@ App = {
     // App.googleAnalytics();
     Social.init();
 
+    // Track external blog posts
+    // ==================================================
+    App.outboundInit();
+
     // About page Carbon Ads detection
     // ==================================================
     var aboutSidebarBreak = document.querySelector(".about-sidebar-break");
@@ -186,6 +190,25 @@ App = {
   //     Utility.removeClass(overflow, "has-transition");
   //   }
   // },
+
+  outboundInit: function() {
+    var outboundLinks = document.querySelectorAll(".js-outbound");
+    [].forEach.call(outboundLinks, function(outboundLink) {
+      outboundLink.addEventListener("click", App.outboundClick);
+    });
+  },
+
+  outboundClick: function(e) {
+    e.preventDefault();
+
+    var url = this.getAttribute("href");
+
+    if (ga) {
+      ga("send", "event", "outbound", "click", url);
+    }
+
+    window.open(url, "_blank");
+  },
 };
 
 App.init();
