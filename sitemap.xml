@@ -37,14 +37,16 @@
 {% endfor %}
 
 {% for page in site.posts %}
-  <url>
-    <loc>{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</loc>
-    <changefreq>monthly</changefreq>
-    {% if page.updated != nil %}
-      <lastmod>{{ page.updated | date: "%Y-%m-%d" }}</lastmod>
-    {% endif %}
-    <priority>0.8</priority>
-  </url>
+  {% if page.layout != 'external' %}
+    <url>
+      <loc>{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}</loc>
+      <changefreq>monthly</changefreq>
+      {% if page.updated != nil %}
+        <lastmod>{{ page.updated | date: "%Y-%m-%d" }}</lastmod>
+      {% endif %}
+      <priority>0.8</priority>
+    </url>
+  {% endif %}
 {% endfor %}
 {% endstrip %}
 </urlset>

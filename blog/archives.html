@@ -16,7 +16,13 @@ sitemap:
           <h2>{{ post.date | date: '%Y' }}</h2>
           <ul class="post-archives">
         {% endif %}
-        <li class="post-archives-item"><a href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-archives-link"><span class="post-meta post-meta--archives">{{ post.date | date: '%B %e' }}</span>{{ post.title }}</a></li>
+        <li class="post-archives-item">
+          {% if post.layout == 'external' %}
+            <a href="{{ post.external_url }}" class="post-archives-link" target="_blank"><span class="post-meta post-meta--archives">{{ post.date | date: '%B %e' }}</span>{{ post.title }}{% include svg/external.html %}</a>
+          {% else %}
+            <a href="{{ post.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-archives-link"><span class="post-meta post-meta--archives">{{ post.date | date: '%B %e' }}</span>{{ post.title }}</a>
+          {% endif %}
+        </li>
       {% endfor %}
       </ul>
     </section>

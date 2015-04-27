@@ -982,6 +982,25 @@ a.post-tag--pink:hover {
   float: right;
 }
 
+// External Link
+// ==================================================
+.post--posts .post-title,
+.post-archives-link {
+  position: relative;
+
+  .svg-icon-external {
+    width: em-calc(6);
+    height: em-calc(6);
+    position: absolute;
+    top: em-calc(3);
+    margin-left: em-calc(3);
+
+    polygon {
+      fill: $grey-light;
+    }
+  }
+}
+
 // Responsive
 // ==================================================
 @include mq(small) {
