@@ -985,19 +985,31 @@ a.post-tag--pink:hover {
 // External Link
 // ==================================================
 .post--posts .post-title,
-.post-archives-link {
-  position: relative;
-
+.post-archives-link,
+.post-related-list-link {
   .svg-icon-external {
-    width: em-calc(6);
-    height: em-calc(6);
-    position: absolute;
-    top: em-calc(3);
     margin-left: em-calc(3);
+    position: absolute;
+    margin-top: em-calc(1);
 
     polygon {
       fill: $grey-light;
     }
+  }
+}
+
+.post--posts .post-title {
+  .svg-icon-external {
+    width: em-calc(8);
+    height: em-calc(8);
+  }
+}
+
+.post-archives-link,
+.post-related-list-link {
+  .svg-icon-external {
+    width: rem-calc(8);
+    height: rem-calc(8);
   }
 }
 
