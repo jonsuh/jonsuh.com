@@ -4,7 +4,7 @@ title: Canary All-in-One Home Security Device Review
 date: "2015-03-25 17:30:00"
 review:
   name: Canary Home Security Device
-  rating: 8
+  rating: 4
   comments: Packed with features. Not perfect but improving.
 share_image: "https://farm9.staticflickr.com/8629/16277701766_ffb6d14c7a_c.jpg"
 comments: false

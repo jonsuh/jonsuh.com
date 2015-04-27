@@ -4,8 +4,8 @@ title: August Smart Lock Review
 date: "2015-01-19 09:17:00"
 review:
   name: August Smart Lock
-  rating: 7.5
-  comments: Solid product. Has its flaws. Still improving.
+  rating: 3
+  comments: Has its flaws. Still improving.
 share_image: "https://farm8.staticflickr.com/7503/16117739367_d99ab6ace8_c.jpg"
 comments: false
 tags:

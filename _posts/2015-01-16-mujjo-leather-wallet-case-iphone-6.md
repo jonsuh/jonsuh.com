@@ -4,7 +4,7 @@ title: Mujjo Leather Wallet Case for iPhone 6 Review
 date: "2015-01-16 09:17:00"
 review:
   name: Mujjo Leather Wallet Case for iPhone 6
-  rating: 9
+  rating: 4
   comments: Top-quality, beautiful product—Highly recommended.
 share_image: https://farm9.staticflickr.com/8612/16108648579_f1bce4940b_c.jpg
 comments: false
