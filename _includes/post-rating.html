@@ -1,15 +1,14 @@
 <div class="post-rating">
   <span class="post-rating-stars">
-    <span class="post-rating-stars-background">
-      {% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}
-    </span>
-    <span class="post-rating-stars-foreground" style="width: {{ include.rating | divided_by: 2.0 | times: 100 | divided_by: 5.0 }}%">
-      {% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}{% include svg/star.html %}
-    </span>
+    {% assign rating = include.rating %}
+    <span class="post-rating-stars-yellow">{% for i in (1..rating) %}★{% endfor %}</span>{% for i in (rating..4) %}☆{% endfor %}
   </span>
-  <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing"><meta itemprop="name" content="{{ include.name }}"></span>
+  <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
+    <meta itemprop="name" content="{{ include.name }}">
+  </span>
   <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="post-rating-value">
-    <span itemprop="ratingValue">{{ include.rating }}</span>/<span itemprop="bestRating">10</span>
+    <meta itemprop="ratingValue" content="{{ include.rating }}">
+    <meta itemprop="bestRating" content="5">
   </span>
   {% if include.comments %}
     <span class="post-rating-comments">{{ include.comments }}</span>
