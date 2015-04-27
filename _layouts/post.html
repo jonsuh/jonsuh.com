@@ -63,7 +63,7 @@ layout: default
               {% for post in site.related_posts limit:5 %}
                 {% if page.url != post.url %}
                   <li class="post-related-list-item">
-                    <a href="{{ post.url | append: "/" }}" class="post-related-list-link">{{ post.title }}</a>
+                    <a href="{% if post.layout == 'external' %}{{ external_url }}{% else %}{{ post.url | append: "/" }}{% endif %}" class="post-related-list-link js-outbound">{{ post.title }}{% if post.layout == 'external' %}{% include svg/external.html %}{% endif %}</a>
                   </li>
                 {% endif %}
               {% endfor %}
