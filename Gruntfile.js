@@ -497,6 +497,13 @@ module.exports = function(grunt) {
     'aws_s3:production'        // Deploy gzipped CSS and JS to S3
   ]);
 
+  grunt.registerTask('deploy:production:only', [
+    'production',              // Grunt production
+    'clean:site_assets',       // Clean _site/assets/(images,media) to prep for deployment
+    'copy:robots_production',  // Copy the production version of robots.txt for deployment
+    'shell:deploy_production', // Capistrano deploy to production environment
+  ]);
+
   grunt.registerTask('deploy:production:all', [
     'production',              // Grunt production
     'rsync:images_production', // Rsync _site/assets/images to production environment
