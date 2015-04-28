@@ -58,8 +58,8 @@ App = {
   },
 
   cookieInit: function() {
-    if (document.cookie.indexOf("mainJS=true") == -1) {
-      document.cookie = "mainJS=true";
+    if (cookie("mainJS") === null) {
+      cookie("mainJS", "true", 1);
     }
   },
 

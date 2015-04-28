@@ -13,6 +13,38 @@ for (var i = 0; i < metaTags.length; i++) {
 }
 
 // ==================================================
+// Cookie function
+// https://github.com/filamentgroup/cookie/
+// ==================================================
+function cookie( name, value, days ){
+  // if value is undefined, get the cookie value
+  if( value === undefined ){
+    var cookiestring = "; " + window.document.cookie;
+    var cookies = cookiestring.split( "; " + name + "=" );
+    if ( cookies.length === 2 ){
+      return cookies.pop().split( ";" ).shift();
+    }
+    return null;
+  }
+  else {
+    var expires;
+    // if value is a false boolean, we'll treat that as a delete
+    if( value === false ){
+      days = -1;
+    }
+    if ( days ) {
+      var date = new Date();
+      date.setTime( date.getTime() + ( days * 24 * 60 * 60 * 1000 ) );
+      expires = "; expires="+date.toGMTString();
+    }
+    else {
+      expires = "";
+    }
+    window.document.cookie = name + "=" + value + expires + "; path=/";
+  }
+}
+
+// ==================================================
 // loadCSS
 // ==================================================
 for (var i = 0; i < metaArray.length; i++) {
@@ -21,7 +53,9 @@ for (var i = 0; i < metaArray.length; i++) {
   if (metaAttrName.match(/CSS/)) {
     if (metaAttrName == "mainCSS") {
       loadCSS(metaArray[i].getAttribute("content"), null, null, function() {
-        document.cookie = "mainCSS=true";
+        if (cookie("mainCSS") === null) {
+          cookie("mainCSS", "true", 1);
+        }
       });
     } else {
       loadCSS(metaArray[i].getAttribute("content"));
@@ -49,7 +83,9 @@ for (var i = 0; i < metaArray.length; i++) {
     roboto700.check()
   ]).then(function() {
     document.documentElement.className += " fonts-loaded";
-    document.cookie = "fonts-loaded=true";
+    if (cookie("fonts-loaded") === null) {
+      cookie("fonts-loaded", "true", 1);
+    }
   }, function() {
     document.documentElement.className += " fonts-timeout";
   });
