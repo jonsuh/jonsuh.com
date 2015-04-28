@@ -149,6 +149,12 @@ module.exports = function(grunt) {
           url: 'http://jonsuh.local/work/',
           outputfile: '_includes/critical/css/work.css',
         }
+      },
+      work_casestudy: {
+        options: {
+          url: 'http://jonsuh.local/work/twoplease',
+          outputfile: '_includes/critical/css/work-casestudy.css'
+        }
       }
     },
 
