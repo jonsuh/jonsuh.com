@@ -1,0 +1,134 @@
+* { box-sizing: inherit; }
+@font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"); }
+@font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"); }
+html { box-sizing: border-box; }
+body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+body, html { font-family: RobotoLocal, Helvetica, Arial, sans-serif; color: rgb(102, 103, 110); background-color: rgb(34, 35, 38); height: 100%; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
+.fonts-loaded body { font-family: Roboto, Helvetica, Arial, sans-serif; }
+
+svg:not(:root) { overflow-x: hidden; overflow-y: hidden; }
+
+h2, h3, h4 { color: rgb(51, 52, 59); margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+h2 { font-size: 1.25em; line-height: 1.3em; margin-bottom: 0.35em; }
+h3 { font-size: 1.125em; line-height: 1.35em; margin-bottom: 0.4em; }
+h4 { font-size: 1em; line-height: 1.4em; margin-bottom: 0.5em; }
+p { font-size: 1em; letter-spacing: 0px; line-height: 1.5em; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: 0.75em; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
+a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(187, 222, 251); background-color: transparent; }
+
+.container { padding-left: 0.9375em; padding-right: 0.9375em; max-width: 68.75em; margin-left: auto; margin-right: auto; position: relative; }
+.container::after { clear: both; content: ''; display: table; }
+.section { background-color: rgb(255, 255, 255); padding-top: 1.5625em; padding-bottom: 1.5625em; }
+.section::after { clear: both; content: ''; display: table; }
+.section-break-half { width: 100%; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+.section-break-half::after { clear: both; content: ''; display: table; }
+.section-break-half { padding-top: 0.78125em; }
+.main, .sidebar { max-width: 39.0625em; margin-left: auto; margin-right: auto; }
+.header-border { width: 100%; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-top-width: 0.1875em; border-top-style: solid; border-top-color: rgb(230, 231, 235); position: absolute; bottom: 0px; left: 0px; z-index: 1; }
+.header { background-color: rgb(34, 35, 38); height: 3.75em; line-height: 3.5625em; overflow-x: hidden; overflow-y: hidden; position: relative; z-index: 3; }
+.header::after { clear: both; content: ''; display: table; }
+.logo { width: 3.125em; float: left; position: relative; left: -0.3125em; }
+.logo-link { text-align: center; border-bottom-width: 0.1875em; border-bottom-color: transparent; display: block; position: relative; z-index: 2; }
+.logo-canvas { position: relative; height: 3.5625em; }
+.logo-svg { width: 2.3958333333em; height: 2.6041666667em; position: relative; top: 0.4375em; }
+.logo-svg polygon { stroke: #bbbcc3; stroke-width: 1px; }
+.logo-svg g { -webkit-transform: translateX(0px); }
+.logo-svg-g-1 { fill: #3fae52; }
+.logo-svg-g-2 { fill: #7cc686; }
+.logo-svg-g-3 { fill: #2d8d43; }
+.logo-svg-c-1 { fill: #00bad2; }
+.logo-svg-c-2 { fill: #0097a7; }
+.logo-svg-c-3 { fill: #4ac4d7; }
+.logo-svg-c-4 { fill: #00bad2; }
+.logo-svg-b-1 { fill: #62b3e4; }
+.logo-svg-b-2 { fill: #1b77bd; }
+.logo-svg-b-3 { fill: #62b3e4; }
+.logo-svg-b-4 { fill: #3191cf; }
+.logo-svg-pu-1 { fill: #7a3594; }
+.logo-svg-pu-2 { fill: #944198; }
+.logo-svg-pu-3 { fill: #b06eae; }
+.logo-svg-pu-4 { fill: #944198; }
+.logo-svg-pi-1 { fill: #e81f64; }
+.logo-svg-pi-2 { fill: #c21e5c; }
+.logo-svg-pi-3 { fill: #f06392; }
+.logo-svg-pi-4 { fill: #e81f64; }
+.logo-svg-pi-5 { fill: #c21e5c; }
+.logo-svg-r-1 { fill: #ef4438; }
+.logo-svg-r-2 { fill: #e57373; }
+.logo-svg-r-3 { fill: #d32e2e; }
+.logo-svg-r-4 { fill: #ef4438; }
+.logo-svg-r-5 { fill: #d32e2e; }
+.logo-svg-o-1 { fill: #f47c20; }
+.logo-svg-o-2 { fill: #f8951f; }
+.logo-svg-o-3 { fill: #f47c20; }
+.logo-svg-o-4 { fill: #fcb452; }
+.logo-svg-y-1 { fill: #fedc63; }
+.logo-svg-y-2 { fill: #fecd27; }
+.logo-svg-y-3 { fill: #faa71c; }
+.nav { text-align: center; background-color: rgb(34, 35, 38); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(58, 60, 68); position: relative; top: -1px; float: right; }
+.nav-link { font-weight: 500; color: rgb(187, 188, 195); letter-spacing: 0.03em; text-transform: uppercase; border-bottom-width: 0.1875em; border-bottom-color: transparent; padding-left: 0.4375em; padding-right: 0.4375em; margin-left: -0.3125em; display: inline-block; position: relative; z-index: 2; }
+.nav-link:first-child { margin-left: 0px; }
+.nav-label { font-size: 0.8125em; margin-bottom: -0.0769230769em; display: inline-block; }
+.align, .align-cell { width: 100%; height: 100%; }
+.align { display: table; }
+.align-cell { display: table-cell; text-align: center; vertical-align: middle; }
+.hero { padding-left: 0.9375em; padding-right: 0.9375em; height: 12.5em; background-size: cover; background-color: rgb(33, 150, 243); position: relative; background-position: 50% 50%; background-repeat: no-repeat no-repeat; }
+.hero::before { content: ''; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 1; }
+
+@media only screen and (min-width: 22.8125em) {
+  .logo { width: 4.0625em; float: left; position: relative; left: -0.1875em; }
+  .nav-link { padding-left: 0.625em; padding-right: 0.625em; }
+  .logo-svg { width: 2.875em; height: 3.125em; position: relative; top: 0.21875em; }
+  .nav-label { font-size: 0.875em; margin-bottom: -0.0769230769em; }
+}
+@media only screen and (min-width: 25em) {
+  .nav-link { padding-left: 0.75em; padding-right: 0.75em; }
+}
+@media only screen and (min-width: 30em) {
+  h2 { font-size: 1.375em; }
+  h3 { font-size: 1.1875em; }
+  p { font-size: 1.0625em; }
+  .container { padding-left: 1.5625em; padding-right: 1.5625em; }
+  .section { padding-top: 2.5em; padding-bottom: 2.5em; }
+  .section-break-half { padding-top: 1.25em; }
+  .header { background-color: rgb(255, 255, 255); height: 4.375em; line-height: 4.1875em; }
+  .logo { width: 4.6875em; }
+  .nav { width: calc(100% - 4.6875em); }
+  .logo { left: initial; }
+  .logo-canvas { height: 4.1875em; }
+  .logo-svg { width: 3.8125em; height: 4.1875em; top: 0px; }
+  .nav { background-color: rgb(255, 255, 255); text-align: right; height: inherit; border-top-width: 0px; border-top-style: initial; border-top-color: initial; top: inherit; float: left; clear: inherit; }
+  .nav-link { color: rgb(102, 103, 110); padding-left: 0.6875em; padding-right: 0.6875em; }
+  .nav-label { font-size: 1em; padding-top: initial; }
+}
+@media only screen and (min-width: 34.375em) {
+  .nav-link { padding-left: 1.125em; padding-right: 1.125em; }
+}
+@media only screen and (min-width: 40em) {
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+  p { font-size: 1.125em; }
+  .section { padding-top: 3.75em; padding-bottom: 3.75em; }
+  .section-break-half { padding-top: 1.875em; }
+  .logo { width: 4.9375em; }
+  .nav { width: calc(100% - 4.9375em); }
+  .nav-link { padding-left: 1.375em; padding-right: 1.375em; }
+}
+@media only screen and (min-width: 48em) {
+  .header { height: 5.625em; line-height: 5.4375em; }
+  .logo { width: 6.375em; }
+  .nav { width: calc(100% - 6.375em); }
+  .logo-canvas { height: 5.4375em; }
+  .logo-svg { width: 5em; height: 5.4375em; }
+  .nav-link { padding-left: 1.5625em; padding-right: 1.5625em; }
+}
+@media only screen and (min-width: 56.25em) {
+  .logo { width: 8.25em; }
+  .nav { width: calc(100% - 8.25em); }
+  .nav-link { padding-left: 2.5em; padding-right: 2.5em; }
+}
+@media only screen and (min-width: 64em) {
+  h2 { font-size: 1.625em; }
+  h3 { font-size: 1.3125em; }
+  h4 { font-size: 1.0625em; }
+  p { font-size: 1.1875em; }
+}

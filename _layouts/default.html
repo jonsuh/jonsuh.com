@@ -23,8 +23,10 @@
       {% include critical/css/about.css %}
     {% elsif url contains '/contact/' %}
       {% include critical/css/contact.css %}
-    {% elsif url contains '/work/' %}
+    {% elsif url == '/work/' %}
       {% include critical/css/work.css %}
+    {% elsif url contains '/work/' %}
+      {% include critical/css/work-casestudy.css %}
     {% elsif url contains '/blog/' %}
       {% if page.tags %}{% include critical/css/blog-post.css %}{% else %}{% include critical/css/blog.css %}{% endif %}
     {% endif %}</style>
