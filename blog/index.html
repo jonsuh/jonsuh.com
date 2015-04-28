@@ -10,7 +10,11 @@ sitemap:
       {% for post in paginator.posts %}
         <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
           <h2 class="post-title" itemprop="name">
-            <a href="{% if post.layout == 'external' %}{{ post.external_url }}{% else %}{{ post.url | append: "/" }}{% endif %}" class="post-link{% if post.layout == 'external' %} js-outbound{% endif %}"{% if post.layout == 'external' %} target="_blank"{% endif %}>{{ post.title }}{% if post.layout == 'external' %}{% include svg/external.html %}{% endif %}</a>
+            {% if post.layout == 'external' %}
+              <a href="{{ post.external_url }}" class="post-link js-outbound" target="_blank">{{ post.title }}{% include svg/external.html %}</a>
+            {% else %}
+              <a href="{{ post.url | append: "/" }}" class="post-link">{{ post.title }}</a>
+            {% endif %}
           </h2>
           <p class="post-meta">
             <time content="{{ post.date | date: "%Y-%m-%d" }}" datetime="{{ post.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>

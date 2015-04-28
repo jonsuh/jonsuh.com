@@ -32,10 +32,17 @@ sitemap:
       {% for post in site.posts limit:3 %}
         <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
           <h2 class="post-title" itemprop="name">
-            <a href="{{ post.url | append: "/" }}" class="post-link">{{ post.title }}</a>
+            {% if post.layout == 'external' %}
+              <a href="{{ post.external_url }}" class="post-link js-outbound" target="_blank">{{ post.title }}{% include svg/external.html %}</a>
+            {% else %}
+              <a href="{{ post.url | append: "/" }}" class="post-link">{{ post.title }}</a>
+            {% endif %}
           </h2>
           <p class="post-meta">
             <time content="{{ post.date | date: "%Y-%m-%d" }}" datetime="{{ post.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
+            {% if post.layout == "external" %}
+              <span class="post-meta-external">for {{ post.external_site }}</span>
+            {% endif %}
           </p>
           <section class="post-content">
             {{ post.excerpt | markdownify }}
