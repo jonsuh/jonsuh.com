@@ -63,7 +63,11 @@ layout: default
               {% for post in site.related_posts limit:5 %}
                 {% if page.url != post.url %}
                   <li class="post-related-list-item">
-                    <a href="{% if post.layout == 'external' %}{{ post.external_url }}{% else %}{{ post.url | append: "/" }}{% endif %}" class="post-related-list-link js-outbound">{{ post.title }}{% if post.layout == 'external' %}{% include svg/external.html %}{% endif %}</a>
+                    {% if post.layout == 'external' %}
+                      <a href="{{ post.external_url }}" class="post-related-list-link js-outbound">{{ post.title }}{% include svg/external.html %}</a>
+                    {% else %}
+                      <a href="{{ post.url | append: "/" }}" class="post-related-list-link">{{ post.title }}</a>
+                    {% endif %}
                   </li>
                 {% endif %}
               {% endfor %}
