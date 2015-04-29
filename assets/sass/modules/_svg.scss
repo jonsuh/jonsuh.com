@@ -3,6 +3,7 @@
 // ==================================================
 .svg-icon {
   @include svg-overflow;
+  @include transition(fill $transition-duration linear);
 }
 
 a .svg-icon {

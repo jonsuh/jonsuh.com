@@ -11,7 +11,7 @@ sitemap:
         <article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
           <h2 class="post-title" itemprop="name">
             {% if post.layout == 'external' %}
-              <a href="{{ post.external_url }}" class="post-link js-outbound" target="_blank">{{ post.title }}{% include svg/external.html %}</a>
+              <a href="{{ post.external_url }}" class="post-link js-outbound" target="_blank">{{ post.title }}{% include svg/icons.html icon='external' %}</a>
             {% else %}
               <a href="{{ post.url | append: "/" }}" class="post-link">{{ post.title }}</a>
             {% endif %}

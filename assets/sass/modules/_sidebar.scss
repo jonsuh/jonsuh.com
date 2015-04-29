@@ -38,12 +38,9 @@
 }
 
 .sidebar-subscribe-link--rss {
-  .svg-icon {
+  .svg-icon-rss {
     width: em-calc(12);
     height: em-calc(12);
-  }
-
-  .svg-icon-path {
     fill: map-get($color-orange, "700");
   }
 }

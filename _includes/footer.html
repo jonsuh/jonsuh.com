@@ -19,18 +19,18 @@
       <nav class="footer-nav" role="navigation">
         <a href="/" class="footer-link-home">{{ site.author.name }}</a>
         <a href="{{ site.social.twitter }}" class="footer-link-twitter" title="Follow {{ site.author.firstname }} on Twitter" target="_blank">
-          {% include svg/twitter.html %}
+          {% include svg/icons.html icon='twitter' %}
         </a>
         <a href="/about/" class="footer-link footer-link--first">About</a>
         <a href="/work/" class="footer-link">Work</a>
         <a href="/blog/" class="footer-link footer-link--blog">Blog</a>
-        <a href="http://feeds.feedburner.com/jonsuh" class="footer-link footer-link--rss" title="RSS feed" target="_blank" rel="alternate">{% include svg/rss.html %}</a>
+        <a href="http://feeds.feedburner.com/jonsuh" class="footer-link footer-link--rss" title="RSS feed" target="_blank" rel="alternate">{% include svg/icons.html icon='rss' %}</a>
         <a href="/contact/" class="footer-link">Contact</a>
       </nav>
     </div>
     <div class="footer-column footer-column--right">
       <p class="footer-copyright">{{ site.time | date: '%Y' }} &copy; <a href="/contact/">{{ site.author.name }}</a>. All rights reserved.</p>
-      <p class="footer-made-with">Made with {% include svg/heart-outline.html %} in Northwest Indiana/Chicago.</p>
+      <p class="footer-made-with">Made with {% include svg/icons.html icon='heart-outline' %} in Northwest Indiana/Chicago.</p>
     </div>
   </div>
 </footer>

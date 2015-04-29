@@ -32,13 +32,13 @@ layout: default
           <ul class="post-share-menu">
             <li class="post-share-menu-title">Share</li>
             <li class="post-share-menu-item">
-              <a href="https://twitter.com/intent/tweet?text={{ page.title | encode_url }}&url={{ share_url }}&via={{ site.social.username }}" class="post-share-menu-link post-share-menu-link--twitter js-social-twitter-share" title="Share on Twitter" target="_blank">{% include svg/twitter.html %}</a>
+              <a href="https://twitter.com/intent/tweet?text={{ page.title | encode_url }}&url={{ share_url }}&via={{ site.social.username }}" class="post-share-menu-link post-share-menu-link--twitter js-social-twitter-share" title="Share on Twitter" target="_blank">{% include svg/icons.html icon='twitter' %}</a>
             </li>
             <li class="post-share-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" data-share-url="{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-share-menu-link post-share-menu-link--facebook js-social-facebook-share" title="Share on Facebook" target="_blank">{% include svg/facebook.html %}</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" data-share-url="{{ page.url | prepend: site.url | prepend: site.url_protocol | append: '/' }}" class="post-share-menu-link post-share-menu-link--facebook js-social-facebook-share" title="Share on Facebook" target="_blank">{% include svg/icons.html icon='facebook' %}</a>
             </li>
             <li class="post-share-menu-item">
-              <a href="https://plus.google.com/share?url={{ share_url }}" class="post-share-menu-link post-share-menu-link--google js-social-google-share" title="Share on Google+" target="_blank">{% include svg/google.html %}</a>
+              <a href="https://plus.google.com/share?url={{ share_url }}" class="post-share-menu-link post-share-menu-link--google js-social-google-share" title="Share on Google+" target="_blank">{% include svg/icons.html icon='google' %}</a>
             </li>
           </ul>
         </section>
@@ -64,7 +64,7 @@ layout: default
                 {% if page.url != post.url %}
                   <li class="post-related-list-item">
                     {% if post.layout == 'external' %}
-                      <a href="{{ post.external_url }}" class="post-related-list-link js-outbound">{{ post.title }}{% include svg/external.html %}</a>
+                      <a href="{{ post.external_url }}" class="post-related-list-link js-outbound">{{ post.title }}{% include svg/icons.html icon='external' %}</a>
                     {% else %}
                       <a href="{{ post.url | append: "/" }}" class="post-related-list-link">{{ post.title }}</a>
                     {% endif %}
@@ -77,7 +77,7 @@ layout: default
         <section class="post-author">
           <img src="/assets/images/avatar-512.jpg" alt="Jonathan Suh" class="post-author-image">
           <h3 class="post-author-name"><a href="/about/" class="post-author-name-link">Jonathan Suh</a></h3>
-          <p class="post-author-about">I’m a multidisciplinary developer &amp; designer. I’m currently with the folks at <a href="http://juiceinteractive.com" class="no-break" target="_blank">Juice Interactive</a>, and I’ve worked with well-known brands and agencies, which include Allstate, Brian Hoff Design, Leo Burnett, and OLSON. <a href="/about/">More about me</a>. <span class="post-author-twitter"><a href="https://twitter.com/intent/follow?screen_name=jonsuh" class="post-author-twitter-link js-social-twitter-share" target="_blank"><span class="post-author-twitter-icon">{% include svg/twitter.html %}</span> Follow @jonsuh</a></span></p>
+          <p class="post-author-about">I’m a multidisciplinary developer &amp; designer. I’m currently with the folks at <a href="http://juiceinteractive.com" class="no-break" target="_blank">Juice Interactive</a>, and I’ve worked with well-known brands and agencies, which include Allstate, Brian Hoff Design, Leo Burnett, and OLSON. <a href="/about/">More about me</a>. <span class="post-author-twitter"><a href="https://twitter.com/intent/follow?screen_name=jonsuh" class="post-author-twitter-link js-social-twitter-share" target="_blank"><span class="post-author-twitter-icon">{% include svg/icons.html icon='twitter' %}</span> Follow @jonsuh</a></span></p>
         </section>
       </article>
     </section>

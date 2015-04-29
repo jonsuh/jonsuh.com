@@ -444,7 +444,7 @@
 .post-share-menu-link--twitter {
   margin-left: em-calc(12);
 
-  .svg-icon {
+  .svg-icon-twitter {
     fill: map-get($color-social, twitter);
   }
 
@@ -454,7 +454,7 @@
 }
 
 .post-share-menu-link--facebook {
-  .svg-icon {
+  .svg-icon-facebook {
     fill: map-get($color-social, facebook);
   }
 
@@ -464,22 +464,12 @@
 }
 
 .post-share-menu-link--google {
-  .svg-icon {
+  .svg-icon-google {
     fill: map-get($color-social, google);
   }
 
   &:hover {
     background-color: map-get($color-social, google);
-  }
-}
-
-.post-share-menu-link--link {
-  .svg-icon {
-    fill: map-get($color-orange, "500");
-  }
-
-  &:hover {
-    background-color: map-get($color-orange, "500");
   }
 }
 
@@ -801,15 +791,19 @@ a.post-tag--pink:hover {
 }
 
 .post-author-twitter-icon {
-  width: em-calc(19);
-  height: em-calc(19);
   margin-right: em-calc(5);
   display: inline-block;
   vertical-align: middle;
   position: relative;
   top: em-calc(-1);
 
-  .svg-icon-path {
+  &,
+  .svg-icon {
+    width: em-calc(19);
+    height: em-calc(19);
+  }
+
+  .svg-icon {
     fill: map-get($color-social, twitter);
   }
 }
@@ -947,13 +941,10 @@ a.post-tag--pink:hover {
 .post-archives-link,
 .post-related-list-link {
   .svg-icon-external {
+    fill: $grey-light;
     margin-left: em-calc(3);
     position: absolute;
     margin-top: em-calc(1);
-
-    polygon {
-      fill: $grey-light;
-    }
   }
 }
 
