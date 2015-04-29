@@ -87,8 +87,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .sidebar-list { line-height: 1em; list-style-type: none; list-style-position: initial; list-style-image: initial; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
 .sidebar-list-item { margin-bottom: 0.3em; }
 .sidebar-list-link { color: rgb(137, 138, 146); border-bottom-color: rgb(230, 231, 235); }
-.sidebar-subscribe-link--rss .svg-icon { width: 0.75em; height: 0.75em; }
-.sidebar-subscribe-link--rss .svg-icon-path { fill: #f57c00; }
+.sidebar-subscribe-link--rss .svg-icon-rss { fill: #f57c00; width: 0.75em; height: 0.75em; }
 .form--sidebar-newsletter .form-field-group { margin-bottom: 0.3125em; }
 .svg-icon { overflow-x: visible; overflow-y: visible; }
 .post { padding-left: 0.9375em; padding-right: 0.9375em; max-width: 68.75em; margin-left: auto; margin-right: auto; position: relative; }

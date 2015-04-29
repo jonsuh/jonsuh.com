@@ -85,6 +85,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .post::after { clear: both; content: ''; display: table; }
 .post--posts .post-article { border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(230, 231, 235); padding-bottom: 1.25em; margin-bottom: 1.25em; }
 .post--posts .post-content p:last-child { margin-bottom: 0px; }
+.post--posts .post-title .svg-icon-external { fill: #bbbcc3; width: 0.5em; height: 0.5em; margin-left: 0.1875em; position: absolute; margin-top: 0.0625em; }
 .post-title { margin-bottom: 0.5em; }
 .post-link { color: rgb(34, 35, 38); border-bottom-color: transparent; }
 .post-meta { font-size: 0.875em; color: rgb(153, 154, 161); }
