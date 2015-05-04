@@ -25,7 +25,7 @@ Although there are advantages to root and the things you can do after you obtain
 
 **Root voids your warranty.** First and foremost, one must understand that when you root your phone, you are voiding your warranty. For example, if you root your phone and you come across a manufacturer’s defect (trackball gets stuck, phone stops charging), you should not take your phone back with root.
 
-The good news is that there are relatively simple ways to unroot and fully restore your phone back to factory state. I have written articles on unrooting devices—[search for "unroot](/blog/search/unroot).
+The good news is that there are relatively simple ways to unroot and fully restore your phone back to factory state. I have written articles on unrooting devices.
 
 **You *could* brick your phone.** Although most people do not brick their phone while rooting, most people do so by making changes to their firmware, radio, kernel, etc. Bricking your phone basically means to screw it up so bad that it becomes nothing more than a brick, a paperweight. I will say this, most people that brick their phones do so by following directions or downloading and flashing files from places that are disreputable or untrustworthy.
 
@@ -61,7 +61,7 @@ Replacing your ROM with a customized one will give you a different experience wi
 
 Typically the rooting process is different for every phone running the Android operating system (OS), but the logic of the process for each phone is similar. Depending on the phone and the process that have been discovered for it, it may be easy or difficult.
 
-Because I have owned the Droid Eris and the Droid Incredible, I have written articles to help you get root. Search for [root](/blog/search/root).
+Because I have owned the Droid Eris and the Droid Incredible, I have written articles to help you get root. [Root Your Droid Incredible](/blog/root-your-droid-incredible/), [Run Froyo on Your Droid Eris](/blog/run-froyo-android-2-2-on-your-droid-eris/).
 
 ## Questions?
 
