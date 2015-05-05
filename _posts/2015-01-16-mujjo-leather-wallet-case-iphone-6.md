@@ -62,4 +62,4 @@ I’ve owned several Mujjo products over the years, and again, they executed wel
 
 ***Sitenote:*** There’s an alternative design, Leather Wallet Case 80&deg;, which has a slightly angled pocket and has cases both for the iPhone 6 and the iPhone 6 Plus. They can also be found at <a href="http://www.mujjo.com/the-sleeves-collection/iphone-sleeves/" target="_blank">mujjo.com</a>.
 
-![](http://www.mujjo.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/e/leather-wallet-case-80_-for-iphone-6-gray-001.jpg)
+![](https://www.mujjo.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/e/leather-wallet-case-80_-for-iphone-6-gray-001.jpg)
