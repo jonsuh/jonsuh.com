@@ -23,12 +23,11 @@ module.exports = function(grunt) {
         '_site/assets/images',
         '_site/assets/media'
       ],
-      css_maps: [
-        'assets/css/**/*.map'
-      ],
-      s3: [
-        '_s3'
-      ]
+      css: ['assets/css'],
+      css_maps: ['assets/css/**/*.map'],
+      js: ['assets/js/*.js'],
+      s3: ['_s3'],
+      site: ['_site']
     },
 
     copy: {
