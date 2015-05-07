@@ -9,6 +9,7 @@ aws-keys.json
 _s3
 
 _drafts
+_drafts_rough
 _site
 !_includes
 # _includes/*
