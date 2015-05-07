@@ -6,16 +6,20 @@ comments: false
 image: need-for-speed-header.jpg
 tags:
 - development
+- tutorial
 - front-end-development
 - jekyll
 - grunt
 - nginx
+- performance
 - sass
 ---
 
-Built entirely from the ground up, my new site has a need for speed. From the workflow and build to deployment, each aspect was carefully scrutinzed, then painstakingly tailored. Let me take you through some of the technologies and processes required for this build.
+Built entirely from the ground up, my new site has a need for speed. From the workflow and build to deployment, each aspect was carefully scrutinized, then painstakingly tailored. Let me take you through some of the technologies and processes required for this build.
 
 <!--more-->
+
+**Update:** I published <a href="/blog/need-for-speed-2/">Need for Speed 2: Improving Front-End Performance</a>, a case study for the approach and steps I took to improve and optimize front-end performance on my website.
 
 ## Jekyll
 
