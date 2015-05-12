@@ -209,7 +209,7 @@ gulp.task('jekyll-watch', shell.task([
 gulp.task('watch', function() {
   gulp.watch('assets/sass/**/*.scss', ['sass-jekyll']);
   gulp.watch('assets/js/src/**/*.js', ['concat-jekyll']);
-  gulp.run('jekyll-watch');
+  gulp.start('jekyll-watch');
 });
 
 gulp.task('browsersync', function() {
