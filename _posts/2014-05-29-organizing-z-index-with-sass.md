@@ -10,6 +10,7 @@ tags:
 - css
 - front-end-development
 - sass
+- sass-maps
 ---
 
 Keeping track of all your z-index values can be quite a task, especially on large projects or projects that involve more than 1 developer. Sass and its recent introduction of the `maps` data-type can help you keep track of your z-index by having them all in one place.
