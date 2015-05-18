@@ -1,18 +1,20 @@
 // ==================================================
 // Scrollbar
 // ==================================================
-::-webkit-scrollbar {
-  width: 15px;
+pre::-webkit-scrollbar {
+  height: em-calc(17);
 }
 
-::-webkit-scrollbar-track {
-  background: $white;
+pre::-webkit-scrollbar-track {
+  background: $pre-background-color;
 }
 
-::-webkit-scrollbar-thumb {
-  background: $grey-lighter;
+pre::-webkit-scrollbar-thumb {
+  background: scale-color($pre-background-color, $lightness: 20%);
+  border-radius: em-calc(15);
+  border: em-calc(4) solid $pre-background-color;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: $blue;
+pre::-webkit-scrollbar-thumb:hover {
+  background: scale-color($pre-background-color, $lightness: 30%);
 }
