@@ -193,7 +193,7 @@
   figure,
   .chart,
   .highlight,
-  .highlighter-rouge,
+  div.highlighter-rouge,
   .twitter-tweet {
     + h1,
     + h2,
@@ -210,7 +210,7 @@
 
   p,
   .highlight,
-  .highlighter-rouge {
+  div.highlighter-rouge {
     + h3,
     + h4,
     + h5 {

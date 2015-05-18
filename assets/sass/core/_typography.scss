@@ -178,6 +178,9 @@ $code-font-family: Consolas, "Liberation Mono", Courier, monospace;
 $code-background-color: $grey-lightest;
 $code-border-radius: 3;
 
+$pre-font-color: #f9f8f5;
+$pre-background-color: #272822;
+
 code {
   font-family: $code-font-family;
   font-size: $paragraph-font-size;
@@ -189,19 +192,19 @@ li > code,
 p > small > code {
   font-size: 0.95em;
   background-color: $code-background-color;
-  padding: em-calc(4 7 2);
+  padding: em-calc(4 5 2 7);
   border-radius: em-calc($code-border-radius);
 }
 
 pre,
-.highlight,
-.highlighter-rouge {
+.highlight {
   margin-bottom: $paragraph-margin-bottom;
   @include clearfix;
 }
 
 pre {
-  background-color: $code-background-color;
+  color: $pre-font-color;
+  background-color: $pre-background-color;
   padding: em-calc(10 15);
   border-radius: em-calc($code-border-radius);
   overflow-y: hidden;
