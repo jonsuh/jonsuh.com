@@ -118,7 +118,7 @@ future:      true
 # Plugins
 # ============================
 # whitelist: []
-# gems:      []
+gems:      ["rouge"]
 
 # ============================
 # Conversion
@@ -148,10 +148,3 @@ kramdown:
   #   coderay_tab_width:         4
   #   coderay_bold_every:        10
   #   coderay_css:               style
-
-# ============================
-# Gems
-# ============================
-gems: [
-  "rouge"
-]
