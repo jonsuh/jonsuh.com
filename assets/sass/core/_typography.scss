@@ -194,7 +194,8 @@ p > small > code {
 }
 
 pre,
-.highlight {
+.highlight,
+.highlighter-rouge {
   margin-bottom: $paragraph-margin-bottom;
   @include clearfix;
 }
