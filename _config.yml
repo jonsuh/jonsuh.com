@@ -132,12 +132,14 @@ excerpt_separator: <!--more-->
 # Markdown Processors
 # ============================
 kramdown:
-  auto_ids:      true
-  # footnote_nr:   1
-  # entity_output: as_char
-  # toc_levels:    1..6
-  # smart_quotes:  lsquo,rsquo,ldquo,rdquo
-  # use_coderay:   false
+  input             : GFM
+  syntax_highlighter: rouge
+  auto_ids          : true
+  # footnote_nr       : 1
+  # entity_output     : as_char
+  # toc_levels        : 1..6
+  # smart_quotes      : lsquo,rsquo,ldquo,rdquo
+  # use_coderay       : false
 
   # coderay:
   #   coderay_wrap:              div
@@ -146,3 +148,10 @@ kramdown:
   #   coderay_tab_width:         4
   #   coderay_bold_every:        10
   #   coderay_css:               style
+
+# ============================
+# Gems
+# ============================
+gems: [
+  "rouge"
+]
