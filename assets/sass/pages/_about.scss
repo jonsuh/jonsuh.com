@@ -249,7 +249,7 @@
 
 // Responsive
 // ==================================================
-@include mq(medium) {
+@include mq(705) {
   $about-mosaic-tile-gutter: em-calc(15);
 
   .about-mosaic {
