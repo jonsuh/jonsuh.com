@@ -24,8 +24,8 @@ Before you get started, you need a text editor that will allow you to change a f
 
 Open up Terminal and run the following command:
 
-{% highlight bash %}
+```bash
 sudo mate /etc/hosts
-{% endhighlight %}
+```
 
 Go to *File & Save As* and select *LF (recommended)* as your line endings and save the file. (You should see a dropdown above the *Save* button)

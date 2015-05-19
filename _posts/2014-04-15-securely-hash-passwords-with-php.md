@@ -22,9 +22,9 @@ Developers have a huge responsibility when handling and storing user-sensitive i
 
 To hash a password, take the password string and pass it into `password_hash` the function as a parameter along with the algorithm you want to use, then store the returned hash into the database.
 
-{% highlight php %}
+```php
 password_hash( $password, $algorithm [, $options ] )
-{% endhighlight %}
+```
 
 - `$password` string.
 - `$algorithm` integer. Supports constants `PASSWORD_BCRYPT` or `PASSWORD_DEFAULT`.
@@ -43,7 +43,7 @@ password_hash( $password, $algorithm [, $options ] )
 - `salt` - You can manually pass in your own salt, although `password_hash` randomly generates a salt for each password.
 - `cost` - The algorithmic cost to be used. Default value is `10`.
 
-{% highlight php %}
+```php
 <?php
   $options = array(
     'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
@@ -51,11 +51,11 @@ password_hash( $password, $algorithm [, $options ] )
   );
   $password_hash = password_hash($password_string, PASSWORD_BCRYPT, $options);
 ?>
-{% endhighlight %}
+```
 
 Here’s a dirty, incomplete example that shows implementation of `password_hash`:
 
-{% highlight php %}
+```php
 <?php
   $password_string = mysqli_real_escape_string($_POST["password"]);
   // The value of $password_hash
@@ -67,20 +67,20 @@ Here’s a dirty, incomplete example that shows implementation of `password_hash
                   VALUES ($email_address, $password_hash)";
   mysqli_query($mysql_connection, $mysql_query);
 ?>
-{% endhighlight %}
+```
 
 ## Verifying passwords
 
 When checking passwords, you can use the handy-dandy `password_verify` function, which checks a password string against a password hash, then returns a boolean.
 
-{% highlight php %}
+```php
 password_verify( $password, $hash )
-{% endhighlight %}
+```
 
 - `$password` string.
 - `$hash` string.
 
-{% highlight php %}
+```php
 <?php
   $password_string = "abc123";
   $password_hash = "$2y$10$aHhnT035EnQGbWAd8PfEROs7PJTHmr6rmzE2SvCQWOygSpGwX2rtW";
@@ -91,7 +91,7 @@ password_verify( $password, $hash )
     // Incorrect password
   }
 ?>
-{% endhighlight %}
+```
 
 ## PHP 5.3.7+
 

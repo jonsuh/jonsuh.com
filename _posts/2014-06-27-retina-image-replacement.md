@@ -21,17 +21,17 @@ Here’s a quick-and-easy way to do it with just a few lines of vanilla JavaScri
 
 For your images, let’s utilize the `data` attribute for your 1x and 2x images:
 
-{% highlight javascript %}
+```js
 <img src=""
      data-1x="/images/photo.jpg"
      data-2x="/images/photo@2x.jpg">
-{% endhighlight %}
+```
 
 ## Vanilla JavaScript
 
 I came up with the following more as a learning exercise but also to keep myself on my toes and from always using a library or someone else’s solution.
 
-{% highlight javascript %}
+```js
 // Select all images with `data-1x` attribute
 // (It assumes that if you have `data-1x` attribute set,
 //  it also has `data-2x` attribute set as well)
@@ -59,13 +59,13 @@ if (window.devicePixelRatio == 2) {
     el.setAttribute("src", src);
   });
 }
-{% endhighlight %}
+```
 
 ## jQuery
 
 The same as above, except using jQuery and without comments.
 
-{% highlight javascript %}
+```js
 var $images = $("img[data-1x]");
  
 if (window.devicePixelRatio == 2) {
@@ -81,13 +81,13 @@ if (window.devicePixelRatio == 2) {
     $this.attr("src", $this.data("1x"));
   });
 }
-{% endhighlight %}
+```
 
 ## retina.js class
 
 I created a `retina.js` class to reuse this in future applications.
 
-{% highlight javascript %}
+```js
 var Retina = Retina || {};
  
 Retina = {
@@ -114,13 +114,13 @@ Retina = {
     }
   }
 };
-{% endhighlight %}
+```
 
 Load `retina.js`* in your application
 
-{% highlight html %}
+```html
 <script src="retina.js"></script>
-{% endhighlight %}
+```
 
 or concatenate it with your other scripts.
 
@@ -128,13 +128,13 @@ Then run it: `Retina.init();`
 
 In this class, I decided to create a separate function, `isRetina`, in case I wanted to use it elsewhere in my application:
 
-{% highlight javascript %}
+```js
 if (Retina.isRetina() == true) {
   //
 } else {
   //
 }
-{% endhighlight %}
+```
 
 <small>* <a href="https://gist.github.com/jonsuh/25eecda57806ef0ee51f#file-retina-jquery-js" target="_blank">jQuery version also available</a>.</small>
 
@@ -142,7 +142,7 @@ if (Retina.isRetina() == true) {
 
 Since this image replacement method requires JavaScript to run, (it’s not pretty) you can use a combination of CSS and the `<noscript>` tag to gracefully degrade to a traditional image tag in browsers without JavaScript.
 
-{% highlight javascript %}
+```js
 <style>
   img.no-js {
     display: none;
@@ -156,6 +156,6 @@ Since this image replacement method requires JavaScript to run, (it’s not pret
 <noscript>
   <img src="/images/photo.jpg">
 </noscript>
-{% endhighlight %}
+```
 
 Again, this solution doesn’t have all the bells and whistles other libraries may offer&mdash;it’s a lightweight, barebone solution for replacing images based on retina or non-retina devices, but feel free to add your own conditional stuff (i.e. on retina devices, use the 2x images on screen sizes > 480px wide, otherwise use the 1x images).

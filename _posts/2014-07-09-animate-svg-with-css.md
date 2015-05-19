@@ -95,7 +95,7 @@ Before you clean up the markup, you may want to run the SVG through an optimizer
 
 Wrap the SVG in a container. Here we’ll use `.svg-container`.
 
-{% highlight xml %}
+```xml
 <div class="svg-container">
   <svg class="svg ufo-building" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 450 250" enable-background="new 0 0 450 250" xml:space="preserve">
     <g class="ufo-building-float">
@@ -122,22 +122,22 @@ Wrap the SVG in a container. Here we’ll use `.svg-container`.
     </g>
   </svg>
 </div>
-{% endhighlight %}
+```
 
 ## CSS
 
 The beautiful thing about SVG is that it’s infinitely scalable irrespective of screen size and pixel density&mdash;a wonderful thing for responsive web design. Make the SVG responsive:
 
-{% highlight css %}
+```css
 .svg {
   width: 100%;
   height: auto;
 }
-{% endhighlight %}
+```
 
 You can also set the fill value of a path in CSS, like you would any other attribute.
 
-{% highlight css %}
+```css
 .svg path {
   fill: #000;
 }
@@ -145,7 +145,7 @@ You can also set the fill value of a path in CSS, like you would any other attri
 .building-flames path {
   fill: #ff0000;
 }
-{% endhighlight %}
+```
 
 ## Animation
 
@@ -157,7 +157,7 @@ We’ll first animate the UFOs and buildings as if they were floating. Let’s u
 
 Since the same animation will be applied to both the UFOs and building, all of them were wrapped  in group `<g class="ufo-building-float">` like such:
 
-{% highlight xml %}
+```xml
 <g class="ufo-building-float">
   <g class="building">
     ...
@@ -169,7 +169,7 @@ Since the same animation will be applied to both the UFOs and building, all of t
     ...
   </g>
 </g>
-{% endhighlight %}
+```
 
 Create a keyframe animation* named `ufo-building-float` and apply it to `.ufo-building-float`.
 
@@ -178,7 +178,7 @@ Create a keyframe animation* named `ufo-building-float` and apply it to `.ufo-bu
 <blockquote>
   <p><i><b>Note:</b> The following CSS examples do <b>not</b> include browser-specific, vendor prefixes. You’ll have to add them on your own. Example:</i></p>
   <small>
-{% highlight css %}
+```css
 /* Older versions of Mozila */
 @-moz-keyframes animation-name {
   0% {-moz-transform: translateY(0)}
@@ -197,11 +197,11 @@ Create a keyframe animation* named `ufo-building-float` and apply it to `.ufo-bu
   -webkit-animation: animation-name 1s linear infinite; /* Chrome, Opera, Safari */
   animation        : animation-name 1s linear infinite; /* Standard */
 }
-{% endhighlight %}
+```
   </small>
 </blockquote>
 
-{% highlight css %}
+```css
 @keyframes ufo-building-float {
   0%   {transform: translateY(0)}
   25%  {transform: translateY(-25px)}
@@ -212,13 +212,13 @@ Create a keyframe animation* named `ufo-building-float` and apply it to `.ufo-bu
 .ufo-building-float {
   animation: ufo-building-float 5s linear infinite;
 }
-{% endhighlight %}
+```
 
 ### UFOs fading in and out
 
 The next animation will fade the UFOs in-and-out. Create two separate keyframes and stagger the fading in-and-out so each UFO animates in separate intervals.
 
-{% highlight css %}
+```css
 @keyframes ufo-big {
   0%        {opacity: 0}
   15%, 70%  {opacity: 1}
@@ -238,13 +238,13 @@ The next animation will fade the UFOs in-and-out. Create two separate keyframes 
 .ufo-small {
   animation: ufo-small 5s ease infinite;
 }
-{% endhighlight %}
+```
 
 ### Blinking UFO lights
 
 Now the synchronous blinking of the lights. Each light is its own path and has class `ufo-big-lights-light`, but also has a unique modifying class that indicates which light it is.
 
-{% highlight html %}
+```html
 <g class="ufo-big">
   <g class="ufo-big-lights">
     <path class="ufo-big-lights-light ufo-big-lights-light--1" d="..."/>
@@ -252,11 +252,11 @@ Now the synchronous blinking of the lights. Each light is its own path and has c
     ...
   </g>
 </g>
-{% endhighlight %}
+```
 
 Create the keyframe animation.
 
-{% highlight css %}
+```css
 @keyframes ufo-big-lights {
   0%        {fill: #000}
   20%       {fill: #fbcb43}
@@ -266,22 +266,22 @@ Create the keyframe animation.
 .ufo-big-lights-light {
   animation: ufo-big-lights 2.5s ease infinite;
 }
-{% endhighlight %}
+```
 
 Since we don’t want the lights to blink simultaneously, break up the animation of each light by `.2s` with `animation-delay`.
 
-{% highlight css %}
+```css
 .ufo-big-lights--2 {animation-delay: .2s}
 .ufo-big-lights--3 {animation-delay: .4s}
 .ufo-big-lights--4 {animation-delay: .6s}
 .ufo-big-lights--5 {animation-delay: .8s}
-{% endhighlight %}
+```
 
 ### Flames
 
 Now let’s make the flames red and animate them. To give them a flame-like effect, scale them up and down along the Y axis and loop it.
 
-{% highlight css %}
+```css
 @keyframes building-flames {
   0%   {transform: scale(1, 1)}
   50%  {transform: scale(1, 1.1)}
@@ -293,7 +293,7 @@ Now let’s make the flames red and animate them. To give them a flame-like effe
   animation       : building-flames .15s ease infinite;
   transform-origin: center top;
 }
-{% endhighlight %}
+```
 
 A couple of notes: `transform-origin` is set as `center top`; otherwise, it will scale at the center of the element, throwing off the positioning. Firefox does not support `transform-origin` for groups; therefore, we have to animate the `path`.
 
@@ -301,7 +301,7 @@ A couple of notes: `transform-origin` is set as `center top`; otherwise, it will
 
 Browsers that do not support SVG will ignore the `<svg>` tag. Using a static image as the fallback, we’ll use a <a href="http://lynn.ru/examples/svg/en.html" target="_blank">neat little trick presented by Alexey Ten</a> with the `<image>` element and nesting it inside the SVG.
 
-{% highlight html %}
+```html
 <svg class="svg ufo-building" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 450 250" enable-background="new 0 0 450 250" xml:space="preserve">
   <g class="ufo-building">
     <path d="M295.7,201.3l-1..."/>
@@ -309,7 +309,7 @@ Browsers that do not support SVG will ignore the `<svg>` tag. Using a static ima
   ...
   <image src="ufo-building-static.jpg" class="svg-fallback">
 </svg>
-{% endhighlight %}
+```
 
 ## Add your own animations
 

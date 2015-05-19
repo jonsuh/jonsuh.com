@@ -25,7 +25,7 @@ Here’s my list of Git Bash aliases and functions. To use them as your own, jus
 
 <small>When copy & pasting, it’s important to keep the spacing. (i.e. for aliases, there must be no spaces before and after the equal signs, and for functions, there must be a space after the opening curly bracket of the declaration and a semicolon after the command. Don’t forget to reload your file (`source ~/.bash_profile`) or restart Terminal after making changes.</small>
 
-{% highlight bash %}
+```bash
 # ----------------------
 # Git Aliases
 # ----------------------
@@ -58,23 +58,23 @@ alias gstd='git stash drop'
 # ----------------------
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; }
-{% endhighlight %}
+```
 
 You can quickly see how these aliases can save you keystrokes. Most of the aliases are pretty straight forward—for example, instead of `git add assets/css/screen.css`, you can run:
 
-{% highlight bash %}
+```bash
 ga assets/css/screen.css
-{% endhighlight %}
+```
 
 or instead of `git checkout -b <branch-name>`:
 
-{% highlight bash %}
+```bash
 gcb <branch-name>
-{% endhighlight %}
+```
 
 There are a few that are a but more custom. I use a couple of variations of `git log` that I find more useful. `gld` is a detailed, one-line view of `git log`:
 
-{% highlight bash %}
+```bash
 $ gld
 dba068d 2015-02-11 Remove stop propagation.
 37372ec 2015-02-11 Remove third-party Twitter widget.js completely and replace with intent link.
@@ -86,7 +86,7 @@ d9bf43b 2015-02-11 Custom robots.
 f72ccc1 2015-02-09 Social share post include Reddit. Fix http to https.
 6a42288 2015-02-11 Uglify critical in production task.
 8564aba 2015-02-11 Configure robots for pages.
-{% endhighlight %}
+```
 
 while `glg` is a detailed, decorative graph view of `git log`:
 
@@ -96,13 +96,13 @@ By default `gm`, the alias for `git merge`, defaults to `--no-ff` (no fast-forwa
 
 Aliases are great but are limited in scope, which is why I had to use a function for `glf`, my Git log find function. Occasionally I want to search for a commit by the commit message. Using `glf`:
 
-{% highlight bash %}
+```bash
 glf "commit message"
-{% endhighlight %}
+```
 
 You should get an output like follows:
 
-{% highlight bash %}
+```bash
 $ glf "logic"
 commit 95ed7d5b6f6d168047fd8ddc86579ce09ca39394
 Author: Jonathan Suh <hello@jonsuh.com>
@@ -115,19 +115,19 @@ Author: Jonathan Suh <hello@jonsuh.com>
 Date:   Tue Sep 30 20:18:29 2014 -0500
 
     Navigation link is-current logic.
-{% endhighlight %}
+```
 
 I realize there are more possibilities for other Git commands, but for anything outside of these, I run them manually; however, feel free to add your own or make modifications to your liking.
 
 I’ve personally enhanced `gs`, my alias for `git status`, as follows:
 
-{% highlight bash %}
+```bash
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
-{% endhighlight %}
+```
 
 Every time I run `gs`, I’m reminded to pull before making a commit:
 
-{% highlight bash %}
+```bash
 $ gs
  
 *********************************************
@@ -137,6 +137,6 @@ $ gs
 On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
-{% endhighlight %}
+```
 
 May these aliases and functions spare you thousands of keystrokes and extend your life expectancy. If you have any alias or functions that are particularly useful, I’d love for you to <a href="/contact/">share it with me</a>.

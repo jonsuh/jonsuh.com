@@ -35,14 +35,14 @@ For my production environment, using `_config.yml` as the base config file, I ca
 
 And here’s the breakdown for my `_config.yml` files:
 
-{% highlight yaml %}
+```yaml
 # _config.yml
 name: Jonathan Suh
 base_url: http://jonsuh.local
 
 # _config.production.yml
 base_url: http://jonsuh.com
-{% endhighlight %}
+```
 
 ## Grunt
 
@@ -50,7 +50,7 @@ I dove into <a href="http://gruntjs.com" target="_blank">Grunt</a>, and I’ll s
 
 No more `compass watch` in one window and `jekyll build --watch` in another. <a href="https://github.com/sindresorhus/grunt-concurrent" target="_blank">grunt-concurrent</a> allows me to do both along with JavaScript concatenation simultaneously without breaking a sweat. Here’s a look at the concurrent task:
 
-{% highlight javascript %}
+```js
 concurrent: {
   watch: {
     tasks: ['compass:watch', 'jekyll:watch', 'watch'],
@@ -59,11 +59,11 @@ concurrent: {
     }
   }
 }
-{% endhighlight %}
+```
 
 As a matter of fact, Grunt handles all of my development and production tasks: Jekyll build, Sass and Compass compile, CSS minification, JavaScript concatenation and uglification, Capistrano and Amazon S3 deployment. Here’s a look at my dependencies:
 
-{% highlight json %}
+```json
 "devDependencies": {
   "grunt": "~0.4.2",
   "load-grunt-tasks": "~0.3.0",
@@ -83,7 +83,7 @@ As a matter of fact, Grunt handles all of my development and production tasks: J
   "node-sass": "~0.8.1",
   "time-grunt": "~0.2.9"
 }
-{% endhighlight %}
+```
 
 ## Compass and Bourbon
 
@@ -97,17 +97,17 @@ The fundamental difference is Libsass is just a compiler while Compass is a fram
 
 **Libsass/Sass**
 
-{% highlight sass %}
+```scss
 background: url("../images/bg.jpg");
 @font-face {
   font-family: "Webfont";
   src: url("../webfonts/webfont.eot");
 }
-{% endhighlight %}
+```
 
 **Compass**
 
-{% highlight scss %}
+```scss
 background: image-url("bg.jpg");
 @font-face {
   font-family: "Webfont";
@@ -120,7 +120,7 @@ background: url("../images/bg.jpg?1389418864");
   font-family: "Webfont";
   src: url("../webfonts/webfont.eot?1471153369");
 }
-{% endhighlight %}
+```
 
 Compass also provides an extensive mixin library; however using it has a heavy payload resulting in slower compiles (its documentation is also horrendous), so I’ve chosen to use <a href="http://bourbon.io" target="_blank">Bourbon</a> instead and use Compass solely for the helper functions and cache busting.
 
@@ -132,13 +132,13 @@ Foundation 5 is crazy modular, so you can use all or as little pieces of it as y
 
 Foundation 5 is managed by <a href="http://bower.io" target="_blank">Bower</a>, so upgrading is a piece of cake, and integrating it into Compass can be done easily.
 
-{% highlight ruby %}
+```ruby
 # config.rb
 additional_import_paths = [
   "bower_components/foundation/scss",
   "bower_components/bourbon/app/assets/stylesheets"
 ]
-{% endhighlight %}
+```
 
 You can use Foundation with Grunt + Libsass or Compass: <a href="http://foundation.zurb.com/docs/sass.html" target="_blank">Read more</a>.
 
@@ -146,7 +146,7 @@ You can use Foundation with Grunt + Libsass or Compass: <a href="http://foundati
 
 I decided to move away from <a href="http://httpd.apache.org" target="_blank">Apache</a> and serve my site using <a href="http://nginx.org" target="_blank">Nginx</a>. Although I’m still getting used to the config and vhost files, Nginx is a heck of a lot faster than Apache, and with some basic Gzip configs, it flies.
 
-{% highlight bash %}
+```bash
 # nginx.conf
 gzip on;
 gzip_disable "msie6";
@@ -157,7 +157,7 @@ gzip_comp_level 6;
 gzip_buffers 16 8k;
 gzip_http_version 1.1;
 gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml;
-{% endhighlight %}
+```
 
 ## Amazon S3
 
@@ -179,10 +179,10 @@ I’ll be honest, getting Capistrano set up was no piece of cake, but when I got
 
 Because I’m using a static-site generator and not checking any compiled files into Git, I have to perform a non-traditional deploy method:
 
-{% highlight ruby %}
+```ruby
 set :deploy_via, :copy
 set :repository, "_site"
-{% endhighlight %}
+```
 
 Otherwise, I’d have to compile my site on my server after every deploy.
 
@@ -192,14 +192,14 @@ Now with one command in Terminal, `grunt deploy:production`, Capistrano deploys 
 
 Each deployment is handled as its own separate timestamped release. If something goes wrong with your deployment, it’ll intelligently roll back.
 
-{% highlight bash %}
+```bash
 example.com
 ├── current -> /var/www/example.com/20131220203126
 ├── releases
 │   ├── 20120101173027
 │   ├── 20130630060645
 └── └── 20131220203126
-{% endhighlight %}
+```
 
 `current` is a symlink to one of the releases. When Capistrano performs a deployment, it creates a new timestamped directory, transfers the files into it, then changes the `current` symlink to point to the new directory. Therefore your vhost should point to `current`.
 

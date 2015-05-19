@@ -124,7 +124,7 @@ gems:      ["rouge"]
 # Conversion
 # ============================
 markdown         : kramdown
-highlighter      : pygments
+highlighter      : rouge
 # lsi              : true
 excerpt_separator: <!--more-->
 

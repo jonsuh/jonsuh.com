@@ -42,9 +42,9 @@ Each social network has its own unique share URL that accepts custom parameters 
 
 Let’s take a look at Facebook’s share URL:
 
-{% highlight html %}
+```html
 https://www.facebook.com/sharer/sharer.php?u=URL_TO_SHARE
-{% endhighlight %}
+```
 
 Facebook’s only accepts one parameter, `u`, and you’ll replace the URL you want shared with `URL_TO_SHARE`.
 
@@ -52,55 +52,55 @@ Facebook’s only accepts one parameter, `u`, and you’ll replace the URL you w
 
 It’s important to note that values of parameters must be URL encoded—spaces and certain special characters will not be read, and URL encoding converts them into readable values. An encoded URL looks like the following:
 
-{% highlight text %}
+```text
 http%3A%2F%2Fjonsuh.com%2F
-{% endhighlight %}
+```
 
 Depending on the language(s) or framework you’re using, there are various ways to URL encode. With PHP:
 
-{% highlight php %}
+```php
 <?php echo urlencode('https://jonsuh.com/'); ?>
-{% endhighlight %}
+```
 
 With Jekyll I use <a href="https://gist.github.com/jonsuh/2a88c7799461623d9d82" target="_blank">this plugin</a> and do the following:
 
-{% highlight ruby %}
+```ruby
 {% raw %}
 {{ 'https://jonsuh.com/' | url_encode }}
 {% endraw %}
-{% endhighlight %}
+```
 
 ### Construct the Share URL
 
 Construct the Facebook share URL by appending the encoded URL immediately after `u=` (the question mark denotes the start of query strings):
 
-{% highlight html %}
+```html
 https://www.facebook.com/sharer/sharer.php?u={{ 'https://jonsuh.com/' | encode_url }}
-{% endhighlight %}
+```
 
 Then create the share link by using an anchor `<a>` with `target=_blank`, which should look like the following:
 
 *<small>(The code has been broken up into several lines for readability—remember to remove any spaces and line breaks in the `href` if you copy & paste.)</small>*
 
-{% highlight html %}
+```html
 <a href="https://www.facebook.com/sharer/sharer.php
      ?u={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Facebook</a>
-{% endhighlight %}
+```
 
 ### Multiple parameters
 
 Facebook’s sharer is simple because it only accepts one parameter, but let’s take a look at Twitter’s, which accepts more than one.
 
-{% highlight html %}
+```html
 https://twitter.com/intent/tweet?text=TWEET_TO_SHARE&url=URL_TO_SHARE&via=USERNAME_TO_SHARE
-{% endhighlight %}
+```
 
 This example accepts 3 parameters: `text`, `url` and `via`. It’s important to note the ampersands are not part of the parameter values—they’re query string separators.
 
 Let’s take the corresponding values and construct the share URL:
 
-{% highlight html %}
+```html
 <!--
 text: Check out this website!
 url : https://jonsuh.com/
@@ -111,13 +111,13 @@ via : jonsuh
      &url={{ 'https://jonsuh.com/' | encode_url }}
      &via=jonsuh" 
    target="_blank">Share on Twitter</a>
-{% endhighlight %}
+```
 
 <a href="https://twitter.com/intent/tweet/?text=Check%20out%20my%20new%20website!&url=https%3A%2F%2Fjonsuh.com%2F&via=jonsuh" class="button" target="_blank">Share on Twitter (_blank)</a>
 
 You can also replace the “Share on Twitter” text with a custom image:
 
-{% highlight html %}
+```html
 <a href="https://twitter.com/intent/tweet/
      ?text={{ 'Check out this website!' | encode_url }}
      &url={{ 'https://jonsuh.com/' | encode_url }}
@@ -125,7 +125,7 @@ You can also replace the “Share on Twitter” text with a custom image:
    target="_blank">
   <img src="http://example.com/image.png" alt="Share on Twitter">
 </a>
-{% endhighlight %}
+```
 
 <a href="https://twitter.com/intent/tweet/?text=Check%20out%20my%20new%20website!&url=https%3A%2F%2Fjonsuh.com%2F&via=jonsuh" target="_blank" style="border: 0">
   <img src="/assets/images/blog/social-share-links/twitter-share.png"
@@ -136,7 +136,7 @@ You can also replace the “Share on Twitter” text with a custom image:
 
 Even better, customize it with CSS:
 
-{% highlight html %}
+```html
 <a class="custom-share-button" href="https://twitter.com/intent/tweet/
      ?text={{ 'Check out this website!' | encode_url }}
      &url={{ 'https://jonsuh.com/' | encode_url }}
@@ -172,7 +172,7 @@ Even better, customize it with CSS:
 }
 .custom-share-button:hover { background-color: #70b7ec; }
 </style>
-{% endhighlight %}
+```
 
 <style>
 .custom-share-button {
@@ -228,7 +228,7 @@ Even better, customize it with CSS:
 
 Now that we’ve gotten social sharing links to work without JavaScript, let’s enhance them by adding some JavaScript to open the share URL in a popup window. Here’s the function we’ll use to handle the popup window.
 
-{% highlight js %}
+```js
 function windowPopup(url, width, height) {
   // Calculate the position of the popup so
   // it’s centered on the screen.
@@ -241,15 +241,15 @@ function windowPopup(url, width, height) {
     "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
   );
 }
-{% endhighlight %}
+```
 
 Bind `windowPopup` to when the share link is clicked. In this example, we’ll use a JavaScript-specific utility class `js-social-share`.
 
-{% highlight html %}
+```html
 <a class="js-social-share" href="https://twitter.com/intent/tweet/?text={{ 'Check out this website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" target="_blank">Share on Twitter</a>
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 //jQuery
 $(".js-social-share").on("click", function(e) {
   e.preventDefault();
@@ -268,7 +268,7 @@ if (jsSocialShares) {
     });
   });
 }
-{% endhighlight %}
+```
 
 <p>
   <a href="https://twitter.com/intent/tweet/?text={{ 'Check out this website!' | encode_url }}&url={{ 'https://jonsuh.com/' | encode_url }}&via=jonsuh" class="js-social-share button" target="_blank">Share on Twitter (Popup)</a>
@@ -295,27 +295,27 @@ Here’s a collection of common social share URLs and examples of their structur
 
 ### Facebook
 
-{% highlight html %}
+```html
 <a href="https://www.facebook.com/sharer/sharer.php
      ?u={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Facebook</a>
-{% endhighlight %}
+```
 
 Parameter `u` is required.
 
 ### Google+
 
-{% highlight html %}
+```html
 <a href="https://plus.google.com/share
      ?url={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Google+</a>
-{% endhighlight %}
+```
 
 Parameter `url` is required. <a href="https://developers.google.com/+/web/share/#sharelink" title="Google+ Share Link documentation" target="_blank">Read the documentation</a>
 
 ### LinkedIn
 
-{% highlight html %}
+```html
 <a href="https://www.linkedin.com/shareArticle
      ?mini=true
      &url={{ 'https://jonsuh.com/' | encode_url }}
@@ -323,43 +323,43 @@ Parameter `url` is required. <a href="https://developers.google.com/+/web/share/
      &source={{ 'https://jonsuh.com/' | encode_url }}
      &summary={{ 'Short summary' | encode_url }}
    target="_blank">Share on LinkedIn</a>
-{% endhighlight %}
+```
 
 Parameter `mini` is required and must be true, `url` is required. <a href="https://developer.linkedin.com/documents/share-linkedin" title="LinkedIn share URL documentation" target="_blank">Read the documentation</a>
 
 ### Pinterest
 
-{% highlight html %}
+```html
 <a href="https://www.pinterest.com/pin/create/button/
      ?url={{ 'https://jonsuh.com/' | encode_url }}
      &media={{ 'https://jonsuh.com/icon.png' | encode_url }}
      &description={{ 'Short description' | encode_url }}
      &hashtags=web,development" 
    target="_blank">Share on Pinterest</a>
-{% endhighlight %}
+```
 
 Parameter `url` is required. <a href="https://developers.pinterest.com/pin_it/" title="Pinterest Pin It button documentation" target="_blank">Read the documentation</a>
 
 ### Reddit
 
-{% highlight html %}
+```html
 <a href="http://www.reddit.com/submit/
      ?url={{ 'https://jonsuh.com/' | encode_url }}"
    target="_blank">Share on Reddit</a>
-{% endhighlight %}
+```
 
 Parameter `url` is required. <a href="http://www.reddit.com/buttons/" title="Reddit Share button documentation" target="_blank">Read the documentation</a>
 
 ### Twitter
 
-{% highlight html %}
+```html
 <a href="https://twitter.com/intent/tweet/
      ?text={{ 'Visit my website' | encode_url }}
      &url={{ 'https://jonsuh.com/' | encode_url }}
      &via=jonsuh
      &hashtags=web,development" 
    target="_blank">Share on Twitter</a>
-{% endhighlight %}
+```
 
 All parameters are optional. <a href="https://dev.twitter.com/web/tweet-button/web-intent" title="Twitter Web Intent documentation" target="_blank">Read the documentation</a>
 

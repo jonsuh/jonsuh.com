@@ -28,7 +28,7 @@ I broke up this post into three sections:
 
 PHP >= 5.2.0 features a function, `json_decode`, that decodes a JSON string into a PHP variable. By default it returns an object. The second parameter accepts a boolean that when set as `true`, tells it to return the objects as associative arrays. You can learn more about the `json_decode` function from <a href="http://php.net/manual/en/function.json-decode.php" target="_blank">PHP’s documentation</a>.
 
-{% highlight php %}
+```php
 <?php
   // JSON string
   $someJSON = '[{"name":"Jonathan Suh","gender":"male"},{"name":"William Philbin","gender":"male"},{"name":"Allison McKinnery","gender":"female"}]';
@@ -43,13 +43,13 @@ PHP >= 5.2.0 features a function, `json_decode`, that decodes a JSON string into
   print_r($someObject);      // Dump all data of the Object
   echo $someObject[0]->name; // Access Object data
 ?>
-{% endhighlight %}
+```
 
 ## Loop through PHP Array or Object
 
 Loop through a PHP array or object with a `foreach` loop.
 
-{% highlight php %}
+```php
 <?php
   // Loop through Array
   $someArray = ...; // Replace ... with your PHP Array
@@ -63,7 +63,7 @@ Loop through a PHP array or object with a `foreach` loop.
     echo $value->name . ", " . $value->gender . "<br>";
   }
 ?>
-{% endhighlight %}
+```
 
 Note the differences in accessing the values of an array vs an object.
 
@@ -71,7 +71,7 @@ Note the differences in accessing the values of an array vs an object.
 
 PHP also features a `json_encode` function to convert an array or object into a string. Read more about the `json_encode` function from <a href="http://php.net/manual/en/function.json-encode.php" target="_blank">PHP’s documentation</a>.
 
-{% highlight php %}
+```php
 <?php
   // Array
   $someArray = [
@@ -93,11 +93,11 @@ PHP also features a `json_encode` function to convert an array or object into a 
   $someJSON = json_encode($someArray);
   echo $someJSON;
 ?>
-{% endhighlight %}
+```
 
 Note that I’m using the short array syntax that’s featured in PHP 5.4+.
 
-{% highlight php %}
+```php
 <?php
   $array = array(
     "foo" => "bar",
@@ -110,7 +110,7 @@ Note that I’m using the short array syntax that’s featured in PHP 5.4+.
     "bar" => "foo"
   ];
 ?>
-{% endhighlight %}
+```
 
 ***
 
@@ -120,7 +120,7 @@ Note that I’m using the short array syntax that’s featured in PHP 5.4+.
 
 JavaScript has a built-in `JSON.parse()` method that parses a JSON string and returns an object.
 
-{% highlight javascript %}
+```js
 <script>
   // Convert JSON String to JavaScript Object
   var JSONString = '[{"name":"Jonathan Suh","gender":"male"},{"name":"William Philbin","gender":"male"},{"name":"Allison McKinnery","gender":"female"}]';
@@ -129,13 +129,13 @@ JavaScript has a built-in `JSON.parse()` method that parses a JSON string and re
   console.log(JSONObject);      // Dump all data of the Object in the console
   alert(JSONObject[0]["name"]); // Access Object data
 </script>
-{% endhighlight %}
+```
 
 `JSON.parse()` is very well-supported, but there are browsers that do not support it (i.e. <= IE 7. More information at <a href="http://caniuse.com/#feat=json" target="_blank">caniuse.com</a>).
 
 jQuery 1.x has a `$.parseJSON()` method that should fill in the gaps for those browsers if you’re needing to support them. You can also use the <a href="https://github.com/douglascrockford/JSON-js" target="_blank">JSON-js</a> library as a polyfill.
 
-{% highlight javascript %}
+```js
 <script>
   // Convert JSON String to JavaScript Object with jQuery
   var JSONString = "..."; // Replace ... with your JSON String
@@ -144,13 +144,13 @@ jQuery 1.x has a `$.parseJSON()` method that should fill in the gaps for those b
   console.log(JSONObject);      // Dump all data of the Object in the console
   alert(JSONObject[0]["name"]); // Access Object data
 </script>
-{% endhighlight %}
+```
 
 ## Loop through JavaScript Object
 
 You can then loop through a JavaScript object using a `for in` loop.
 
-{% highlight javascript %}
+```js
 <script>
   // Loop through Object
   var JSONObject = ...; // Replace ... with your JavaScript Object
@@ -161,13 +161,13 @@ You can then loop through a JavaScript object using a `for in` loop.
     }
   }
 </script>
-{% endhighlight %}
+```
 
 ## Convert JavaScript Object to JSON String
 
 JavaScript has a `JSON.stringify` method to convert a value into a JSON string.
 
-{% highlight javascript %}
+```js
 <script>
   var JSONObject = [
     {
@@ -187,7 +187,7 @@ JavaScript has a `JSON.stringify` method to convert a value into a JSON string.
   var JSONString = JSON.stringify(JSONObject);
   alert(JSONString);
 </script>
-{% endhighlight %}
+```
 
 Like `JSON.parse`, `JSON.stringify` is not supported in dinosaur browsers like <= IE 7. You can use the <a href="https://github.com/douglascrockford/JSON-js" target="_blank">JSON-js library</a> to polyfill `JSON.stringify` as well.
 
@@ -203,7 +203,7 @@ Let’s say you want to get information from a database, safely return the data 
 
 Let’s assume your database structure looks like the following:
 
-{% highlight text %}
+```text
 Table: people
 ┌────┬────────────────────┬─────────┐
 | id | name               | gender  |
@@ -214,7 +214,7 @@ Table: people
 | 3  | Becky Borgster     | female  |
 | 4  | Victoria Einsteen  | female  |
 └────┴────────────────────┴─────────┘
-{% endhighlight %}
+```
 
 And you want to dynamically get a list of people from the database based on gender, like this:
 
@@ -222,7 +222,7 @@ And you want to dynamically get a list of people from the database based on gend
 
 Let’s start with the front-end file `index.html` that’ll have a select dropdown with genders to select from, a table to display the results, and the script to handle the Ajax. The JavaScript is written in jQuery.
 
-{% highlight html %}
+```html
 <select id="gender" name="gender">
   <option value="male">Male</option>
   <option value="female">Female</option>
@@ -267,11 +267,11 @@ $("#gender").on("change", function() {
   });
 });
 </script>
-{% endhighlight %}
+```
 
 Now let’s create a `response.php` file to handle the back-end logic of getting the information from the database and returning the results as a JSON string.
 
-{% highlight php %}
+```php
 <?php
   // File: response.php
 
@@ -301,6 +301,6 @@ Now let’s create a `response.php` file to handle the back-end logic of getting
   $someJSON = json_encode($someArray);
   echo $someJSON;
 ?>
-{% endhighlight %}
+```
 
 To get a more in-depth and better example of PHP-JSON-JavaScript/jQuery-Ajax interaction, read my [jQuery Ajax Call to PHP Script with JSON Return](/blog/jquery-ajax-call-to-php-script-with-json-return/) post.

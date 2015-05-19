@@ -19,18 +19,18 @@ To remove the duplicate entries in the Open With menu, you have to rebuild the 
 * Open up Terminal (Applications &gt; Utilities &gt; Terminal).
 * Type the following command in Terminal and press enter.
 
-{% highlight bash %}
+```bash
 # For OS X 10.5+
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # For OS X 10.3 and 10.4
 /System/Library/Frameworks/ApplicationServices.framework/\Frameworks/LaunchServices.framework/Support/lsregister \-kill -r -domain local -domain system -domain user
-{% endhighlight %}  
+```  
 
 * Restart Finder by typing the following command in Terminal and pressing enter.
 
-{% highlight bash %}
+```bash
 killall Finder
-{% endhighlight %}
+```
 
 Your Launch Services Database should have been rebuilt and you should no longer see duplicate application entries in your Open With menu.

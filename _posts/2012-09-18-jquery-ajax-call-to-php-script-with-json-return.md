@@ -24,7 +24,7 @@ User experience plays a vital role in excellent web design. Ajax allows you to r
 
 We’ll first start with a form that you’d like to process with Ajax.
 
-{% highlight html %}
+```html
 <form action="return.php" class="js-ajax-php-json" method="post" accept-charset="utf-8">
   <input type="text" name="favorite_beverage" value="" placeholder="Favorite restaurant" />
   <input type="text" name="favorite_restaurant" value="" placeholder="Favorite beverage" />
@@ -34,23 +34,23 @@ We’ll first start with a form that you’d like to process with Ajax.
   </select>
   <input type="submit" name="submit" value="Submit form"  />
 </form>
-{% endhighlight %}
+```
 
 You’ll add the form somewhere in the `<body>`. I added two input fields and one dropdown field for this demo to give you a preview of how the information is processed and returned.
 
 Now we’ll add just a placeholder `<div>` that we’ll use to give you a visual of the information returned.
 
-{% highlight html %}
+```html
 <div class="the-return">
   [HTML is replaced when successful.]
 </div>
-{% endhighlight %}
+```
 
 ## PHP
 
 This is where the information that is given from the form will be passed through and processed. In this demo, we’ll save the file as `response.php` in the same location of the HTML file above.
 
-{% highlight php %}
+```php
 <?php
 if (is_ajax()) {
   if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
@@ -79,7 +79,7 @@ function test_function(){
   echo json_encode($return);
 }
 ?>
-{% endhighlight %}
+```
 
 **Line 2:** First, check that the request that’s being made is an Ajax request with `is_ajax()`.
 
@@ -95,7 +95,7 @@ Once a switch value match is found for `action`, in this example `test`, it will
 
 This is where the magic of processing the form and getting the returned values by `response.php` asynchronously happens. You’ll put the following in the `<head>`.
 
-{% highlight javascript %}
+```js
 <script type="text/javascript">
 $("document").ready(function(){
   $(".js-ajax-php-json").submit(function(){
@@ -120,7 +120,7 @@ $("document").ready(function(){
   });
 });
 </script>
-{% endhighlight %}
+```
 
 For this demo, you’ll be pointing to `response.php` relatively because it should be in the same location.
 

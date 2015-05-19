@@ -82,9 +82,9 @@ Grunt is installed and managed by npm, Node.js’s package manager. npm is insta
 
 Run the following command in your command line.
 
-{% highlight bash %}
+```bash
 npm install -g grunt-cli
-{% endhighlight %}
+```
 
 *You may have to run it with `sudo` if you’re getting errors.*
 
@@ -101,7 +101,7 @@ There are multiple ways to create a `package.json` file, but for this guide we�
 
 Create and save your `package.json` file in the root directory of your project by using the following example:
 
-{% highlight json %}
+```json
 {
   "name": "sample-project",
   "version": "0.0.1",
@@ -112,15 +112,15 @@ Create and save your `package.json` file in the root directory of your project b
     "grunt-contrib-watch": "^0.6.1"
   }
 }
-{% endhighlight %}
+```
 
 ### Installing dependencies
 
 In your command line, navigate to your project directory and run the following* :
 
-{% highlight bash %}
+```bash
 npm install
-{% endhighlight %}
+```
 
 This will install all of the required dependencies into your project. (Take notice that a `node_modules` directory was created)
 
@@ -133,28 +133,28 @@ If you want to add another plugin, you can do it one of two ways:
 **Method #1**  
 Replacing `name-of-plugin` with the appropriate plugin name, run this:
 
-{% highlight bash %}
+```bash
 npm install name-of-plugin --save-dev
-{% endhighlight %}
+```
 
 This will install the latest version of the plugin. The `--save-dev` flag will add the appropriate line to your `package.json` file.
 
 **Method #2**  
 Add another line of json to your `package.json` file inside of `devDependencies`, like such:
 
-{% highlight json %}
+```json
   "devDependencies": {
     ...
     "grunt-contrib-concat": "^0.3.0",
     "name-of-plugin": "^x.x.x"
   }
-{% endhighlight %}
+```
 
 Then run the following to install the plugin you added:
 
-{% highlight bash %}
+```bash
 npm install
-{% endhighlight %}
+```
 
 <em>A quick note about setting the version of your dependency:</em> A tilde ( ~ ) will match the most recent minor version, a caret ( ^ ) will match the most recent major version, and neither will lock the version down.
 
@@ -167,7 +167,7 @@ npm install
 
 This is where you load your Grunt plugins, configure tasks, and set custom tasks. Create a `Gruntfile.js` file in the root directory of your project using this example:
 
-{% highlight javascript %}
+```js
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -186,14 +186,14 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['concat']);
 };
-{% endhighlight %}
+```
 
 All of your Grunt code needs to be inside `module.exports = function(grunt) {...};`
 
 **Configuring tasks**  
 Tasks are configured inside `grunt.initConfig({...});` like such:
 
-{% highlight javascript %}
+```js
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
   concat: {
@@ -206,7 +206,7 @@ grunt.initConfig({
     }
   }
 });
-{% endhighlight %}
+```
 
 Here we’re configuring the `concat` task, where we’re setting the option, `banner`, and configuring the subtask, `dist`, to concatenate `file1.js` and `file2.js` into one file, `build.js`.
 
@@ -215,44 +215,44 @@ Based on the plugin, configuring can be slightly different, so it’s important 
 **Loading plugins**  
 Now that you’ve configured the `concat` task, you have to load the plugin or Grunt will not recognize the task.
 
-{% highlight javascript %}
+```js
 grunt.loadNpmTasks('grunt-contrib-concat');
-{% endhighlight %}
+```
 
 **Configuring the default task**  
 Grunt has a default task that is triggered by running the following command:
 
-{% highlight bash %}
+```bash
 grunt
-{% endhighlight %}
+```
 
 You can also run `grunt default`. You can configure the default task to run the command of your choice.
 
-{% highlight javascript %}
+```js
 grunt.registerTask('default', ['concat']);
-{% endhighlight %}
+```
 
 **Configuring custom tasks**  
 You can also configure custom tasks, which is done in the same manner as the default task. You’ll pass your task name in the first parameter and one-or-more tasks in the second parameter as an array.
 
-{% highlight javascript %}
+```js
 grunt.registerTask('customtaskname', ['task1', 'task2', 'task3']);
-{% endhighlight %}
+```
 
 **Running tasks**  
 Once tasks, the default task, and custom tasks have been configured, you can run them as such:
 
-{% highlight bash %}
+```bash
 grunt
 grunt concat
 grunt customtaskname
-{% endhighlight %}
+```
 
 If you have more than one subtask for a task, running `grunt taskname` will run all the subtasks in linear order. However, if you want to run a specific subtask:
 
-{% highlight bash %}
+```bash
 grunt taskname:subtaskname
-{% endhighlight %}
+```
 
 This is a great way to break up your tasks so you can run specific tasks for specific scenarios, such as development vs production.
 
@@ -264,7 +264,7 @@ Now that you know the basic anatomy and setup of Grunt and its files, let’s go
 
 ### Set up project files
 
-{% highlight text %}
+```text
 sample-project
 ├── sass
 ├── └── screen.scss
@@ -274,10 +274,10 @@ sample-project
 ├── Gruntfile.js
 ├── index.html
 └── package.json
-{% endhighlight %}
+```
 
 **package.json**
-{% highlight json %}
+```json
 {
   "name": "sample-project",
   "version": "0.0.1",
@@ -289,10 +289,10 @@ sample-project
     "grunt-sass": "^0.12.0"
   }
 }
-{% endhighlight %}
+```
 
 **Gruntfile.js**
-{% highlight javascript lineos %}
+```js
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -344,10 +344,10 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['concat', 'sass:dist', 'watch']);
   grunt.registerTask('production', ['concat', 'uglify', 'sass:production']);
 };
-{% endhighlight %}
+```
 
 **index.html**
-{% highlight html %}
+```html
 <html>
 <head>
 <link href="dist/screen.css" rel="stylesheet">
@@ -357,10 +357,10 @@ module.exports = function(grunt) {
 <h1>Sample project</h1>
 </body>
 </html>
-{% endhighlight %}
+```
 
 **screen.scss**
-{% highlight scss %}
+```scss
 body {
   background: #ccc;
 }
@@ -368,17 +368,17 @@ body {
 h1 {
   color: blue;
 }
-{% endhighlight %}
+```
 
 **file1.js**
-{% highlight javascript %}
+```js
 alert("file1.js");
-{% endhighlight %}
+```
 
 **file2.js**
-{% highlight javascript %}
+```js
 alert("file2.js");
-{% endhighlight %}
+```
 
 ### Install Grunt and plugins
 
@@ -386,39 +386,39 @@ Now that our files are prepped and ready, we need to install Grunt and the neces
 
 In the root directory of the project, run:
 
-{% highlight bash %}
+```bash
 npm install
-{% endhighlight %}
+```
 
 ### Running tasks
 
 Now you’re ready to run the configured Grunt tasks. Open up `index.html` in your browser. For starters, let’s go ahead and run the custom build task:
 
-{% highlight bash %}
+```bash
 grunt build
-{% endhighlight %}
+```
 
 The custom build task was configured as follows:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('build', ['concat', 'sass:dist']);
-{% endhighlight %}
+```
 
 You’ll notice that `build.js` and `screen.css` were created in a new `dist` directory. Refresh `index.html` and you should get 2 alerts and notice the styling of the page has changed.
 
 Now let’s run the default Grunt task:
 
-{% highlight bash %}
+```bash
 grunt
-{% endhighlight %}
+```
 
 <img src="/assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-grunt.png">
 
 The default task was configured as follows:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('default', ['concat', 'sass:dist', 'watch']);
-{% endhighlight %}
+```
 
 After running `concat` and `sass:dist`, Grunt waits and watches for changes to any files in directories `js/` and `sass/`.
 
@@ -430,17 +430,17 @@ You’ll notice in Terminal that Grunt detected your changes and ran the corresp
 
 Let’s say you’re done with development and you’re ready to make the files production-ready. Run the custom production task:
 
-{% highlight bash %}
+```bash
 grunt production
-{% endhighlight %}
+```
 
 <img src="/assets/images/blog/2014/get-started-with-grunt/get-started-with-grunt-production.png">
 
 The custom production task was configured as follows:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('production', ['concat', 'uglify', 'sass:production']);
-{% endhighlight %}
+```
 
 If you check the files in `dist/` you’ll notice that both `build.js` and `screen.css` were compiled then minified. Notice that `grunt production` is calling a subtask `sass:production` as opposed to `sass:dist`, which is used for development.
 

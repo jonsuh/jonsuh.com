@@ -27,7 +27,7 @@ After you create an ad and you select *Get code*, you should see a dialog box w
 
 By default, Google AdSense ads are not responsive; therefore, we have to implement some JavaScript trickery to make it responsive. We do this by creating different-sized ads and using the browser’s width to determine which size ad to load. Here’s a look at the JavaScript hack:
 
-{% highlight javascript %}
+```js
 <script type="text/javascript"><!--
   google_ad_client = "ca-pub-XXXXXXXXXXXXXXXX";
   if (window.innerWidth <= 350) {
@@ -47,7 +47,7 @@ By default, Google AdSense ads are not responsive; therefore, we have to impleme
     google_ad_height = 60;
   }
 //--></script>
-{% endhighlight %}
+```
 
 For this example, create 3 different-sized ads: small for mobile devices, medium for tablets, large for desktop (I used a 320x50 for small, 468x60 for medium, and 728x90 for large).
 
@@ -61,17 +61,17 @@ The JavaScript works great, but if for example the site is loaded on a browser t
 
 In order to hide the overflow and prevent horizontal scrolling, you just need to wrap the script inside of a div and with one line of CSS, hide the overflow, which is as follows:
 
-{% highlight css %}
+```css
 .js-gads {
   overflow: hidden;
 }
-{% endhighlight %}
+```
 
 ## Usage
 
 In closing, once you add the CSS to your stylesheet, you would achieve a responsive Google AdSense ad with the following:
 
-{% highlight html %}
+```html
 <div class="js-gads">
   <script type="text/javascript"><!--
     google_ad_client = "ca-pub-XXXXXXXXXXXXXXXX";
@@ -94,7 +94,7 @@ In closing, once you add the CSS to your stylesheet, you would achieve a respons
   //--></script>
   <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 </div>
-{% endhighlight %}
+```
 
 ### Demo
 

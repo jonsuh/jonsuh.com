@@ -27,7 +27,7 @@ It’s important to separate databases and authentication keys and salts for eac
 
 Edit your `wp-config.php` file so it looks like the following:
 
-{% highlight php %}
+```php
 <?php
 
 // Set your environment/url pairs
@@ -71,24 +71,24 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-{% endhighlight %}
+```
 
 Edit `$environments` accordingly so they match your environments and their corresponding hostnames.
 
 Then create a `wp-config` directory in the root of your project and create the following files inside:
 
-{% highlight text %}
+```text
 website.com
 ├── wp-config
 │   ├── wp-db-local.php
 │   ├── wp-db-development.php
 │   ├── wp-db-staging.php
 └── └── wp-db-production.php
-{% endhighlight %}
+```
 
 Edit and add the following lines to each of your `wp-db-*.php` files:
 
-{% highlight php %}
+```php
 <?php
 // Prevent file from being accessed directly
 if (!defined('ABSPATH')) exit();
@@ -113,12 +113,12 @@ $table_prefix = 'wp_';
 
 define('WPLANG',   '');
 define('WP_DEBUG', true);
-{% endhighlight %}
+```
 
 For `wp-db-production.php` turn debugging off by defining `WP_DEBUG` to `false`
 
-{% highlight php %}
+```php
 define('WP_DEBUG', false);
-{% endhighlight %}
+```
 
 Voila&mdash;Now all you need to do is drop in the correct credentials for each of your environments and you’re done!

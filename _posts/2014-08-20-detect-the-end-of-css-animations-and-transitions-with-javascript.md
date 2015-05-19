@@ -20,7 +20,7 @@ CSS allows you to create animations with transitions and keyframes that once wer
 
 Handle the animations (with transitions or keyframes) in your CSS; handle the event timing and triggers in your JavaScript.
 
-{% highlight css %}
+```css
 .button {
   transition-property: background-color, transform;
   transition-duration: 1.5s;
@@ -31,13 +31,13 @@ Handle the animations (with transitions or keyframes) in your CSS; handle the ev
   background-color: red;
   transform: translateY(50px);
 }
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```js
 $(".button").click(function() {
   $(this).addClass("animate");
 });
-{% endhighlight %}
+```
 
 ## Detecting and executing when transitions end with jQuery
 
@@ -45,7 +45,7 @@ Using JavaScript, we can detect the `transitionend` event; however for cross-bro
 
 Then bind the event with jQuery’s `one` function, which ensures that it runs only once (it unbinds the event handler after it runs once). (Read more about the <a href="http://api.jquery.com/one/" target="_blank">one function</a>)
 
-{% highlight javascript %}
+```js
 $(".button").click(function(){
   $(this).addClass("animate");
   $(this).one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
@@ -53,7 +53,7 @@ $(".button").click(function(){
     // Do something when the transition ends
   });
 });
-{% endhighlight %}
+```
 
 The above solution works, but the problem is, depending on the browser, it can fire twice (i.e. Chrome supports both `webkitTransitionEnd` and `transitionend`)
 
@@ -65,7 +65,7 @@ Here’s what the console returns when I log the event in Chrome:
 
 We’ll introduce a function, `whichTransitionEvent`, to detect the supported event property name; assign a variable, in this case `transitionEvent`, to hold the event property name; and pass the variable as the first argument of the `one` function.
 
-{% highlight javascript %}
+```js
 // Function from David Walsh: http://davidwalsh.name/css-animation-callback
 function whichTransitionEvent(){
   var t,
@@ -94,7 +94,7 @@ $(".button").click(function(){
     // Do something when the transition ends
   });
 });
-{% endhighlight %}
+```
 
 This ensures that, even in Chrome, the event only fires once:
 
@@ -111,7 +111,7 @@ The above solution can be slightly tweaked to account for animations done with k
 
 Like transitions have the `transitionend` event, animations have the `animationend` event. We’ll take the `whichtransitionEvent` function and swap out instances of `transition` for `animation` (case sensitive).
 
-{% highlight javascript %}
+```js
 function whichAnimationEvent(){
   var t,
       el = document.createElement("fakeelement");
@@ -139,13 +139,13 @@ $(".button").click(function(){
     // Do something when the animation ends
   });
 });
-{% endhighlight %}
+```
 
 ## Vanilla JavaScript
 
 With Vanilla JavaScript, it’s slightly trickier. Using the `whichTransitionEvent` function, bind `transitionEvent` with `addEventListener`.
 
-{% highlight javascript %}
+```js
 var button = document.querySelector(".button"),
     transitionEvent = whichTransitionEvent();
 
@@ -164,7 +164,7 @@ function customFunction(event) {
 
   // Do something when the transition ends
 }
-{% endhighlight %}
+```
 
 The second argument must be a function name as opposed to `function({})`. This is important because we must unbind the listener, otherwise the listener will keep running, causing it to run multiple times.
 

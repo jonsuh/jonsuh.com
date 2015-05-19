@@ -19,15 +19,15 @@ Aliases are nothing more than keyboard shortcuts or abbreviations, and although 
 
 Let’s create a temporary alias in the command line for `ls -al` (list all files in long listing format in the current directory). Open Terminal and run the following command:
 
-{% highlight bash %}
+```bash
 alias ll="ls -al"
-{% endhighlight %}
+```
 
 <small>Note: There should be no spaces before or after the equal sign. Spaces will break the command.</small>
 
 Now if you type `ll` in the command line, you should see something like the following:
 
-{% highlight text %}
+```text
 -rw-------    1 user  staff   6927 Feb 12 12:51 .bash_history
 -rw-r--r--    1 user  staff   2787 Jan  3 20:16 .bash_profile
 -rw-r--r--    1 user  staff     58 Apr  8  2014 .bashrc
@@ -37,19 +37,19 @@ drwxr-xr-x    3 user  staff    102 Nov  4  2013 .gem
 -rw-r--r--    1 user  staff    811 Feb  2 15:31 .gitconfig
 drwxr-xr-x    5 user  staff    170 Apr  8  2014 .go
 drwxr-xr-x  687 user  staff  23358 Feb  3 19:37 .npm
-{% endhighlight %}
+```
 
 To remove the alias, use the `unalias` command:
 
-{% highlight bash %}
+```bash
 unalias ll
-{% endhighlight %}
+```
 
 To see a list of all your aliases, use the `alias` command:
 
-{% highlight bash %}
+```bash
 alias
-{% endhighlight %}
+```
 
 ## Permanent Aliases
 
@@ -59,32 +59,32 @@ To make aliases permanent, we have to set them in a file that’s read when you 
 
 From the command line, open to edit the file by running the following:
 
-{% highlight bash %}
+```bash
 nano ~/.bash_profile
-{% endhighlight %}
+```
 
 <small>(You can also open and edit it with your code editor, i.e. `subl ~/.bash_profile`)</small>
 
 Add the following lines either at the bottom of the file or wherever you’d like:
 
-{% highlight bash %}
+```bash
 # -------
 # Aliases
 # -------
 alias ll="ls -al"
-{% endhighlight %}
+```
 
 Save and close the file. Now if you restart Terminal, the alias `ll` will be available to you. You can also tell Terminal to reload the `~/.bash_profile` file using the `source` command:
 
-{% highlight bash %}
+```bash
 source ~/.bash_profile
-{% endhighlight %}
+```
 
 ## Useful Aliases
 
 Here are a handful of aliases that you may find useful.
 
-{% highlight bash %}
+```bash
 # -------
 # Aliases
 # -------
@@ -97,6 +97,6 @@ alias ll="ls -al" # List all files in current directory in long list format
 alias ldir="ls -al | grep ^d" # List all directories in current directory in long list format
 alias o="open ." # Open the current directory in Finder
 alias ut="uptime" # Computer uptime
-{% endhighlight %}
+```
 
 If you use Git in the command-line, I also wrote a post on <a href="/blog/git-command-line-shortcuts/" target="_blank">Git Command-Line Shortcuts</a>, which includes my personal set of Git Bash aliases and functions.

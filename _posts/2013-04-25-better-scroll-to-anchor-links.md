@@ -17,13 +17,13 @@ However, traditional scroll-to approaches do not play well with all responsive s
 
 Let’s look at a traditional jQuery approach:
 
-{% highlight html %}
+```html
 <a id="#top"></a>
 ...
 <a href="#top" class="anchorLink">Back to Top</a>
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```js
 $(document).ready(function(){
   $(".anchorLink").click(function(e){
     e.preventDefault();
@@ -36,7 +36,7 @@ $(document).ready(function(){
     }, 100);
   });
 });
-{% endhighlight %}
+```
 
 This method works by getting the y offset of the target anchor, and uses jQuery’s animate to generate a sliding effect, where the duration is 100ms.
 
@@ -48,7 +48,7 @@ This inconsistency is a problem with the growth of responsive design because in 
 
 Here’s a better solution:
 
-{% highlight javascript %}
+```js
 $(".anchorLink").click(function(e){
   e.preventDefault();
  
@@ -64,7 +64,7 @@ $(".anchorLink").click(function(e){
     scrollTop: that_offset.top
   }, speed);
 });
-{% endhighlight %}
+```
 
 This method first calculates the absolute distance between the link and the anchor. It’ll then calculate the directly proportional speed needed to travel that distance based on the value of `base_speed` (time in ms to travel 1,000 pixels).
 
@@ -72,7 +72,7 @@ With this solution, it’ll take 100ms to travel 1,000 pixels and 1,000ms to tra
 
 You can also take this solution and make it abstract so you can reuse the code throughout your site. Here’s a real simple example:
 
-{% highlight javascript %}
+```js
 $(document).ready(function(){
   $(".anchorLink").click(function(e) {
     e.preventDefault();
@@ -92,20 +92,20 @@ function anchorScroll(this_obj, that_obj, base_speed) {
     scrollTop: that_offset.top
   }, speed);
 }
-{% endhighlight %}
+```
 
 Though this solution is an improvement to the first, keep in mind that jQuery animate’s default easing function is `swing`. Read <a href="https://medium.com/design-ux/926eb80d64e3" target="_blank">Transition Interfaces</a> by <a href="http://psql.me" target="_blank">Pasquale D’Silva</a>.
 
 You can experiment with more easing functions using the <a href="http://gsgd.co.uk/sandbox/jquery/easing" target="_blank">jQuery Easing Plugin</a>, then do the following:
 
-{% highlight javascript %}
+```js
 $("html,body").animate({
   scrollTop: that_offset.top
 }, {
   duration: speed,
   easing: "easeInOutSine"
 });
-{% endhighlight %}
+```
 
 Check out jQuery’s <a href="http://jqueryui.com/resources/demos/effect/easing.html">demo of different easing functions</a> for visual examples.
 

@@ -143,13 +143,13 @@ Browsers, by default, treat CSS as render blocking; therefore, when it hits the 
 
 We can improve the page render time by inlining “critical CSS” in the `<head>` so the browser can quickly render the above-the-fold content of a page without having to wait to download the entire stylesheet, and then loading the full stylesheet in a non-rendering-blocking way.
 
-{% highlight html %}
+```html
 <head>
   <style>
     /* inline critical CSS */
   </style>
 </head>
-{% endhighlight %}
+```
 
 Determining what CSS is or isn’t critical requires (1) viewing the page on mobile and/or desktop viewport sizes, (2) identifying the elements that are visible within that viewport, and (3) selecting the CSS that accompanies those elements.
 
@@ -159,7 +159,7 @@ This can be a bit tricky, especially when done manually, but fantastic tools are
 
 Now that the critical CSS is inlined in the `<head>`, load the rest of the stylesheet asynchronously, which I do with the help of <a href="https://github.com/filamentgroup/loadCSS" target="_blank">loadCSS</a>.
 
-{% highlight html %}
+```html
 <head>
   <style>
     /* inline critical CSS */
@@ -174,7 +174,7 @@ Now that the critical CSS is inlined in the `<head>`, load the rest of the style
     <link href="/path/to/stylesheet.css" rel="stylesheet">
   </noscript>
 </head>
-{% endhighlight %}
+```
 
 Google also gives an <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#example" target="_blank">alternate example</a> of loading CSS in a non-render-blocking way.
 
@@ -187,7 +187,7 @@ JavaScript can also be render-blocking; therefore its delivery should also be op
 3. Deferring the execution of scripts using the `defer` attribute.
 4. Asynchronously loading possible scripts using the `async` attribute.
 
-{% highlight html %}
+```html
 <head>
   <script>
     // small inline JS
@@ -199,7 +199,7 @@ JavaScript can also be render-blocking; therefore its delivery should also be op
   <script src="/path/to/parent-script.js" defer>
   <script src="/path/to/dependent-script.js" defer>
 </body>
-{% endhighlight %}
+```
 
 `defer` downloads the script as the HTML is parsed but waits to execute once the page has been rendered. <a href="http://caniuse.com/#feat=script-defer" target="_blank">`defer` support</a> is pretty good; however is reported to be inconsistent and unreliable; therefore is best to both `defer` and have them at the bottom of the document.
 
@@ -207,7 +207,7 @@ JavaScript can also be render-blocking; therefore its delivery should also be op
 
 <a href="http://caniuse.com/#feat=script-async" target="_blank">`async` support</a> is not as great as `defer`, which is why I chose to use <a href="https://github.com/filamentgroup/loadJS" target="_blank">loadJS</a>, a script for asynchronously loading JS files. It supports older browsers and also has a useful feature to conditionally load a script.
 
-{% highlight html %}
+```html
 <head>
   <script>
     // small inline JS
@@ -224,7 +224,7 @@ JavaScript can also be render-blocking; therefore its delivery should also be op
   <script src="/path/to/parent-script.js" defer>
   <script src="/path/to/dependent-script.js" defer>
 </body>
-{% endhighlight %}
+```
 
 ### Webfonts
 
@@ -236,7 +236,7 @@ When a browser attempts to download a web font, it hides the text for a period o
 
 The way <a href="/blog/font-loading-with-font-events/">I solved FOIT</a> is by progressively loading fonts by first relying on default, system fonts (e.g. Helvetica and Georgia) to allow the content to be rendered quickly. Web fonts are then loaded asynchronously using loadCSS and rely on font events with the help of the <a href="https://github.com/bramstein/fontfaceobserver" target="_blank">Font Face Observer</a> library to detect when the fonts have been downloaded. Once the fonts are downloaded and available, a class is added to the document which sets the page in the correct font.
 
-{% highlight html %}
+```html
 <head>
   <style>
     body { font-family: Helvetica, Arial, sans-serif; }
@@ -265,7 +265,7 @@ The way <a href="/blog/font-loading-with-font-events/">I solved FOIT</a> is by p
     });
   </script>
 </head>
-{% endhighlight %}
+```
 
 Progressively loading fonts results in FOUT (Flash of Unstyled Text) and/or FOFT (Flash of Faux Text) depending on how it’s done.
 

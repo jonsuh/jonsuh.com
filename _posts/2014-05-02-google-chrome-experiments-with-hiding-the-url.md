@@ -41,11 +41,11 @@ I’ll be honest&mdash;at first it drove me crazy, but only because I didn’t k
 
 The URL is an essential part of the web. It’s the core of how all pages are connected, organized, and shared. A site’s URL structure gives a lot of contextual information:
 
-{% highlight text %}
+```text
 www.example.com/blog/article-name/
 www.example.com/category/category-name/
 www.example.com/product/product-id/
-{% endhighlight %}
+```
 
 Often times I rely heavily on it, and it’s a core part of how I navigate the web. However, when I don’t need it, arguments can be made that it’s unnecessary clutter. I think we’ve become so accustomed to the URL always being there that we’ve learned to ignore it except when we need it.
 
@@ -53,11 +53,11 @@ As a general user, I like how the full URL is hidden.
 
 As a web developer, I don’t&mdash;the full URL structure is extremely important to me. When building a website or web application, the URL doesn’t just give contextual information to the user but also functional information to the website/application itself.
 
-{% highlight text %}
+```text
 www.example.com/sign-in/
 www.example.com/sign-out/
 www.example.com/users/confirm?token=XXXXXX
-{% endhighlight %}
+```
 
 It’s vital that the full URL is always available to me so I can make sure the application is properly functioning and navigating the way I had intended it to.
 

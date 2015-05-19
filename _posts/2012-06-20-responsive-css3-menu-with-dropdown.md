@@ -19,7 +19,7 @@ Here’s a tutorial on how to create a navigation menu with dropdowns purely in 
 
 ## HTML
 
-{% highlight html %}
+```html
 <ul class="js-css-menu shadow responsive vertical">
   <li><a href="#">Link</a></li>
   <li class="current"><a href="#">Current</a></li>
@@ -40,7 +40,7 @@ Here’s a tutorial on how to create a navigation menu with dropdowns purely in 
     </div>
   </li>
 </ul>
-{% endhighlight %}
+```
 
 The menu is created using an unordered list. The class "js-css-menu" is the only required class. The others are optional; if you do not want it you can simply remove it. The dropdown menu is done with a div inside of the li and adjacent to the link.
 
@@ -50,7 +50,7 @@ To help you understand the CSS better, I’m going to eliminate most of the extr
 
 ### Main menu
 
-{% highlight css %}
+```css
 .js-css-menu {
   display: inline-block;
 }
@@ -75,7 +75,7 @@ To help you understand the CSS better, I’m going to eliminate most of the extr
 .js-css-menu > li.current > a {
   background-color: #ccc;
 }
-{% endhighlight %}
+```
 
 Since I used an unordered list, we have to strip the margins and list styling. This is done by <span class="highlight">list-style: none; padding: 0; margin: 0</span>.
 
@@ -83,7 +83,7 @@ By default, list items are block elements; therefore, to make the menu horizonta
 
 ### Dropdown
 
-{% highlight css %}
+```css
 .js-css-menu > li div {
   position: absolute; display: none;
 }
@@ -93,13 +93,13 @@ By default, list items are block elements; therefore, to make the menu horizonta
 .js-css-menu > li:hover div {
   background: #b00000; display: block
 }
-{% endhighlight %}
+```
 
 The dropdown menu is created with a div. Since you want it to be hidden until you hover over the link with the menu, you want to initially hide it with <span class="highlight">display: none</span>. You’ll then display it with <span class="highlight">display: block</span> in the hover action.
 
 ### Vertical
 
-{% highlight css %}
+```css
 .js-css-menu.vertical {
   width: 100px; /* Adjust the width of the vertical menu */
 }
@@ -110,7 +110,7 @@ The dropdown menu is created with a div. Since you want it to be hidden until yo
   width: 150px; top: 0;
   left: 101px; /* Adjust the left value according to the width of the vertical menu */
 }
-{% endhighlight %}
+```
 
 Not much needs to be done to make the menu vertical. To start, add class "vertical" to the menu. Because in order to make the horizontal menu, we had to make the list-items display inline, we must go back to making them block so they can stack. You can achieve that with <span class="highlight">display: block; float: none; position: relative</span>.
 
@@ -118,7 +118,7 @@ Although the list-items are now block, the unordered list is still inline; there
 
 ### Responsive
 
-{% highlight css %}
+```css
 @media (max-width: 480px) { /* To adjust the "breaking point" of the responsive menu, change 480px to a value of your choosing. */
   .js-css-menu.responsive, .js-css-menu.responsive > li {
     width: auto!important;
@@ -129,7 +129,7 @@ Although the list-items are now block, the unordered list is still inline; there
     display: none!important;
   }
 }
-{% endhighlight %}
+```
 
 In order to achieve a responsive menu, we’ll be using media CSS queries. <span class="highlight">@media (max-width: 480px)</span> is strictly indicating any CSS inside of this block will only be set if the width of your browser is less-than-or-equal-to 480px (the maximum width allowed for this block of CSS is 480px).
 

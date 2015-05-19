@@ -21,7 +21,7 @@ Sass 3.3 has introduced some neat features with the ampersand&mdash;it now has B
 
 By itself, the ampersand `&` is a shortcut to selecting the parent element. Here’s a quick example:
 
-{% highlight sass %}
+```scss
 .link {
   color: red;
 
@@ -29,14 +29,14 @@ By itself, the ampersand `&` is a shortcut to selecting the parent element. Here
     color: blue;
   }
 }
-{% endhighlight %}
+```
 
 Resulting CSS:
 
-{% highlight css %}
+```css
 .link           {color: red;}
 .link.is-active {color: blue;}
-{% endhighlight %}
+```
 
 ## BEM-Selector Support
 
@@ -46,13 +46,13 @@ CSS Wizardry wrote a fantastic primer on BEM that has helped me get a good grasp
 
 Let’s say you have the following markup:
 
-{% highlight html %}
+```html
 <nav class="nav">
   <a href="/" class="nav__link">Home</a>
   <a href="/" class="nav__link">Work</a>
   <a href="/" class="nav__link nav__link--twitter">Twitter</a>
 </nav>
-{% endhighlight %}
+```
 
 You want `nav__link` to share much of the same attributes when it comes to the font-size, color, and padding, except the Twitter icon, which you want the font color to be blue instead of red (hence the modifier class `nav__link--twitter`).
 
@@ -60,7 +60,7 @@ Using the ampersand, you’ll use `&__element` and `&--modifier` to declare your
 
 Here’s how the ampersand helps make your element and modifier classes a breeze:
 
-{% highlight sass %}
+```scss
 .nav {
   background: white;
 
@@ -76,11 +76,11 @@ Here’s how the ampersand helps make your element and modifier classes a breeze
     }
   }
 }
-{% endhighlight %}
+```
 
 Resulting CSS:
 
-{% highlight css %}
+```css
 .nav {
   background: white;
 }
@@ -92,11 +92,11 @@ Resulting CSS:
 .nav__link--twitter {
   color: blue;
 }
-{% endhighlight %}
+```
 
 It also supports single underscores and hyphens if you’re not a big fan of using double underscores and hyphens.
 
-{% highlight sass %}
+```scss
 .nav {
   background: white;
 
@@ -110,11 +110,11 @@ It also supports single underscores and hyphens if you’re not a big fan of usi
     }
   }
 }
-{% endhighlight %}
+```
 
 Resulting CSS:
 
-{% highlight css %}
+```css
 .nav {
   background: white;
 }
@@ -126,13 +126,13 @@ Resulting CSS:
 .nav_link-twitter {
   color: blue;
 }
-{% endhighlight %}
+```
 
 ## Trailing Ampersand
 
 The trailing ampersand allows you to prepend a class to the "master parent" element. Here’s an example of how I’ve used it:
 
-{% highlight sass %}
+```scss
 .image {
   width: 200px;
   height: 50px;
@@ -142,11 +142,11 @@ The trailing ampersand allows you to prepend a class to the "master parent" elem
     background-image: url("logo.png");
   }
 }
-{% endhighlight %}
+```
 
 Resulting CSS:
 
-{% highlight css %}
+```css
 .image {
   width: 200px;
   height: 50px;
@@ -155,11 +155,11 @@ Resulting CSS:
 .no-svg .image {
   background-image: url("logo.png");
 }
-{% endhighlight %}
+```
 
 It will always prepend the class to the "master parent" regardless of how deep you nest is (I hope your nests aren’t this deep...)
 
-{% highlight sass %}
+```scss
 .wrap {
   .container {
     .navigation {
@@ -171,28 +171,28 @@ It will always prepend the class to the "master parent" regardless of how deep y
     }
   }
 }
-{% endhighlight %}
+```
 
 Resulting CSS:
 
-{% highlight sass %}
+```scss
 .no-svg .wrap .container .navigation .image {
   background-image: url("logo.png");
 }
-{% endhighlight %}
+```
 
 ## Sass 3.3
 
 In order to take advantage of BEM-selector support and the trailing ampersand, you’ll need to be running Sass >= 3.3. To upgrade Sass on your machine, run the following in your command line:
 
-{% highlight bash %}
+```bash
 gem update sass
-{% endhighlight %}
+```
 
 <small>You *may* have to run the command with sudo: `sudo gem update sass`</small>
 
 To see what version of Sass you’re running, run the following:
 
-{% highlight bash %}
+```bash
 sass -v
-{% endhighlight %}
+```

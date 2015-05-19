@@ -26,19 +26,19 @@ I’ll be covering the Microdata format since it’s recommended and what I use 
 
 Microdata uses HTML element attributes (most commonly using `<div>` and `<span>` elements) to give your content context using items and properties. Let’s take the following:
 
-{% highlight html %}
+```html
 <div>
   <p>Hey! My name is Jonathan Suh.</p>
 </div>
-{% endhighlight %}
+```
 
 and give it some context using Microdata:
 
-{% highlight html %}
+```html
 <div itemscope itemtype="http://schema.org/Person">
   <p>Hey! My name is <span itemprop="name">Jonathan Suh</span>.</p>
 </div>
-{% endhighlight %}
+```
 
 - `itemscope` tells us that the content in the `<div>` is an item that consists of properties (name-value pairs).
 - The properties of `itemscope` are defined by `itemtype="http://schema.org/Person"`, which tells us that the item is a Person.
@@ -46,16 +46,16 @@ and give it some context using Microdata:
 
 Here’s a slightly more complex example:
 
-{% highlight html %}
+```html
 <div>
   Hey! My name is Jonathan Suh. I’m a Web Developer 
   at Juice Interactive in Chicago, IL.
 </div>
-{% endhighlight %}
+```
 
 with Microdata and nested items:
 
-{% highlight html %}
+```html
 <div itemscope itemtype="http://schema.org/Person">
   <p>Hey! My name is 
     <span itemprop="name">Jonathan Suh</span>. I’m a 
@@ -69,17 +69,17 @@ with Microdata and nested items:
     </span>
   .</p>
 </div>
-{% endhighlight %}
+```
 
 ### Date and time
 
 Use the `<time>` element and the `datetime` attribute to specify dates and times. The `datetime` value must be in the ISO date format (time zone is optional).
 
-{% highlight html %}
+```html
 <time itemprop="datePublished" datetime="2015-01-02T12:34-06:00">
   January 1, 2015 12:34PM
 </time>
-{% endhighlight %}
+```
 
 ### Non-visible content
 
@@ -87,12 +87,12 @@ Google doesn’t display content that isn’t visible to the user; however, ther
 
 For example, if your blog post gives the product a review of 8 stars, users may assume the rating is based on a scale of 1–10, but a search engine won’t assume this; therefore, you must indicate this, which you can do using the `<meta>` element and `content` attribute:
 
-{% highlight html %}
+```html
 <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
   Rating: <span itemprop="ratingValue">8</span>
   <meta itemprop="bestRating" content="10">
 </div>
-{% endhighlight %}
+```
 
 ## Types of Rich Snippets
 
@@ -111,7 +111,7 @@ Review rich snippets are designed to provide review information (star ratings, n
 
 An individual review indicates one reviewer and one star rating by the reviewer. Let’s take the following product review of the August Smart Lock:
 
-{% highlight html %}
+```html
 <div>
   <h1>August Smart Lock</h1>
   <p>By Jonathan Suh<br>
@@ -122,11 +122,11 @@ An individual review indicates one reviewer and one star rating by the reviewer.
        instead, unlock your door with an app on your smartphone.</p>
   </div>
 </div>
-{% endhighlight %}
+```
 
 and mark it up using Microdata:
 
-{% highlight html %}
+```html
 <div itemscope itemtype="http://schema.org/Review">
   <h1 itemprop="name">August Smart Lock</h1>
   <p>By <span itemprop="author">Jonathan Suh</span><br>
@@ -142,21 +142,21 @@ and mark it up using Microdata:
        instead, unlock your door with an app on your smartphone.</p>
   </div>
 </div>
-{% endhighlight %}
+```
 
 **Aggregate reviews**
 
 Aggregate reviews indicates a set of reviews from various reviewers, and the star rating is the average of all of the ratings. (i.e. 10 user reviews and an average star rating of 8.5 of 10 based on 20 ratings)
 
-{% highlight html %}
+```html
 <div>
   <h1>August Smart Lock</h1>
   <p>Rating: 7 (based on 20 ratings)<br>
     10 user reviews</p>
 </div>
-{% endhighlight %}
+```
 
-{% highlight html %}
+```html
 <div itemscope itemtype="http://schema.org/Product">
   <h1 itemprop="name">August Smart Lock</h1>
   <p>Rating: 
@@ -168,7 +168,7 @@ Aggregate reviews indicates a set of reviews from various reviewers, and the sta
     </span>
   </p>
 </div>
-{% endhighlight %}
+```
 
 ## Resources
 

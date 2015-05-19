@@ -55,17 +55,17 @@ In addition, it’s possible that the service is not properly encrypting your pa
 
 This is how your credentials should look in a service’s database:
 
-{% highlight text %}
+```text
 username: your-email@domain.com
 password: $2a$10$w9ZxPcakBohcreA7DBo3/.buxGJTC9BtRH0/p4/JOGsgPLNJk8jOO
-{% endhighlight %}
+```
 
 Unfortunately, there are those services that have unfortunately hired web developers who didn’t really know what they were doing that will store your password in plain text:
 
-{% highlight text %}
+```text
 username: your-email@domain.com
 password: abc123
-{% endhighlight %}
+```
 
 Assuming that we don’t know whether or not the service is encrypting passwords before storing them, it’s best to take the safe route.
 

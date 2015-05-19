@@ -20,11 +20,11 @@ If Grunt is brand-new territory or you’re relatively new to it, you may want t
 
 Traditionally every time you install a new plugin, you have tell Grunt to load it: 
 
-{% highlight javascript %}
+```js
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-sass');
-{% endhighlight %}
+```
 
 Then every time you uninstall a plugin, you have to remove the `grunt.loadNpmTasks` function that loads that plugin, otherwise your Grunt tasks will fail.
 
@@ -32,17 +32,17 @@ Then every time you uninstall a plugin, you have to remove the `grunt.loadNpmTas
 
 Install jit-grunt by running the following in the command line at the root directory of your project:
 
-{% highlight bash %}
+```bash
 npm install jit-grunt --save-dev
-{% endhighlight %}
+```
 
 Then require jit-grunt by adding the following at the top of your `Gruntfile.js`:
 
-{% highlight javascript %}
+```js
 module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 ...
-{% endhighlight %}
+```
 
 You can now safely remove all lines of `grunt.loadNpmTasks('function-name');` from your `Gruntfile.js`, and you’re done! Grunt will now auto-magically know which tasks to load as you run your tasks.
 
@@ -52,17 +52,17 @@ To get a better understanding of how each task is performing, <a href="https://g
 
 Like you did with jit-grunt, install time-grunt:
 
-{% highlight bash %}
+```bash
 npm install time-grunt --save-dev
-{% endhighlight %}
+```
 
 Then require time-grunt at the top of your `Gruntfile.js`.
 
-{% highlight javascript %}
+```js
 module.exports = function(grunt) {
   require('time-grunt')(grunt);
 ...
-{% endhighlight %}
+```
 
 That’s it! Now when you run a task, you should get a breakdown of each task and its time of execution:
 
@@ -76,31 +76,31 @@ Rebuild only the files that you’ve made changes to with <a href="https://githu
 
 Install grunt-newer:
 
-{% highlight bash %}
+```bash
 npm install grunt-newer --save-dev
-{% endhighlight %}
+```
 
 Then for your tasks, prepend `newer:` to them like such:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('build', ['newer:concat', 'newer:sass:dist']);
-{% endhighlight %}
+```
 
 ## Reuse tasks
 
 You may have a build task for development and another for production that may look like such:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('build', ['concat', 'sass']);
 grunt.registerTask('production', ['concat', 'sass', 'cssmin', 'uglify']);
-{% endhighlight %}
+```
 
 The only difference is production runs cssmin and uglify. Since the build task already exists, reuse the build task in the production task:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('build', ['concat', 'sass']);
 grunt.registerTask('production', ['build', 'cssmin', 'uglify']);
-{% endhighlight %}
+```
 
 In the event you add another task in the build task, you’ll know that the new task will run in production as well before cssmin and uglify are run.
 
@@ -112,13 +112,13 @@ There may be an instance where you’d want to run something from the command li
 
 Install grunt-shell:
 
-{% highlight bash %}
+```bash
 npm install grunt-shell --save-dev
-{% endhighlight %}
+```
 
 Create a new task:
 
-{% highlight javascript %}
+```js
 grunt.initConfig({
   shell: {
     options: {
@@ -130,13 +130,13 @@ grunt.initConfig({
     }
   },
 });
-{% endhighlight %}
+```
 
 Then run shell in your task:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('production', ['build', 'cssmin', 'uglify', 'shell:deploy']);
-{% endhighlight %}
+```
 
 If you need to run multiple shell commands, grunt-shell allows you to let them run synchronously or asynchronously. Make sure to read the config on how to do this: <a href="https://github.com/sindresorhus/grunt-shell#multiple-commands" target="_blank">https://github.com/sindresorhus/grunt-shell#multiple-commands</a>
 
@@ -148,13 +148,13 @@ Run multiple blocking tasks (like watch, nodemon, and jekyll’s built-in watch)
 
 Install grunt-concurrent:
 
-{% highlight bash %}
+```bash
 npm install grunt-concurrent --save-dev
-{% endhighlight %}
+```
 
 Set up your concurrent task:
 
-{% highlight javascript %}
+```js
 grunt.initConfig({
   concurrent: {
     first: {
@@ -165,14 +165,14 @@ grunt.initConfig({
     }
   },
 });
-{% endhighlight %}
+```
 
 Then set up concurrent with one of your tasks:
 
-{% highlight javascript %}
+```js
 grunt.registerTask('default', ['sass', 'concat', 'jekyll:build',
                    'concurrent:first', 'concurrent:second']);
-{% endhighlight %}
+```
 
 ## In closing
 
