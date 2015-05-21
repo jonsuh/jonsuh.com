@@ -23,8 +23,8 @@
   }
 
   &:before {
-    background-color: rgba($grey-darkest, 0.9);
-    @include linear-gradient(to right, rgba($grey-darkest, 0.9) 50%, transparent);
+    background-color: rgba($grey-darkest, 0.8);
+    @include linear-gradient(to right, rgba($grey-darkest, 0.8) 50%, transparent);
   }
 
   .align-cell {
