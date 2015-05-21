@@ -6,14 +6,25 @@
   @include mq(small) {
     height: em-calc(425);
   }
-  @include retina-background-image("audi.jpg");
+  background-image: image-url("audi-small.jpg?201505211216");
+  @include mq(600) {
+    background-image: image-url("audi.jpg?201505211216");
+  }
   @include mq(large) {
-    background-image: image-url("audi@2x.jpg");
+    background-image: image-url("audi@2x.jpg?201505211216");
+  }
+  @include mq(retina) {
+    @include mq(small) {
+      background-image: image-url("audi.jpg?201505211216");
+    }
+    @include mq(ipad) {
+      background-image: image-url("audi@2x.jpg?201505211216");
+    }
   }
 
   &:before {
-    background-color: rgba($grey-darkest, 0.8);
-    @include linear-gradient(to right, rgba($grey-darkest, 0.7) 50%, transparent);
+    background-color: rgba($grey-darkest, 0.9);
+    @include linear-gradient(to right, rgba($grey-darkest, 0.9) 50%, transparent);
   }
 
   .align-cell {
@@ -35,14 +46,14 @@
   }
   polygon {
     stroke: rgba($white, 0.3);
-    stroke-width: 2;
+    stroke-width: 3;
     fill: transparent;
     stroke-dasharray: 50;
     stroke-dashoffset: 50;
     @include animation(home-hero-svg 15s linear infinite);
 
     &:nth-child(odd) {
-      stroke: rgba($blue, 0.8);
+      stroke: rgba($blue, 0.5);
     }
   }
 }
@@ -215,7 +226,12 @@
     margin-top: 0;
 
     polygon {
-      stroke-width: 1;
+      stroke: rgba($white, 0.2);
+      stroke-width: 3;
+
+      &:nth-child(odd) {
+        stroke: rgba($blue, 0.4);
+      }
     }
   }
 
@@ -239,6 +255,11 @@
     height: calc(100% - #{em-calc(90 + 25)});
     min-height: em-calc(400);
     max-height: em-calc(500);
+  }
+
+  .home-hero-svg {
+    width: em-calc(73 * 3.5);
+    height: em-calc(80 * 3.5);
   }
 
   .home-hero-introduction {
