@@ -1,6 +1,8 @@
 * { box-sizing: inherit; }
 @font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"); }
 @font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"); }
+@font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"); }
+@font-face { font-family: "LoraLocal"; font-style: italic; font-weight: 400; src: local("Lora Italic"), local("Lora-Italic"); }
 html { box-sizing: border-box; }
 body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
 body, html { font-family: RobotoLocal, Helvetica, Arial, sans-serif; color: rgb(102, 103, 110); background-color: rgb(34, 35, 38); height: 100%; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }

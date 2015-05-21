@@ -67,28 +67,33 @@ for (var i = 0; i < metaArray.length; i++) {
 // Detect fonts with FontFaceObserver
 // ==================================================
 (function() {
-  var roboto400 = new FontFaceObserver("Roboto", {
-    weight: 400
-  });
-  var roboto500 = new FontFaceObserver("Roboto", {
-    weight: 500
-  });
-  var roboto700 = new FontFaceObserver("Roboto", {
-    weight: 700
-  });
+  if (cookie("fonts-loaded") === null) {
+    var roboto400 = new FontFaceObserver("Roboto", {
+      weight: 400
+    });
+    var roboto500 = new FontFaceObserver("Roboto", {
+      weight: 500
+    });
+    var roboto700 = new FontFaceObserver("Roboto", {
+      weight: 700
+    });
+    var lora = new FontFaceObserver("Lora", {
+      weight: 400,
+      style: "italic"
+    });
 
-  Promise.all([
-    roboto400.check(),
-    roboto500.check(),
-    roboto700.check()
-  ]).then(function() {
-    document.documentElement.className += " fonts-loaded";
-    if (cookie("fonts-loaded") === null) {
+    Promise.all([
+      roboto400.check(),
+      roboto500.check(),
+      roboto700.check(),
+      lora.check()
+    ]).then(function() {
+      document.documentElement.className += " fonts-loaded";
       cookie("fonts-loaded", "true", 1);
-    }
-  }, function() {
-    document.documentElement.className += " fonts-timeout";
-  });
+    }, function() {
+      document.documentElement.className += " fonts-timeout";
+    });
+  }
 })();
 
 // (function () {

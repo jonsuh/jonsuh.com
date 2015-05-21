@@ -24,11 +24,11 @@ $paragraph-margin-bottom-plus: .35em;
 @mixin serif {
   font-family: $serif-local;
 
-  .wf-active & {
+  .fonts-loaded & {
     font-family: $serif;
   }
 
-  .wf-inactive {
+  .fonts-timeout & {
     font-family: $serif-fallback;
   }
 }
@@ -129,7 +129,7 @@ ul {
 // ==================================================
 blockquote {
   @include serif;
-  font-size: 1.15em;
+  font-size: 0.95em;
   font-style: italic;
   color: scale-color($paragraph-font-color, $lightness: 15%);
   border-left: 2px solid $grey-light;
