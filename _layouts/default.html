@@ -10,9 +10,9 @@
   <title>{{ page.title }}{% if url != '/' %} — {% endif %}{{ site.title }}</title>
   {% if site.cdn_url contains '//' %}<link rel="dns-prefetch" href="{{ site.cdn_url }}">{% endif %}
 <!--#if expr="$HTTP_COOKIE=/fonts-loaded\=true/" -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500|Lora:400italic">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500|Roboto+Slab:400,700">
 <!--#else -->
-  <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=Roboto:400,700,500|Lora:400italic">
+  <meta name="fontsCSS" content="//fonts.googleapis.com/css?family=Roboto:400,700,500|Roboto+Slab:400,700">
 <!--#endif -->
 <!--#if expr="$HTTP_COOKIE=/mainCSS\=true/" -->
   <link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.cdn_url }}?v={{ css_version }}">
@@ -42,7 +42,7 @@
   </script>
 
   <noscript>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500|Lora:400italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,500|Roboto+Slab:400,700">
     <link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.cdn_url }}?v={{ css_version }}">
     {% if page.css %}
       <link rel="stylesheet" href="{{ '/assets/css/blog/' | prepend: site.cdn_url | append: page.css }}?v={{ css_version }}">

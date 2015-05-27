@@ -12,7 +12,6 @@ figure {
 
 figcaption {
   @include serif;
-  font-style: italic;
   font-size: em-calc(12);
   color: scale-color($paragraph-font-color, $lightness: 30%);
   line-height: 1.3;

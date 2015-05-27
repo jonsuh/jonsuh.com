@@ -26,9 +26,17 @@
 }
 
 @font-face {
-  font-family: "LoraLocal";
-  font-style: italic;
+  font-family: "RobotoSlabLocal";
+  font-style: normal;
   font-weight: 400;
-  src: local("Lora Italic"),
-       local("Lora-Italic");
+  src: local("Roboto Slab Regular"),
+       local("RobotoSlab-Regular");
+}
+
+@font-face {
+  font-family: "RobotoSlabLocal";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Slab Bold"),
+       local("RobotoSlab-Bold");
 }

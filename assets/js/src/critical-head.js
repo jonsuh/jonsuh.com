@@ -77,16 +77,15 @@ for (var i = 0; i < metaArray.length; i++) {
     var roboto700 = new FontFaceObserver("Roboto", {
       weight: 700
     });
-    var lora = new FontFaceObserver("Lora", {
-      weight: 400,
-      style: "italic"
+    var robotoSlab = new FontFaceObserver("Roboto Slab", {
+      weight: 400
     });
 
     Promise.all([
       roboto400.check(),
       roboto500.check(),
       roboto700.check(),
-      lora.check()
+      robotoSlab.check()
     ]).then(function() {
       document.documentElement.className += " fonts-loaded";
       cookie("fonts-loaded", "true", 1);

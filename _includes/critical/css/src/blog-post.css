@@ -2,7 +2,7 @@
 @font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 400; src: local("Roboto"), local("Roboto-Regular"); }
 @font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 500; src: local("Roboto Medium"), local("Roboto-Medium"); }
 @font-face { font-family: "RobotoLocal"; font-style: normal; font-weight: 700; src: local("Roboto Bold"), local("Roboto-Bold"); }
-@font-face { font-family: "LoraLocal"; font-style: italic; font-weight: 400; src: local("Lora Italic"), local("Lora-Italic"); }
+@font-face { font-family: "RobotoSlabLocal"; font-style: italic; font-weight: 400; src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"); }
 html { box-sizing: border-box; }
 body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
 body, html { font-family: RobotoLocal, Helvetica, Arial, sans-serif; color: rgb(102, 103, 110); background-color: rgb(34, 35, 38); height: 100%; }
@@ -14,7 +14,7 @@ code { font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 
 figure { margin-top: 1em; margin-right: 40px; margin-bottom: 1em; margin-left: 40px; }
 figure::after { clear: both; content: ''; display: table; }
 figure img { display: block; }
-figcaption { font-family: freight-text-pro, 'FreightText Pro', FreightText, Georgia, 'Times New Roman', serif; font-style: italic; font-size: 0.875em; color: rgb(147, 148, 155); line-height: 1.3; text-align: center; margin-top: 0.75em; }
+figcaption { font-family: RobotoSlabLocal, Georgia, 'Times New Roman', serif; font-style: italic; font-size: 0.875em; color: rgb(147, 148, 155); line-height: 1.3; text-align: center; margin-top: 0.75em; }
 form { font-size: 1em; margin-bottom: 0.75em; }
 hr { box-sizing: content-box; height: 0px; }
 img { max-width: 100%; height: auto; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; }
@@ -111,9 +111,13 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
 .post-meta { font-size: 0.875em; color: rgb(153, 154, 161); }
 .post-meta-author-link { color: rgb(153, 154, 161); border-bottom-color: transparent; }
 .post-rating { margin-bottom: 0.75em; }
-.post-rating-stars { color: rgb(221, 222, 225); margin-right: 0.3em; }
-.post-rating-stars-yellow { color: rgb(249, 206, 29); }
-.post-rating-comments { font-family: 'Freight Text Pro', FreightText, Georgia, 'Times New Roman', serif; font-style: italic; color: rgb(153, 154, 161); }
+.post-rating-stars { font-family: sans-serif; color: #dddee1; margin-right: .3em; }
+.post-rating-star { display: inline-block; vertical-align: middle; position: relative; }
+.post-rating-star--yellow { color: #f9ce1d; }
+.post-rating-star-ha, .post-rating-star-lf { display: block; position: relative; margin-right: .5em; }
+.post-rating-star-ha { color: #f9ce1d; width: .5em; overflow: hidden; z-index: 2; }
+.post-rating-star-lf { position: absolute; top: 0; z-index: 1; }
+.post-rating-comments { font-family: RobotSlabLocal; font-size: 0.875em; color: rgb(153, 154, 161); }
 .post-content p + h2 { margin-top: 1.25rem; }
 .post-content table th, .post-content table td { font-size: 90%; line-height: 1.3; padding: .5em .7em; }
 .post-content > hr { margin: 1.5625em 0; }
@@ -170,6 +174,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   .post-meta { font-size: 0.9375em; }
   .post-content p + h2 { margin-top: 1.5625rem; }
   .post-content > hr { margin: 1.875em 0; }
+  .post-rating-comments { font-size: 0.9375em; }
 }
 @media only screen and (min-width: 34.375em) {
   .nav-link { padding-left: 1.125em; padding-right: 1.125em; }
@@ -192,6 +197,7 @@ a { color: rgb(102, 103, 110); text-decoration: none; border-bottom-width: 1px; 
   .post-meta { font-size: 1em; }
   .post-content p + h2 { margin-top: 1.875rem; }
   .post-content > hr { margin: 2.5em 0; }
+  .post-rating-comments { font-size: 1em; }
 }
 @media only screen and (min-width: 48em) {
   .header { height: 5.625em; line-height: 5.4375em; }

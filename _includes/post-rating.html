@@ -1,7 +1,10 @@
 <div class="post-rating">
   <span class="post-rating-stars">
-    {% assign rating = include.rating %}
-    <span class="post-rating-stars-yellow">{% for i in (1..rating) %}★{% endfor %}</span>{% for i in (rating..4) %}☆{% endfor %}
+    {% strip %}
+      {% assign rating = include.rating %}
+      {% assign rating_round = rating | round %}
+      <span class="post-rating-star post-rating-star--yellow">{% for i in (1..rating) %}★{% endfor %}</span>{% if rating != rating_round %}<span class="post-rating-star"><span class="post-rating-star-ha">★</span><span class="post-rating-star-lf">☆</span></span>{% endif %}<span class="post-rating-star">{% for i in (rating_round..4) %}☆{% endfor %}</span>
+    {% endstrip %}
   </span>
   <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
     <meta itemprop="name" content="{{ include.name }}">

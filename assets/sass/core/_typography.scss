@@ -1,12 +1,12 @@
 // ==================================================
 // Typography
 // ==================================================
-$paragraph-font-size     : em-calc(16);
-$paragraph-font-color    : $grey-dark;
-$paragraph-line-height   : 1.5em;
-$paragraph-letter-spacing: 0;
-$paragraph-indent        : 1.5em;
-$paragraph-margin-bottom : .75em;
+$paragraph-font-size         : em-calc(16);
+$paragraph-font-color        : $grey-dark;
+$paragraph-line-height       : 1.5em;
+$paragraph-letter-spacing    : 0;
+$paragraph-indent            : 1.5em;
+$paragraph-margin-bottom     : .75em;
 $paragraph-margin-bottom-plus: .35em;
 
 @mixin sans-serif {
@@ -130,7 +130,6 @@ ul {
 blockquote {
   @include serif;
   font-size: 0.95em;
-  font-style: italic;
   color: scale-color($paragraph-font-color, $lightness: 15%);
   border-left: 2px solid $grey-light;
   padding-left: 1.5em;

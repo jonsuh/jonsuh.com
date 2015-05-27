@@ -361,6 +361,10 @@
         font-size: 80%;
       }
     }
+
+    .reversefootnote {
+      font-family: sans-serif;
+    }
   }
 }
 
@@ -371,18 +375,60 @@
 }
 
 .post-rating-stars {
+  font-family: sans-serif;
   color: scale-color($grey-light, $lightness: 50%);
   margin-right: .3em;
 }
 
-.post-rating-stars-yellow {
+.post-rating-star {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.post-rating-star--yellow {
   color: $yellow;
+}
+
+.post-rating-star-ha,
+.post-rating-star-lf {
+  display: block;
+  position: relative;
+  margin-right: .5em;
+}
+
+.post-rating-star-ha {
+  color: $yellow;
+  width: .5em;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.post-rating-star-lf {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
 .post-rating-comments {
   @include serif;
-  font-style: italic;
+  font-size: em-calc(14);
+  @include mq(small) {
+    font-size: em-calc(15);
+  }
+  @include mq(medium) {
+    font-size: em-calc(16);
+  }
   color: $grey;
+  position: relative;
+  top: em-calc(1);
+}
+
+// Updates
+// ==================================================
+.post-updates {
+  @include serif;
+  font-size: 0.95em;
 }
 
 // Share
@@ -557,13 +603,13 @@ a.post-tag:hover {
 
 .posts-header-label--tag {
   @include serif;
-  font-style: italic;
+  font-size: em-calc(15);
   padding-right: em-calc(8);
   @include mq(small) {
-    font-size: em-calc(17);
+    font-size: em-calc(16);
   }
   @include mq(medium) {
-    font-size: em-calc(18);
+    font-size: em-calc(17);
   }
 }
 
