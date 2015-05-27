@@ -15,7 +15,7 @@ tags:
 - smart
 ---
 
-August Connect is a device that allows you to remotely connect to and control the [August Smart Lock](/blog/august-smart-lock/) remotely. It bridges your Wi-Fi connection and August Smart Lock’s Bluetooth connection. Without it, you can only connect to the August Smart Lock via Bluetooth Low Energy (BLE). I’ve been using the August Connect with my August Smart Lock for 3 months now, and here’s my review.
+August Connect is a device that allows you to remotely connect to and control the [August Smart Lock](/blog/august-smart-lock/). It bridges your Wi-Fi connection and August Smart Lock’s Bluetooth connection. Without it, you can only connect to the August Smart Lock via Bluetooth Low Energy (BLE). I’ve been using the August Connect with my August Smart Lock for 3 months now, and here’s my review.
 
 <!--more-->
 
@@ -87,9 +87,9 @@ The one thing lacking about the August Connect and August Smart Lock is their in
 
 ## Conclusion
 
-The ability to connect to and control the [August Smart Lock](/blog/august-smart-lock/) remotely is a much-needed feature for a smart lock. It’s a bummer that you need a separate device just for that feature, but for that feature alone, I think it’s worth the investment (if you own an August Smart Lock).
+The ability to connect to and control the [August Smart Lock](/blog/august-smart-lock/) remotely is a much-needed feature for a smart lock. It’s a bummer that you need a separate device just for that feature, but for that alone, I think it’s worth the investment (if you own an August Smart Lock).
 
-Other than that, there’s not much to say about the August Connects since it’s not a feature-rich device nor does it add a ton of extended functionality to the August Smart Lock. There’s a lot of potential though, especially if both the August Connect and the August Smart Locks opens up for third-party integration.
+Other than that, there’s not much to say about the August Connects since it’s not a feature-rich device and doesn’t add a ton of extended functionality to the August Smart Lock. There’s a lot of potential though, especially if both the August Connect and the August Smart Locks open up for third-party integration.
 
 The August Connect costs $49.99 and can be purchased from [August.com](http://august.com) or [Amazon.com](http://www.amazon.com/August-Connect-Secure-Remote-Access/dp/B00RPM6UZA/?tag=jonsuhcom-20).
 
