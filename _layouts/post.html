@@ -11,7 +11,7 @@ layout: default
             {% if page.updated == nil %}
               <time content="{{ page.date | date: "%Y-%m-%d" }}" datetime="{{ page.date | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
             {% else %}
-              Updated <meta itemprop="datePublished" content="{{ page.date | date: "%B %-d, %Y" }}"><time content="{{ page.updated | date: "%Y-%m-%d" }}" datetime="{{ page.updated | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="dateModified">{{ page.updated | date: "%B %-d, %Y" }}</time>
+              Updated <meta itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}"><time content="{{ page.updated | date: "%Y-%m-%d" }}" datetime="{{ page.updated | date: "%Y-%m-%d" }}" class="post-meta-time" itemprop="dateModified" title="Written on {{ page.date | date: "%B %-d, %Y" }}">{{ page.updated | date: "%B %-d, %Y" }}</time>
             {% endif %}
             <span class="post-meta-author"> by <a href="/about/" class="post-meta-author-link" rel="author"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</span></span></a></span>
           </p>
