@@ -2,10 +2,11 @@
 layout: post
 title: August Smart Lock Review
 date: "2015-01-19 09:17:00"
+updated: "2015-05-25 10:05:00"
 review:
   name: August Smart Lock
-  rating: 3
-  comments: Has its flaws. Still improving.
+  rating: 3.5
+  comments: Isn’t perfect, but big improvements as of late.
 share_image: "https://farm8.staticflickr.com/7503/16117739367_d99ab6ace8_c.jpg"
 comments: false
 tags:
@@ -19,33 +20,33 @@ Spend less time fiddling with keys when unlocking your door; instead, unlock you
 
 <!--more-->
 
-I got my August Smart Lock in October 2014 and have been using it ever since. I love it, and I hate it. So what’s there to love and hate? Here’s my first-hand review of August Smart Lock and my 3 months of using it.
+I got my August Smart Lock in October 2014 and have been using it ever since. I love it, and I hate it. So what’s there to love and hate? Here’s my first-hand review of August Smart Lock and my 7 months of using it.
 
-!["August Smart Lock packaging"](https://farm8.staticflickr.com/7558/16117741417_63cc970c1e_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7558/16117741417_63cc970c1e_c.jpg" alt="August Smart Lock packaging" padding="66.75%" async="1" %}
 
 ## Installation and Setup
 
-August Smart Lock is dead simple to install just as long as it’s compatible with your existing deadbolt lock. (it has a <a href="http://www.august.com/compatible-deadbolts.html" target="_blank">compatibility list</a> which tells you whether your lock is compatible. Generally if your deadbolt mount is independent of your door handle, it’s probably compatible, but you may want to double-check to be sure) The installation guide provides an easy-to-understand compatibility diagram.
+August Smart Lock is dead simple to install just as long as it’s compatible with your existing deadbolt lock. (it has a [compatibility list](http://www.august.com/compatible-deadbolts.html) which tells you whether your lock is compatible. Generally if your deadbolt mount is independent of your door handle, it’s probably compatible, but you may want to double-check to be sure) The installation guide provides an easy-to-understand compatibility diagram.
 
-!["August Smart Lock compatibility diagram"](https://farm8.staticflickr.com/7503/16116651080_5b07a3b6bf_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7503/16116651080_5b07a3b6bf_c.jpg" alt="August Smart Lock compatibility diagram" padding="66.75%" async="1" %}
 
 Unlike many smart locks, which replace your entire or most of your deadbolt lock system, August Smart Lock replaces just the interior thumbturn assembly. It took me 10 minutes to install it.
 
-!["Inside August Smart Lock packaging"](https://farm8.staticflickr.com/7505/16117740817_fb6db0b4f5_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7505/16117740817_fb6db0b4f5_c.jpg" alt="August Smart Lock packaging diagram" padding="66.75%" async="1" %}
 
-!["August Smart Lock mounting plates and adapters"](https://farm9.staticflickr.com/8584/16117441789_5a70b85dae_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8584/16117441789_5a70b85dae_c.jpg" alt="August Smart Lock mounting plates and adapters diagram" padding="66.75%" async="1" %}
 
 Installation requires you to (1) unscrew and remove your interior thumbturn assembly, screw on proper mounting plate, (2) put on the proper adapter, (3) slide on the lock and close the clips to secure it.
 
-!["August Smart Lock mounting plate and adapter installed"](https://farm9.staticflickr.com/8581/16302716062_bd6319e53e_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8581/16302716062_bd6319e53e_c.jpg" alt="August Smart Lock mounting plate and adapter installed" padding="66.75%" async="1" %}
 
 Based on the kind of lock system you have, you’ll only use 1 of 3 mounting plates and 1 of 3 adapters that it comes with.
 
-!["August Smart Lock installed on my door"](https://farm9.staticflickr.com/8589/16117439229_10a1a59cfc_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8589/16117439229_10a1a59cfc_c.jpg" alt="August Smart Lock installed on my door" padding="66.75%" async="1" %}
 
-Finally, turn the lock on by removing the faceplate (turn it counterclockwise with your palm) and removing the plastic tabs from the batteries; then put the faceplate back on.
+Finally, turn the lock on by removing the faceplate and removing the plastic tabs from the batteries; then put the faceplate back on.
 
-Setting up and connecting August Smart Lock to your device is simple as well. Download and open the August app for <a href="https://itunes.apple.com/us/app/august-smart-lock/id648730592?mt=8" target="_blank">iOS</a> or <a href="https://play.google.com/store/apps/details?id=com.august.app&hl=en" target="_blank">Android</a> (<a href="http://august.com/phones" target="_blank">list of compatible phones</a>). It’s evident that the user interface and experience was well thought out.
+Setting up and connecting August Smart Lock to your device is simple as well. Download and open the August app for [iOS](https://itunes.apple.com/us/app/august-smart-lock/id648730592?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.august.app&hl=en) ([list of compatible phones](http://august.com/phones)). It’s evident that the user interface and experience was well thought out.
 
 Once you’ve signed up for an account and signed in, it’ll scan for your lock(s) and guide you through setting it up.
 
@@ -53,15 +54,15 @@ Once you’ve signed up for an account and signed in, it’ll scan for your lock
 
 The August app allows you to easily lock or unlock August Smart Lock with a single tap once you’ve selected the lock—It allows you to add and add multiple locks. The user interface is well designed and makes using the app a pleasant experience.
 
-!["August app lock and unlock screens"](https://farm9.staticflickr.com/8584/15691276443_4236e63e30_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8584/15691276443_4236e63e30_c.jpg" alt="August app lock and unlock screens" padding="59.25%" async="1" %}
 
 August Smart Lock requires 4 AA batteries (included) and relies on Bluetooth Low Energy (BLE) to pair with your phone. Since it relies on BLE instead of Wi-Fi, it says it can last almost a year before having to replace its batteries[^1], and during a power outage you’ll still be able to connect to it (assuming your batteries aren’t dead either). You’ll also get a reminder when batteries get low. Since August Smart Lock doesn’t replace your entire lock system, if you forget your phone you can still lock or unlock with your original key from the outside.
 
-!["August Smart Lock inside"](https://farm8.staticflickr.com/7576/15681174534_0612a61ffe_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7576/15681174534_0612a61ffe_c.jpg" alt="August Smart Lock inside" padding="66.75%" async="1" %}
 
-Since August Smart Lock only connects via BLE, you can’t control it remotely (not yet at least—<a href="#connect">explanation further down in the review</a>) Alongside the great user experience, it provides some notable features as well.
+Since August Smart Lock only connects via BLE, the only way to control it remotely is to buy and connect August Smart Lock to an [August Connect](#connect). Alongside the great user experience, it provides some notable features as well.
 
-If your deadbolt isn’t properly aligned with the door frame (you have to push or pull your door to turn your lock and it engage), that’ll still be a problem when locking your door with the August app—you’ll still have to physically push/pull your door while using the app. If that’s the case, you may want to have your door adjusted so its properly aligned.
+If your deadbolt isn’t properly aligned with the door frame (you have to push or pull your door to turn your lock and it engage), that’ll still be a problem when locking your door with the August app—you’ll still have to physically push/pull your door while using the app. If that’s the case, you may want to have your door adjusted so it’s properly aligned.
 
 ### Auto-Unlock
 
@@ -75,7 +76,7 @@ Everlock automatically relocks your door shortly after you’ve unlocked it (tha
 
 The app allows you to add users you want to grant access to (the user would have to have a phone compatible with August Smart Lock).
 
-!["August app guest permissions"](https://farm8.staticflickr.com/7519/16285208566_28eb349051_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7519/16285208566_28eb349051_c.jpg" alt="August app guest permissions" padding="59.25%" async="1" %}
 
 For each user, you can set them as an owner or a guest, and for guests you can grant them permanent, temporary, or recurring/schedule-based access. User access can easily be changed or revoked.
 
@@ -85,23 +86,53 @@ It was announced at CES 2015 that <a href="https://nest.com/blog/2015/01/05/what
 
 This is just the first step into a world of possibilities with other smart devices, appliances, and services.
 
+### Notifications
+
+August Smart Lock will send notifications to your device when its status changes, such as when a user locks/unlocks  or it auto-unlocks your door. The notifications for when a user locks/unlocks are inconsistent. Sometimes I get them; other times I don’t—I haven’t figured out the pattern (if there is one).
+
+<div class="flickity--images js-flickity"
+  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false }'>
+  <img data-aload="https://farm9.staticflickr.com/8859/18131847625_46cca2c4fd_c.jpg" alt="iOS August app notifications">
+  <img data-aload="https://farm9.staticflickr.com/8763/18105236856_391bc1a0d2_c.jpg" alt="iOS August app lockscreen widget">
+</div>
+<noscript>
+  <div class="flickity--images js-flickity">
+    <img src="https://farm9.staticflickr.com/8859/18131847625_46cca2c4fd_c.jpg" alt="iOS August app notifications">
+    <img src="https://farm9.staticflickr.com/8763/18105236856_391bc1a0d2_c.jpg" alt="iOS August app lockscreen widget">
+  </div>
+</noscript>
+
+It’s useful to receive a notification that it’s auto-unlocking your door so you know whether or not you need to get your keys out before you get to the door.
+
+On iOS, you can also lock/unlock August Smart Lock from your lock screen by adding August app as a widget. Toggling either will open the August app and auto-trigger either one of those actions. If you have Touch ID enabled or a passcode, it’ll require you to enter it. It also assumes you’re locking/unlocking via Bluetooth, therefore it won’t work when you’re trying to control August Smart Lock remotely via [August Connect](#connect).
+
 ### Connect
 
-<a href="http://blog.august.com/2015/01/07/augustconnect/" target="_blank">August recently announced August Connect</a>, a device that bridges the lock and Wi-Fi and allows you to control your August Smart Lock from anywhere using the app just as long as you have internet connectivity. It’ll set you back an additional $49.99, but there are no monthly or annual fees required.
+[August Connect](/blog/august-connect/)[^2] allows you to control your lock remotely using the August app as long as you have Internet access. It pairs to your August Smart Lock over Bluetooth and connects to your network over Wi-Fi. It costs an additional $49.99, but there are no monthly or annual fees.
+
+For more information on how it works, read my [review of the August Connect](/blog/august-connect/).
+
+### Apple Watch
+
+Apple Watch integration is minimal—it only receives notifications. My phone is usually on vibrate, and I don’t always feel it vibrating, so it’s more reliable to receive a notification on my watch via haptic feedback.
+
+{% include image.html src="https://farm9.staticflickr.com/8816/17943831448_b73ab99fe4.jpg" alt="Apple Watch August app notification" async="1" %}
+
+It’d be nice to lock/unlock August Smart Lock from the Apple Watch (my guess is that functionality is coming).
 
 ## Design
 
 Designed by Yves Béhar, August Smart Lock is a gorgeous piece of machinery and an eye-catcher, but it’s also bulkier in person than it appears in photos—it sticks out 2” from the door and is 3” wide in diameter.
 
-![](https://farm8.staticflickr.com/7503/16117739367_d99ab6ace8_c.jpg)
+{% include image.html src="https://farm8.staticflickr.com/7503/16117739367_d99ab6ace8_c.jpg" alt="" padding="66.75%" async="1" %}
 
-![](https://farm9.staticflickr.com/8616/16302719192_aa0b7c31ff_c.jpg)
+{% include image.html src="https://farm9.staticflickr.com/8616/16302719192_aa0b7c31ff_c.jpg" alt="" padding="66.75%" async="1" %}
 
 Although it looks bulky in person, when turning it manually it doesn’t feel awkward and turns with ease, almost effortless. The face plate tends to become loose and falls off sometimes when you’re unlocking it manually (it may be just the way I’m gripping it, but the same thing happens to my wife).
 
 August Smart Lock comes in 4 flavors from you to choose from: silver, champagne, black, and red.
 
-![](https://augusthomeinc.files.wordpress.com/2014/07/lock_colors2c_angled.jpg)
+{% include image.html src="https://augusthomeinc.files.wordpress.com/2014/07/lock_colors2c_angled.jpg" alt="August Smart Lock different colors" padding="48.44%" async="1" %}
 
 An indicator light on the frontplate turns green when it unlocks and red when it locks—there are also accompanying sounds for each.
 
@@ -111,28 +142,34 @@ An indicator light on the frontplate turns green when it unlocks and red when it
 
 When August Smart Lock works like it’s designed to work or like you’d expect it to work, it’s fantastic, and on paper the features sound great; unfortunately, in practice the integration lacks harmony and still needs work.
 
-Connecting to it can range from painless to utter and sheer frustration and resentment, and most of the time it’s the latter. It’s unreliable and usually takes several seconds, sometimes longer, and occasionally never (at least until my patience runs out as I’m staring at my phone waiting for it to connect or until my phone auto locks). A majority of the time I still pull out my keys because it’s faster than waiting for it to connect.
+Connecting to it can range from painless to utter and sheer frustration and resentment, and although my earlier experiences was more frustrating than not, August has made some major improvements to the lock and app that has made it a lot more reliable. However, when it doesn’t work or refuses to connect, it’s extremely frustrating—I still recommend you have a back-up set of keys around, just in case.
 
-When auto-unlock works, it’s amazing, like thaumaturgy, sorcery, magic. August has released a few updates which have improved the reliability of auto-unlock. From personal experience it works about 80% of the time[^2], although on rare occasions I’ll still find my door locked.
+When auto-unlock works, it’s amazing, like thaumaturgy, sorcery, magic. August’s updates have greatly improved the reliability of auto-unlock. It works about 90% of the time, although on rare occasions I’ll still find my door locked.
 
-I haven’t used Everlock, but based on the very fact that auto-unlock isn’t perfect, I wouldn’t trust Everlock to automatically lock the door behind me, especially when I’m leaving the house—I can imagine coming home and, to my horror, finding my door unlocked.
-
-With that said, of all the available smart locks out there (like <a href="https://ockitron" target="_blank">Lockitron</a>, <a href="http://www.gojiaccess.com" target="_blank">Goji</a>, <a href="https://www.mykevo.com" target="_blank">Kevo</a> to name a few), August Smart Lock is still my preference and choice.
+I don’t use Everlock, but based on the very fact that auto-unlock isn’t perfect, I wouldn’t trust it to automatically lock the door behind me, especially when I’m leaving the house.
 
 ## Conclusion
 
-August Smart Lock costs $249 and you can order one from <a href="http://august.com" target="_blank">August.com</a>, <a href="http://www.amazon.com/August-Smart-Lock-Bluetooth-Enabled/dp/B00OHY14CS/?tag=jonsuhcom-20" target="_blank">Amazon.com</a> (free shipping), or <a href="http://store.apple.com/us/product/HF6U2LL/A/august-smart-lock?fnode=0001050701" target="_blank">Apple.com</a> or your local Apple store.
+Of all the available smart locks out there (like [Lockitron](https://lockitron.com), [Goji](http://www.gojiaccess.com), [Kevo](https://www.mykevo.com)), August Smart Lock is still my preference and choice.
 
-August Connect costs $49.99 and you can pre-order it from <a href="http://august.com" target="_blank">August.com</a> or <a href="http://www.amazon.com/August-Connect-Secure-Remote-Access/dp/B00RPM6UZA/?tag=jonsuhcom-20" target="_blank">Amazon.com</a> (free shipping).
+Over the past 7 months, August has pushed several firmware and software improvements that have made August Smart Lock a lot more reliable, especially connection and auto-unlock reliability. Along with more improvements, I’d love to see it open up, and support and talk to more devices, ecosystems and services, such as [Canary Home Security Device](/blog/canary-home-security-device/), [Automatic](https://automatic.com) and [IFTTT](https://ifttt.com).
 
-Although August Smart Lock still needs work, I trust it to make the proper software and firmware improvements to smooth out the wrinkles of its unreliability and connection woes. When I pre-ordered it, I knew I was investing in a work-in-progress, and I’ve accepted that in spite of my frustrations.
+If you’re planning on getting the August Smart Lock, you may also want to consider getting the August Connect so you can connect to and control it remotely. It improves connectivity some by giving you a second way of connecting when Bluetooth isn’t cooperating, but the fact that it allows you to control August Smart Lock remotely makes it worth it. I’m not sure if I’d be as happy with my August Smart Lock if I didn’t have the August Connect.
 
-It’s also possible that August Connect would improve connectivity and reliability since it’ll be a stationary device, and when it’s installed, more than likely rely on August Connect to pair with and control August Smart Lock as opposed to the phone.
+August Smart Lock costs $249.99 and you can order one from [August.com](http://august.com), [Amazon.com](http://www.amazon.com/August-Smart-Lock-Bluetooth-Enabled/dp/B00OHY14CS/?tag=jonsuhcom-20), [Apple.com](http://store.apple.com/us/product/HF6U2LL/A/august-smart-lock?fnode=0001050701) or at your local Apple store.
+
+[August Connect](/blog/august-connect/) costs $49.99 and you can order it from [August.com](http://august.com) or [Amazon.com](http://www.amazon.com/August-Connect-Secure-Remote-Access/dp/B00RPM6UZA/?tag=jonsuhcom-20).
 
 <a href="https://www.flickr.com/photos/jonsuhcom/sets/72157648020084853/" class="button" target="_blank">More photos of August Smart Lock on Flickr</a>
 
 ---
 
-[^1]: I’m not too sure about the 1-year battery life that’s advertised—my batteries were at 25% after only 6 months.
+<div class="post-updates">
+  <p><strong>Update May 25, 2015:</strong> August has made some big firmware and software improvements over the past few months, and they have made August Smart Lock a lot more usable and more reliable. Rating bumped up to 3.5.</p>
+</div>
 
-[^2]: Previously: “...from personal experience, it works about 60–70% of the time—occasionally at the very attempt to open my door, I’ll find that it’s still locked.”
+---
+
+[^1]: The 1-year battery life is in ideal conditions—my batteries lasted 7 months. Battery life may vary based a few factors, such as the tightness or resistance of your lock when locking/unlocking your door.
+
+[^2]: It’s unfortunately that you have to purchase another device and spend an additional $49.99 to control your August Smart Lock remotely, but without it, it’s not nearly as useful.
