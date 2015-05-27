@@ -56,7 +56,7 @@ For example, Facebook’s script makes 3 requests. A test environment with socia
 | Twitter    | 4      | 52.7KB      |
 | **Total**  | **14** | **203.2KB** |
 
-<small class="serif"><em>Source: <a href="/blog/social-share-links/">Responsible Social Share Links</a></em></small>
+<small class="serif">Source: <a href="/blog/social-share-links/">Responsible Social Share Links</a></small>
 
 That’s an additional 14 HTTP requests and 203.2KB. Instead, I went with <a href="/blog/social-share-links/" title="Responsible Social Share Links">“share-intent” URLs</a>, which are basically links used to pass and construct data into a share and can be used to create social share links using just HTML. It allowed me to strip away the third-party scripts I was using for sharing, which accounted for 7 requests. I wrote more on this matter on <a href="/blog/social-share-links/">Responsible Social Share Links</a>.
 
