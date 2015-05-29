@@ -110,7 +110,7 @@ encoding:     "utf-8"
 # Filtering
 # ============================
 show_drafts: true
-limit_posts: 15
+# limit_posts: 0
 future:      true
 # unpublished: false
 
