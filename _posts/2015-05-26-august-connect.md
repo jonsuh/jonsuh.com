@@ -15,7 +15,7 @@ tags:
 - smart
 ---
 
-August Connect is a device that allows you to remotely connect to and control the [August Smart Lock](/blog/august-smart-lock/). It bridges your Wi-Fi connection and August Smart Lock’s Bluetooth connection. Without it, you can only connect to the August Smart Lock via Bluetooth Low Energy (BLE). I’ve been using the August Connect with my August Smart Lock for 3 months now, and here’s my review.
+August Connect is a device that allows you to remotely connect to and control the [August Smart Lock](/blog/august-smart-lock/). It bridges your Wi-Fi connection and August Smart Lock’s Bluetooth connection. Without it, you can only connect to the August Smart Lock via Bluetooth. I’ve been using the August Connect with my August Smart Lock for 3 months now, and here’s my review.
 
 <!--more-->
 
@@ -23,7 +23,7 @@ August Connect is a device that allows you to remotely connect to and control th
 
 {% include image.html src="https://farm9.staticflickr.com/8766/17519052554_ef3d29fecc_c.jpg" alt="August Connect inside packaging" padding="66.75%" async="1" %}
 
-The design of the August Connect is simple, clean, and inconspicuous—even if it’s exposed, it should look great plugged into a wall. Unlike the August Smart Lock, the August Connect only comes in one color: white.
+The design of the August Connect is simple, clean, and inconspicuous—even if it’s exposed, it should look great plugged into a wall. Unlike the August Smart Lock, it only comes in one color: white.
 
 ## Installation and Setup
 
@@ -55,7 +55,7 @@ August states that August Connect can be within 30 feet of your August Smart Loc
 
 ## Features and Usage
 
-The August Connect works like it’s designed to, and I haven’t encountered many issues with it. Since I’ve owned it (February 2015), I’ve only had to restart it once because August Smart Lock failed to properly connect to the August Connect.
+The August Connect works like it’s designed to, and I haven’t encountered many issues with it. Since I’ve owned it (February 2015), I’ve only had to restart it once because August Smart Lock failed to properly connect to it.
 
 Locking, unlocking, and checking the status of August Smart Lock is pretty straight forward. You’ll notice a new icon labeled “Remote Connect” on the top right of the lock status screen. Toggle it on (highlighted teal) to tell August Smart Lock to connect via August Connect instead of Bluetooth.
 
@@ -83,7 +83,7 @@ Locking, unlocking, or checking the status of the lock isn’t instantaneous—i
 
 You can connect more than one August Smart Lock to one August Connect; however, assuming your locks are far enough apart that both would not be close enough to properly connect to the August Connect, you’d probably need an August Connect for every lock you’d want remote access to.
 
-The one thing lacking about the August Connect and August Smart Lock is their inability to communicate and talk to other devices, ecosystems, or applications—August Smart Lock only talks to Nest Thermostat, and even then the integration is limited. It’d be wonderful, for example, if you could add August Smart Lock on IFTTT as an Action based on a Trigger, and have it perform an action remotely via August Connect. (e.g. You’re having a party on July 1, 2015. At 5:00pm, automatically unlock the front door.) My hope is that both August Smart Lock and August Connects opens up and allows more third-party integration.
+The one thing lacking about the August Connect and August Smart Lock is the inability to communicate and talk to other devices, ecosystems, or applications—August Smart Lock only talks to Nest Thermostat, and even then the integration is limited. It’d be wonderful, for example, if you could add August Smart Lock on IFTTT as an Action based on a Trigger, and have it perform an action remotely via August Connect. (e.g. You’re having a party on July 1, 2015. At 5:00pm, automatically unlock the front door.) My hope is that both August Smart Lock and August Connects open up and allow more third-party integration.
 
 ## Conclusion
 
