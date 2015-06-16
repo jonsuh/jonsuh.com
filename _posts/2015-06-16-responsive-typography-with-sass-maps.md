@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: external
 title: Responsive Typography with Sass Maps
-date: "2015-05-18 10:00:00"
+date: "2015-06-16 05:00:00"
 excerpt: "Managing consistent, typographic rhythm isn’t easy, but when the type is responsive, it makes things even more difficult. Fortunately Sass maps can help make responsive typography much more manageable."
 external_site: "Smashing Magazine"
 external_url: "http://www.smashingmagazine.com/2015/06/16/responsive-typography-with-sass-maps/"
@@ -332,13 +332,18 @@ I also realize that my solution is not robust (it’s not designed to handle med
 
 ### Alternatives
 
-[Modular Scale](http://www.modularscale.com/) is a great tool to achieve responsive typography as well, so be sure to check that out as well.
+[Viewport units](https://css-tricks.com/viewport-sized-typography/) (`vh`, `vw`, `vmin` and `vmax`) can also be used to create responsive typography:
 
-[Viewport Units](https://css-tricks.com/viewport-sized-typography/) (`vh`, `vw`, `vmin` and `vmax`) can also be used for fluid, responsive typography, much like what [FitText.js](http://fittextjs.com) does (the use of viewport units is [not limited to font-size](http://snook.ca/archives/html_and_css/vm-vh-units)). They are directly proportional to the size of the viewport.
+{% include image.html src="viewport-units-example.gif" caption="An example of viewport units in action. One viewport unit = 1% of the viewport’s width or height. (For a 1000-pixel-wide viewport, <code>1vw</code> = <code>100px</code>; for a 500-pixel-high viewport, <code>1vh</code> = <code>5px</code>.)" padding="21.6%" %}
 
-- 1 viewport unit = 1% of the viewport width or height  
-(e.g. if the viewport is 1000px wide, 1vw = 10px. if the viewport is 500px high, 1vh = 5px)
+For example, viewport-width units can be used to build [fluid hero text](http://demosthenes.info/blog/739/Creating-Responsive-Hero-Text-With-vw-Units). However, because the text will be scaled to the width or height of the viewport (as opposed to the size of the content area of the page) and because CSS currently lacks `min` and `max` values for the `font-size` property, viewport units aren't suitable for body text: No matter what value you choose, body text sized in viewport units will always end up being too large or too small at extreme browser sizes, necessitating intervention by media query.
 
-{% include image.html src="viewport-units-example.gif" caption="An example of viewport units in action" padding="21.6%" %}
+[FitText.js](http://fittextjs.com/) does a similar job, with a focus on sizing text so that it always rests on a single line or measure. SVG techniques can also be used to achieve a similar effect.
 
-Since the amount of space a character takes up can vary based on the font and character, you’d have to experiment a bit to get the values right. Outside of IE and Opera Mini, [support for viewport units](http://caniuse.com/#feat=viewport-units) is pretty solid for modern browsers.
+Finally, [Erik van Blokland](https://twitter.com/letterror) has been working on some very [exciting possibilities for responsive typography](http://letterror.com/dev/mathshapes/page_20_Excellence.html), such as letterforms that actually alter with viewport size to preserve space, rather than simply get smaller.
+
+### Further Resources
+
+[Modular Scale](http://www.modularscale.com/) is a great tool to achieve responsive typography, and Sara Soueidan has a great article on [responsive typography techniques](http://tympanus.net/codrops/2013/11/19/techniques-for-responsive-typography/).
+
+_(ds, ml, al)_
