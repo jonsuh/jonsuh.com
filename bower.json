@@ -2,14 +2,15 @@
   "name": "jonsuh.com",
   "dependencies": {},
   "devDependencies": {
-    "normalize-css": "~3.0.2",
-    "bourbon": "~4.2.1",
-    "neat": "~1.7.1",
+    "normalize-css": "~3.0.3",
+    "bourbon": "~4.2.5",
+    "neat": "~1.7.2",
     "picturefill": "~2.1.0",
     "chartjs": "~1.0.2",
-    "mq-sass": "*",
-    "flickity": "~1.0.0",
-    "loadcss": "~0.1.6",
-    "fontfaceobserver": "~1.4.5"
+    "mq-sass": "~0.2.0",
+    "flickity": "~1.1.1",
+    "loadcss": "~0.1.8",
+    "fontfaceobserver": "~1.5.3",
+    "Chart.js": "chartjs#~1.0.2"
   }
 }
