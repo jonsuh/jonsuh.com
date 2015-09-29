@@ -199,6 +199,10 @@ pre,
 div.highlighter-rouge {
   margin-bottom: $paragraph-margin-bottom;
   @include clearfix;
+
+  code {
+    color: #f9f8f5;
+  }
 }
 
 pre {
