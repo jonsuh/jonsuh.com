@@ -19,6 +19,8 @@ I’ve been learning [React](https://facebook.github.io/react), a JavaScript lib
 
 ## Setup
 
+*Note: If you’re new to Gulp, you may want to get familiarized with it before continuing (this post assumes you’re familiar with it). Here are [two](http://alistapart.com/blog/post/getting-started-with-gulp) [articles](https://css-tricks.com/getting-started-gulp/) that’ll help you get started with Gulp.*
+
 My Gulp workflow features the following:
 
 - Sass and Autoprefixer
@@ -86,7 +88,7 @@ example.com
 }
 ```
 
-Assuming that you have npm, Gulp and Bower installed and are familiar with them, run `npm install` and `bower install` and you should be set.
+Assuming that you have npm, Gulp and Bower installed, run `npm install` and `bower install` and you should be set.
 
 ### Gulpfile.js
 
@@ -234,7 +236,7 @@ Now that I’ve shared examples of the important files to get you going, let’s
 
 ### Converting JSX to JavaScript with Babel
 
-When building with React, you can write plain JavaScript or [JSX](https://facebook.github.io/jsx/) (JavaScript syntax extension), a different but more concise syntax. JSX arguably makes things easier and more readable, but needs to be converted into native JavaScript. JSX is analogous to [CoffeeScript](http://coffeescript.org/), even [Sass](http://sass-lang.com/) or [LESS](http://lesscss.org/) (but for CSS).
+When building with React, you can write plain JavaScript or in [JSX](https://facebook.github.io/jsx/) (JavaScript syntax extension). JSX is a preprocessor that gives you a more concise syntax, and is arguably easier and more readable, but needs to be converted to native JavaScript. JSX is analogous to [CoffeeScript](http://coffeescript.org/), even [Sass](http://sass-lang.com/) or [LESS](http://lesscss.org/) (but for CSS).
 
 ```javascript
 // JSX
@@ -342,3 +344,7 @@ gulp.task('watch', function() {
 I’m only a few days into learning React and this workflow is a result of my early learning stages. I’m sure I have a lot to learn and have yet to find a real-world use case to integrate React; therefore, if something is incorrect or there’s a better way to do what I’m doing, feel free to reach out [@jonsuh](https://twitter.com/jonsuh).
 
 For the immediate future, I only find myself integrating small components here and there to sites I build (if I can find a good reason and use case). As I continue to learn, build with it, and find better ways to integrate it into my workflow, I’m sure this post is subject to change.
+
+---
+
+<small>Thanks to [Adam](https://twitter.com/a_simpson) for reviewing this post and giving it an integrity check!</small>
