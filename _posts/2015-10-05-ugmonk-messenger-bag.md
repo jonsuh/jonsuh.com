@@ -57,13 +57,13 @@ On the inside, the bag has two main compartments.
 
 The back compartment is designed to be a laptop/tablet compartment that can fit up to a 15" laptop without a case or a 13" with a case or sleeve. It also has a strap that secures onto a button stud to keep your laptop or tablet secure.
 
-{% include image.html src="https://c1.staticflickr.com/1/724/21831240122_0bacb2bb2f_c.jpg" alt="Ugmonk Messenger Bag top, open view" padding="66.75%" async="1" %}
+{% include image.html src="https://c1.staticflickr.com/1/724/21831240122_0bacb2bb2f_c.jpg" alt="Ugmonk Messenger Bag inside laptop strap" padding="66.75%" async="1" %}
 
 The front compartment has 2 storage pockets (one that buttons down and the other has a leather strap with a clip for your keys) and 2 pen holders.
 
 {% include image.html src="https://c2.staticflickr.com/6/5754/21220348724_273fc7dffa_c.jpg" alt="Ugmonk Messenger Bag front compartment" padding="66.75%" async="1" %}
 
-{% include image.html src="https://c2.staticflickr.com/6/5731/21852699781_cccd701d63_c.jpg" alt="Ugmonk Messenger Bag front compartment pocket with button" padding="66.75%" async="1" %}
+{% include image.html src="https://c2.staticflickr.com/6/5731/21852699781_cccd701d63_c.jpg" alt="Ugmonk Messenger Bag pocket with button" padding="66.75%" async="1" %}
 
 {% include image.html src="https://c1.staticflickr.com/1/602/21843093245_bfa2d938d5_c.jpg" alt="Ugmonk Messenger Bag inside side storage pocket" padding="66.75%" async="1" %}
 
@@ -109,7 +109,7 @@ I use this bag almost every day, and it’s held up well thus far. The quality o
 
 The stitching is tightly knit, and the rivets are securely fastened. I got to meet Jeff and talk to him for a moment at [Circles Conference](http://circlesconference.com), and he mentioned that he deliberately used hardware that would last, which is why there are no zippers.
 
-{% include image.html src="https://c1.staticflickr.com/1/673/21852734421_9a0ff83cd1_c.jpg" alt="Ugmonk Messenger Bag leather patch and stitching" padding="66.75%" async="1" %}
+{% include image.html src="https://c1.staticflickr.com/1/673/21852734421_9a0ff83cd1_c.jpg" alt="Ugmonk Messenger Bag shoulder strap clip" padding="66.75%" async="1" %}
 
 One thing to note is that the top flap doesn’t fully cover the top opening (the ends stick out) when the cinch straps aren’t set on the tightest setting. Keep this in mind if you’re out in the rain—water may get inside and potentially ruin or damage something. If I could change something about this bag, it would be that the opening would be fully covered when closed even at its loosest setting.
 
