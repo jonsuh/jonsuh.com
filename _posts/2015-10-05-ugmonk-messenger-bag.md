@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ugmonk Messenger Bag Review
+title: Ugmonk Waxed Canvas Messenger Bag Review
 date: "2015-10-05 06:00:00"
 review:
   name: Ugmonk Messenger Bag
