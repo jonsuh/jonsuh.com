@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating React with Gulp
+title: Integrating React with gulp
 date: "2015-09-29 08:00:00"
 share_image: share.png
 comments: false
@@ -13,15 +13,15 @@ tags:
 - react
 ---
 
-I’ve been learning [React](https://facebook.github.io/react), a JavaScript library by Facebook for building user interfaces, for the past few days during my commute—it’s been challenging, but a lot of fun. After a couple of days of learning the basics (reading their [Getting Started](https://facebook.github.io/react/docs/getting-started.html) introduction to React and following their [tutorial](https://facebook.github.io/react/docs/tutorial.html)), I reconfigured my `Gulpfile.js` to include React in my local development environment.
+I’ve been learning [React](https://facebook.github.io/react), a JavaScript library by Facebook for building user interfaces, for the past few days during my commute—it’s been challenging, but a lot of fun. After a couple of days of learning the basics (reading their [Getting Started](https://facebook.github.io/react/docs/getting-started.html) introduction to React and following their [tutorial](https://facebook.github.io/react/docs/tutorial.html)), I reconfigured my `gulpfile.js` to include React in my local development environment.
 
 <!--more-->
 
 ## Setup
 
-*Note: If you’re new to Gulp, you may want to get familiarized with it before continuing (this post assumes you’re familiar with it). Here are [two](http://alistapart.com/blog/post/getting-started-with-gulp) [articles](https://css-tricks.com/getting-started-gulp/) that’ll help you get started with Gulp.*
+*Note: If you’re new to gulp, you may want to get familiarized with it before continuing (this post assumes you’re familiar with it). Here are [two](http://alistapart.com/blog/post/getting-started-with-gulp) [articles](https://css-tricks.com/getting-started-gulp/) that’ll help you get started with gulp.*
 
-My Gulp workflow features the following:
+My gulp workflow features the following:
 
 - Sass and Autoprefixer
 - Convert JSX to JavaScript
@@ -52,7 +52,7 @@ example.com
 └── package.json
 ```
 
-...the `package.json` file where I define any Gulp dependencies I’ll be using:
+...the `package.json` file where I define any gulp dependencies I’ll be using:
 
 ```json
 {
@@ -88,9 +88,9 @@ example.com
 }
 ```
 
-Assuming that you have npm, Gulp and Bower installed, run `npm install` and `bower install` and you should be set.
+Assuming that you have npm, gulp and Bower installed, run `npm install` and `bower install` and you should be set.
 
-### Gulpfile.js
+### gulpfile.js
 
 The meat of the setup is in my `gulpfile.js` file, which looks like the following:
 
@@ -230,9 +230,9 @@ gulp.task('build', ['sass', 'copy-js-vendor', 'concat']);
 gulp.task('default', ['build', 'browsersync', 'watch']);
 ```
 
-## Gulp Dependencies and Tasks Explained
+## gulp Dependencies and Tasks Explained
 
-Now that I’ve shared examples of the important files to get you going, let’s go through a few of the Gulp dependencies and tasks required to get things running.
+Now that I’ve shared examples of the important files to get you going, let’s go through a few of the gulp dependencies and tasks required to get things running.
 
 ### Converting JSX to JavaScript with Babel
 
@@ -252,7 +252,7 @@ React.render(
 );
 ```
 
-With the help of [Babel](https://babeljs.io/) and its Gulp plugin, [gulp-babel](https://github.com/babel/gulp-babel), you can convert JSX to JavaScript by piping `babel()` into the `concat` task, like such:
+With the help of [Babel](https://babeljs.io/) and its gulp plugin, [gulp-babel](https://github.com/babel/gulp-babel), you can convert JSX to JavaScript by piping `babel()` into the `concat` task, like such:
 
 ```javascript
 var jsFiles = {
@@ -297,9 +297,9 @@ Note the `'es-lint'` on the first line: Any tasks included in the second argumen
 
 ### Linting JS and JSX with ESLint
 
-As I began writing more JavaScript, I found linting my code to be extremely helpful in helping me detect problems before testing it in the browser. I‘ve been linting my JavaScript with [JSHint](http://jshint.com/) for a while now ([gulp-jshint](https://github.com/spalger/gulp-jshint) for Gulp); however, when I introduced React and JSX, I constantly came across issues that would break the pipe even when using JSHint with its [JSXHint](https://github.com/STRML/JSXHint/) module.
+As I began writing more JavaScript, I found linting my code to be extremely helpful in helping me detect problems before testing it in the browser. I‘ve been linting my JavaScript with [JSHint](http://jshint.com/) for a while now ([gulp-jshint](https://github.com/spalger/gulp-jshint) for gulp); however, when I introduced React and JSX, I constantly came across issues that would break the pipe even when using JSHint with its [JSXHint](https://github.com/STRML/JSXHint/) module.
 
-[ESLint](http://eslint.org/) and its Gulp plugin, [gulp-eslint](https://github.com/adametry/gulp-eslint), to the rescue!
+[ESLint](http://eslint.org/) and its gulp plugin, [gulp-eslint](https://github.com/adametry/gulp-eslint), to the rescue!
 
 ```javascript
 gulp.task('eslint', function() {
@@ -328,9 +328,9 @@ In order to get ESLint and JSX playing nicely, you have to enable JSX. Another w
 
 ### Watching JS and JSX Files for Changes
 
-Now that we’ve got Gulp linting, compiling, and concatenating our JS/JSX files, we now want it to watch for changes and re-lint/compile/concatenate.
+Now that we’ve got gulp linting, compiling, and concatenating our JS/JSX files, we now want it to watch for changes and re-lint/compile/concatenate.
 
-Let’s configure Gulp’s watch task to watch for both JS and JSX files, then execute `concat` since the task handles both.
+Let’s configure gulp’s watch task to watch for both JS and JSX files, then execute `concat` since the task handles both.
 
 ```javascript
 gulp.task('watch', function() {
