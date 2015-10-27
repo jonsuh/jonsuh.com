@@ -90,8 +90,6 @@ This one, intentional move had the greatest effect on me. The project became per
 
 It’s been amazing to couple my God-given gifts and passion with God’s Word to package them up into this project. I’m not a pastor or a missionary, but I am a developer/designer. I believe design, the web and efforts like this can help communicate the Scriptures and the Gospel, and 100 Days of Scriptures was one way I could contribute to eternal things.
 
-Although I had fun playing with design, typography, and CSS
-
 ## That’s It
 
 To those who followed 100 Days of Scriptures by visiting the site or following my posts on Twitter, Instagram or Facebook, or took the time to drop me encouraging words in person, email or social...
