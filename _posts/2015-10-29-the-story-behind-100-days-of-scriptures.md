@@ -84,7 +84,7 @@ Other fun facts:
 
 ## Takeaways
 
-Design comes less naturally to me, which required me to flex muscles I don’t flex as often to deliver a design every day. Looking back, I am proud of some of the designs, but there are plenty I wish I could refine or nuke and redo. However, the project was less about design, typography and CSS, and more about character, intent, discipline and execution. I’m thrilled I went the distance and crossed the finish line.
+Design comes less naturally to me, which required me to flex muscles I don’t flex as often to deliver a design every day. Looking back, I am proud of some of the designs, but there are plenty I wish I could refine or nuke and redo. However, the project was less about design, typography and CSS, and more about character, intent, discipline and execution. I’m thrilled I went the distance and about to cross the finish line.
 
 I hoped this project would be an encouragement and inspiration to others, but as time went by, I began realizing that the person that needed this project most was me. I embraced that notion and made adjustments to how I approached each day. I ditched my friends’ Scripture suggestions and began searching the Scriptures on my own every day.
 
