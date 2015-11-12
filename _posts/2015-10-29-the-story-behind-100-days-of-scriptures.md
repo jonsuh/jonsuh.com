@@ -76,11 +76,11 @@ In total, I missed 8 days so far due to travel, sickness, sleepiness and persona
 Other fun facts:
 
 - Average time designing and coding per day: 1.5 hours
-- Longest day: [Day 26](/100-days-of-scriptures/#day-26) at 4 hours (Day 36 comes in 2nd at 3.5 hours)
+- Longest day: [Day 26](/100-days-of-scriptures/#day-26) at 4 hours ([Day 36](/100-days-of-scriptures/#day-36) comes in 2nd at 3.5 hours)
 - Shortest day: [Day 38](/100-days-of-scriptures/#day-38) at 30 minutes
-- Favorite day: [Day 71](/100-days-of-scriptures/#day-72)
+- Favorite day: [Day 71](/100-days-of-scriptures/#day-71)
 - Favorite font: [Playfair Display](https://www.google.com/fonts/specimen/Playfair+Display) (Used 5 times)
-- Favorite verse: Proverbs 16:3, [Day 100](/100-days-of-scriptures/#day-100) (My life verse)
+- Favorite verse: Proverbs 16:3, [Day 100](/100-days-of-scriptures/#day-100) (Yet to come!)
 
 ## Takeaways
 
