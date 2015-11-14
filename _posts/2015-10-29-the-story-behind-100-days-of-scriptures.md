@@ -2,7 +2,7 @@
 layout: post
 title: The Story Behind “100 Days of Scriptures”
 date: "2015-10-29 06:00:00"
-share_image: share.jpg
+share_image: share.jpg?v2
 comments: false
 tags:
 - design
