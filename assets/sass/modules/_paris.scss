@@ -1,0 +1,27 @@
+.paris {
+	text-align: center;
+	background: linear-gradient(to right, #002395 33.3%, #fff 33.3%, #fff 66.6%, #e72837 66.6%, #e72837);
+	padding-top: em-calc(75);
+	@include mq(small) {
+		padding-top: em-calc(100);
+	}
+	@include mq(medium) {
+		padding-top: em-calc(125);
+	}
+	@include mq(large) {
+		padding-top: em-calc(150);
+	}
+}
+
+.paris-text {
+	$font-size: 14;
+
+	font-size: em-calc($font-size);
+	font-family: Roboto;
+	color: $grey-darker;
+	text-transform: uppercase;
+	background-color: rgba($white, 0.7);
+	padding: em-calc(10, $font-size);
+	margin-bottom: em-calc(10, $font-size);
+	display: inline-block;
+}

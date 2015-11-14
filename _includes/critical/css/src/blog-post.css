@@ -9,6 +9,18 @@ body, html { font-family: RobotoLocal, Helvetica, Arial, sans-serif; color: rgb(
 body, html, input { text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
 .fonts-loaded body { font-family: Roboto, Helvetica, Arial, sans-serif; }
 
+.paris { text-align: center; background: linear-gradient(to right, #002395 33.3%, #fff 33.3%, #fff 66.6%, #e72837 66.6%, #e72837); padding-top: 4.6875em; }
+.paris-text { font-size: 0.875em; font-family: Roboto; color: #33343b; text-transform: uppercase; background-color: rgba(255, 255, 255, 0.7); padding: 0.71429em; margin-bottom: 0.71429em; display: inline-block; }
+@media only screen and (min-width: 30em) {
+  .paris { padding-top: 6.25em; }
+}
+@media only screen and (min-width: 40em) {
+  .paris { padding-top: 7.8125em; }
+}
+@media only screen and (min-width: 64em) {
+  .paris { padding-top: 9.375em; }
+}
+
 article, aside, figcaption, figure, header, nav, section { display: block; }
 code { font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 1em; color: rgb(102, 103, 110); }
 figure { margin-top: 1em; margin-right: 40px; margin-bottom: 1em; margin-left: 40px; }
@@ -19,7 +31,7 @@ form { font-size: 1em; margin-bottom: 0.75em; }
 hr { box-sizing: content-box; height: 0px; }
 img { max-width: 100%; height: auto; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; }
 input { color: inherit; font: inherit; line-height: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
-pre { padding: 0.625em 0.9375em; margin-bottom: 0.75em; }
+pre { padding: 0.625em 0.9375em; margin-bottom: 0.75em; overflow: hidden; }
 svg:not(:root) { overflow-x: hidden; overflow-y: hidden; }
 
 h1, h2, h4 { color: rgb(51, 52, 59); margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
