@@ -10,7 +10,7 @@ tags:
 - scripture
 ---
 
-Since starting [100 Days of Scriptures](/100-days-of-scriptures/), several people have asked me about it. As it comes to an end, I’d like to share its story, the process, lessons learned, and the effect its had on me.
+Since starting [100 Days of Scriptures](/100-days-of-scriptures/), several people have asked me about it. Now that it’s come to an end, I’d like to share its story, the process, lessons learned, and the effect its had on me.
 
 <!--more-->
 
@@ -65,13 +65,13 @@ With 66 books, 1,189 chapters, and 31,102 verses in the Bible, surely I could co
 
 100 unique designs!? If I know anything about design, it‘s that anything worthwhile takes time. But I had already committed and began the work, so I put aside my excuses and gave myself some breathing room by creating a few designs ahead of time.
 
-## <del>100</del> 108 Days
+## <del>100</del> 109 Days
 
 I launched 100 Days of Scriptures on my 30<sup>th</sup> birthday. In spite of the fact that I was done with my 20’s, I was excited for day 1 and the 99 days that remained. The designs I had created as a buffer didn’t last long. By the end of the first week, I was all caught up and designing something new each day.
 
 Coding and shipping a new design every day is rewarding, but tough. I didn’t have a strict process for creating each design; instead, I went with the flow. Sometimes design ideas came naturally, while other times I had to work at coming up with them. I also let the time I spent on each design be loose. Some evenings (more than not), my pillow called my name, and I was eager to get the design out the door and in bed. Then there were other evenings where I was in the zone and willing to experiment, and when I was done, I had invested 3–4 hours. However, after I had delivered a design, done was done. I didn’t invest more time the next day adjusting and perfecting yesterday’s design—it was hands off and on to the next day.
 
-In total, I missed 8 days so far due to travel, sickness, sleepiness and personal reasons. I made up for those days, which extends the length of the project to 108 days. My longest streak was 41 days.
+In total, I missed 9 days so far due to travel, sickness, sleepiness and personal reasons. I made up for those days, which extends the length of the project to 109 days. My longest streak was 41 days.
 
 Other fun facts:
 
@@ -79,12 +79,12 @@ Other fun facts:
 - Longest day: [Day 26](/100-days-of-scriptures/#day-26) at 4 hours ([Day 36](/100-days-of-scriptures/#day-36) comes in 2nd at 3.5 hours)
 - Shortest day: [Day 38](/100-days-of-scriptures/#day-38) at 30 minutes
 - Favorite day: [Day 71](/100-days-of-scriptures/#day-71)
-- Favorite font: [Playfair Display](https://www.google.com/fonts/specimen/Playfair+Display) (Used 5 times)
-- Favorite verse: Proverbs 16:3, [Day 100](/100-days-of-scriptures/#day-100) (Yet to come!)
+- Favorite font: [Playfair Display](https://www.google.com/fonts/specimen/Playfair+Display) (Used 6 times)
+- Favorite verse: Proverbs 16:3, [Day 100](/100-days-of-scriptures/#day-100)
 
 ## Takeaways
 
-Design comes less naturally to me, which required me to flex muscles I don’t flex as often to deliver a design every day. Looking back, I am proud of some of the designs, but there are plenty I wish I could refine or nuke and redo. However, the project was less about design, typography and CSS, and more about character, intent, discipline and execution. I’m thrilled I went the distance and about to cross the finish line.
+Design comes less naturally to me, which required me to flex muscles I don’t flex as often to deliver a design every day. Looking back, I am proud of some of the designs, but there are plenty I wish I could refine or nuke and redo. However, the project was less about design, typography and CSS, and more about character, intent, discipline and execution. I’m thrilled I went the distance and crossed the finish line.
 
 I hoped this project would be an encouragement and inspiration to others, but as time went by, I began realizing that the person that needed this project most was me. I embraced that notion and made adjustments to how I approached each day. I ditched my friends’ Scripture suggestions and began searching the Scriptures on my own every day.
 
@@ -92,12 +92,12 @@ This one, intentional move had the greatest effect on me. The project became per
 
 It’s been amazing to couple my God-given gifts and passion with God’s Word to package them up into this project. I’m not a pastor or a missionary, but I am a developer/designer. I believe design, the web and efforts like this can help communicate the truth behind the Scriptures and the Gospel, and 100 Days of Scriptures was one way I could contribute to eternal things.
 
-## Thanks
+## That’s It
 
-To those who has followed 100 Days of Scriptures by visiting the site or following my posts on Twitter, Instagram or Facebook, or took the time to drop me encouraging words in person, email or social...
+To those who have followed 100 Days of Scriptures by visiting the site or following my posts on Twitter, Instagram or Facebook, or took the time to drop me encouraging words in person, email or social...
 
 ### THANK YOU!
 
 Unfortunately, I have no plans to extend it past 100 days, but to cap it off in a positive way, I’ve open sourced it on [Github](https://github.com/jonsuh/100-days-of-scriptures).
 
-I enjoyed and benefited much from it, but 150 hours (probably closer to 200) is an investment, and I’m ready to invest my time into something else. I have considered bringing it to life in print (posters, maybe a book?), but I’m unsure—It was designed for the web, and putting it into print isn’t as easy as copy-and-paste. If you have any thoughts or input, feel free to [reach out](/contact/), or follow me on Twitter [@jonsuh](https://twitter.com/jonsuh) if you want to stay in the loop.
+I enjoyed and benefited much from it, but almost 200 hours is an investment, and I’m ready to invest my time into something else. I have considered bringing it to life in print (posters, maybe a book?), but I’m unsure—It was designed for the web, and putting it into print isn’t as easy as copy-and-paste. If you have any thoughts or input, feel free to [reach out](/contact/), or follow me on Twitter [@jonsuh](https://twitter.com/jonsuh) if you want to stay in the loop.
