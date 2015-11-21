@@ -17,7 +17,7 @@ You may have heard of or even used JavaScript templating engines such as [Handle
 
 ## Why JavaScript Templating?
 
-JavaScript templating can be useful if you want dynamic content but don’t have server-side templating available. It also can argubly minimize the amount of data that’s returned to the client (e.g. data as JSON only instead of the entire markup), making sites faster and servers more responsive by lowering bandwidth and load. Let’s say you have a list, and each list item has the following markup:
+JavaScript templating can be useful if you want dynamic content but don’t have server-side templating available. It also can argubly minimize the amount of data that’s returned to the client (e.g. data as an object or JSON instead of the entire markup), making sites faster and servers more responsive by lowering bandwidth and load. Let’s say you have a list, and each list item has the following markup:
 
 ```html
 <li class="list-item">
@@ -34,7 +34,7 @@ JavaScript templating can be useful if you want dynamic content but don’t have
 </li>
 ```
 
-If a list needs 50+ of these items, with server-side templating we’d typically get the entire markup back from the Ajax call. Instead, if a template of the markup is available client-side, we can get just the data via Ajax (as a JSON object or an array), then parse the data and generate the final HTML using the template.
+If a list needs 50+ of these items, with server-side templating we’d typically get the entire markup back from the Ajax call. Instead, if a template of the markup is available client-side, we can get just the data via Ajax (as a object or an array), then parse the data and generate the final HTML using the template.
 
 ## type=\"text/template\"
 
@@ -63,9 +63,9 @@ Let‘s “templatize” the markup of one of the items by using placeholders fo
 
 Placeholder formats like `{% raw %}{{url}}{% endraw %}` should be unique since we’ll be using search-and-replace, but they’re arbitrary and can be replaced with whatever you want (i.e. `%url%`, `<% url %>`).
 
-## Templating with JSON Objects
+## Templating with Objects
 
-Now we need to parse the data and generate the HTML. Here’s an example JSON object:
+Now we need to parse the data and generate the HTML. Here’s an example object:
 
 ```json
 0: {
@@ -84,11 +84,11 @@ Now we need to parse the data and generate the HTML. Here’s an example JSON ob
 }
 ```
 
-The following JavaScript parses the data and replaces the placeholders of the template with the data from the JSON object.
+The following JavaScript parses the data and replaces the placeholders of the template with the data from the object.
 
 ```javascript
-// JSON object we’re working with
-{% raw %}var dataJSON = {
+// Object we’re working with
+{% raw %}var dataObject = {
   0: {"id":5,"name":"Basecamp","city":"Chicago","state":"IL","url":"https://basecamp.com/"},
   1: {"id":17,"name":"Google","city":"Mountain View","state":"CA","url":"http://google.com/"}
 };
@@ -100,14 +100,14 @@ var templateHtml = template.innerHTML;
 // Final HTML variable as empty string
 var listHtml = "";
 
-// Loop through JSON object dataJSON, replace placeholder tags
+// Loop through dataObject, replace placeholder tags
 // with actual data, and generate final HTML
-for (var key in dataJSON) {
-  listHtml += templateHtml.replace(/{{id}}/g, dataJSON[key]["id"])
-                          .replace(/{{name}}/g, dataJSON[key]["name"])
-                          .replace(/{{city}}/g, dataJSON[key]["city"])
-                          .replace(/{{state}}/g, dataJSON[key]["state"])
-                          .replace(/{{url}}/g, dataJSON[key]["url"]);
+for (var key in dataObject) {
+  listHtml += templateHtml.replace(/{{id}}/g, dataObject[key]["id"])
+                          .replace(/{{name}}/g, dataObject[key]["name"])
+                          .replace(/{{city}}/g, dataObject[key]["city"])
+                          .replace(/{{state}}/g, dataObject[key]["state"])
+                          .replace(/{{url}}/g, dataObject[key]["url"]);
 }
 
 // Replace the HTML of #list with final HTML
@@ -121,12 +121,12 @@ By taking the HTML of the template, we can replace the placeholder with the actu
 We can also use dot notation since we’re working with an object:
 
 ```javascript
-{% raw %}for (var key in dataJSON) {
-  listHtml += templateHtml.replace(/{{id}}/g, dataJSON[key].id)
-                          .replace(/{{name}}/g, dataJSON[key].name)
-                          .replace(/{{city}}/g, dataJSON[key].city)
-                          .replace(/{{state}}/g, dataJSON[key].state)
-                          .replace(/{{url}}/g, dataJSON[key].url);
+{% raw %}for (var key in dataObject) {
+  listHtml += templateHtml.replace(/{{id}}/g, dataObject[key].id)
+                          .replace(/{{name}}/g, dataObject[key].name)
+                          .replace(/{{city}}/g, dataObject[key].city)
+                          .replace(/{{state}}/g, dataObject[key].state)
+                          .replace(/{{url}}/g, dataObject[key].url);
 }{% endraw %}
 ```
 
@@ -135,8 +135,8 @@ We can also use dot notation since we’re working with an object:
 If you prefer or need to work with arrays, the implementation is slightly different. For this example we’ll just use the data from above and convert it to an array before looping through it.
 
 ```javascript
-// Convert dataJSON to an array
-{% raw %}var dataArray = Object.keys(dataJSON).map(function(k) { return dataJSON[k]; });
+// Convert dataObject to an array
+{% raw %}var dataArray = Object.keys(dataObject).map(function(k) { return dataObject[k]; });
 
 // Loop through array dataArray, replace placeholder tags
 // with actual data, and generate final HTML
@@ -166,7 +166,10 @@ xhr.onreadystatechange = function() {
   if (xhr.readyState == XMLHttpRequest.DONE) {
     // On success
     if (xhr.state == 200) {
-      document.getElementById("list").innerHTML = listCreateHtml(xhr.responseText);
+      // Convert JSON string response to an Object
+      var dataObject = JSON.parse(xhr.responseText);
+
+      document.getElementById("list").innerHTML = listCreateHtml(dataObject);
     }
   }
 }
@@ -176,15 +179,15 @@ xhr.send();
 
 // Function to generate and returns the HTML.
 // Accepts an object as a parameter
-function listCreateHtml(dataJSON) {
+function listCreateHtml(dataObject) {
   var listHtml = "";
 
-  for (key in dataJSON) {
-    listHtml += templateHtml.replace(/{{id}}/g, dataJSON[key]["id"])
-                            .replace(/{{name}}/g, dataJSON[key]["name"])
-                            .replace(/{{city}}/g, dataJSON[key]["city"])
-                            .replace(/{{state}}/g, dataJSON[key]["state"])
-                            .replace(/{{url}}/g, dataJSON[key]["url"]);
+  for (key in dataObject) {\
+    listHtml += templateHtml.replace(/{{id}}/g, dataObject[key]["id"])
+                            .replace(/{{name}}/g, dataObject[key]["name"])
+                            .replace(/{{city}}/g, dataObject[key]["city"])
+                            .replace(/{{state}}/g, dataObject[key]["state"])
+                            .replace(/{{url}}/g, dataObject[key]["url"]);
   }
 
   return listHtml;
@@ -200,7 +203,10 @@ $.ajax({
   type: "GET",
   url: "/url/to/get-data/",
   dataType: "json",
-  success: function(data) {
+  success: function(dataJSON) {
+    // Convert JSON string response to an Object
+    var dataObject = JSON.parse(dataJSON);
+
     document.getElementById("list").innerHTML = listCreateHtml(data);
   }
 });
