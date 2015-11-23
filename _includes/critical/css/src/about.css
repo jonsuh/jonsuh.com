@@ -8,18 +8,6 @@ body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;
 body, html { font-family: RobotoLocal, Helvetica, Arial, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; color: rgb(102, 103, 110); background-color: rgb(34, 35, 38); height: 100%; }
 .fonts-loaded body { font-family: Roboto, Helvetica, Arial, sans-serif; }
 
-.paris { text-align: center; background: linear-gradient(to right, #002395 33.3%, #fff 33.3%, #fff 66.6%, #e72837 66.6%, #e72837); padding-top: 4.6875em; }
-.paris-text { font-size: 0.875em; font-family: Roboto; color: #33343b; text-transform: uppercase; background-color: rgba(255, 255, 255, 0.7); padding: 0.71429em; margin-bottom: 0.71429em; display: inline-block; }
-@media only screen and (min-width: 30em) {
-  .paris { padding-top: 6.25em; }
-}
-@media only screen and (min-width: 40em) {
-  .paris { padding-top: 7.8125em; }
-}
-@media only screen and (min-width: 64em) {
-  .paris { padding-top: 9.375em; }
-}
-
 aside, header, nav, section { display: block; }
 hr { box-sizing: content-box; height: 0px; }
 img { max-width: 100%; height: auto; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; }

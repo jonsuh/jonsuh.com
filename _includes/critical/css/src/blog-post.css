@@ -9,18 +9,6 @@ body, html { font-family: RobotoLocal, Helvetica, Arial, sans-serif; color: rgb(
 body, html, input { text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
 .fonts-loaded body { font-family: Roboto, Helvetica, Arial, sans-serif; }
 
-.paris { text-align: center; background: linear-gradient(to right, #002395 33.3%, #fff 33.3%, #fff 66.6%, #e72837 66.6%, #e72837); padding-top: 4.6875em; }
-.paris-text { font-size: 0.875em; font-family: Roboto; color: #33343b; text-transform: uppercase; background-color: rgba(255, 255, 255, 0.7); padding: 0.71429em; margin-bottom: 0.71429em; display: inline-block; }
-@media only screen and (min-width: 30em) {
-  .paris { padding-top: 6.25em; }
-}
-@media only screen and (min-width: 40em) {
-  .paris { padding-top: 7.8125em; }
-}
-@media only screen and (min-width: 64em) {
-  .paris { padding-top: 9.375em; }
-}
-
 article, aside, figcaption, figure, header, nav, section { display: block; }
 code { font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 1em; color: rgb(102, 103, 110); }
 figure { margin-top: 1em; margin-right: 40px; margin-bottom: 1em; margin-left: 40px; }
