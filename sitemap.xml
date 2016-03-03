@@ -48,5 +48,17 @@
     </url>
   {% endif %}
 {% endfor %}
+
+  <url>
+    <loc>{{ site.url | prepend: site.url_protocol }}/100-days-of-scriptures/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>{{ site.url | prepend: site.url_protocol }}/hamburgers/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 {% endstrip %}
 </urlset>
