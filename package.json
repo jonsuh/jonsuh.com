@@ -1,0 +1,28 @@
+{
+  "name": "jonsuh.com",
+  "version": "8.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.2.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.5.4",
+    "browser-sync": "^2.18.5",
+    "hexo": "^3.2.2",
+    "hexo-renderer-ejs": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.11",
+    "node-sass": "^4.0.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "watch": "^1.0.1"
+  },
+  "scripts": {
+    "sass": "node-sass --quiet themes/jonsuh-v8/source/assets/_sass --output themes/jonsuh-v8/source/assets/_css",
+    "browsersync": "browser-sync start --config bs-config.js",
+    "watch": "yarn run watch:parallel && yarn run sass",
+    "watch:parallel": "parallelshell 'yarn run watch:hexo' 'yarn run watch:sass' 'yarn run watch:postcss' 'yarn run browsersync'",
+    "watch:hexo": "hexo generate --watch",
+    "watch:sass": "watch --interval 0.1 'yarn run sass' themes/jonsuh-v8/source/assets/_sass",
+    "watch:postcss": "postcss --use autoprefixer --config config.postcss.json --watch --map inline --dir public/assets/css themes/jonsuh-v8/source/assets/_css/*.css"
+  }
+}
