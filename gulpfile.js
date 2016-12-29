@@ -23,7 +23,8 @@ var plumberOptions = {
 gulp.task('css', function() {
   var sassOptions = {
     includePaths: [
-      // 'node_modules/',
+      'node_modules/mcgriddle/_sass/mcgriddle',
+      'node_modules/mq-sass/stylesheets',
     ]
   };
 
