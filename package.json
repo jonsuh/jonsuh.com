@@ -17,5 +17,8 @@
     "hexo": "^3.2.2",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-marked": "^0.2.11"
+  },
+  "devDependencies": {
+    "mq-sass": "^0.8.0"
   }
 }

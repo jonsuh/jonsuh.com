@@ -2301,6 +2301,10 @@ moment-timezone@^0.5.4:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.13.0.tgz#24162d99521e6d40f99ae6939e806d2139eaac52"
 
+mq-sass@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/mq-sass/-/mq-sass-0.8.0.tgz#05a019dbb57a1e1a4147a2a68c9f884c61ecab84"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
