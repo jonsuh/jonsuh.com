@@ -306,6 +306,10 @@ $colors: (
   ),
 );
 
+@function color($name, $value: 500) {
+  @return map-get(map-get($colors, $name), $value);
+}
+
 $red        : color(red);
 $pink       : color(pink);
 $purple     : color(purple);

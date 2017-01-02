@@ -1,10 +1,6 @@
 // Functions
 // ==================================================
 
-@function color($name, $value: 500) {
-  @return map-get(map-get($colors, $name), $value);
-}
-
 // Em to Pixel (Thanks ZURB)
 // ==================================================
 @function strip-unit($num) {
