@@ -8,7 +8,8 @@
   "dependencies": {
     "hexo": "^3.2.2",
     "hexo-renderer-ejs": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.11"
+    "hexo-renderer-marked": "^0.2.11",
+    "hexo-util": "ssh://github.com/jonsuh/hexo-util.git#8a2b253"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.0",
