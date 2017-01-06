@@ -1,17 +1,12 @@
 // Navigation
 // ==================================================
-.navigation {
-  display: flex;
-  align-items: stretch;
-}
-
 .navigation-link {
   font-size: em(15);
   font-weight: 700;
-  padding-left: rem(8);
-  padding-right: rem(8);
   color: $grey-darkest;
   text-decoration: none;
+  padding-left: rem(8);
+  padding-right: rem(8);
   display: flex;
   align-items: center;
   position: relative;
