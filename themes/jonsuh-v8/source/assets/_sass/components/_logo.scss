@@ -93,17 +93,17 @@ $logo-perspective   : 200;
 }
 
 .logo__box {
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transform-origin: calc(50% + #{rem(1)}) 50%;
 }
 
 .logo-first {
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-delay: 0.15s;
+  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0.1s;
 }
 
 .logo__overflow {
-  transition: opacity 0.15s linear;
+  transition: opacity 0.1s linear;
   transition-delay: 0;
 }
 
@@ -121,7 +121,7 @@ $logo-perspective   : 200;
   .logo__box {
     &::before,
     &::after {
-      transition: transform 0.2s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: transform 0.15s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
       transform-origin: left;
     }
   }
@@ -146,7 +146,7 @@ $logo-perspective   : 200;
     }
     .logo__overflow {
       opacity: 1;
-      transition-delay: 0.15s;
+      transition-delay: 0.08s;
     }
 
     .logo-first--s {
