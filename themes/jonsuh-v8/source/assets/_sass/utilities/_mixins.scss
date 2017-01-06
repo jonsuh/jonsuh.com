@@ -16,12 +16,16 @@
   -webkit-font-smoothing : $webkit;
 }
 
+// Clearfix hide
+// ==================================================
 @mixin clearfix-hide {
   &:after {
     display: none;
   }
 }
 
+// Dark mode
+// ==================================================
 @mixin dark {
   @if $dark-mode == true {
     @content;
