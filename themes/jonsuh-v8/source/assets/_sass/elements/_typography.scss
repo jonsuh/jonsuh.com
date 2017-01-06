@@ -1,0 +1,8 @@
+// Typography
+// ==================================================
+body {
+  @include font-smoothing;
+
+  font-family: $sans-serif;
+  color: $grey-darker;
+}

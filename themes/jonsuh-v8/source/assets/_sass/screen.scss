@@ -5,6 +5,7 @@
 @import "settings/colors";
 @import "settings/mq-sass";
 @import "settings/mcgriddle";
+@import "settings/typography";
 
 // Dependencies
 // ==================================================
@@ -23,7 +24,7 @@
 
 // Elements - Unclassed selectors
 // ==================================================
-// @import "elements/";
+@import "elements/typography";
 
 // Objects - Unstyled selectors
 // ==================================================
