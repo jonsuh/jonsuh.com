@@ -1,7 +1,7 @@
 // Functions
 // ==================================================
 
-// Em to Pixel (Thanks ZURB)
+// em and rem to Pixel (Thanks ZURB)
 // ==================================================
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
@@ -13,6 +13,12 @@
   @return $value;
 }
 
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
 @function em($values, $base-value: $em-base) {
   $max: length($values);
 
@@ -21,6 +27,18 @@
   $emValues: ();
   @for $i from 1 through $max {
     $emValues: append($emValues, convert-to-em(nth($values, $i), $base-value));
+  }
+  @return $emValues;
+}
+
+@function rem($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $emValues: ();
+  @for $i from 1 through $max {
+    $emValues: append($emValues, convert-to-rem(nth($values, $i), $base-value));
   }
   @return $emValues;
 }
