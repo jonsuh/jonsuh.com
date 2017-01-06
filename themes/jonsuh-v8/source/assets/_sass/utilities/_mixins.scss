@@ -21,3 +21,9 @@
     display: none;
   }
 }
+
+@mixin dark {
+  @if $dark-mode == true {
+    @content;
+  }
+}
