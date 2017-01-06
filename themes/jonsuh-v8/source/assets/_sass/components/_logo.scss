@@ -6,12 +6,6 @@ $logo-border-size   : 2;
 $logo-first-s-offset: 82;
 $logo-perspective   : 200;
 
-.logo,
-.logo-first,
-.logo__overflow {
-  display: inline-block;
-}
-
 .logo {
   font-weight: 700;
   color: $grey-darkest;
@@ -19,6 +13,7 @@ $logo-perspective   : 200;
   text-align: left;
   text-decoration: none;
   position: relative;
+  display: block;
 }
 
 .logo__box {
@@ -54,6 +49,11 @@ $logo-perspective   : 200;
   left: rem(15);
   top: rem(14);
   pointer-events: none;
+}
+
+.logo-first,
+.logo__overflow {
+  display: inline-block;
 }
 
 .logo-first {
