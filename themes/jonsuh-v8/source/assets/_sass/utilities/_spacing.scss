@@ -1,0 +1,48 @@
+// Spacing
+// ==================================================
+$spacing: (
+  default: 15px,
+  small  : 25px,
+  medium : 35px,
+  large  : 50px
+);
+
+@function spacing-get($breakpoint) {
+  @return map-get($spacing, $breakpoint);
+}
+
+@mixin spacing-direction($direction, $type, $size) {
+  @if str-index($direction, x) {
+    #{$type}-left: em($size);
+    #{$type}-right: em($size);
+  }
+  @if str-index($direction, y) {
+    #{$type}-top: em($size);
+    #{$type}-bottom: em($size);
+  }
+  @if str-index($direction, left) {
+    #{$type}-left: em($size);
+  }
+  @if str-index($direction, right) {
+    #{$type}-right: em($size);
+  }
+  @if str-index($direction, top) {
+    #{$type}-top: em($size);
+  }
+  @if str-index($direction, bottom) {
+    #{$type}-bottom: em($size);
+  }
+}
+
+@mixin spacing($type: padding, $direction: y) {
+  @each $breakpoint, $size in $spacing {
+    @if $breakpoint == default {
+      @include spacing-direction($direction, $type, $size);
+    }
+    @else {
+      @include mq($breakpoint) {
+        @include spacing-direction($direction, $type, $size);
+      }
+    }
+  }
+}

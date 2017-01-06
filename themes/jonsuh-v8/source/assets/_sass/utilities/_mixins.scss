@@ -31,3 +31,23 @@
     @content;
   }
 }
+
+// Max width
+// ==================================================
+@mixin max-width($padding: true) {
+  @if $padding == true {
+    @each $breakpoint, $value in $spacing {
+      @if $breakpoint == default {
+        max-width: $grid-width + em($value * 2);
+      }
+      @else {
+        @include mq($breakpoint) {
+          max-width: $grid-width + em($value * 2);
+        }
+      }
+    }
+  }
+  @else {
+    max-width: $grid-width;
+  }
+}
