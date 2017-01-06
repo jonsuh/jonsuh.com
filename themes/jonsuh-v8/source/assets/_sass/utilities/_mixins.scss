@@ -15,3 +15,9 @@
   -moz-osx-font-smoothing: $moz;
   -webkit-font-smoothing : $webkit;
 }
+
+@mixin clearfix-hide {
+  &:after {
+    display: none;
+  }
+}
