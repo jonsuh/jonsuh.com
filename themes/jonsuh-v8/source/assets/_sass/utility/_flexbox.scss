@@ -1,0 +1,61 @@
+// Flexbox
+// ==================================================
+
+// Flex direction
+.fd--r  { flex-direction: row; } // Default
+.fd--rr { flex-direction: row-reverse; }
+.fd--c  { flex-direction: column; }
+.fd--cr { flex-direction: column-reverse; }
+
+
+
+// Flex wrap
+.fw--nw { flex-wrap: nowrap; } // Default
+.fw--w  { flex-wrap: wrap; }
+.fw--wr { flex-wrap: wrap-reverse; }
+
+
+
+// Justify content
+.jc--fe { justify-content: flex-end; }
+.jc--fs { justify-content: flex-start; } // Default
+.jc--c  { justify-content: center; }
+.js--sa { justify-content: space-around; }
+.jc--sb { justify-content: space-between; }
+
+
+
+// Align items
+.ai--fs { align-items: flex-start; }
+.ai--c  { align-items: center; }
+.ai--fe { align-items: flex-end; }
+.ai--s  { align-items: stretch; } // Default
+.ai--b  { align-items: baseline; }
+
+
+
+// Flex grow
+.fg--0 { flex-grow: 0; } // Default
+.fg--1 { flex-grow: 1; }
+
+
+
+// Flex shrink
+.fs--0 { flex-shrink: 0; }
+.fs--1 { flex-shrink: 1; } // Default
+
+
+
+// Flex basis
+.fb--a { flex-basis: auto; } // Default
+.fg--0 { flex-basis: 0; }
+
+
+
+// Align self
+.as--a  { align-self: auto; } // Default
+.as--fs { align-self: flex-start; }
+.as--c  { align-self: center; }
+.as--fe { align-self: flex-end; }
+.as--s  { align-self: stretch; }
+.as--b  { align-self: baseline }
