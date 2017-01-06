@@ -1,0 +1,8 @@
+// Header
+// ==================================================
+.container--header {
+  @include clearfix-hide;
+
+  display: flex;
+  justify-content: space-between;
+}

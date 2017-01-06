@@ -1,0 +1,75 @@
+// Navigation
+// ==================================================
+.navigation {
+  display: flex;
+  align-items: stretch;
+}
+
+.navigation-link {
+  font-size: em(15);
+  font-weight: 700;
+  padding-left: rem(8);
+  padding-right: rem(8);
+  color: $grey-darkest;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: rem(2);
+    background: linear-gradient(to right, $red, $pink);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.07s linear;
+  }
+
+  &:nth-child(2)::before {
+    background: linear-gradient(to right, $teal, $cyan);
+  }
+  &:nth-child(3)::before {
+    background: linear-gradient(to right, $orange, $yellow);
+  }
+  &:nth-child(4)::before {
+    background: linear-gradient(to right, $indigo, $blue);
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@include mq(375) {
+  .navigation-link {
+    padding-left: rem(10);
+    padding-right: rem(10);
+  }
+}
+
+@include mq(small) {
+  .navigation-link {
+    font-size: em(16);
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+}
+
+@include mq(medium) {
+  .navigation-link {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+@include mq(large) {
+  .navigation-link {
+    padding-left: rem(25);
+    padding-right: rem(25);
+  }
+}

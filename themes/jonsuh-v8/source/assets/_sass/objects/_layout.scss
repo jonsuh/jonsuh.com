@@ -1,0 +1,20 @@
+// Layout
+// ==================================================
+.container {
+  @include container;
+}
+
+.container--writing {
+  max-width: em(553);
+
+  @include mq(medium) {
+    max-width: em(585);
+  }
+  @include mq(large) {
+    max-width: em(618);
+  }
+}
+
+.section {
+
+}

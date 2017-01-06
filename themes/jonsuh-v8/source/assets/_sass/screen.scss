@@ -28,11 +28,13 @@
 
 // Objects - Unstyled selectors
 // ==================================================
-// @import "objects/";
+@import "objects/layout";
 
 // Components - Styled selectors
 // ==================================================
+@import "components/header";
 @import "components/logo";
+@import "components/navigation";
 
 // Trumps
 // ==================================================
