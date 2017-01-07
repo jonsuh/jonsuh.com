@@ -1,9 +1,9 @@
 // Typography
 // ==================================================
 body {
+  @include sans-serif;
   @include font-smoothing;
 
-  font-family: $sans-serif;
   color: $grey-darker;
 }
 
@@ -187,7 +187,8 @@ ul {
 // Blockquotes
 // ==================================================
 blockquote {
-  font-family: $serif;
+  @include serif;
+
   border-left: em(2) solid $grey-lighter;
   padding-left: 1.25em;
   margin-left: 0;

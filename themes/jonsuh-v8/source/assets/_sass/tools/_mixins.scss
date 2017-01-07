@@ -53,3 +53,13 @@
     max-width: $grid-width;
   }
 }
+
+// Sans-serif and Serif
+// ==================================================
+@mixin sans-serif {
+  font-family: $sans-serif;
+}
+
+@mixin serif {
+  font-family: $serif;
+}
