@@ -1,0 +1,23 @@
+// Type scale
+// ==================================================
+
+// Breakpoints based on mq-sass
+$type-scale-breakpoints: (
+  small,
+  medium,
+  large,
+);
+
+@mixin type-scale($font-size, $scale) {
+  font-size: $font-size;
+
+  @each $breakpoint in $type-scale-breakpoints {
+    $font-size: $font-size * $scale;
+
+    @include mq($breakpoint) {
+      font-size: $font-size;
+    }
+  }
+
+  @content;
+}
