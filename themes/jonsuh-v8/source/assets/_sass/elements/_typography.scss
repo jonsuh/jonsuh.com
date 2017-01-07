@@ -161,3 +161,36 @@ hr {
     font-size: em(19);
   }
 }
+
+// Dark
+// ==================================================
+@include dark {
+  body {
+    color: $grey;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $grey-lighter;
+  }
+
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $grey-light;
+    }
+  }
+
+  mark {
+    color: $grey;
+    // background-color: $yellow;
+    // background-image: linear-gradient(to right, $yellow, color(yellow, 300));
+    background-color: $black;
+    background-image: linear-gradient(to right, $black, rgba($grey-darkest, 0.5));
+  }
+}

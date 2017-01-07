@@ -68,3 +68,11 @@
     padding-right: rem(25);
   }
 }
+
+// Dark
+// ==================================================
+@include dark {
+  .navigation-link {
+    color: $grey-light;
+  }
+}

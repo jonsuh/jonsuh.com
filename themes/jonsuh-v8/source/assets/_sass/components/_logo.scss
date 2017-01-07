@@ -155,3 +155,19 @@ $logo-perspective   : 200;
     }
   }
 }
+
+// Dark
+// ==================================================
+@include dark {
+  .logo {
+    color: $grey-light;
+  }
+
+  .logo__box {
+    &,
+    &::before,
+    &::after {
+      border-color: $grey-light;
+    }
+  }
+}
