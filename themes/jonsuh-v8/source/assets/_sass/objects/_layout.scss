@@ -1,7 +1,14 @@
 // Layout
 // ==================================================
+.container-wrap {
+  @include spacing(padding, xy);
+}
+
 .container {
   @include container;
+}
+.container.d--f {
+  @include clearfix-hide;
 }
 
 .container--writing {
@@ -16,5 +23,5 @@
 }
 
 .section {
-
+  @include spacing;
 }
