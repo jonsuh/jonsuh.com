@@ -1,3 +1,9 @@
+
+/*
+  {% pullquote [wide] [cite:"Full Name"] %}
+    Lorem ipsum dolor sit amet.
+  {% endpullquote %}
+*/
 hexo.extend.tag.register('pullquote', function(args, content) {
   content = hexo.render.renderSync({
     text: content,
