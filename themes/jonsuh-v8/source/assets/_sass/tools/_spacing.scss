@@ -12,25 +12,30 @@ $spacing: (
 }
 
 @mixin spacing-direction($direction, $type, $size) {
-  @if str-index($direction, x) {
-    #{$type}-left: em($size);
-    #{$type}-right: em($size);
+  @if $direction == xy {
+    #{$type}: em($size);
   }
-  @if str-index($direction, y) {
-    #{$type}-top: em($size);
-    #{$type}-bottom: em($size);
-  }
-  @if str-index($direction, l) {
-    #{$type}-left: em($size);
-  }
-  @if str-index($direction, r) {
-    #{$type}-right: em($size);
-  }
-  @if str-index($direction, t) {
-    #{$type}-top: em($size);
-  }
-  @if str-index($direction, b) {
-    #{$type}-bottom: em($size);
+  @else {
+    @if str-index($direction, x) {
+      #{$type}-left: em($size);
+      #{$type}-right: em($size);
+    }
+    @if str-index($direction, y) {
+      #{$type}-top: em($size);
+      #{$type}-bottom: em($size);
+    }
+    @if str-index($direction, l) {
+      #{$type}-left: em($size);
+    }
+    @if str-index($direction, r) {
+      #{$type}-right: em($size);
+    }
+    @if str-index($direction, t) {
+      #{$type}-top: em($size);
+    }
+    @if str-index($direction, b) {
+      #{$type}-bottom: em($size);
+    }
   }
 }
 

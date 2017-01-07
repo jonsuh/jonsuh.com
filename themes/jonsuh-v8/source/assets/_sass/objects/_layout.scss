@@ -23,5 +23,5 @@
 }
 
 .section {
-  @include spacing;
+  @include spacing(padding, xy);
 }
