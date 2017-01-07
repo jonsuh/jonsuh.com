@@ -20,16 +20,16 @@ $spacing: (
     #{$type}-top: em($size);
     #{$type}-bottom: em($size);
   }
-  @if str-index($direction, left) {
+  @if str-index($direction, l) {
     #{$type}-left: em($size);
   }
-  @if str-index($direction, right) {
+  @if str-index($direction, r) {
     #{$type}-right: em($size);
   }
-  @if str-index($direction, top) {
+  @if str-index($direction, t) {
     #{$type}-top: em($size);
   }
-  @if str-index($direction, bottom) {
+  @if str-index($direction, b) {
     #{$type}-bottom: em($size);
   }
 }
