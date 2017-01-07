@@ -160,14 +160,14 @@ $logo-perspective   : 200;
 // ==================================================
 @include dark {
   .logo {
-    color: $grey-light;
+    color: $grey-lighter;
   }
 
   .logo__box {
     &,
     &::before,
     &::after {
-      border-color: $grey-light;
+      border-color: $grey-lighter;
     }
   }
 }

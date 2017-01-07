@@ -272,7 +272,7 @@ hr {
 // ==================================================
 @include dark {
   body {
-    color: $grey;
+    color: $grey-light;
   }
 
   h1,
@@ -281,19 +281,27 @@ hr {
   h4,
   h5,
   h6 {
-    color: $grey-lighter;
+    color: $grey-lightest;
   }
 
   a {
-    color: $grey;
+    color: $grey-light;
 
     &:hover {
-      color: $grey-light;
+      color: $grey-lighter;
     }
   }
 
+  blockquote {
+    border-left-color: rgba($grey-darker, 0.5);
+  }
+
+  hr {
+    border-color: rgba($grey-darker, 0.5);
+  }
+
   mark {
-    color: $grey;
+    color: $grey-light;
     background-color: $black;
     background-image: linear-gradient(to right, $black, rgba($grey-darkest, 0.5));
   }
