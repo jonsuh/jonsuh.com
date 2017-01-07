@@ -20,11 +20,31 @@ h6 {
   margin-bottom: 0;
 }
 
+h1 {
+  @include type-scale(em(30), 1.06);
+}
+
+h2 {
+  @include type-scale(em(24), 1.05);
+}
+
+h3 {
+  @include type-scale(em(22), 1.04);
+}
+
+h4 {
+  @include type-scale(em(18), em(1));
+}
+
+h5 {
+  @include type-scale(em(16), em(1));
+}
+
 // Base font sizes
 // ==================================================
 p,
 li {
-  font-size: em(16);
+  @include type-scale(em(16), em(1));
 }
 
 li {
@@ -90,14 +110,7 @@ pre {
   -webkit-overflow-scrolling: touch;
 
   code {
-    font-size: em(14);
-
-    @include mq(small) {
-      font-size: em(15);
-    }
-    @include mq(medium) {
-      font-size: em(16);
-    }
+    @include type-scale(em(14), em(1), em(16));
   }
 }
 
