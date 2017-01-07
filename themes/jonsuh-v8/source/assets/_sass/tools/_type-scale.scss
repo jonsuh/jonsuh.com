@@ -8,15 +8,17 @@ $type-scale-breakpoints: (
   large,
 );
 
-@mixin type-scale($font-size, $scale, $type: modular) {
+@mixin type-scale($font-size, $scale) {
   font-size: $font-size;
 
   @each $breakpoint in $type-scale-breakpoints {
-    @if $type == incremental {
-      $font-size: $font-size + $scale;
-    }
-    @else {
+    // modular
+    @if unitless($scale) == true {
       $font-size: $font-size * $scale;
+    }
+    // incremental
+    @else {
+      $font-size: $font-size + $scale;
     }
 
     @include mq($breakpoint) {
