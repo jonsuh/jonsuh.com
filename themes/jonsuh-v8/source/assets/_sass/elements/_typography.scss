@@ -6,3 +6,158 @@ body {
   font-family: $sans-serif;
   color: $grey-darker;
 }
+
+// Headings
+// ==================================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $grey-darkest;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Base font sizes
+// ==================================================
+p,
+li {
+  font-size: em(16);
+}
+
+li {
+  p,
+  li {
+    font-size: 1em;
+  }
+}
+
+// Anchor
+// ==================================================
+a {
+  color: $grey-darker;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.075s;
+  transition-timing-function: linear;
+
+  &:hover {
+    color: $grey-darkest;
+  }
+}
+
+// Paragraphs
+// ==================================================
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Lists
+// ==================================================
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+// Blockquotes
+// ==================================================
+blockquote {
+  font-family: $serif;
+  margin: 0;
+}
+
+// Figures
+// ==================================================
+figure {
+  margin: 0;
+}
+
+// Code
+// ==================================================
+code,
+pre {
+  font-family: $monospace;
+}
+
+pre {
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  code {
+    font-size: em(14);
+
+    @include mq(small) {
+      font-size: em(15);
+    }
+    @include mq(medium) {
+      font-size: em(16);
+    }
+  }
+}
+
+// Superscripts, Subscripts
+// ==================================================
+sup,
+sub {
+  font-size: 0.65em;
+}
+
+@supports (font-feature-settings: "sups") {
+  sup,
+  sub {
+    font-size: 1em;
+    font-feature-settings: "sups";
+  }
+
+  sup {
+    top: 0em;
+  }
+
+  sub {
+    bottom: -0.6em;
+  }
+}
+
+// Mark
+// ==================================================
+mark {
+  color: $grey-darker;
+  background-color: $yellow;
+  background-image: linear-gradient(to right, $yellow, color(yellow, 300));
+}
+
+// Horizontal Line
+// ==================================================
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Responsive
+// ==================================================
+@include mq(small) {
+  p,
+  li {
+    font-size: em(17);
+  }
+}
+
+@include mq(medium) {
+  p,
+  li {
+    font-size: em(18);
+  }
+}
+
+@include mq(large) {
+  p,
+  li {
+    font-size: em(19);
+  }
+}
