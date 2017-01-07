@@ -17,27 +17,33 @@ h5,
 h6 {
   color: $grey-darkest;
   margin-top: 0;
-  margin-bottom: 0;
 }
 
 h1 {
   @include type-scale(em(30), 1.06);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
 }
 
 h2 {
   @include type-scale(em(24), 1.05);
+  letter-spacing: -0.005em;
+  line-height: 1.2;
 }
 
 h3 {
   @include type-scale(em(22), 1.04);
+  line-height: 1.26;
 }
 
 h4 {
   @include type-scale(em(18), em(1));
+  line-height: 1.28;
 }
 
 h5 {
   @include type-scale(em(16), em(1));
+  line-height: 1.35;
 }
 
 // Base font sizes
@@ -45,12 +51,102 @@ h5 {
 p,
 li {
   @include type-scale(em(16), em(1));
+
+  line-height: 1.4;
+
+  @include mq(medium) {
+    line-height: 1.5;
+  }
 }
 
 li {
   p,
   li {
     font-size: 1em;
+  }
+}
+
+// Base margins
+// ==================================================
+h1 {
+  margin-bottom: rem(13.714285714);
+
+  @include mq(small) {
+    margin-bottom: rem(14.571428571);
+  }
+  @include mq(medium) {
+    margin-bottom: rem(15.428571429);
+  }
+  @include mq(large) {
+    margin-bottom: rem(16.285714286);
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: rem(12);
+
+  @include mq(small) {
+    margin-bottom: rem(12.75);
+  }
+  @include mq(medium) {
+    margin-bottom: rem(13.5);
+  }
+  @include mq(large) {
+    margin-bottom: rem(14.25);
+  }
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  p,
+  ol,
+  ul {
+    margin-bottom: 0.5em;
+  }
+
+  ol,
+  ul {
+    margin-top: 0.5em;
+  }
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+figure,
+pre {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+
+  @include mq(medium) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+hr {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  @include mq(medium) {
+    margin-top: 4em;
+    margin-bottom: 4em;
   }
 }
 
@@ -71,29 +167,45 @@ a {
 // ==================================================
 p {
   margin-top: 0;
-  margin-bottom: 0;
 }
 
 // Lists
 // ==================================================
 ol,
 ul {
+  padding-left: 1.5em;
   margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+
+  @include mq(small) {
+    padding-left: 1.75em;
+  }
+  @include mq(medium) {
+    padding-left: 2em;
+  }
 }
 
 // Blockquotes
 // ==================================================
 blockquote {
   font-family: $serif;
-  margin: 0;
+  border-left: em(2) solid $grey-lighter;
+  padding-left: 1.25em;
+  margin-left: 0;
+
+  @include mq(small) {
+    border-left-width: em(3);
+    padding-left: 1.5em;
+  }
+  @include mq(medium) {
+    padding-left: 2em;
+  }
 }
 
 // Figures
 // ==================================================
 figure {
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 // Code
@@ -104,7 +216,6 @@ pre {
 }
 
 pre {
-  margin: 0;
   overflow-y: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -148,30 +259,12 @@ mark {
 // Horizontal Line
 // ==================================================
 hr {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+  max-width: em(150);
+  border: em(1) solid $grey-lighter;
 
-// Responsive
-// ==================================================
-@include mq(small) {
-  p,
-  li {
-    font-size: em(17);
-  }
-}
-
-@include mq(medium) {
-  p,
-  li {
-    font-size: em(18);
-  }
-}
-
-@include mq(large) {
-  p,
-  li {
-    font-size: em(19);
+  @include mq(medium) {
+    max-width: em(200);
+    border-top-width: em(2);
   }
 }
 
