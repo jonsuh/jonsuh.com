@@ -1,0 +1,29 @@
+// Selection
+// ==================================================
+::selection {
+  color: $white;
+  background-color: $grey-darker;
+}
+
+blockquote ::selection {
+  color: $white;
+  background-color: color(blue, 800);
+}
+
+figure pre ::selection {
+  background-color: $grey-darkest;
+}
+
+// Dark
+// ==================================================
+@include dark {
+  ::selection {
+    color: $grey-lighter;
+    background-color: $grey-darkest;
+  }
+
+  blockquote ::selection {
+    color: $grey-lighter;
+    background-color: color(blue, 900);
+  }
+}
