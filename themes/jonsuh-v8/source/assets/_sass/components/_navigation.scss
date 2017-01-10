@@ -19,7 +19,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: scaleX(0);
+    // transform: scaleX(0);
     transition: transform 0.07s linear;
   }
 
@@ -38,34 +38,26 @@
       transform: scaleX(1);
     }
   }
-}
 
-@include mq(375) {
-  .navigation-link {
+  @include mq(375) {
     padding-left: rem(10);
     padding-right: rem(10);
   }
-}
 
-@include mq(small) {
-  .navigation-link {
+  @include mq(small) {
     font-size: em(16);
     padding-left: rem(15);
     padding-right: rem(15);
   }
-}
 
-@include mq(medium) {
-  .navigation-link {
-    padding-left: rem(20);
-    padding-right: rem(20);
+  @include mq(medium) {
+    margin-left: rem(5);
+    margin-right: rem(5);
   }
-}
 
-@include mq(large) {
-  .navigation-link {
-    padding-left: rem(25);
-    padding-right: rem(25);
+  @include mq(large) {
+    margin-left: rem(10);
+    margin-right: rem(10);
   }
 }
 
