@@ -13,13 +13,19 @@ $logo-perspective   : 200;
   text-align: left;
   text-decoration: none;
   position: relative;
-  display: block;
+  display: inline-block;
 }
 
 .logo__box {
   width: em($logo-size);
   height: em($logo-size);
   border-left: em($logo-border-size) solid $grey-darkest;
+
+  &,
+  &::before,
+  &::after {
+    transition: border-color 0.075s linear;
+  }
 
   &::before,
   &::after {
@@ -51,38 +57,56 @@ $logo-perspective   : 200;
   pointer-events: none;
 }
 
-.logo-first,
-.logo__overflow {
-  display: inline-block;
-}
-
 .logo-first {
-
+  display: inline-block;
 }
 
 .logo-first--s {
   margin-left: rem(-6);
 }
 
-.logo__overflow {
-  opacity: 0;
-}
-
+.logo__overflow,
 .logo-rest {
   display: none;
 }
 
-@include mq(560) {
-  .logo__text {
-    width: rem(130);
+.logo__overflow {
+  opacity: 0;
+}
+
+.logo:hover {
+  .logo__box {
+    &,
+    &::before,
+    &::after {
+      border-color: $grey-darker;
+    }
+  }
+}
+
+// Light
+// ==================================================
+.logo--light {
+  color: $grey-lighter;
+
+  .logo__box {
+    &,
+    &::before,
+    &::after {
+      border-color: $grey-lighter;
+    }
   }
 
-  .logo-first--s {
-    margin-left: rem($logo-first-s-offset * -1);
-  }
+  &:hover {
+    color: $grey-lighter;
 
-  .logo-rest {
-    display: inline-block;
+    .logo__box {
+      &,
+      &::before,
+      &::after {
+        border-color: $grey-lightest;
+      }
+    }
   }
 }
 
@@ -90,68 +114,84 @@ $logo-perspective   : 200;
 // ==================================================
 .logo {
   perspective: em($logo-perspective);
-}
-
-.logo__box {
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transform-origin: calc(50% + #{rem(1)}) 50%;
-}
-
-.logo-first {
-  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-delay: 0.1s;
-}
-
-.logo__overflow {
-  transition: opacity 0.1s linear;
-  transition-delay: 0;
-}
-
-.logo:hover {
-  .logo__box {
-    transform: rotateY(180deg);
-  }
-}
-
-@include mq(560) {
-  .logo {
-    perspective: none;
-  }
 
   .logo__box {
-    &::before,
-    &::after {
-      transition: transform 0.15s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform-origin: left;
-    }
+    transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-origin: calc(50% + #{rem(1)}) 50%;
   }
 
-  .logo-rest--uh {
-    transform: translate3d(rem($logo-first-s-offset), 0, 0);
+  .logo-first {
+    transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-delay: 0.1s;
   }
 
-  .logo:hover {
+  .logo__overflow {
+    transition: opacity 0.1s linear;
+    transition-delay: 0;
+  }
+
+  &:hover {
     .logo__box {
-      transform: none;
+      transform: rotateY(180deg);
+    }
+  }
+}
 
-      &::before {
-        transform: scale(3.2, 1);
-        transition-delay: 0s;
-      }
+.logo--animated {
+  @include mq(560) {
+    perspective: none;
 
+    .logo__box {
+      &::before,
       &::after {
-        transform: translate3d(em(105), 0, 0);
-        transition-delay: 0s;
+        transition: transform 0.15s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform-origin: left;
       }
     }
-    .logo__overflow {
-      opacity: 1;
-      transition-delay: 0.08s;
+
+    .logo__text {
+      width: rem(130);
     }
 
     .logo-first--s {
+      margin-left: rem($logo-first-s-offset * -1);
+    }
+
+    .logo__overflow {
+      display: inline-block;
+    }
+
+    .logo-rest {
+      display: inline-block;
+    }
+
+    .logo-rest--uh {
       transform: translate3d(rem($logo-first-s-offset), 0, 0);
-      transition-delay: 0s;
+    }
+
+    &:hover {
+      .logo__box {
+        transform: none;
+
+        &::before {
+          transform: scale(3.2, 1);
+          transition-delay: 0s;
+        }
+
+        &::after {
+          transform: translate3d(em(105), 0, 0);
+          transition-delay: 0s;
+        }
+      }
+      .logo__overflow {
+        opacity: 1;
+        transition-delay: 0.08s;
+      }
+
+      .logo-first--s {
+        transform: translate3d(rem($logo-first-s-offset), 0, 0);
+        transition-delay: 0s;
+      }
     }
   }
 }
