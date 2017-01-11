@@ -13,10 +13,10 @@ $spacing-utility: (
 
   @if $breakpoint == default {
     @each $direction in $spacing-utility {
-      .spacing-p--#{$direction} {
+      .p--#{$direction} {
         @include spacing-direction($direction, $type, $size, false);
       }
-      .spacing-pm--#{$direction} {
+      .pm--#{$direction} {
         @include spacing-direction($direction, $type, $size, true);
       }
     }
@@ -24,10 +24,10 @@ $spacing-utility: (
   @else {
     @include mq($breakpoint) {
       @each $direction in $spacing-utility {
-        .spacing-p--#{$direction} {
+        .p--#{$direction} {
           @include spacing-direction($direction, $type, $size, false);
         }
-        .spacing-pm--#{$direction} {
+        .pm--#{$direction} {
           @include spacing-direction($direction, $type, $size, true);
         }
       }
