@@ -1,12 +1,5 @@
 // Layout
 // ==================================================
-.container-wrap {
-  @include spacing(padding, xy);
-}
-.container-wrap--1 {
-  @include spacing(padding, y, false);
-}
-
 .container {
   @include container;
 }
@@ -26,5 +19,5 @@
 }
 
 .section {
-  @include spacing(padding, xy);
+
 }
