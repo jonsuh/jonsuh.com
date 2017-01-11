@@ -1,19 +1,28 @@
 // Spacing
 // ==================================================
 $spacing: (
-  default: 15px,
-  small  : 25px,
-  medium : 35px,
-  large  : 50px
+  default: 16px,
+  small  : 24px,
+  medium : 32px,
+  large  : 40px,
 );
+
+$spacing-y-multiplier: 1.5;
 
 @function spacing-get($breakpoint) {
   @return map-get($spacing, $breakpoint);
 }
 
-@mixin spacing-direction($direction, $type, $size) {
+@mixin spacing-direction($direction, $type, $size, $y-multiplier) {
+  @if $y-multiplier == true {
+    $y-multiplier: $spacing-y-multiplier;
+  }
+  @else {
+    $y-multiplier: 1;
+  }
+
   @if $direction == xy {
-    #{$type}: em($size);
+    #{$type}: em($size * $y-multiplier) em($size);
   }
   @else {
     @if str-index($direction, x) {
@@ -21,8 +30,8 @@ $spacing: (
       #{$type}-right: em($size);
     }
     @if str-index($direction, y) {
-      #{$type}-top: em($size);
-      #{$type}-bottom: em($size);
+      #{$type}-top: em($size * $y-multiplier);
+      #{$type}-bottom: em($size * $y-multiplier);
     }
     @if str-index($direction, l) {
       #{$type}-left: em($size);
@@ -31,22 +40,22 @@ $spacing: (
       #{$type}-right: em($size);
     }
     @if str-index($direction, t) {
-      #{$type}-top: em($size);
+      #{$type}-top: em($size * $y-multiplier);
     }
     @if str-index($direction, b) {
-      #{$type}-bottom: em($size);
+      #{$type}-bottom: em($size * $y-multiplier);
     }
   }
 }
 
-@mixin spacing($type: padding, $direction: y) {
+@mixin spacing($type: padding, $direction: y, $y-multiplier: true) {
   @each $breakpoint, $size in $spacing {
     @if $breakpoint == default {
-      @include spacing-direction($direction, $type, $size);
+      @include spacing-direction($direction, $type, $size, $y-multiplier);
     }
     @else {
       @include mq($breakpoint) {
-        @include spacing-direction($direction, $type, $size);
+        @include spacing-direction($direction, $type, $size, $y-multiplier);
       }
     }
   }
