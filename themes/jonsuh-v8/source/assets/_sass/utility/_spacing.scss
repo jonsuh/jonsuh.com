@@ -1,0 +1,36 @@
+// Spacing
+// ==================================================
+// relies on tools/spacing.scss
+
+$spacing-utility: (
+  xy,
+  x, l, r,
+  y, t, b
+);
+
+@each $breakpoint, $size in $spacing {
+  $type: padding;
+
+  @if $breakpoint == default {
+    @each $direction in $spacing-utility {
+      .spacing-p--#{$direction} {
+        @include spacing-direction($direction, $type, $size, false);
+      }
+      .spacing-pm--#{$direction} {
+        @include spacing-direction($direction, $type, $size, true);
+      }
+    }
+  }
+  @else {
+    @include mq($breakpoint) {
+      @each $direction in $spacing-utility {
+        .spacing-p--#{$direction} {
+          @include spacing-direction($direction, $type, $size, false);
+        }
+        .spacing-pm--#{$direction} {
+          @include spacing-direction($direction, $type, $size, true);
+        }
+      }
+    }
+  }
+}
