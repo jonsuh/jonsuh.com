@@ -191,6 +191,7 @@ blockquote {
   border-left: em(2) solid $grey-lighter;
   padding-left: 1.25em;
   margin-left: 0;
+  margin-right: 0;
 
   @include mq(small) {
     border-left-width: em(3);
