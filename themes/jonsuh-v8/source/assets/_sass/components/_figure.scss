@@ -64,3 +64,11 @@
     margin-right: -10%;
   }
 }
+
+// Dark
+// ==================================================
+@include dark {
+  .figure-caption {
+    color: $grey;
+  }
+}
