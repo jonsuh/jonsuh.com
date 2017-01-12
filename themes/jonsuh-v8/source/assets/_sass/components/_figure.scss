@@ -1,0 +1,63 @@
+// Figure
+// ==================================================
+.figure--float {
+  max-width: em(250);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figure-image {
+  width: 100%;
+  display: block;
+}
+
+.figure-caption {
+  font-size: em(14);
+  color: $grey-dark;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 0.75rem;
+
+  @include mq(small) {
+    font-size: em(15);
+  }
+
+  @include mq(medium) {
+    font-size: em(16);
+  }
+}
+
+@include mq(600) {
+  .figure--float {
+    margin-top: 0.5rem;
+    margin-bottom: $grid-gutter;
+  }
+  .figure--float-left {
+    margin-right: $grid-gutter;
+    float: left;
+  }
+  .figure--float-right {
+    float: right;
+    margin-left: $grid-gutter;
+  }
+}
+
+@include mq(mid) {
+  .figure--float {
+    max-width: em(300);
+  }
+}
+
+@include mq(large) {
+  .figure--float-left {
+    margin-left: -10%;
+  }
+  .figure--float-right {
+    margin-right: -10%;
+  }
+
+  .figure--wide {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}

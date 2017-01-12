@@ -5,7 +5,8 @@
   background-color: $grey-darker;
 }
 
-blockquote ::selection {
+blockquote ::selection,
+.figure ::selection {
   color: $white;
   background-color: color(blue, 800);
 }
