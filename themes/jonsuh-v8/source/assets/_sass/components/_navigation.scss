@@ -5,8 +5,8 @@
   font-weight: 700;
   color: $grey-darkest;
   text-decoration: none;
-  padding-left: rem(8);
-  padding-right: rem(8);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -40,24 +40,23 @@
   }
 
   @include mq(375) {
-    padding-left: rem(10);
-    padding-right: rem(10);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   @include mq(small) {
-    font-size: em(16);
-    padding-left: rem(15);
-    padding-right: rem(15);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   @include mq(medium) {
-    margin-left: rem(5);
-    margin-right: rem(5);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   @include mq(large) {
-    margin-left: rem(10);
-    margin-right: rem(10);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
 

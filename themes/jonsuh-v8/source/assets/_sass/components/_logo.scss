@@ -114,26 +114,26 @@ $logo-perspective   : 200;
 // ==================================================
 .logo {
   perspective: em($logo-perspective);
+}
 
+.logo__box {
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-origin: calc(50% + #{rem(1)}) 50%;
+}
+
+.logo-first {
+  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0.1s;
+}
+
+.logo__overflow {
+  transition: opacity 0.1s linear;
+  transition-delay: 0;
+}
+
+.logo:hover {
   .logo__box {
-    transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transform-origin: calc(50% + #{rem(1)}) 50%;
-  }
-
-  .logo-first {
-    transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: 0.1s;
-  }
-
-  .logo__overflow {
-    transition: opacity 0.1s linear;
-    transition-delay: 0;
-  }
-
-  &:hover {
-    .logo__box {
-      transform: rotateY(180deg);
-    }
+    transform: rotateY(180deg);
   }
 }
 
@@ -208,6 +208,16 @@ $logo-perspective   : 200;
     &::before,
     &::after {
       border-color: $grey-lighter;
+    }
+  }
+
+  .logo:hover {
+    .logo__box {
+      &,
+      &::before,
+      &::after {
+        border-color: $grey-lightest;
+      }
     }
   }
 }

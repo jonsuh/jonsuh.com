@@ -1,29 +1,24 @@
 // Footer
 // ==================================================
+.footer-wrap {
+  border-top: 1px solid $grey-lightest;
+}
+
 .footer__around {
   font-size: em(15);
   text-align: center;
   flex-basis: 100%;
 }
 
-.footer__around--copyright {
-  color: $grey;
-}
-
 .footer__logo {
   flex-basis: 100%;
-  margin-top: rem(20);
-  margin-bottom: rem(15);
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .footer-link {
-  color: $grey-lighter;
   text-decoration: none;
   padding: rem(10 5);
-
-  &:hover {
-    color: $grey-lightest;
-  }
 }
 
 @include mq(medium) {
@@ -51,12 +46,20 @@
   }
 
   .footer-link {
-    margin-left: rem(10);
+    margin-left: 0.75rem;
   }
 }
 
 @include mq(large) {
   .footer-link {
-    margin-left: rem(15);
+    margin-left: 1rem;
+  }
+}
+
+// Dark
+// ==================================================
+@include dark {
+  .footer-wrap {
+    border-top-color: rgba($grey-darker, 0.5);
   }
 }
