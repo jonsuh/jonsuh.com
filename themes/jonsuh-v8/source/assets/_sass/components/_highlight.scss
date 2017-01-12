@@ -11,6 +11,28 @@
 
   pre {
     padding: em(10);
+
+    ::-webkit-scrollbar {
+      height: 1.8em;
+    }
+  }
+
+  pre::-webkit-scrollbar {
+    height: 1.25em;
+  }
+
+  pre::-webkit-scrollbar-track {
+    background-color: $grey-darkest;
+  }
+
+  pre::-webkit-scrollbar-thumb {
+    background-color: $grey-darker;
+    border-radius: 1em;
+    border: em(4) solid $grey-darkest;
+
+    &:hover {
+      background-color: $grey-dark;
+    }
   }
 }
 
@@ -18,6 +40,18 @@
 // ==================================================
 @include dark {
   .highlight {
-    background-color: darken($grey-darkest, 2.5%);
+    &,
+    pre::-webkit-scrollbar-track {
+      background-color: darken($grey-darkest, 2.5%);
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background-color: darken($grey-darker, 5%);
+      border-color: darken($grey-darkest, 2.5%);
+
+      &:hover {
+        background-color: $grey-darker;
+      }
+    }
   }
 }
