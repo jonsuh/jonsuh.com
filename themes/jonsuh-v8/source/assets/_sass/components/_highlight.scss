@@ -1,0 +1,23 @@
+// Highlight
+// ==================================================
+.highlight {
+  color: $grey-lighter;
+  background-color: $grey-darkest;
+
+  @include mq(large) {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+
+  pre {
+    padding: em(10);
+  }
+}
+
+// Dark
+// ==================================================
+@include dark {
+  .highlight {
+    background-color: darken($grey-darkest, 2.5%);
+  }
+}
