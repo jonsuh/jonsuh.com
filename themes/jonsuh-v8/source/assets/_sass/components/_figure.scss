@@ -1,7 +1,7 @@
 // Figure
 // ==================================================
 .figure--float {
-  max-width: em(250);
+  max-width: em(300);
   margin-left: auto;
   margin-right: auto;
 }
@@ -28,6 +28,9 @@
 }
 
 @include mq(600) {
+  .figure--float {
+    max-width: em(250);
+  }
   .figure--float {
     margin-top: 0.5rem;
     margin-bottom: $grid-gutter;
