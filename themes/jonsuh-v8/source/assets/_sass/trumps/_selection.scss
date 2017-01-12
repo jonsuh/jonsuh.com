@@ -23,7 +23,8 @@ figure pre ::selection {
     background-color: $grey-darkest;
   }
 
-  blockquote ::selection {
+  blockquote ::selection,
+  .figure ::selection {
     color: $grey-lighter;
     background-color: color(blue, 900);
   }
