@@ -1,0 +1,7 @@
+{
+  "extends": "",
+  "rules": {},
+  "env": {
+    "browser": true
+  }
+}

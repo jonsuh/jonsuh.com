@@ -1,6 +1,8 @@
 var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
 var autoprefixer = require('autoprefixer');
+var browserSync  = require('browser-sync');
+var concat       = require('gulp-concat');
+var eslint       = require('gulp-eslint');
 var notify       = require('gulp-notify');
 var plumber      = require('gulp-plumber');
 var postcss      = require('gulp-postcss');
@@ -42,6 +44,23 @@ gulp.task('css', function() {
     .pipe(gulp.dest('public/assets/css'));
 });
 
+gulp.task('eslint', function() {
+  return gulp.src('themes/jonsuh-v8/source/assets/_js/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+gulp.task('js', ['eslint'], function() {
+  return gulp.src([
+      'themes/jonsuh-v8/source/assets/_js/app.js',
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('public/assets/js'));
+});
+
 gulp.task('watch', function() {
   var browserSyncConfig = require('./bs-config.js');
 
@@ -54,8 +73,9 @@ gulp.task('watch', function() {
   });
 
   gulp.watch('themes/jonsuh-v8/source/assets/_sass/**/*.scss', ['css']);
+  gulp.watch('themes/jonsuh-v8/source/assets/_js/**/*.js', ['js']);
 });
 
-gulp.task('build', ['css']);
+gulp.task('build', ['css', 'js']);
 
 gulp.task('default', ['build', 'watch']);
