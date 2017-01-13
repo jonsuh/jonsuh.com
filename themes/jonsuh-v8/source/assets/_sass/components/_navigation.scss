@@ -33,7 +33,8 @@
     background: linear-gradient(to right, $purple, $blue);
   }
 
-  &:hover {
+  &:hover,
+  &.is-current {
     &::before {
       transform: scaleX(1);
     }
@@ -52,6 +53,10 @@
   @include mq(medium) {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+
+    &::before {
+      height: rem(3);
+    }
   }
 
   @include mq(large) {

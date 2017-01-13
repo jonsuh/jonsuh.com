@@ -2,10 +2,10 @@
   <header class="container d--f jc--sb" role="banner">
 <%- partial('_partial/logo', {animated: true}, {cache: true}) %>
     <nav class="d--f ai--s" role="navigation">
-      <a href="/about/" class="navigation-link">About</a>
-      <a href="/work/" class="navigation-link">Work</a>
-      <a href="/blog/" class="navigation-link">Blog</a>
-      <a href="/contact/" class="navigation-link">Contact</a>
+      <a href="/about/" class="navigation-link<% if (is_current("about")) { %> is-current<% } %>">About</a>
+      <a href="/work/" class="navigation-link<% if (is_current("work")) { %> is-current<% } %>">Work</a>
+      <a href="/blog/" class="navigation-link<% if (is_current("blog") || is_post()) { %> is-current<% } %>">Blog</a>
+      <a href="/contact/" class="navigation-link<% if (is_current("contact")) { %> is-current<% } %>">Contact</a>
     </nav>
   </header>
 </div>
