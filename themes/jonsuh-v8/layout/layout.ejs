@@ -8,36 +8,11 @@
   <link rel="stylesheet" href="/assets/css/screen.css">
 </head>
 <body>
-<div class="p--xy">
-  <header class="container d--f jc--sb" role="banner">
-<%- partial('_partial/logo', {animated: true}, {cache: true}) %>
-    <nav class="d--f ai--s" role="navigation">
-      <a href="/about/" class="navigation-link">About</a>
-      <a href="/work/" class="navigation-link">Work</a>
-      <a href="/blog/" class="navigation-link">Blog</a>
-      <a href="/contact/" class="navigation-link">Contact</a>
-    </nav>
-  </header>
-</div>
+<%- partial('_partial/header', {}, {cache: true}) %>
 <main role="main">
 <%- body %>
 </main>
-<div class="footer-wrap pm--xy">
-  <footer class="container d--f jc--sb ai--c fw--w" role="contentinfo">
-    <div class="footer__around">
-      <a href="/about/" class="footer-link">About</a>
-      <a href="/work/" class="footer-link">Work</a>
-      <a href="/blog/" class="footer-link">Blog</a>
-      <a href="/contact/" class="footer-link">Contact</a>
-    </div>
-    <div class="footer__logo ta--c">
-<%- partial('_partial/logo', {}, {cache: true}) %>
-    </div>
-    <div class="footer__around footer__around--copyright">
-      <span class="footer-copyright">2017 © Jonathan Suh</span>
-    </div>
-  </footer>
-</div>
+<%- partial('_partial/footer', {}, {cache: true}) %>
 <script src="https://use.typekit.net/gwp6ivk.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <script src="/assets/js/app.js" defer></script>
