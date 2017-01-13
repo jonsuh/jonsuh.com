@@ -10,17 +10,7 @@
 <body>
 <div class="p--xy">
   <header class="container d--f jc--sb" role="banner">
-    <a href="/" class="logo logo--animated">
-      <div class="logo__box"></div>
-      <div class="logo__text">
-        <span class="logo-first">J</span><div class="logo__overflow">
-          <span class="logo-rest">onathan</span>
-        </div>
-        <span class="logo-first logo-first--s">S</span><div class="logo__overflow">
-          <span class="logo-rest logo-rest--uh">uh</span>
-        </div>
-      </div>
-    </a>
+    <%- partial('_partial/logo', {animated: true}, {cache: true}) %>
     <nav class="d--f ai--s" role="navigation">
       <a href="/about/" class="navigation-link">About</a>
       <a href="/work/" class="navigation-link">Work</a>
@@ -29,7 +19,9 @@
     </nav>
   </header>
 </div>
+<main role="main">
 <%- body %>
+</main>
 <div class="footer-wrap pm--xy">
   <footer class="container d--f jc--sb ai--c fw--w" role="contentinfo">
     <div class="footer__around">
@@ -39,17 +31,7 @@
       <a href="/contact/" class="footer-link">Contact</a>
     </div>
     <div class="footer__logo ta--c">
-      <a href="/" class="logo">
-        <div class="logo__box"></div>
-        <div class="logo__text">
-          <span class="logo-first">J</span><div class="logo__overflow">
-            <span class="logo-rest">onathan</span>
-          </div>
-          <span class="logo-first logo-first--s">S</span><div class="logo__overflow">
-            <span class="logo-rest logo-rest--uh">uh</span>
-          </div>
-        </div>
-      </a>
+      <%- partial('_partial/logo', {}, {cache: true}) %>
     </div>
     <div class="footer__around footer__around--copyright">
       <span class="footer-copyright">2017 © Jonathan Suh</span>
