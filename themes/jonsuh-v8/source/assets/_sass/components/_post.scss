@@ -11,7 +11,7 @@
 // Rating
 // ==================================================
 .post__rating {
-  font-size: em(18);
+  font-size: em(20);
   color: $grey-lightest;
 }
 
@@ -24,10 +24,6 @@
 @include mq(medium) {
   .post__meta {
     font-size: 1em;
-  }
-
-  .post__rating {
-    font-size: em(20);
   }
 }
 
