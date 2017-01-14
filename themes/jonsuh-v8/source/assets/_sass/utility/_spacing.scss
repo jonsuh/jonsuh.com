@@ -9,15 +9,19 @@ $spacing-utility: (
 );
 
 @each $breakpoint, $size in $spacing {
-  $type: padding;
-
   @if $breakpoint == default {
     @each $direction in $spacing-utility {
       .p--#{$direction} {
-        @include spacing-direction($direction, $type, $size, false);
+        @include spacing-direction($direction, padding, $size, false);
       }
       .pm--#{$direction} {
-        @include spacing-direction($direction, $type, $size, true);
+        @include spacing-direction($direction, padding, $size, true);
+      }
+      .m--#{$direction} {
+        @include spacing-direction($direction, padding, $size, false);
+      }
+      .mm--#{$direction} {
+        @include spacing-direction($direction, padding, $size, true);
       }
     }
   }
@@ -25,10 +29,16 @@ $spacing-utility: (
     @include mq($breakpoint) {
       @each $direction in $spacing-utility {
         .p--#{$direction} {
-          @include spacing-direction($direction, $type, $size, false);
+          @include spacing-direction($direction, padding, $size, false);
         }
         .pm--#{$direction} {
-          @include spacing-direction($direction, $type, $size, true);
+          @include spacing-direction($direction, padding, $size, true);
+        }
+        .m--#{$direction} {
+          @include spacing-direction($direction, padding, $size, false);
+        }
+        .mm--#{$direction} {
+          @include spacing-direction($direction, padding, $size, true);
         }
       }
     }
