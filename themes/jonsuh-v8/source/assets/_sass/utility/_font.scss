@@ -1,0 +1,13 @@
+// Font
+// ==================================================
+.ff--s  { @include serif; }
+.ff--ss { @include sans-serif; }
+
+
+
+.fs--i { font-style: italic; }
+.fs--n { font-style: normal; }
+
+
+
+.tt--u { text-transform: uppercase; }
