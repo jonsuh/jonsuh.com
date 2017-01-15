@@ -1,17 +1,17 @@
-<section class="pm--xy">
+<div class="pm--xy">
   <div class="container container--writing">
-    <article itemscope itemtype="http://schema.org/<%= (typeof(post.review) === "object") ? "Review" : "BlogPosting" %>">
+    <article itemscope itemtype="http://schema.org/<%= (typeof(page.review) === "object") ? "Review" : "BlogPosting" %>">
       <header>
-        <h1 itemprop="name"><%= post.title %></h1>
+        <h1 itemprop="name"><%= page.title %></h1>
         <div class="post__meta mm--b">
-          <% if (typeof(post.dateUpdated) === "undefined") { %>
-            <span class="ff--s fs--i">Published on</span> <time content="<%= date(post.date, config.date_format) %>" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
-              <%= date(post.date, "MMMM D, YYYY") %>
+          <% if (typeof(page.dateUpdated) === "undefined") { %>
+            <span class="ff--s fs--i">Published on</span> <time content="<%= date(page.date, config.date_format) %>" datetime="<%= date_xml(page.date) %>" itemprop="datePublished">
+              <%= date(page.date, "MMMM D, YYYY") %>
             </time>
           <% } else { %>
-            <span class="ff--s fs--i">Updated on</span> <meta content="<%= date(post.date, config.date_format) %>" itemprop="datePublished">
-            <time content="<%= date(post.dateUpdated, config.date_format) %>" datetime="<%= date_xml(post.dateUpdated) %>" itemprop="dateModified" title="Published on <%= date(post.date, "MMMM D, YYYY") %>">
-              <%= date(post.dateUpdated, "MMMM D, YYYY") %>
+            <span class="ff--s fs--i">Updated on</span> <meta content="<%= date(page.date, config.date_format) %>" itemprop="datePublished">
+            <time content="<%= date(page.dateUpdated, config.date_format) %>" datetime="<%= date_xml(page.dateUpdated) %>" itemprop="dateModified" title="Published on <%= date(page.date, "MMMM D, YYYY") %>">
+              <%= date(page.dateUpdated, "MMMM D, YYYY") %>
             </time>
           <% } %>
           <span class="ws--nw ln--1.4">
@@ -24,19 +24,23 @@
           </span>
         </div>
       </header>
-      <% if (typeof(post.review) === "object") { %>
+      <% if (typeof(page.review) === "object") { %>
         <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
-          <meta itemprop="name" content="<%= post.review.name %>">
+          <meta itemprop="name" content="<%= page.review.name %>">
         </span>
         <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="post__rating mb--0.5">
-          <span class="post-star"><%= "★".repeat(post.review.rating) %></span><%= "☆".repeat(5 - post.review.rating) %>
-          <meta itemprop="ratingValue" content="<%= post.review.rating %>">
+          <span class="post-star"><%= "★".repeat(page.review.rating) %></span><%= "☆".repeat(5 - page.review.rating) %>
+          <meta itemprop="ratingValue" content="<%= page.review.rating %>">
           <meta itemprop="bestRating" content="5">
         </div>
       <% } %>
-      <div itemprop="<%= (typeof(post.review) === "object") ? "reviewBody" : "articleBody" %>">
-        <%- post.content %>
+      <div itemprop="<%= (typeof(page.review) === "object") ? "reviewBody" : "articleBody" %>">
+        <%- page.content %>
       </div>
     </article>
+    <div class="d--f">
+      <a href="<%= url_for(page.prev.path) %>"><%= page.prev.title %></a>
+      <a href="<%= url_for(page.prev.path) %>"><%= page.prev.title %></a>
+    </div>
   </div>
-</section>
+</div>
