@@ -1,6 +1,5 @@
-
 /*
-  {% pullquote [wide] [cite:"Full Name"] %}
+  {% pullquote [wide] [cite="Full Name"] %}
     Lorem ipsum dolor sit amet.
   {% endpullquote %}
 */
@@ -18,13 +17,13 @@ hexo.extend.tag.register('pullquote', function(args, content) {
       className += " pullquote--wide";
     }
 
-    if (value.match(/cite:/)) {
+    if (value.match(/cite=/)) {
       value = hexo.render.renderSync({
         text: value,
         engine: 'markdown'
       });
 
-      value = value.replace("cite:", "")
+      value = value.replace("cite=", "")
                    .replace(/<\/p>/g,"")
                    .replace(/<p>/g,"");
 

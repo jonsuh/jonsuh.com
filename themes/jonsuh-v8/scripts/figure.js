@@ -1,5 +1,5 @@
 /*
-  {% figure [wide left right] [src:"https://url.to/image.jpg"] [alt:"Alt text"] [caption:"Full caption goes here"] %}
+  {% figure [wide left right] [src="https://url.to/image.jpg"] [alt="Alt text"] [caption="Full caption goes here"] %}
 */
 hexo.extend.tag.register('figure', function(args, content) {
   let className = "figure";
@@ -25,18 +25,18 @@ hexo.extend.tag.register('figure', function(args, content) {
     }
 
     // alt
-    if (value.match(/alt:/)) {
-      alt = value.replace("alt:", "");
+    if (value.match(/alt=/)) {
+      alt = value.replace("alt=", "");
     }
 
     // caption
-    if (value.match(/caption:/)) {
+    if (value.match(/caption=/)) {
       value = hexo.render.renderSync({
         text: value,
         engine: 'markdown'
       });
 
-      value = value.replace("caption:", "")
+      value = value.replace("caption=", "")
                    .replace(/<\/p>/g,"")
                    .replace(/<p>/g,"");
 
@@ -44,8 +44,8 @@ hexo.extend.tag.register('figure', function(args, content) {
     }
 
     // src
-    if (value.match(/src:/)) {
-      src = value.replace("src:", "");
+    if (value.match(/src=/)) {
+      src = value.replace("src=", "");
     }
   });
 
