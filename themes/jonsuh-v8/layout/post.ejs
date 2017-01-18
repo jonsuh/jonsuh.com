@@ -1,16 +1,16 @@
-<div class="pm--xy">
+<div class="spm--xy">
   <div class="container container--writing">
     <article itemscope itemtype="http://schema.org/<%= (typeof(page.review) === "object") ? "Review" : "BlogPosting" %>">
       <header>
         <h1 itemprop="name"><%= page.title %></h1>
-        <div class="post__meta mm--b">
+        <div class="post__meta smm--b">
           <% if (typeof(page.dateUpdated) === "undefined") { %>
-            <span class="ff--s fs--i">Published on</span> <time content="<%= date(page.date, config.date_format) %>" datetime="<%= date_xml(page.date) %>" itemprop="datePublished">
+            <span class="ff--s fs--i">Published</span> <time content="<%= date(page.date, config.date_format) %>" datetime="<%= date_xml(page.date) %>" itemprop="datePublished">
               <%= date(page.date, "MMMM D, YYYY") %>
             </time>
           <% } else { %>
-            <span class="ff--s fs--i">Updated on</span> <meta content="<%= date(page.date, config.date_format) %>" itemprop="datePublished">
-            <time content="<%= date(page.dateUpdated, config.date_format) %>" datetime="<%= date_xml(page.dateUpdated) %>" itemprop="dateModified" title="Published on <%= date(page.date, "MMMM D, YYYY") %>">
+            <span class="ff--s fs--i">Updated</span> <meta content="<%= date(page.date, config.date_format) %>" itemprop="datePublished">
+            <time content="<%= date(page.dateUpdated, config.date_format) %>" datetime="<%= date_xml(page.dateUpdated) %>" itemprop="dateModified" title="Published <%= date(page.date, "MMMM D, YYYY") %>">
               <%= date(page.dateUpdated, "MMMM D, YYYY") %>
             </time>
           <% } %>
@@ -38,9 +38,13 @@
         <%- page.content %>
       </div>
     </article>
-    <div class="d--f">
-      <a href="<%= url_for(page.prev.path) %>"><%= page.prev.title %></a>
-      <a href="<%= url_for(page.prev.path) %>"><%= page.prev.title %></a>
+    <div class="d--f spm--t">
+      <% if (page.prev) { %>
+        <a href="<%= url_for(page.prev.path) %>" title="<%= page.prev.title %>">Prev</a>
+      <% } %>
+      <% if (page.next) { %>
+        <a href="<%= url_for(page.next.path) %>" title="<%= page.next.title %>" class="ml--a">Next</a>
+      <% } %>
     </div>
   </div>
 </div>

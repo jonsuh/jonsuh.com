@@ -11,16 +11,16 @@ $spacing-utility: (
 @each $breakpoint, $size in $spacing {
   @if $breakpoint == default {
     @each $direction in $spacing-utility {
-      .p--#{$direction} {
+      .sp--#{$direction} {
         @include spacing-direction($direction, padding, $size, false);
       }
-      .pm--#{$direction} {
+      .spm--#{$direction} {
         @include spacing-direction($direction, padding, $size, true);
       }
-      .m--#{$direction} {
+      .sm--#{$direction} {
         @include spacing-direction($direction, padding, $size, false);
       }
-      .mm--#{$direction} {
+      .smm--#{$direction} {
         @include spacing-direction($direction, padding, $size, true);
       }
     }
@@ -28,16 +28,16 @@ $spacing-utility: (
   @else {
     @include mq($breakpoint) {
       @each $direction in $spacing-utility {
-        .p--#{$direction} {
+        .sp--#{$direction} {
           @include spacing-direction($direction, padding, $size, false);
         }
-        .pm--#{$direction} {
+        .spm--#{$direction} {
           @include spacing-direction($direction, padding, $size, true);
         }
-        .m--#{$direction} {
+        .sm--#{$direction} {
           @include spacing-direction($direction, padding, $size, false);
         }
-        .mm--#{$direction} {
+        .smm--#{$direction} {
           @include spacing-direction($direction, padding, $size, true);
         }
       }
