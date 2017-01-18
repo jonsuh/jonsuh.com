@@ -1,6 +1,8 @@
 /*
   {% figure [wide left right] [src="https://url.to/image.jpg"] [alt="Alt text"] [caption="Full caption goes here"] %}
 */
+const path = require('path');
+
 hexo.extend.tag.register('figure', function(args, content) {
   let className = "figure";
   let alt = "";
@@ -52,11 +54,13 @@ hexo.extend.tag.register('figure', function(args, content) {
   // Set correct images directory
   let assetsDir = "/assets/images/";
 
-  if (this.layout === "post") {
-    assetsDir += this.path;
-  }
+  if ( ! src.includes("://")) {
+    if (this.layout === "post") {
+      assetsDir = path.join(assetsDir, this.path);
+    }
 
-  src = assetsDir + src;
+    src = path.join(assetsDir, src);
+  }
 
   return '<figure class="' + className + '"><img src="' + src + '" alt="' + alt + '" class="figure-image">' + caption + '</figure>';
 }, {ends: false});
