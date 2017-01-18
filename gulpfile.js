@@ -53,6 +53,7 @@ gulp.task('eslint', function() {
 
 gulp.task('js', ['eslint'], function() {
   return gulp.src([
+      'themes/jonsuh-v8/source/assets/_js/utility.js',
       'themes/jonsuh-v8/source/assets/_js/app.js',
     ])
     .pipe(sourcemaps.init())
