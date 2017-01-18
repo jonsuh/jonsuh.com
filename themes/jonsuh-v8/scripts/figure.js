@@ -49,5 +49,14 @@ hexo.extend.tag.register('figure', function(args, content) {
     }
   });
 
+  // Set correct images directory
+  let assetsDir = "/assets/images/";
+
+  if (this.layout === "post") {
+    assetsDir += this.path;
+  }
+
+  src = assetsDir + src;
+
   return '<figure class="' + className + '"><img src="' + src + '" alt="' + alt + '" class="figure-image">' + caption + '</figure>';
 }, {ends: false});
