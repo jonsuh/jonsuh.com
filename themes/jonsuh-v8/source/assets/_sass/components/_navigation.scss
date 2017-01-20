@@ -53,10 +53,6 @@
   @include mq(medium) {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-
-    &::before {
-      height: rem(3);
-    }
   }
 
   @include mq(large) {
