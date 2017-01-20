@@ -1,6 +1,73 @@
 // Typography
 // ==================================================
 
+// Drop Cap
+// ==================================================
+.drop-cap {
+  &::first-letter {
+    font-weight: 700;
+    line-height: 1;
+    color: $grey-darkest;
+    float: left;
+
+    font-size: em(82);
+    margin-top: -0.175em;
+    margin-bottom: -0.175em;
+    margin-left: -0.075em;
+    margin-right: 0.05em;
+
+    @include mq(small) {
+      margin-top: -0.17em;
+    }
+    @include mq(medium) {
+      font-size: em(87);
+      margin-top: -0.15em;
+    }
+    @include mq(large) {
+      margin-top: -0.17em;
+      margin-left: -0.07em;
+    }
+  }
+}
+.drop-cap--a::first-letter,
+.drop-cap--t::first-letter {
+  margin-right: 0.08em;
+  margin-left: 0.01em;
+}
+.drop-cap--c::first-letter {
+  margin-left: -0.02em;
+}
+.drop-cap--j::first-letter {
+  margin-left: -0.01em;
+}
+.drop-cap--k::first-letter,
+.drop-cap--l::first-letter {
+  margin-right: 0.1em;
+}
+.drop-cap--q::first-letter {
+  //RADICAL CHANGE
+}
+.drop-cap--s::first-letter {
+  margin-left: -0.015em;
+}
+.drop-cap--v::first-letter,
+.drop-cap--w::first-letter {
+  margin-left: 0;
+  margin-right: 0.075em;
+}
+.drop-cap--x::first-letter {
+  margin-left: 0;
+  margin-right: 0.1em;
+}
+.drop-cap--y::first-letter {
+  margin-left: 0.02em;
+  margin-right: 0.1em;
+}
+.drop-cap--z::first-letter {
+  margin-left: -0.01em;
+  margin-right: 0.075em;
+}
+
 // Pullquote
 // ==================================================
 .pullquote {
@@ -59,6 +126,10 @@
 // Dark
 // ==================================================
 @include dark {
+  .drop-cap::first-letter {
+    color: $grey-lightest;
+  }
+
   .pullquote {
     color: $grey-lightest;
   }
