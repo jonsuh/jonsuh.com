@@ -310,19 +310,22 @@ $colors: (
   @return map-get(map-get($colors, $name), $value);
 }
 
+$blue       : color(blue);
+$light-blue : color(light-blue);
+$blue-grey  : color(blue-grey);
+$indigo     : color(indigo);
+$brown      : color(brown);
+$cyan       : color(cyan);
+$green      : color(green);
+$light-green: color(light-green);
+$lime       : color(lime);
+$orange     : color(orange);
+$deep-orange: color(deep-orange);
 $red        : color(red);
 $pink       : color(pink);
 $purple     : color(purple);
 $deep-purple: color(deep-purple);
-$indigo     : color(indigo);
-$blue       : color(blue);
-$light-blue : color(light-blue);
-$cyan       : color(cyan);
 $teal       : color(teal);
-$green      : color(green);
-$light-green: color(light-green);
-$lime       : color(lime);
 $yellow     : color(yellow);
 $amber      : color(amber);
-$orange     : color(orange);
-$deep-orange: color(deep-orange);
+
