@@ -15,17 +15,17 @@
       <% } %>
       <article class="p--r">
         <h5 class="mb--0.5">
-          <a href="<%- url_for(post.path) %>" class="archive-link"><%= post.title %></a>
+          <a href="<%- (post.external_url) ? post.external_url : url_for(post.path) %>" class="archive-link"><%= post.title %></a>
         </h5>
         <div class="post__meta post__meta--archive mb--0.5">
-          <% if (typeof(post.dateUpdated) === "undefined") { %>
+          <% if (typeof(post.date_updated) === "undefined") { %>
             <time content="<%= date(post.date, config.date_format) %>" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
               <%= date(post.date, "MMMM D") %>
             </time>
           <% } else { %>
             <meta content="<%= date(post.date, config.date_format) %>" itemprop="datePublished">
-            <time content="<%= date(post.dateUpdated, config.date_format) %>" datetime="<%= date_xml(post.dateUpdated) %>" itemprop="dateModified" title="Published on <%= date(post.date, "MMMM D, YYYY") %>">
-              <%= date(post.dateUpdated, "MMMM D") %>
+            <time content="<%= date(post.date_updated, config.date_format) %>" datetime="<%= date_xml(post.date_updated) %>" itemprop="dateModified" title="Published on <%= date(post.date, "MMMM D, YYYY") %>">
+              <%= date(post.date_updated, "MMMM D") %>
             </time>
           <% } %>
         </div>
