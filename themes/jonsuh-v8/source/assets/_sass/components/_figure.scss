@@ -6,8 +6,16 @@
   margin-right: auto;
 }
 
+.figure--auto {
+  .figure-image {
+    width: auto;
+  }
+}
+
 .figure-image {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
 }
 
