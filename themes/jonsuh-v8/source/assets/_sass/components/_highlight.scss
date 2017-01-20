@@ -1,8 +1,7 @@
 // Highlight
 // ==================================================
 .highlight {
-  color: $grey-lighter;
-  background-color: $grey-darkest;
+  background-color: lighten($grey-lightest, 2.5%);
 
   @include mq(large) {
     margin-left: -10%;
@@ -18,16 +17,89 @@
   }
 
   pre::-webkit-scrollbar-track {
-    background-color: $grey-darkest;
+    background-color: lighten($grey-lightest, 2.5%);
   }
 
   pre::-webkit-scrollbar-thumb {
-    background-color: $grey-darker;
+    background-color: $grey-lighter;
     border-radius: 1em;
-    border: em(4) solid $grey-darkest;
+    border: em(4) solid lighten($grey-lightest, 2.5%);
 
     &:hover {
-      background-color: $grey-dark;
+      background-color: $grey-light;
+    }
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: $blue-grey;
+    font-style: italic;
+  }
+
+  .token.string,
+  .token.attr-value {
+    color: color(lime, 900);
+  }
+
+  .token.punctuation,
+  .token.operator {
+    color: $grey-darker;
+  }
+
+  .token.entity,
+  .token.url,
+  .token.symbol,
+  .token.boolean,
+  .token.variable,
+  .token.constant,
+  .token.property,
+  .token.regex,
+  .token.inserted {
+    color: color(blue, 600);
+  }
+
+  .token.number {
+    color: color(cyan, 700);
+  }
+
+  .token.atrule,
+  .token.attr-name,
+  .language-autohotkey .token.selector {
+    color: color(orange, 800);
+  }
+
+  .token.keyword,
+  .token.function,
+  .token.deleted,
+  .language-autohotkey .token.tag {
+    color: $purple;
+  }
+
+  .token.tag,
+  .token.selector,
+  .language-autohotkey .token.keyword {
+    color: $pink;
+  }
+
+  .token.important,
+  .token.function,
+  .token.bold {
+    font-weight: 700;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  &.scss {
+    .token.property + .token.punctuation + .token.variable {
+      color: inherit;
     }
   }
 }
@@ -48,6 +120,51 @@
       &:hover {
         background-color: $grey-darker;
       }
+    }
+
+    .token.string,
+    .token.attr-value {
+      color: color(green, 400);
+    }
+
+    .token.punctuation,
+    .token.operator {
+      color: $grey-light;
+    }
+
+    .token.entity,
+    .token.url,
+    .token.symbol,
+    .token.boolean,
+    .token.variable,
+    .token.constant,
+    .token.property,
+    .token.regex,
+    .token.inserted {
+      color: $light-blue;
+    }
+
+    .token.number {
+      color: $cyan;
+    }
+
+    .token.atrule,
+    .token.attr-name,
+    .language-autohotkey .token.selector {
+      color: color(orange, 600);
+    }
+
+    .token.keyword,
+    .token.function,
+    .token.deleted,
+    .language-autohotkey .token.tag {
+      color: color(purple, 300);
+    }
+
+    .token.tag,
+    .token.selector,
+    .language-autohotkey .token.keyword {
+      color: color(pink, 400);
     }
   }
 }
