@@ -1,18 +1,32 @@
 // Archive
 // ==================================================
-$archive-meta-width: 100;
+$archive-meta-short-width: 55;
+$archive-meta-long-width: 110;
 $archive-meta-gutter: strip-unit($grid-gutter) * 16;
 
 .container--archive {
-  max-width: em(553);
-  margin-left: auto;
-  margin-right: auto;
+  max-width: em(553) + em($archive-meta-short-width) + em($archive-meta-gutter);
+}
+
+.archive__list:last-of-type {
+  margin-bottom: 0;
 }
 
 .archive-year {
   color: $white;
-  background-color: $grey-darkest;
+  background-color: $grey-darker;
   display: inline-block;
+  margin-left: rem($archive-meta-short-width + $archive-meta-gutter / 2);
+}
+
+.post__meta--archive {
+  margin-right: rem($archive-meta-gutter / 2);
+  margin-top: rem(1);
+  flex-basis: rem($archive-meta-short-width);
+}
+
+.post-date--long {
+  display: none;
 }
 
 .archive-link {
@@ -24,47 +38,37 @@ $archive-meta-gutter: strip-unit($grid-gutter) * 16;
   }
 }
 
-@include mq(medium) {
-  .container--archive {
-    max-width: em(585);
+@include mq(small) {
+  .post__meta--archive {
+    margin-right: rem($archive-meta-gutter);
   }
 }
 
-@include mq(mid) {
+@include mq(medium) {
   .container--archive {
-    max-width: em(585 + $archive-meta-width) + $grid-gutter;
+    max-width: em(585) + em($archive-meta-long-width) + em($archive-meta-gutter);
   }
 
-  .archive__list {
-    max-width: em(585);
-  }
-
-  .archive__list,
-  .archive__year {
-    margin-left: rem($archive-meta-width + $archive-meta-gutter);
+  .archive-year {
+    margin-left: rem($archive-meta-long-width + $archive-meta-gutter);
   }
 
   .post__meta--archive {
-    text-align: right;
-    width: rem($archive-meta-width);
-    margin-top: rem(3);
-    position: absolute;
-    top: 0;
-    left: rem(($archive-meta-width + $archive-meta-gutter) * -1);
+    flex-basis: rem($archive-meta-long-width);
+    margin-top: rem(5);
+  }
+
+  .post-date--short {
+    display: none;
+  }
+  .post-date--long {
+    display: inline;
   }
 }
 
 @include mq(large) {
   .container--archive {
-    max-width: em(618 + $archive-meta-width) + $grid-gutter;
-  }
-
-  .archive__list {
-    max-width: em(618);
-  }
-
-  .post__meta--archive {
-    margin-top: rem(4);
+    max-width: em(618) + em($archive-meta-long-width) + em($archive-meta-gutter);
   }
 }
 
@@ -77,6 +81,6 @@ $archive-meta-gutter: strip-unit($grid-gutter) * 16;
 
   .archive-year {
     color: $grey-darkest;
-    background-color: $grey-lightest;
+    background-color: $grey;
   }
 }
