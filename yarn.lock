@@ -1824,9 +1824,9 @@ hexo-renderer-ejs@^0.2.0:
     ejs "^1.0.0"
     object-assign "^4.0.1"
 
-hexo-renderer-marked@^0.2.11:
+"hexo-renderer-marked@ssh://github.com/jonsuh/hexo-renderer-marked#2a81fb5":
   version "0.2.11"
-  resolved "https://registry.yarnpkg.com/hexo-renderer-marked/-/hexo-renderer-marked-0.2.11.tgz#32fd3880d3c3979fd7b8015ec121a6c44ff49f84"
+  resolved "ssh://github.com/jonsuh/hexo-renderer-marked#2a81fb5"
   dependencies:
     hexo-util "^0.6.0"
     marked "^0.3.5"

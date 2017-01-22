@@ -99,6 +99,7 @@ marked:
   breaks: false
   smartLists: true
   smartypants: true
+  headingAnchor: lowercase
 
 # ============================
 # Deployment
