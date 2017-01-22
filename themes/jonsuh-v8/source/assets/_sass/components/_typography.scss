@@ -68,6 +68,20 @@
   margin-right: 0.075em;
 }
 
+// Paragraph
+// ==================================================
+.paragraph {
+  > p,
+  > ul li {
+    @include serif;
+  }
+
+  > p + p {
+    text-indent: 1.5em;
+    margin-top: -1.5em;
+  }
+}
+
 // Pullquote
 // ==================================================
 .pullquote {
