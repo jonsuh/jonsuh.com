@@ -216,6 +216,11 @@ pre {
   font-family: $monospace;
 }
 
+code {
+  background-color: lighten($grey-lightest, 2.5%);
+  padding: em(2 3);
+}
+
 pre {
   overflow-y: hidden;
   overflow-x: auto;
@@ -223,6 +228,9 @@ pre {
 
   code {
     @include type-scale(em(14), em(1), em(16));
+
+    background-color: inherit;
+    padding: 0;
   }
 }
 
@@ -305,5 +313,9 @@ hr {
     color: $grey-light;
     background-color: $black;
     background-image: linear-gradient(to right, $black, rgba($grey-darkest, 0.5));
+  }
+
+  code {
+    background-color: darken($grey-darkest, 2.5%);
   }
 }
