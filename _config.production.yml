@@ -1,10 +1,7 @@
-# ============================
-# Environment
-# ============================
 environment: production
+
 url: //jonsuh.com
+labs_url: http://labs.jonsuh.com
 
 render_drafts: false
-future: true
-
-per_page: 10
+future: false

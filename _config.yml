@@ -18,6 +18,7 @@ timezone: America/Chicago
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # ============================
 url: //localhost:3000
+labs_url: http://labs.jonsuh.com
 root: /
 permalink: blog/:title/
 permalink_defaults:
@@ -107,3 +108,8 @@ marked:
 # ============================
 deploy:
   type:
+
+# ============================
+# Other variables
+# ============================
+amazon_tag: jonsuhcom-20
