@@ -52,10 +52,10 @@ hexo.extend.tag.register('figure', function(args, content) {
   });
 
   // Set correct images directory
-  let assetsDir = "/assets/images/";
+  let assetsDir = path.resolve(hexo.config.images_dir);
 
   if ( ! src.includes("://") && src.charAt(0) !== "/") {
-    assetsDir = path.join(assetsDir, this.path);
+    assetsDir = path.join(assetsDir, path.dirname(this.path));
 
     src = path.join(assetsDir, src);
   }

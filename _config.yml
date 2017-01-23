@@ -112,4 +112,5 @@ deploy:
 # ============================
 # Other variables
 # ============================
+images_dir: assets/images
 amazon_tag: jonsuhcom-20
