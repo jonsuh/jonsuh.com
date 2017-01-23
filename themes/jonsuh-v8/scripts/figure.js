@@ -58,10 +58,8 @@ hexo.extend.tag.register('figure', function(args, content) {
   // Set correct images directory
   let assetsDir = "/assets/images/";
 
-  if ( ! src.includes("://")) {
-    if (this.layout === "post") {
-      assetsDir = path.join(assetsDir, this.path);
-    }
+  if ( ! src.includes("://") && src.charAt(0) !== "/") {
+    assetsDir = path.join(assetsDir, this.path);
 
     src = path.join(assetsDir, src);
   }
