@@ -25,10 +25,6 @@ hexo.extend.tag.register('figure', function(args, content) {
         className += " figure--float-right";
       }
     }
-    // auto
-    if (value === "auto") {
-      className += " figure--auto";
-    }
 
     // alt
     if (value.match(/alt=/)) {
