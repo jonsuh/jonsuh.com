@@ -3,6 +3,7 @@ var autoprefixer = require('autoprefixer');
 var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
 var eslint       = require('gulp-eslint');
+var mergeStream  = require('merge-stream');
 var notify       = require('gulp-notify');
 var plumber      = require('gulp-plumber');
 var postcss      = require('gulp-postcss');
@@ -51,7 +52,21 @@ gulp.task('eslint', function() {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('js', ['eslint'], function() {
+gulp.task('js-vendor', function() {
+  var chartjs = gulp.src([
+    'node_modules/chart.js/dist/Chart.js',
+  ])
+    .pipe(concat('chart.js'))
+    .pipe(gulp.dest('public/assets/js'));
+
+  var flickity = gulp.src(['node_modules/flickity/dist/flickity.pkgd.js'])
+    .pipe(concat('flickity.js'))
+    .pipe(gulp.dest('public/assets/js'));
+
+  return mergeStream(chartjs, flickity);
+});
+
+gulp.task('js', ['js-vendor', 'eslint'], function() {
   return gulp.src([
       'themes/jonsuh-v8/source/assets/_js/utility.js',
       'themes/jonsuh-v8/source/assets/_js/app.js',

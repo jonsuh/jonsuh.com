@@ -15,6 +15,8 @@
   "devDependencies": {
     "autoprefixer": "^6.6.0",
     "browser-sync": "^2.18.5",
+    "chart.js": "^2.4.0",
+    "flickity": "^2.0.5",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^3.0.1",
@@ -24,6 +26,7 @@
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
     "mcgriddle": "^0.5.0",
+    "merge-stream": "^1.0.1",
     "mq-sass": "^0.8.0"
   }
 }
