@@ -54,6 +54,31 @@
       }
     }
   }
+
+  // Flickity
+  // ==================================================
+  .flickity-prev-next-button {
+    background-color: transparent;
+
+    &.previous {
+      left: -3rem;
+    }
+    &.next {
+      right: -3rem;
+    }
+  }
+
+  // .flickity-rtl {
+  //   .flickity-prev-next-button.previous {
+  //     left: auto;
+  //     right: -3rem;
+  //   }
+
+  //   .flickity-prev-next-button.next {
+  //     right: auto;
+  //     left: -3rem;
+  //   }
+  // }
 }
 
 // Responsive
