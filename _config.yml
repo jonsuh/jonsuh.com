@@ -113,5 +113,6 @@ deploy:
 # Other variables
 # ============================
 images_dir: /assets/images
+css_dir: /assets/css
 scripts_dir: /assets/js
 amazon_tag: jonsuhcom-20
