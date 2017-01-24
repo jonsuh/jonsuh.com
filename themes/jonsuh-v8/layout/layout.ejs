@@ -6,15 +6,21 @@
   <title><%- config.title %></title>
 
   <link rel="stylesheet" href="/assets/css/screen.css">
+
+  <script src="https://use.typekit.net/gwp6ivk.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
+
 <%- partial('_partial/header', {}, {cache: true}) %>
+
 <main role="main">
 <%- body %>
 </main>
+
 <%- partial('_partial/footer', {}, {cache: true}) %>
-<script src="https://use.typekit.net/gwp6ivk.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<script src="/assets/js/app.js" defer></script>
+
+<script src="/assets/js/app.js"></script>
+<%- page_scripts(page.js) %>
 </body>
 </html>
