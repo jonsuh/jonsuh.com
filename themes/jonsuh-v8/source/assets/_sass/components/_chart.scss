@@ -2,13 +2,7 @@
 // Chart
 // ==================================================
 .chart {
-  margin-top: 1.75em;
-  margin-bottom: 1.75em;
-
-  @include mq(medium) {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+  @extend %block-margin-y;
 }
 
 .chart-canvas {

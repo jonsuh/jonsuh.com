@@ -47,15 +47,22 @@ h5 {
 
 // Base font sizes
 // ==================================================
-p,
-li {
+%p-font-size {
   @include type-scale(em(16), em(1));
+}
 
+%p-line-height {
   line-height: 1.4;
 
   @include mq(medium) {
     line-height: 1.5;
   }
+}
+
+p,
+li {
+  @extend %p-font-size;
+  @extend %p-line-height;
 }
 
 li {
@@ -128,8 +135,7 @@ blockquote {
   margin-bottom: 1.5em;
 }
 
-figure,
-pre {
+%block-margin-y {
   margin-top: 1.75em;
   margin-bottom: 1.75em;
 
@@ -137,6 +143,11 @@ pre {
     margin-top: 2em;
     margin-bottom: 2em;
   }
+}
+
+figure,
+pre {
+  @extend %block-margin-y;
 }
 
 hr {
