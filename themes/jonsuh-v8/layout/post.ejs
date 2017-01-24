@@ -34,7 +34,7 @@
           <meta itemprop="bestRating" content="5">
         </div>
       <% } %>
-      <div itemprop="<%= (typeof(page.review) === "object") ? "reviewBody" : "articleBody" %>" <% if (page.class) { %>class="<%= page.class %>"<% } %>>
+      <div itemprop="<%= (typeof(page.review) === "object") ? "reviewBody" : "articleBody" %>" class="post__content<%= (page.class) ? " " + page.class : "" %>">
         <%- page.content %>
       </div>
     </article>
