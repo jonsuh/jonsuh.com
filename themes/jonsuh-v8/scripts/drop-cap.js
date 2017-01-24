@@ -15,7 +15,7 @@ hexo.extend.tag.register('dropcap', function(args, content) {
     engine: 'markdown'
   });
 
-  content = content.replace(/<p>/g,"<p class='" + className + "'>");
+  content = content.replace(/<p>/g, "<p class='" + className + "'>");
 
   return content;
 }, {ends: true});

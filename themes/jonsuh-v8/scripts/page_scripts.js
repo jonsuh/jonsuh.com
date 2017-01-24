@@ -25,14 +25,14 @@ hexo.extend.helper.register('page_scripts', function(scripts) {
             scriptContent = fs.readFileSync(script);
           }
 
-          script = '<script>' + scriptContent + '</script>';
+          script = `<script>${scriptContent}</script>`;
         }
         else {
           script = '<script src="' + path.join(scriptsDir, script) + '"></script>';
         }
       }
       else {
-        script = '<script src="' + script + '"></script>';
+        script = `<script src="${script}"></script>`;
       }
 
       html += script + "\n";

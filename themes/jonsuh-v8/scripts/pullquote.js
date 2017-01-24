@@ -27,9 +27,9 @@ hexo.extend.tag.register('pullquote', function(args, content) {
                    .replace(/<\/p>/g,"")
                    .replace(/<p>/g,"");
 
-      cite = '<cite class="pullquote-cite">' + value + '</cite>';
+      cite = `<cite class="pullquote-cite">${value}</cite>`;
     }
   });
 
-  return '<blockquote class="' + className + '">' + content + cite + '</blockquote>';
+  return `<blockquote class="${className}">${content}${cite}</blockquote>`;
 }, {ends: true});

@@ -42,7 +42,7 @@ hexo.extend.tag.register('figure', function(args, content) {
                    .replace(/<\/p>/g,"")
                    .replace(/<p>/g,"");
 
-      caption = '<figcaption class="figure-caption">' + value + '</figcaption>';
+      caption = `<figcaption class="figure-caption">${value}</figcaption>`;
     }
 
     // src
@@ -60,5 +60,5 @@ hexo.extend.tag.register('figure', function(args, content) {
     src = path.join(assetsDir, src);
   }
 
-  return '<figure class="' + className + '"><img src="' + src + '" alt="' + alt + '" class="figure-image">' + caption + '</figure>';
+  return `<figure class="${className}"><img src="${src}" alt="${alt}" class="figure-image">${caption}</figure>`;
 }, {ends: false});
