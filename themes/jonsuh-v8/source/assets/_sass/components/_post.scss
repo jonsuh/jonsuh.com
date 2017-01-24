@@ -19,6 +19,37 @@
   color: color(yellow, 600);
 }
 
+// Content
+// ==================================================
+.post__content {
+  // Table
+  // ==================================================
+  table {
+    @extend %p-font-size;
+    @extend %p-line-height;
+    @extend %block-margin-y;
+
+    width: 100%;
+    border-spacing: 0;
+
+    th {
+      background-color: $grey-lightest;
+    }
+
+    th,
+    td {
+      font-size: 0.9em;
+      padding: 0.5em 0.75em;
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: lighten($grey-lightest, 2.5%);
+      }
+    }
+  }
+}
+
 // Responsive
 // ==================================================
 @include mq(medium) {
@@ -36,5 +67,19 @@
 
   .post__rating {
     color: $grey-darker;
+  }
+
+  .post__content {
+    table {
+      th {
+        background-color: darken($grey-darkest, 5%);
+      }
+
+      tbody {
+        tr:nth-child(even) {
+          background-color: darken($grey-darkest, 2.5%);
+        }
+      }
+    }
   }
 }
