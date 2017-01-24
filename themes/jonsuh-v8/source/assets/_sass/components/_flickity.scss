@@ -1,0 +1,151 @@
+// Flickity
+// ==================================================
+.flickity-viewport {
+  @extend %block-margin-y;
+
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+// Previous/Next
+// ==================================================
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 5rem;
+  border: none;
+  background-color: $white;
+  background-color: rgba($white, 0.7);
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  &.previous {
+    left: 0.5rem;
+  }
+
+  &.next {
+    right: 0.5rem;
+  }
+
+  svg {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .arrow {
+    fill: $grey-darker;
+  }
+}
+
+// Page dots
+// ==================================================
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+
+  .dot {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0 0.5rem;
+    background-color: $grey-darker;
+    border-radius: 50%;
+    opacity: 0.25;
+    cursor: pointer;
+  }
+  .dot.is-selected {
+    background-color: $blue;
+    opacity: 1;
+  }
+}
+
+// Enabled
+// ==================================================
+.flickity-enabled {
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Draggable
+// ==================================================
+.flickity-enabled.is-draggable {
+  tap-highlight-color: transparent;
+  user-select: none;
+
+  .flickity-viewport {
+    cursor: move;
+    cursor: grab;
+  }
+
+  .flickity-viewport.is-pointer-down {
+    cursor: grabbing;
+  }
+}
+
+// RTL
+// ==================================================
+.flickity-rtl {
+  .flickity-prev-next-button.previous {
+    left: auto;
+    right: 0.8rem;
+  }
+
+  .flickity-prev-next-button.next {
+    right: auto;
+    left: 0.8rem;
+  }
+
+  .flickity-page-dots {
+    direction: rtl;
+  }
+}
+
+// Dark
+// ==================================================
+@include dark {
+  .flickity-prev-next-button {
+    background-color: $grey-darkest;
+    background-color: rgba($grey-darkest, 0.7);
+
+    &:hover {
+      background-color: $grey-darkest;
+    }
+
+    .arrow {
+      fill: $grey-light;
+    }
+  }
+}
