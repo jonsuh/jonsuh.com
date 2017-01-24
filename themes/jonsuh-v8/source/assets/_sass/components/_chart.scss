@@ -1,0 +1,77 @@
+// ==================================================
+// Chart
+// ==================================================
+.chart {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+
+  @include mq(medium) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.chart-canvas {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Legend
+// ==================================================
+.chart-legend {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    font-size: em(13);
+    margin: rem(2.5 5);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  span {
+    width: rem(14);
+    height: rem(14);
+    margin-right: rem(5);
+    border-radius: 100%;
+    display: inline-block;
+  }
+}
+
+// Pie
+// ==================================================
+.chart--pie {
+  .chart-canvas {
+    max-width: em(250);
+  }
+
+  @include mq(medium) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .chart-canvas,
+    .chart-legend {
+      margin-left: inherit;
+      margin-right: inherit;
+    }
+
+    .chart-legend {
+      margin-top: 0;
+      margin-left: 2em;
+
+      li {
+        font-size: em(14);
+        display: flex;
+      }
+    }
+  }
+}
