@@ -1,9 +1,5 @@
 // Footer
 // ==================================================
-.footer-wrap {
-  border-top: 1px solid $grey-lightest;
-}
-
 .footer__around {
   font-size: em(15);
   text-align: center;
@@ -53,13 +49,5 @@
 @include mq(large) {
   .footer-link {
     margin-left: 1rem;
-  }
-}
-
-// Dark
-// ==================================================
-@include dark {
-  .footer-wrap {
-    border-top-color: rgba($grey-darker, 0.5);
   }
 }
