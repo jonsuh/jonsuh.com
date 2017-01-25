@@ -81,6 +81,37 @@
   // }
 }
 
+// Prev/Next Buttons
+// ==================================================
+.post-prevnext {
+  @extend %p-font-size;
+
+  text-decoration: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.post-prevnext-arrowl,
+.post-prevnext-arrowr {
+  transition: transform 0.05s linear;
+}
+
+.post-prevnext-arrowl {
+  padding-right: 0.5rem;
+}
+.post-prevnext-arrowr {
+  padding-left: 0.5rem;
+}
+
+.post-prevnext:hover {
+  .post-prevnext-arrowl {
+    transform: translate3d(-1em, 0, 0);
+  }
+  .post-prevnext-arrowr {
+    transform: translate3d(1em, 0, 0);
+  }
+}
+
 // Responsive
 // ==================================================
 @include mq(medium) {
