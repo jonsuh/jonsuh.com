@@ -1,0 +1,54 @@
+<div class="spm--xy">
+  <div class="container container--writing">
+    <article itemscope itemtype="http://schema.org/<%= (typeof(post.review) === "object") ? "Review" : "BlogPosting" %>">
+      <header>
+        <h1 itemprop="name"><%= post.title %></h1>
+        <div class="post__meta smm--b">
+          <% if (typeof(post.dateUpdated) === "undefined") { %>
+            <span class="ff--s fs--i">Published</span> <time content="<%= date(post.date, config.date_format) %>" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+              <%= date(post.date, "MMMM D, YYYY") %>
+            </time>
+          <% } else { %>
+            <span class="ff--s fs--i">Updated</span> <meta content="<%= date(post.date, config.date_format) %>" itemprop="datePublished">
+            <time content="<%= date(post.dateUpdated, config.date_format) %>" datetime="<%= date_xml(post.dateUpdated) %>" itemprop="dateModified" title="Published <%= date(post.date, "MMMM D, YYYY") %>">
+              <%= date(post.dateUpdated, "MMMM D, YYYY") %>
+            </time>
+          <% } %>
+          <span class="ws--nw ln--1.4">
+            <span class="ff--s fs--i">by</span>
+            <a href="/about/" rel="author">
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name"><%- config.author %></span>
+              </span>
+            </a>
+          </span>
+        </div>
+      </header>
+      <% if (typeof(post.review) === "object") { %>
+        <span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
+          <meta itemprop="name" content="<%= post.review.name %>">
+        </span>
+        <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="post__rating mb--0.5">
+          <span class="post-star"><%= "★".repeat(post.review.rating) %></span><%= "☆".repeat(5 - post.review.rating) %>
+          <meta itemprop="ratingValue" content="<%= post.review.rating %>">
+          <meta itemprop="bestRating" content="5">
+        </div>
+      <% } %>
+      <div itemprop="<%= (typeof(post.review) === "object") ? "reviewBody" : "articleBody" %>" class="post__content<%= (post.class) ? " " + post.class : "" %>">
+        <%- post.content %>
+      </div>
+    </article>
+    <div class="d--f spm--t">
+      <% if (post.next) { %>
+        <a href="<%= url_for(post.next.path) %>" title="<%= post.next.title %>" class="post-prevnext d--f">
+          <span class="post-prevnext-arrowl">←</span>Prev Post
+        </a>
+      <% } %>
+      <% if (post.prev) { %>
+        <a href="<%= url_for(post.prev.path) %>" title="<%= post.prev.title %>" class="post-prevnext d--f ml--a">
+          Next Post<span class="post-prevnext-arrowr">→</span>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</div>
