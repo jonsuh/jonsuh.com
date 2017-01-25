@@ -304,6 +304,10 @@ $colors: (
     800: #37474f,
     900: #263238,
   ),
+  social: (
+    facebook: #3b5998,
+    twitter: #1da1f2,
+  ),
 );
 
 @function color($name, $value: 500) {
