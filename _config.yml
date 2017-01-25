@@ -102,6 +102,13 @@ marked:
   smartypants: true
   headingAnchor: lowercase
 
+popularPosts:
+  weight:
+    tagRelevancy: 1.0
+    contentsRelevancy: 1.0
+  cache:
+    path: hexo-popular-related-posts-cache.json
+
 # ============================
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
