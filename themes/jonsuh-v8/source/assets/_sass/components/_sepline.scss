@@ -1,0 +1,17 @@
+// Separator Line
+// ==================================================
+.sepline {
+  border: 0 solid $grey-lightest;
+}
+
+.sepline--top {
+  border-top-width: 1px;
+}
+
+// Dark
+// ==================================================
+@include dark {
+  .sepline {
+    border-color: rgba($grey-darker, 0.5);
+  }
+}
