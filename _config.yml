@@ -17,7 +17,7 @@ timezone: America/Chicago
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # ============================
-url: //localhost:3000
+url: http://localhost:3000
 labs_url: http://labs.jonsuh.com
 root: /
 permalink: blog/:title/
