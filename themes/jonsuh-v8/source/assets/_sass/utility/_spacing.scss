@@ -18,10 +18,10 @@ $spacing-utility: (
         @include spacing-direction($direction, padding, $size, true);
       }
       .sm--#{$direction} {
-        @include spacing-direction($direction, padding, $size, false);
+        @include spacing-direction($direction, margin, $size, false);
       }
       .smm--#{$direction} {
-        @include spacing-direction($direction, padding, $size, true);
+        @include spacing-direction($direction, margin, $size, true);
       }
     }
   }
@@ -35,10 +35,10 @@ $spacing-utility: (
           @include spacing-direction($direction, padding, $size, true);
         }
         .sm--#{$direction} {
-          @include spacing-direction($direction, padding, $size, false);
+          @include spacing-direction($direction, margin, $size, false);
         }
         .smm--#{$direction} {
-          @include spacing-direction($direction, padding, $size, true);
+          @include spacing-direction($direction, margin, $size, true);
         }
       }
     }
