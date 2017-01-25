@@ -12,14 +12,19 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
+<div class="parallax">
+  <div class="p--a parallax__layer parallax__layer--bottom"></div>
+  <div class="p--a parallax__layer parallax__layer--top"></div>
+  <div class="p--a parallax__layer">
+    <%- partial('_partial/header', {}, {cache: true}) %>
 
-<%- partial('_partial/header', {}, {cache: true}) %>
+    <main role="main">
+    <%- body %>
+    </main>
 
-<main role="main">
-<%- body %>
-</main>
-
-<%- partial('_partial/footer', {}, {cache: true}) %>
+    <%- partial('_partial/footer', {}, {cache: true}) %>
+  </div>
+</div>
 
 <script src="/assets/js/app.js"></script>
 <%- page_scripts(page.js) %>
