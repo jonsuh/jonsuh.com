@@ -18,18 +18,18 @@ body {
   right: 0;
 }
 
-.parallax__layer--top,
-.parallax__layer--bottom {
+.parallax__layer--1,
+.parallax__layer--2 {
   transition: transform 0.3s ease-out;
 }
 
-.parallax__layer--top {
+.parallax__layer--1 {
   background-image: linear-gradient(140deg, $grey-lightest, lighten($grey-lightest, 2%));
-  height: em(1400);
-  transform: skewY(3deg) translate3d(em(-14), em(-1600), -2px) scaleX(3);
+  height: em(1600);
+  transform: skewY(3deg) translate3d(em(-14), em(-1900), -2px) scaleX(3);
 }
 
-.parallax__layer--bottom {
+.parallax__layer--2 {
   background-image: linear-gradient(90deg, $grey-lightest, $white);
   height: em(1300);
   transform: skewY(-30deg) translate3d(em(-7), em(-1400), -1px) scaleX(2);
@@ -37,43 +37,41 @@ body {
 }
 
 @include mq(small) {
-  .parallax__layer--top {
-    transform: skewY(5deg) translate3d(em(-14), em(-1400), -2px) scaleX(3);
+  .parallax__layer--1 {
+    transform: skewY(5deg) translate3d(em(-14), em(-1700), -2px) scaleX(3);
   }
 
-  .parallax__layer--bottom {
+  .parallax__layer--2 {
     transform: skewY(-25deg) translate3d(em(-7), em(-1300), -1px) scaleX(2);
   }
 }
 
 @include mq(medium) {
-  .parallax__layer--top {
-    transform: skewY(7deg) translate3d(em(-14), em(-1200), -2px) scaleX(3);
+  .parallax__layer--1 {
+    transform: skewY(7deg) translate3d(em(-14), em(-1500), -2px) scaleX(3);
   }
 
-  .parallax__layer--bottom {
+  .parallax__layer--2 {
     transform: skewY(-20deg) translate3d(em(-7), em(-1200), -1px) scaleX(2);
   }
 }
 
 @include mq(large) {
-  .parallax__layer--top {
-    transform: skewY(9deg) translate3d(em(-14), em(-1200), -2px) scaleX(3);
+  .parallax__layer--1 {
+    transform: skewY(9deg) translate3d(em(-14), em(-1500), -2px) scaleX(3);
   }
 
-  .parallax__layer--bottom {
+  .parallax__layer--2 {
     transform: skewY(-15deg) translate3d(em(-7), em(-1200), -1px) scaleX(2);
   }
 }
 
-// Dark
-// ==================================================
 @include dark {
-  .parallax__layer--top {
+  .parallax__layer--1 {
     background-image: linear-gradient(140deg, darken($grey-darkest, 2%), darken($grey-darkest, 3%));
   }
 
-  .parallax__layer--bottom {
+  .parallax__layer--2 {
     background-image: linear-gradient(90deg, darken($grey-darkest, 3%), $grey-darkest);
   }
 }
