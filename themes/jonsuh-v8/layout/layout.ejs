@@ -12,18 +12,21 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-<div class="parallax">
-  <div class="parallax__layer parallax__layer--1"></div>
+<div class="parallax" data-rellax-speed="-10">
   <div class="parallax__layer parallax__layer--2"></div>
-  <div class="parallax__layer">
-    <%- partial('_partial/header', {}, {cache: true}) %>
+</div>
+<div class="parallax" data-rellax-speed="10">
+  <div class="parallax__layer parallax__layer--1"></div>
+</div>
 
-    <main role="main">
-    <%- body %>
-    </main>
 
-    <%- partial('_partial/footer', {}, {cache: true}) %>
-  </div>
+<%- partial('_partial/header', {}, {cache: true}) %>
+
+<main role="main">
+<%- body %>
+</main>
+
+<%- partial('_partial/footer', {}, {cache: true}) %>
 </div>
 
 <script src="/assets/js/app.js"></script>
