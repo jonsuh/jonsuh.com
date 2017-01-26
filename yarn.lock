@@ -3003,13 +3003,13 @@ moment-timezone@^0.5.4:
   dependencies:
     moment ">= 2.6.0"
 
-"moment@>= 2.6.0", moment@^2.10.6, moment@~2.13.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.13.0.tgz#24162d99521e6d40f99ae6939e806d2139eaac52"
-
-moment@^2.17.1, moment@^2.8.4:
+"moment@>= 2.6.0", moment@^2.10.6, moment@^2.17.1, moment@^2.8.4:
   version "2.17.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.17.1.tgz#fed9506063f36b10f066c8b59a144d7faebe1d82"
+
+moment@~2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.13.0.tgz#24162d99521e6d40f99ae6939e806d2139eaac52"
 
 mq-sass@^0.8.0:
   version "0.8.0"
@@ -3648,6 +3648,10 @@ regex-cache@^0.4.2:
     is-equal-shallow "^0.1.3"
     is-primitive "^2.0.0"
 
+rellax@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/rellax/-/rellax-1.0.0.tgz#89e2a4bc73273a098f0925e6f2a18a5aaae8d0d4"
+
 remove-trailing-separator@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.0.1.tgz#615ebb96af559552d4bf4057c8436d486ab63cc4"
@@ -3680,7 +3684,7 @@ replace-ext@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-1.0.0.tgz#de63128373fcbf7c3ccfa4de5a480c45a67958eb"
 
-request@2, request@2.78.0, request@^2.55.0, request@^2.61.0:
+request@2, request@2.78.0, request@^2.54.0, request@^2.55.0, request@^2.61.0:
   version "2.78.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
   dependencies:
@@ -3705,7 +3709,7 @@ request@2, request@2.78.0, request@^2.55.0, request@^2.61.0:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
 
-request@^2.54.0, request@^2.79.0:
+request@^2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:

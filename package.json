@@ -28,6 +28,7 @@
     "gulp-sourcemaps": "^1.9.1",
     "mcgriddle": "^0.5.0",
     "merge-stream": "^1.0.1",
-    "mq-sass": "^0.8.0"
+    "mq-sass": "^0.8.0",
+    "rellax": "^1.0.0"
   }
 }
