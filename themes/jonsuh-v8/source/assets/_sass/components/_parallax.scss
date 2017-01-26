@@ -23,55 +23,48 @@ body {
   transition: transform 0.3s ease-out;
 }
 
+.parallax__layer--main {
+  position: relative;
+}
+
 .parallax__layer--1 {
-  background-image: linear-gradient(140deg, $grey-lightest, lighten($grey-lightest, 2%));
-  height: em(1600);
-  transform: skewY(3deg) translate3d(em(-14), em(-1900), -2px) scaleX(3);
+  height: em(2600);
+  background-image: linear-gradient(95deg, $grey-lighter 20%, $grey-lightest);
+  transform: translate3d(em(-7), em(-3100), -3px) scaleX(4) skewY(65deg);
 }
 
 .parallax__layer--2 {
-  background-image: linear-gradient(90deg, $grey-lightest, $white);
-  height: em(1300);
-  transform: skewY(-30deg) translate3d(em(-7), em(-1400), -1px) scaleX(2);
-  box-shadow: 0 0 em(50) em(5) rgba($black, 0.04);
+  height: em(1600);
+  background-image: linear-gradient(75deg, darken($grey-lightest, 2%), $white 50%);
+  transform: translate3d(em(-7), em(-1650), -1px) scaleX(2) skewY(-55deg);
+  box-shadow: em(5) em(5) em(50) em(2) rgba($black, 0.05);
 }
 
 @include mq(small) {
   .parallax__layer--1 {
-    transform: skewY(5deg) translate3d(em(-14), em(-1700), -2px) scaleX(3);
+    transform: translate3d(em(-7), em(-3000), -3px) scaleX(4) skewY(60deg);
   }
-
   .parallax__layer--2 {
-    transform: skewY(-25deg) translate3d(em(-7), em(-1300), -1px) scaleX(2);
+    transform: translate3d(em(-7), em(-1575), -1px) scaleX(2) skewY(-50deg);
   }
 }
 
 @include mq(medium) {
   .parallax__layer--1 {
-    transform: skewY(7deg) translate3d(em(-14), em(-1500), -2px) scaleX(3);
+    transform: translate3d(em(-7), em(-2900), -3px) scaleX(4) skewY(55deg);
   }
 
   .parallax__layer--2 {
-    transform: skewY(-20deg) translate3d(em(-7), em(-1200), -1px) scaleX(2);
+    transform: translate3d(em(-7), em(-1500), -1px) scaleX(2) skewY(-45deg);
   }
 }
 
 @include mq(large) {
   .parallax__layer--1 {
-    transform: skewY(9deg) translate3d(em(-14), em(-1500), -2px) scaleX(3);
+    transform: translate3d(em(-7), em(-2800), -3px) scaleX(4) skewY(50deg);
   }
 
   .parallax__layer--2 {
-    transform: skewY(-15deg) translate3d(em(-7), em(-1200), -1px) scaleX(2);
-  }
-}
-
-@include dark {
-  .parallax__layer--1 {
-    background-image: linear-gradient(140deg, darken($grey-darkest, 2%), darken($grey-darkest, 3%));
-  }
-
-  .parallax__layer--2 {
-    background-image: linear-gradient(90deg, darken($grey-darkest, 3%), $grey-darkest);
+    transform: translate3d(em(-7), em(-1425), -1px) scaleX(2) skewY(-40deg);
   }
 }
