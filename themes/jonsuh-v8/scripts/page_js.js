@@ -1,11 +1,11 @@
 /*
-  {% page_scripts yaml %}
+  {% page_js yaml %}
 */
 const path = require('path');
 const fs = require('hexo-fs');
 const uglify = require('uglify-js');
 
-hexo.extend.helper.register('page_scripts', function(scripts) {
+hexo.extend.helper.register('page_js', function(scripts) {
   let scriptsDir = hexo.config.scripts_dir;
 
   let html = "";
