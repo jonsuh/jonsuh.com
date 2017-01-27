@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><%- config.title %></title>
+  <title><%- config.title -%></title>
 
   <link rel="stylesheet" href="/assets/css/screen.css">
-  <%- page_css(page.css) %>
+
+  <%- page_css(page.css) -%>
 
   <script src="https://use.typekit.net/gwp6ivk.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -19,17 +20,18 @@
   <div class="parallax__layer parallax__layer--1"></div>
 </div>
 
-
-<%- partial('_partial/header', {}, {cache: true}) %>
+<%- partial('_partial/header', {}, {cache: true}) -%>
 
 <main role="main">
 <%- body %>
 </main>
 
-<%- partial('_partial/footer', {}, {cache: true}) %>
+<%- partial('_partial/footer', {}, {cache: true}) -%>
+
 </div>
 
 <script src="/assets/js/app.js"></script>
-<%- page_js(page.js) %>
+
+<%- page_js(page.js) -%>
 </body>
 </html>

@@ -29,7 +29,7 @@
           <% } %>
         </div>
         <p class="mb--0.5">
-          <a href="<%- (post.external) ? post.external.url : url_for(post.path) %>" class="archive-link"><%= post.title %></a>
+          <a href="<%= (post.external) ? post.external.url : url_for(post.path) %>" class="archive-link"><%- post.title %></a>
         </p>
       </article>
     <% }) %>
