@@ -93,6 +93,36 @@
 //   margin-bottom: 0;
 // }
 
+// Share
+// ==================================================
+.post__share-link {
+  text-decoration: none;
+  padding: 0.75em;
+  transition-property: background-color, fill;
+
+  .social-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.post__share-link--facebook {
+  fill: color(social, facebook);
+
+  &:hover {
+    background-color: color(social, facebook);
+    fill: $white;
+  }
+}
+.post__share-link--twitter {
+  fill: color(social, twitter);
+
+  &:hover {
+    background-color: color(social, twitter);
+    fill: $white;
+  }
+}
+
 // Prev/Next Buttons
 // ==================================================
 .post-prevnext {
@@ -117,10 +147,10 @@
 
 .post-prevnext:hover {
   .post-prevnext-arrowl {
-    transform: translate3d(-1em, 0, 0);
+    transform: translate3d(-0.5em, 0, 0);
   }
   .post-prevnext-arrowr {
-    transform: translate3d(1em, 0, 0);
+    transform: translate3d(0.5em, 0, 0);
   }
 }
 

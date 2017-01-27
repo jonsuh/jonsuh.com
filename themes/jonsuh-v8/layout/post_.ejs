@@ -38,6 +38,19 @@
         <%- post.content %>
       </div>
     </article>
+    <div class="sp--t d--f ai--c">
+      <p class="mb--0 mr--1">Share</p>
+      <a href="https://twitter.com/intent/tweet?text=<%- encode_url(post.title) %>&url=<%- encode_url(config.url + url_for(post.path)) %>&via=jonsuh" class="post__share-link post__share-link--twitter js-share-twitter" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon social-icon--twitter" width="20px" height="20px">
+          <use xlink:href="/assets/images/icons.svg#twitter"></use>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=<%- encode_url(config.url + url_for(post.path)) %>&title=<%- encode_url(post.title) %>&description=<%- encode_url(strip_html(post.excerpt)) %>" class="post__share-link post__share-link--facebook js-share-facebook" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon social-icon--facebook" width="20px" height="20px">
+          <use xlink:href="/assets/images/icons.svg#facebook"></use>
+        </svg>
+      </a>
+    </div>
     <div class="d--f spm--t">
       <% if (post.next) { %>
         <a href="<%= url_for(post.next.path) %>" title="<%= post.next.title %>" class="post-prevnext d--f">
