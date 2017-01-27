@@ -70,6 +70,7 @@ gulp.task('js', ['js-vendor', 'eslint'], function() {
   return gulp.src([
       'node_modules/rellax/rellax.js',
       'themes/jonsuh-v8/source/assets/_js/utility.js',
+      'themes/jonsuh-v8/source/assets/_js/share.js',
       'themes/jonsuh-v8/source/assets/_js/app.js',
     ])
     .pipe(sourcemaps.init())
