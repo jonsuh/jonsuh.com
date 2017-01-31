@@ -1,5 +1,5 @@
 /*
-  {% page_css yaml %}
+  <%- page_css(yaml) %>
 */
 const path = require('path');
 const fs = require('hexo-fs');

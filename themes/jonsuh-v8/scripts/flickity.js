@@ -1,3 +1,9 @@
+/*
+  {% figure %}
+  http://example.com/image.jpg
+  http://example.com/image.jpg "alt"
+  {% endfigure %}
+*/
 hexo.extend.tag.register('flickity', function(args, content) {
   let arr = content.split(/\n/);
 
