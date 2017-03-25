@@ -2,6 +2,27 @@ var Utility = (function() {
   "use strict";
 
   /**
+   * Executes function when DOM is ready
+   *
+   * @public
+   * @param {Function} callback
+   */
+  var domReady = function(callback) {
+    if (typeof callback === "function") {
+      if (
+          document.readyState === "complete" ||
+          (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+
+        callback();
+      }
+      else {
+        document.addEventListener("DOMContentLoaded", callback);
+      }
+    }
+  };
+
+  /**
    * Opens popup window
    *
    * @public
@@ -25,6 +46,7 @@ var Utility = (function() {
 
 
   return {
+    domReady: domReady,
     windowOpen: windowOpen
   };
 
