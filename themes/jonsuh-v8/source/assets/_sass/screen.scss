@@ -35,7 +35,7 @@
 
 // Components - Styled selectors
 // ==================================================
-@import "components/parallax";
+// @import "components/parallax";
 @import "components/logo";
 @import "components/navigation";
 @import "components/footer";
@@ -53,6 +53,8 @@
 // Trumps
 // ==================================================
 @import "trumps/selection";
+
+@import "trumps/home";
 
 // Utility Classes
 // ==================================================
