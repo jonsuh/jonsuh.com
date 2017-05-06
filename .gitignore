@@ -1,4 +1,5 @@
 .DS_Store
+.colorhighlighter
 node_modules
 themes/*/source/assets/_css
 
