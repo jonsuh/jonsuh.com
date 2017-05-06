@@ -16,7 +16,7 @@
 }
 
 .post-star {
-  color: color(yellow, 600);
+  color: $yellow-600;
 }
 
 // Content
@@ -107,18 +107,18 @@
 }
 
 .post__share-link--facebook {
-  fill: color(social, facebook);
+  fill: $social-facebook;
 
   &:hover {
-    background-color: color(social, facebook);
+    background-color: $social-facebook;
     fill: $white;
   }
 }
 .post__share-link--twitter {
-  fill: color(social, twitter);
+  fill: $social-twitter;
 
   &:hover {
-    background-color: color(social, twitter);
+    background-color: $social-twitter;
     fill: $white;
   }
 }

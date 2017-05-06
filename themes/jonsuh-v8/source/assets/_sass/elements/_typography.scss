@@ -279,7 +279,7 @@ sub {
 mark {
   color: $grey-darker;
   background-color: $yellow;
-  background-image: linear-gradient(to right, $yellow, color(yellow, 300));
+  background-image: linear-gradient(to right, $yellow, $yellow-300);
 }
 
 // Horizontal Line

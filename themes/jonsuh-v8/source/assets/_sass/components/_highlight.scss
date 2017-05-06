@@ -35,7 +35,7 @@
 
   .token.string,
   .token.attr-value {
-    color: color(lime, 900);
+    color: $lime-900;
   }
 
   .token.punctuation,
@@ -52,17 +52,17 @@
   .token.property,
   .token.regex,
   .token.inserted {
-    color: color(blue, 600);
+    color: $blue-600;
   }
 
   .token.number {
-    color: color(cyan, 700);
+    color: $cyan-700;
   }
 
   .token.atrule,
   .token.attr-name,
   .language-autohotkey .token.selector {
-    color: color(orange, 800);
+    color: $orange-800;
   }
 
   .token.keyword,
@@ -119,7 +119,7 @@
 
     .token.string,
     .token.attr-value {
-      color: color(green, 400);
+      color: $green-400;
     }
 
     .token.punctuation,
@@ -146,20 +146,20 @@
     .token.atrule,
     .token.attr-name,
     .language-autohotkey .token.selector {
-      color: color(orange, 600);
+      color: $orange-600;
     }
 
     .token.keyword,
     .token.function,
     .token.deleted,
     .language-autohotkey .token.tag {
-      color: color(purple, 300);
+      color: $purple-300;
     }
 
     .token.tag,
     .token.selector,
     .language-autohotkey .token.keyword {
-      color: color(pink, 400);
+      color: $pink-400;
     }
   }
 }

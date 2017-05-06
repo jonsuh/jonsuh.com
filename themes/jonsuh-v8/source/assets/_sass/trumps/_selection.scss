@@ -8,7 +8,7 @@
 blockquote ::selection,
 .figure ::selection {
   color: $white;
-  background-color: color(blue, 800);
+  background-color: $blue-800;
 }
 
 figure pre ::selection {
@@ -26,6 +26,6 @@ figure pre ::selection {
   blockquote ::selection,
   .figure ::selection {
     color: $grey-lighter;
-    background-color: color(blue, 900);
+    background-color: $blue-900;
   }
 }
