@@ -3,10 +3,10 @@
   "version": "8.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.2"
+    "version": "3.3.5"
   },
   "dependencies": {
-    "hexo": "^3.2.2",
+    "hexo": "^3.3.5",
     "hexo-generator-archive": "^0.1.4",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-marked": "ssh://github.com/jonsuh/hexo-renderer-marked#2a81fb5",
