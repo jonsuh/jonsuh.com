@@ -1,10 +1,70 @@
-.home__hero {
-  text-align: center;
-  height: 60vh;
+.home__image {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+
+// Desk
+// ==================================================
+.home__desk {
+  width: 100%;
+  min-width: em(1024);
+  max-width: em(1400);
+}
+
+@include mq(340) {
+  .home__desk-cup-steam {
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    animation: home__desk-cup-steam 5s ease-out forwards infinite;
+  }
+}
+
+@keyframes home__desk-cup-steam {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@include mq(545) {
+  .home__desk-speaker-tweeter {
+    animation: home__desk-speaker-tweeter 0.6s ease-in forwards infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  @keyframes home__desk-speaker-tweeter {
+    0%, 40%, 100% {
+      transform: scale(0.98);
+    }
+    20% {
+      transform: scale(1.01);
+    }
+  }
+}
+
+
+
+// Name
+// ==================================================
+.home__name-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__name {
+  display: flex;
+  transform: translateX(-0.25vw);
 }
 
 .home__letter {
@@ -35,12 +95,32 @@
 }
 
 
-// Hero animation
+// Name animation
+// ==================================================
+.home--stroke-dark {
+  stroke: $grey-darkest;
+}
+.home--fill-dark {
+  fill: $grey-darkest;
+}
+.home--stroke-light {
+  stroke: $grey-lightest;
+}
+.home--fill-light {
+  fill: $grey-lightest;
+}
+.home--fill-white {
+  fill: #fff;
+}
+
+
+// Name animation
 // ==================================================
 .home-letter {
   transition: transform 0.5s ease-in-out;
   transition-timing-function: cubic-bezier(0.23, 0.5, 0.88, 1);
   transform: rotateX(-90deg);
+  fill: $grey-darkest;
 }
 
 .home__letter:nth-child(5) .home-letter { transition-delay: 0.9s; }
@@ -52,8 +132,32 @@
 .home__letter:nth-child(7) .home-letter { transition-delay: 0.63s; }
 .home__letter:nth-child(3) .home-letter { transition-delay: 0.72s; }
 
-.home__hero.is-ready {
+.home__name.is-ready {
   .home-letter {
     transform: rotateX(0deg);
+  }
+}
+
+
+// Dark
+// ==================================================
+@include dark {
+  .home--stroke-dark {
+    stroke: $grey-lighter;
+  }
+  .home--fill-dark {
+    fill: $grey-lighter;
+  }
+  .home--stroke-light {
+    stroke: $grey-darker;
+  }
+  .home--fill-light {
+    fill: $grey-darker;
+  }
+  .home--fill-white {
+    fill: $grey-darkest;
+  }
+  .home-letter {
+    fill: $grey-lighter;
   }
 }

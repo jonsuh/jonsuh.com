@@ -5,7 +5,7 @@ var App = (function() {
     rellaxInit();
 
     Utility.domReady(function() {
-      document.querySelector(".js-home__hero").classList.add("is-ready");
+      document.querySelector(".js-home__name").classList.add("is-ready");
     });
 
     Share.init();
