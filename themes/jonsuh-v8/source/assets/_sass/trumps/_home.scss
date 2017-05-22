@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
+  overflow: visible;
+  overflow-x: hidden;
 }
 
 
@@ -13,8 +14,13 @@
   width: 100%;
   min-width: em(1024);
   max-width: em(1400);
+  overflow: visible;
 }
 
+
+
+// Desk Animations
+// ==================================================
 @include mq(340) {
   .home__desk-cup-steam {
     stroke-dashoffset: 100;
@@ -32,19 +38,81 @@
 
 @include mq(545) {
   .home__desk-speaker-tweeter {
-    animation: home__desk-speaker-tweeter 0.6s ease-in forwards infinite;
+    animation: home__desk-speaker-tweeter 1.75s ease-in forwards infinite;
     transform-box: fill-box;
     transform-origin: center;
   }
 
   @keyframes home__desk-speaker-tweeter {
-    0%, 40%, 100% {
+    0%, 15%, 45%, 55%, 65%, 100% {
       transform: scale(0.98);
     }
-    20% {
-      transform: scale(1.01);
+    10%, 50%, 60% {
+      transform: scale(1.02);
     }
   }
+}
+
+.home__desk-speaker-knob {
+  transition: transform 0.5s linear;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.home__desk-speaker-light {
+  transition-delay: 0s;
+  transition: opacity 0.1s linear;
+}
+
+.home__desk-playpause {
+  cursor: pointer;
+}
+
+.home__desk-play,
+.home__desk-pause {
+  transition: opacity 0.1s linear;
+}
+
+.home__desk-play {
+  opacity: 0;
+}
+
+.home__desk {
+  &.is-speaker-off {
+    .home__desk-speaker-tweeter {
+      animation-name: none;
+    }
+
+    .home__desk-speaker-knob {
+      transform: rotate(-135deg);
+    }
+
+    .home__desk-speaker-light {
+      opacity: 0;
+      transition-delay: 0.5s;
+    }
+  }
+
+  &.is-paused {
+    .home__desk-speaker-tweeter {
+      animation-name: none;
+    }
+    .home__desk-play {
+      opacity: 1;
+    }
+    .home__desk-pause {
+      opacity: 0;
+    }
+  }
+}
+
+.home__desk-frame {
+  transition: transform 0.075s ease-in-out;
+  transform-origin: top center;
+}
+
+.home__desk-frame:hover {
+  transform: rotate(-4deg);
 }
 
 
@@ -60,6 +128,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .home__name {
@@ -104,10 +173,10 @@
   fill: $grey-darkest;
 }
 .home--stroke-light {
-  stroke: $grey-lightest;
+  stroke: #e6e6e7;
 }
 .home--fill-light {
-  fill: $grey-lightest;
+  fill: #e6e6e7;
 }
 .home--fill-white {
   fill: #fff;
