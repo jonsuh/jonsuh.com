@@ -1,0 +1,77 @@
+.ufo-building {
+  width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.ufo-building-float {
+  animation: ufo-building-float 5s linear infinite;
+}
+
+.ufo-big {
+  animation: ufo-big 5s linear infinite;
+}
+
+.ufo-small {
+  animation: ufo-small 5s linear infinite;
+}
+
+.ufo-big-lights-light {
+  animation: ufo-big-lights 2.5s ease infinite;
+}
+
+.ufo-big-lights-light--2 {
+  animation-delay: 0.2s;
+}
+
+.ufo-big-lights-light--3 {
+  animation-delay: 0.4s;
+}
+
+.ufo-big-lights-light--4 {
+  animation-delay: 0.6s;
+}
+
+.ufo-big-lights-light--5 {
+  animation-delay: 0.8s;
+}
+
+.building-flames path {
+  fill: #f44336;
+  animation: building-flames 0.15s ease infinite;
+  transform-origin: center top;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes ufo-building-float {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-1.5em); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(1.5em); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes ufo-big {
+  0% { opacity: 0; }
+  15%, 70% { opacity: 1; }
+  85%, 100% { opacity: 0; }
+}
+
+@keyframes ufo-small {
+  0%, 10% { opacity: 0; }
+  25%, 85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes ufo-big-lights {
+  0% { fill: #000; }
+  20% { fill: #ffeb3b; }
+  40%, 100% { fill: #000; }
+}
+
+@keyframes building-flames {
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(1, 1.2); }
+  100% { transform: scale(1, 1); }
+}
