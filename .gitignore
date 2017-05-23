@@ -1,11 +1,24 @@
 .DS_Store
-.colorhighlighter
+bower_components
 node_modules
+
+
+.colorhighlighter
 themes/*/source/assets/_css
 
 
-# hexo
+# AWS
+aws-keys.json
+
+
+# Hexo
 db.json
 *.log
 public/
 .deploy*/
+
+
+# Jekyll
+_includes
+_s3
+_site
