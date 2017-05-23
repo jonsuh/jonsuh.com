@@ -36,7 +36,10 @@ gulp.task('css', function() {
     autoprefixer(postCSSOptions.autoprefixer),
   ];
 
-  return gulp.src('themes/jonsuh-v8/source/assets/_sass/**/*.scss')
+  return gulp.src([
+      'themes/jonsuh-v8/source/assets/_sass/**/*.scss',
+      'themes/jonsuh-v8/source/assets/css/**/*.css'
+    ])
     .pipe(plumber(plumberOptions))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
@@ -90,7 +93,10 @@ gulp.task('watch', function() {
     cb(err);
   });
 
-  gulp.watch('themes/jonsuh-v8/source/assets/_sass/**/*.scss', ['css']);
+  gulp.watch([
+    'themes/jonsuh-v8/source/assets/_sass/**/*.scss',
+    'themes/jonsuh-v8/source/assets/css/**/*.css'
+  ], ['css']);
   gulp.watch('themes/jonsuh-v8/source/assets/_js/**/*.js', ['js']);
 });
 
