@@ -37,8 +37,6 @@
 // ==================================================
 // @import "components/parallax";
 @import "components/logo";
-@import "components/navigation";
-@import "components/footer";
 @import "components/typography";
 
 @import "components/chart";
@@ -47,8 +45,13 @@
 @import "components/highlight";
 @import "components/sepline";
 
-@import "components/archive";
-@import "components/post";
+// Modules - Styled selectors
+// ==================================================
+@import "modules/navigation";
+@import "modules/footer";
+
+@import "modules/archive";
+@import "modules/post";
 
 // Trumps
 // ==================================================
