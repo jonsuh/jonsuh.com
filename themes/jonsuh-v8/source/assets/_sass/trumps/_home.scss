@@ -128,7 +128,7 @@
 }
 
 .home__desk-frame {
-  transition: transform 0.075s ease-in-out;
+  transition: transform 0.075s cubic-bezier(.02, .01, .47, 1);
   transform-origin: top center;
 }
 
@@ -141,7 +141,7 @@
 // Name
 // ==================================================
 .home__namedesc {
-  $height: 100;
+  $height: 150;
 
   width: 100%;
   height: rem($height);
@@ -158,6 +158,7 @@
 .home__name {
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 
 .home__letter {
@@ -172,23 +173,83 @@
   display: inline-flex;
 }
 
+.home__namedesc {
+  perspective: 10000px;
+}
+
 .home__desc {
   @include font-smoothing;
 
   font-weight: 700;
   font-size: em(20);
   color: #fff;
-  background-color: $grey-darkest;
-  padding: 0.3rem 0.7rem 0.5rem;
   align-items: center;
-  letter-spacing: 0.1em;
   text-align: center;
   flex-basis: auto;
+  pointer-events: all;
+
+  transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.home__desc-title,
+.home__desc-name {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: rem(40);
+  line-height: rem(36);
+  display: flex;
+  justify-content: center;
+}
+
+.home__desc-title {
+  background-color: $grey-darkest;
+  transform: translate3d(0, 0, rem(20));
+}
+
+.home__desc-name {
+  color: #fff;
+  text-decoration: none;
+  background-color: $red;
+  background-image: linear-gradient(to right, $red, $pink);
+  transform: rotateX(-90deg) translate3d(0, 0, rem(-20));
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, $pink, $red);
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      animation: home__desc-name 8s linear forwards infinite;
+    }
+  }
+}
+
+@keyframes home__desc-name {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.home__desc:hover,
+.home__desc.is-hover {
+  transform: rotateX(90deg) translate3d(0, 0, rem(20));
 }
 
 @include mq(500) {
   .home__namedesc {
-    $height: 120;
+    $height: 170;
 
     height: rem($height);
     top: calc(50% - #{rem($height / 2)});
@@ -205,11 +266,29 @@
   .home__desc {
     font-size: em(22);
   }
+
+  .home__desc-title,
+  .home__desc-name {
+    height: rem(46);
+    line-height: rem(42);
+  }
+
+  .home__desc-title {
+    transform: translate3d(0, 0, rem(23));
+  }
+
+  .home__desc-name {
+    transform: rotateX(-90deg) translate3d(0, 0, rem(-23));
+  }
+
+  .home__desc:hover {
+    transform: rotateX(90deg) translate3d(0, 0, rem(23));
+  }
 }
 
 @include mq(medium) {
   .home__namedesc {
-    $height: 150;
+    $height: 190;
 
     height: rem($height);
     top: calc(50% - #{rem($height / 2)});
@@ -242,7 +321,7 @@
 
 .home__name.is-ready {
   .home-letter {
-    transform: rotateX(0deg);
+    transform: none;
   }
 }
 
