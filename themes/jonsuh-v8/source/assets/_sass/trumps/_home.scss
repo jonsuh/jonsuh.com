@@ -8,6 +8,7 @@
 }
 
 
+
 // Desk
 // ==================================================
 .home__desk {
@@ -119,68 +120,86 @@
 
 // Name
 // ==================================================
-.home__name-wrap {
+.home__namedesc {
+  $height: 100;
+
   width: 100%;
-  height: 100%;
+  height: rem($height);
   position: absolute;
-  top: 0;
+  top: calc(50% - #{rem($height / 2)});
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   pointer-events: none;
 }
 
 .home__name {
   display: flex;
-  transform: translateX(-0.25vw);
+  justify-content: center;
 }
 
 .home__letter {
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
   perspective: 300px;
 }
 
-.home__letter-- {
-  display: none;
-}
-
 .home-letter {
-  font-size: 2em;
+  font-size: 1.25em;
   height: em(30);
   display: inline-flex;
 }
 
+.home__desc {
+  @include font-smoothing;
+
+  font-weight: 700;
+  font-size: em(20);
+  color: #fff;
+  background-color: $grey-darkest;
+  padding: 0.3rem 0.7rem 0.5rem;
+  align-items: center;
+  letter-spacing: 0.1em;
+  text-align: center;
+  flex-basis: auto;
+}
+
+@include mq(500) {
+  .home__namedesc {
+    $height: 120;
+
+    height: rem($height);
+    top: calc(50% - #{rem($height / 2)});
+  }
+
+  .home__name {
+    flex-basis: 100%;
+  }
+
+  .home-letter {
+    font-size: 1.5em;
+  }
+
+  .home__desc {
+    font-size: em(22);
+  }
+}
+
 @include mq(medium) {
-  .home__letter-- {
-    display: inherit;
+  .home__namedesc {
+    $height: 150;
+
+    height: rem($height);
+    top: calc(50% - #{rem($height / 2)});
   }
 
-  .home__letter {
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
+  .home-letter {
+    font-size: 2em;
   }
 }
 
-
-// Name animation
-// ==================================================
-.home--stroke-dark {
-  stroke: $grey-darkest;
-}
-.home--fill-dark {
-  fill: $grey-darkest;
-}
-.home--stroke-light {
-  stroke: #e6e6e7;
-}
-.home--fill-light {
-  fill: #e6e6e7;
-}
-.home--fill-white {
-  fill: #fff;
-}
 
 
 // Name animation
@@ -206,6 +225,27 @@
     transform: rotateX(0deg);
   }
 }
+
+
+
+// Strokes and Fills
+// ==================================================
+.home--stroke-dark {
+  stroke: $grey-darkest;
+}
+.home--fill-dark {
+  fill: $grey-darkest;
+}
+.home--stroke-light {
+  stroke: #e6e6e7;
+}
+.home--fill-light {
+  fill: #e6e6e7;
+}
+.home--fill-white {
+  fill: #fff;
+}
+
 
 
 // Dark
