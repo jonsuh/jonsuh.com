@@ -49,7 +49,7 @@
       transform: scale(0.98);
     }
     10%, 50%, 60% {
-      transform: scale(1.02);
+      transform: scale(1.04);
     }
   }
 }
@@ -71,11 +71,20 @@
 
 .home__desk-play,
 .home__desk-pause {
-  transition: opacity 0.1s linear;
+  transition: opacity 0.15s linear;
 }
 
 .home__desk-play {
   opacity: 0;
+}
+
+.home__desk-mouse {
+  cursor: pointer;
+}
+
+.home__desk-cursor,
+.home__desk-mouse {
+  transition: transform 0.8s cubic-bezier(.35,.88,.38,.99);
 }
 
 .home__desk {
@@ -94,13 +103,24 @@
     }
   }
 
+  &.is-mouse-moved {
+    .home__desk-cursor {
+      transform: translate3d(rem(150), rem(-40), 0);
+    }
+    .home__desk-mouse {
+      transform: translate3d(rem(30), 0, 0);
+    }
+  }
+
   &.is-paused {
     .home__desk-speaker-tweeter {
       animation-name: none;
     }
+
     .home__desk-play {
       opacity: 1;
     }
+
     .home__desk-pause {
       opacity: 0;
     }

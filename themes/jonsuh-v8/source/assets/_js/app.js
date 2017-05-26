@@ -13,18 +13,24 @@ var App = (function() {
   };
 
   var homeInit = function() {
+    var home__desk = document.querySelector(".home__desk");
+
     document
-      .querySelector(".js-home__desk-speaker-knob")
+      .querySelector(".js-home__desk-mouse")
       .addEventListener("click", function() {
-        document
-          .querySelector(".home__desk")
-          .classList.toggle("is-speaker-off");
+        home__desk.classList.toggle("is-mouse-moved");
       });
 
     document
       .querySelector(".js-home__desk-playpause")
       .addEventListener("click", function() {
-        document.querySelector(".home__desk").classList.toggle("is-paused");
+        home__desk.classList.toggle("is-paused");
+      });
+
+    document
+      .querySelector(".js-home__desk-speaker-knob")
+      .addEventListener("click", function() {
+        home__desk.classList.toggle("is-speaker-off");
       });
   };
 
