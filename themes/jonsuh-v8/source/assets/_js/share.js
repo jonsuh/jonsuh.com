@@ -1,6 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 var Share = (function() {
   "use strict";
-
   var init = function() {
     var twitterLinks = document.querySelectorAll(".js-share-twitter");
     if (twitterLinks.length) {
@@ -27,11 +27,9 @@ var Share = (function() {
     e.preventDefault();
 
     Utility.windowOpen(this.getAttribute("href"), 600, 300);
-  }
-
+  };
 
   return {
     init: init
   };
-
 })();

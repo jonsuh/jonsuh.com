@@ -1,6 +1,5 @@
 var App = (function() {
   "use strict";
-
   var init = function() {
     rellaxInit();
 
@@ -14,25 +13,29 @@ var App = (function() {
   };
 
   var homeInit = function() {
-    document.querySelector(".js-home__desk-speaker-knob").addEventListener("click", function() {
-      document.querySelector(".home__desk").classList.toggle("is-speaker-off")
-    });
+    document
+      .querySelector(".js-home__desk-speaker-knob")
+      .addEventListener("click", function() {
+        document
+          .querySelector(".home__desk")
+          .classList.toggle("is-speaker-off");
+      });
 
-    document.querySelector(".js-home__desk-playpause").addEventListener("click", function() {
-      document.querySelector(".home__desk").classList.toggle("is-paused")
-    });
+    document
+      .querySelector(".js-home__desk-playpause")
+      .addEventListener("click", function() {
+        document.querySelector(".home__desk").classList.toggle("is-paused");
+      });
   };
 
   var rellaxInit = function() {
-    // var rellax = new Rellax(".parallax");
-    var rellax = new Rellax(".home__letter");
+    // var rellax = new Rellax(".parallax"); // eslint-disable-line no-unused-vars
+    var rellax = new Rellax(".home__letter"); // eslint-disable-line no-unused-vars
   };
-
 
   return {
     init: init
   };
-
 })();
 
 App.init();
