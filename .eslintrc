@@ -1,7 +1,28 @@
 {
-  "extends": "",
-  "rules": {},
   "env": {
+    "es6": false,
     "browser": true
-  }
+  },
+  "globals": {
+    "App": true,
+    "Share": true,
+    "Utility": true,
+    "Rellax": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true
+      }
+    ],
+    "dot-location": ["error", "property"]
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ]
 }

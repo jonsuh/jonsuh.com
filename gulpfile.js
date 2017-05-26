@@ -1,4 +1,5 @@
 var gulp         = require('gulp');
+var gulpIf       = require('gulp-if');
 var autoprefixer = require('autoprefixer');
 var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
@@ -48,10 +49,17 @@ gulp.task('css', function() {
     .pipe(gulp.dest('public/assets/css'));
 });
 
+function eslintFixed(file) {
+  return file.eslint != null && file.eslint.fixed;
+}
+
 gulp.task('eslint', function() {
   return gulp.src('themes/jonsuh-v8/source/assets/_js/**/*.js')
-    .pipe(eslint())
+    .pipe(eslint({
+      fix: true
+    }))
     .pipe(eslint.format())
+    .pipe(gulpIf(eslintFixed, gulp.dest('themes/jonsuh-v8/source/assets/_js')))
     .pipe(eslint.failAfterError());
 });
 
