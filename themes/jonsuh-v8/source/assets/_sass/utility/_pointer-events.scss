@@ -1,5 +1,4 @@
 // Pointer events
 // ==================================================
-.pe--n {
-  pointer-events: none;
-}
+.pe--a { pointer-events: all; }
+.pe--n { pointer-events: none; }
