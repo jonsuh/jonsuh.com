@@ -1,6 +1,7 @@
 var gulp         = require('gulp');
 var gulpIf       = require('gulp-if');
 var autoprefixer = require('autoprefixer');
+var babel        = require('gulp-babel');
 var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
 var eslint       = require('gulp-eslint');
@@ -85,6 +86,7 @@ gulp.task('js', ['js-vendor', 'eslint'], function() {
       'themes/jonsuh-v8/source/assets/_js/app.js',
     ])
     .pipe(sourcemaps.init())
+    .pipe(babel())
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('public/assets/js'));
