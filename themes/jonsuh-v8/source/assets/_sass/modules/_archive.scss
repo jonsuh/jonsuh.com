@@ -12,10 +12,17 @@ $archive-meta-gutter: strip-unit($grid-gutter) * 16;
   margin-bottom: 0;
 }
 
+.archive__year {
+  margin-bottom: 1.5rem;
+}
+
 .archive-year {
+  @include type-scale(em(16), em(1), em(18));
+
   color: $white;
-  background-color: $grey-darker;
-  display: inline-block;
+  background-color: $deep-orange;
+  padding: 0.3em 0.5em;
+  padding-right: 8em;
   margin-left: rem($archive-meta-short-width + $archive-meta-gutter / 2);
 }
 
