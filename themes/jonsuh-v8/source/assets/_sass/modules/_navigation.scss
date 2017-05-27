@@ -5,8 +5,8 @@
   font-weight: 700;
   color: $grey-darkest;
   text-decoration: none;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -27,7 +27,7 @@
     background: linear-gradient(to right, $teal, $cyan);
   }
   &:nth-child(3)::before {
-    background: linear-gradient(to right, $orange, $yellow);
+    background: linear-gradient(to right, $deep-orange, $yellow);
   }
   &:nth-child(4)::before {
     background: linear-gradient(to right, $purple, $blue);
@@ -41,8 +41,8 @@
   }
 
   @include mq(375) {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
   }
 
   @include mq(small) {
@@ -51,6 +51,7 @@
   }
 
   @include mq(medium) {
+    font-size: em(16);
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
